@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            Swift函数和闭包 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/brands.min.css">
+    
+        
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/","Apple、Linux":"/Apple、Linux","计算机理论":"/计算机理论","产品、运营":"/产品、运营","我的项目👻":"https://github.com/Liao-Hexo"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"欢迎访问廖家龙的博客网站","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/Liao-Hexo","apple":"https://developer.apple.com/cn/","google":"https://www.google.com","stack-overflow":"https://stackoverflow.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"category":true,"tag":true,"announcement":"如有任何疑问，请联系本人邮箱“2668802570@qq.com”"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["如有任何疑问，请联系本人邮箱2668802570@qq.com"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY年MM月DD日 HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"jsdelivr"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":[null,"/css/custom.css"],"js":[null]},"version":"4.0.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/Apple%E3%80%81Linux"
+                            >
+                                APPLE、LINUX
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA"
+                            >
+                                计算机理论
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/%E4%BA%A7%E5%93%81%E3%80%81%E8%BF%90%E8%90%A5"
+                            >
+                                产品、运营
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://github.com/Liao-Hexo"
+                            >
+                                我的项目👻
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/Apple%E3%80%81Linux">APPLE、LINUX</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">计算机理论</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/%E4%BA%A7%E5%93%81%E3%80%81%E8%BF%90%E8%90%A5">产品、运营</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://github.com/Liao-Hexo">我的项目👻</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Swift函数和闭包
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">如有任何疑问，请联系本人邮箱2668802570@qq.com</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2018年12月31日 23:53:00</span>
+                <span class="mobile">2018-12-31 23:53</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Tue Nov 21 2023 23:14:37 GMT+0800">2023年11月21日 23:14:37</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h2 id="Swift函数"><a href="#Swift函数" class="headerlink" title="Swift函数"></a>Swift函数</h2><p>Swift函数用来完成特定任务的独立的代码块</p>
+<ul>
+<li>函数声明：告诉编译器函数的名字、返回类型及参数</li>
+<li>函数定义：提供了函数的实体</li>
+</ul>
+<h3 id="函数定义和调用"><a href="#函数定义和调用" class="headerlink" title="函数定义和调用"></a>函数定义和调用</h3><p>Swift 定义函数使用关键字 <strong>func</strong>。</p>
+<p>定义函数的时候，可以指定一个或多个输入参数和一个返回值类型。</p>
+<p>每个函数都有一个函数名来描述它的功能。通过函数名以及对应类型的参数值来调用这个函数。函数的参数传递的顺序必须与参数列表相同。</p>
+<p>函数的实参传递的顺序必须与形参列表相同，**-&gt;** 后定义函数的返回值类型。</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqxydhh9ldj30jo0e60ud.jpg"></p>
+<h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>函数可以接受一个或者多个参数，这些参数被包含在函数的括号中，以逗号分隔</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqxyjowc6rj30qg0e676g.jpg"></p>
+<h3 id="不带参数的函数"><a href="#不带参数的函数" class="headerlink" title="不带参数的函数"></a>不带参数的函数</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqxyp7yv8xj30dg0e6jsi.jpg"></p>
+<h3 id="元组作为函数的返回值"><a href="#元组作为函数的返回值" class="headerlink" title="元组作为函数的返回值"></a>元组作为函数的返回值</h3><p>函数返回值类型可以是字符串，整型，浮点型等。</p>
+<p>元组与数组类似，不同的是，元组中的元素可以是任意类型，使用的是圆括号。</p>
+<p>你可以用元组（tuple）类型让多个值作为一个复合值从函数中返回。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="comment">//在一个Int数组中找出最小值和最大值</span></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">minMax</span>(<span class="params">array</span>: [<span class="type">Int</span>]) -&gt; (min: <span class="type">Int</span>, max: <span class="type">Int</span>) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> currentMin <span class="operator">=</span> array[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">var</span> currentMax <span class="operator">=</span> array[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> array[<span class="number">1</span><span class="operator">..&lt;</span>array.count] &#123;</span><br><span class="line">        <span class="keyword">if</span> value <span class="operator">&lt;</span> currentMin &#123;</span><br><span class="line">            currentMin <span class="operator">=</span> value</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> value <span class="operator">&gt;</span> currentMax &#123;</span><br><span class="line">            currentMax <span class="operator">=</span> value</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (currentMin, currentMax)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bounds <span class="operator">=</span> minMax(array: [<span class="number">8</span>, <span class="operator">-</span><span class="number">6</span>, <span class="number">2</span>, <span class="number">109</span>, <span class="number">3</span>, <span class="number">71</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最小值为 <span class="subst">\(bounds.min)</span> ，最大值为 <span class="subst">\(bounds.max)</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果你不确定返回的元组一定不为nil，那么你可以返回一个可选的元组类型</span></span><br><span class="line"><span class="comment">//注意：可选元组类型如(Int, Int)?与元组包含可选类型如(Int?, Int?)是不同的.可选的元组类型，整个元组是可选的，而不只是元组中的每个元素值。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//前面的minMax(_:)函数返回了一个包含两个Int值的元组。但是函数不会对传入的数组执行任何安全检查，如果array参数是一个空数组，如上定义的minMax(_:)在试图访问array[0]时会触发一个运行时错误。为了安全地处理这个&quot;空数组&quot;问题，将minMax(_:)函数改写为使用可选元组返回类型，并且当数组为空时返回nil</span></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">minMax</span>(<span class="params">array</span>: [<span class="type">Int</span>]) -&gt; (min: <span class="type">Int</span>, max: <span class="type">Int</span>)<span class="operator">?</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> array.isEmpty &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> currentMin <span class="operator">=</span> array[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">var</span> currentMax <span class="operator">=</span> array[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> array[<span class="number">1</span><span class="operator">..&lt;</span>array.count] &#123;</span><br><span class="line">        <span class="keyword">if</span> value <span class="operator">&lt;</span> currentMin &#123;</span><br><span class="line">            currentMin <span class="operator">=</span> value</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> value <span class="operator">&gt;</span> currentMax &#123;</span><br><span class="line">            currentMax <span class="operator">=</span> value</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (currentMin, currentMax)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bounds <span class="operator">=</span> minMax(array: [<span class="number">8</span>, <span class="operator">-</span><span class="number">6</span>, <span class="number">2</span>, <span class="number">109</span>, <span class="number">3</span>, <span class="number">71</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最小值为 <span class="subst">\(bounds<span class="operator">!</span>.min)</span> ，最大值为 <span class="subst">\(bounds<span class="operator">!</span>.max)</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="没有返回值的函数"><a href="#没有返回值的函数" class="headerlink" title="没有返回值的函数"></a>没有返回值的函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">runoob</span>(<span class="params">site</span>: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;菜鸟教程官网： <span class="subst">\(site)</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">runoob(site: <span class="string">&quot;http://www.runoob.com&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数参数名称"><a href="#函数参数名称" class="headerlink" title="函数参数名称"></a>函数参数名称</h3><p>函数参数都有一个外部参数名和一个局部参数名</p>
+<h4 id="局部参数名在函数的实现内部使用"><a href="#局部参数名在函数的实现内部使用" class="headerlink" title="局部参数名在函数的实现内部使用"></a>局部参数名在函数的实现内部使用</h4><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqxzjw8f1rj30i80gejtj.jpg"></p>
+<h4 id="外部参数名"><a href="#外部参数名" class="headerlink" title="外部参数名"></a>外部参数名</h4><p>可以在局部参数名前指定外部参数名，中间以空格分隔，外部参数名用于在函数调用时传递给函数的参数。</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqxzrhryerj30pe0h6goc.jpg"></p>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>可变参数可以接受零个或多个值。函数调用时，你可以用可变参数来指定函数参数，其数量是不确定的。可变参数通过在变量类型名后面加入（…）的方式来定义。</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqxzyhr9mbj30l60kw0vy.jpg"></p>
+<h3 id="常量、变量、I-O参数"><a href="#常量、变量、I-O参数" class="headerlink" title="常量、变量、I&#x2F;O参数"></a>常量、变量、I&#x2F;O参数</h3><p>一般默认在函数中定义的参数都是常量参数，也就是这个参数你只可以查询使用，不能改变它的值。如果想要声明一个变量参数，可以在参数定义前加 inout 关键字，这样就可以改变这个参数的值了。</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy07v0ljfj31as0kgdku.jpg"></p>
+<h3 id="函数类型及使用"><a href="#函数类型及使用" class="headerlink" title="函数类型及使用"></a>函数类型及使用</h3><p>每个函数都有种特定的函数类型，由函数的参数类型和返回类型组成</p>
+<h4 id="使用函数类型"><a href="#使用函数类型" class="headerlink" title="使用函数类型"></a>使用函数类型</h4><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy0g0p7ayj30z60feadc.jpg"></p>
+<h3 id="函数类型作为参数类型，函数类型作为返回类型"><a href="#函数类型作为参数类型，函数类型作为返回类型" class="headerlink" title="函数类型作为参数类型，函数类型作为返回类型"></a>函数类型作为参数类型，函数类型作为返回类型</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy0nlakyxj30rw0j8n12.jpg"></p>
+<h3 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h3><p>函数嵌套指的是函数内定义一个新的函数，外部的函数可以调用函数内定义的函数。</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy2qj7asoj30ra0kgwhx.jpg"></p>
+<h2 id="Swift闭包"><a href="#Swift闭包" class="headerlink" title="Swift闭包"></a>Swift闭包</h2><p>闭包是自包含的功能代码块，可以在代码中使用或者用来作为参数传值，全局函数和嵌套函数其实就是特殊的闭包</p>
+<p>闭包的形式：</p>
+<table>
+<thead>
+<tr>
+<th>全局函数</th>
+<th>嵌套函数</th>
+<th>闭包表达式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>有名字但不能捕获任何值。</td>
+<td>有名字，也能捕获封闭函数内的值。</td>
+<td>无名闭包，使用轻量级语法，可以根据上下文环境捕获值。</td>
+</tr>
+</tbody></table>
+<p>Swift中的闭包有很多优化的地方: </p>
+<ol>
+<li>根据上下文推断参数和返回值类型</li>
+<li>从单行表达式闭包中隐式返回（也就是闭包体只有一行代码，可以省略return）</li>
+<li>可以使用简化参数名，如$0, $1(从0开始，表示第i个参数…)</li>
+<li>提供了尾随闭包语法(Trailing closure syntax)</li>
+</ol>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy3c1w56bj30ik0k8771.jpg"></p>
+<h3 id="闭包表达式"><a href="#闭包表达式" class="headerlink" title="闭包表达式"></a>闭包表达式</h3><p>闭包表达式是一种利用简洁语法构建内联闭包的方式，闭包表达式提供了一些语法优化，使得撰写闭包变的简单明了</p>
+<h4 id="sorted-方法"><a href="#sorted-方法" class="headerlink" title="sorted 方法"></a>sorted 方法</h4><ol>
+<li><p>Swift 标准库提供了名为 <strong>sorted(by:)</strong> 的方法，会根据您提供的用于排序的闭包函数将已知类型数组中的值进行排序。 排序完成后，sorted(by:) 方法会返回一个与原数组大小相同，包含同类型元素且元素已正确排序的新数组。原数组不会被 sorted(by:) 方法修改。</p>
+</li>
+<li><p>sorted(by:)方法需要传入两个参数：</p>
+</li>
+<li><ul>
+<li>已知类型的数组</li>
+<li>闭包函数，该闭包函数需要传入与数组元素类型相同的两个值，并返回一个布尔类型值来表明当排序结束后传入的第一个参数排在第二个参数前面还是后面。如果第一个参数值出现在第二个参数值前面，排序闭包函数需要返回 <strong>true</strong>，反之返回 <strong>false</strong>。</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy3n6bhjij31na0hqjxq.jpg"></p>
+<h3 id="参数名称缩写"><a href="#参数名称缩写" class="headerlink" title="参数名称缩写"></a>参数名称缩写</h3><p>Swift自动为内联函数提供了参数名称缩写功能，可以直接通过<code>$0,$1,$2</code>来顺序调用闭包的参数</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy3v0zd98j30lg0eg0uv.jpg"></p>
+<h3 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h3><p>Swift 的<code>String</code>类型定义了关于大于号 (<code>&gt;</code>) 的字符串实现，其作为一个函数接受两个<code>String</code>类型的参数并返回<code>Bool</code>类型的值。 而这正好与<code>sort(_:)</code>方法的第二个参数需要的函数类型相符合。 因此，可以简单地传递一个大于号，Swift可以自动推断出您想使用大于号的字符串函数实现</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy3yike4nj30lg0egwg7.jpg"></p>
+<h3 id="尾随闭包"><a href="#尾随闭包" class="headerlink" title="尾随闭包"></a>尾随闭包</h3><p>尾随闭包是一个书写在函数括号之后的闭包表达式，函数支持将其作为最后一个参数调用</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy43w5sm0j30lg0eg0um.jpg"></p>
+<h3 id="捕获值"><a href="#捕获值" class="headerlink" title="捕获值"></a>捕获值</h3><ol>
+<li><p>闭包可以在其定义的上下文中捕获常量或变量。</p>
+</li>
+<li><p>即使定义这些常量和变量的原域已经不存在，闭包仍然可以在闭包函数体内引用和修改这些值。</p>
+</li>
+<li><p>Swift最简单的闭包形式是嵌套函数，也就是定义在其他函数的函数体内的函数。 </p>
+</li>
+<li><p>嵌套函数可以捕获其外部函数所有的参数以及定义的常量和变量。</p>
+</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">makeIncrementor</span>(<span class="params">forIncrement</span> <span class="params">amount</span>: <span class="type">Int</span>) -&gt; () -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> runningTotal <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//incrementor函数并没有获取任何参数，但是在函数体内访问了runningTotal和amount变量。这是因为其通过捕获在包含它的函数体内已经存在的runningTotal和amount变量而实现。由于没有修改amount变量，incrementor实际上捕获并存储了该变量的一个副本，而该副本随着incrementor一同被存储。所以我们调用这个函数时会累加</span></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">incrementor</span>() -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        runningTotal <span class="operator">+=</span> amount</span><br><span class="line">        <span class="keyword">return</span> runningTotal</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> incrementor</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> incrementByTen <span class="operator">=</span> makeIncrementor(forIncrement: <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(incrementByTen())  <span class="comment">//返回值为10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(incrementByTen())  <span class="comment">//返回值为20</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(incrementByTen())  <span class="comment">//返回值为30</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="闭包是引用类型"><a href="#闭包是引用类型" class="headerlink" title="闭包是引用类型"></a>闭包是引用类型</h3><ol>
+<li><p>上面的例子中，incrementByTen是常量，但是这些常量指向的闭包仍然可以增加其捕获的变量值。这是因为函数和闭包都是引用类型。</p>
+</li>
+<li><p>无论您将函数&#x2F;闭包赋值给一个常量还是变量，您实际上都是将常量&#x2F;变量的值设置为对应函数&#x2F;闭包的引用。 上面的例子中，incrementByTen指向闭包的引用是一个常量，而并非闭包内容本身。这也意味着如果您将闭包赋值给了两个不同的常量&#x2F;变量，两个值都会指向同一个闭包</p>
+</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">makeIncrementor</span>(<span class="params">forIncrement</span> <span class="params">amount</span>: <span class="type">Int</span>) -&gt; () -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> runningTotal <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//incrementor函数并没有获取任何参数，但是在函数体内访问了runningTotal和amount变量。这是因为其通过捕获在包含它的函数体内已经存在的runningTotal和amount变量而实现。由于没有修改amount变量，incrementor实际上捕获并存储了该变量的一个副本，而该副本随着incrementor一同被存储。所以我们调用这个函数时会累加</span></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">incrementor</span>() -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        runningTotal <span class="operator">+=</span> amount</span><br><span class="line">        <span class="keyword">return</span> runningTotal</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> incrementor</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> incrementByTen <span class="operator">=</span> makeIncrementor(forIncrement: <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(incrementByTen())  <span class="comment">//返回值为10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(incrementByTen())  <span class="comment">//返回值为20</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(incrementByTen())  <span class="comment">//返回值为30</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> alsoIncrementByTen <span class="operator">=</span> incrementByTen</span><br><span class="line"><span class="built_in">print</span>(alsoIncrementByTen())  <span class="comment">//返回值也为40</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这里的值没有发生改变，是因为函数被调用结束就被释放了，没有用一个常量或变量去引用它，相当于每次调用都是一个新的函数</span></span><br><span class="line"><span class="built_in">print</span>(makeIncrementor(forIncrement: <span class="number">20</span>)())  <span class="comment">//结果为20</span></span><br><span class="line"><span class="built_in">print</span>(makeIncrementor(forIncrement: <span class="number">20</span>)())  <span class="comment">//结果为20</span></span><br><span class="line"><span class="built_in">print</span>(makeIncrementor(forIncrement: <span class="number">20</span>)())  <span class="comment">//结果为20</span></span><br></pre></td></tr></table></figure>
+
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/6_Swift%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E5%85%B8/"
+                                   title="Swift数组和字典"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Swift数组和字典</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/8_Swift%E6%9E%9A%E4%B8%BE%E5%92%8C%E7%BB%93%E6%9E%84%E4%BD%93/"
+                                   title="Swift枚举和结构体"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Swift枚举和结构体</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">Swift函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">函数定义和调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">函数参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">不带参数的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">1.4.</span> <span class="nav-text">元组作为函数的返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B2%A1%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.5.</span> <span class="nav-text">没有返回值的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%90%8D%E7%A7%B0"><span class="nav-number">1.6.</span> <span class="nav-text">函数参数名称</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%8F%82%E6%95%B0%E5%90%8D%E5%9C%A8%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%86%85%E9%83%A8%E4%BD%BF%E7%94%A8"><span class="nav-number">1.6.1.</span> <span class="nav-text">局部参数名在函数的实现内部使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E5%8F%82%E6%95%B0%E5%90%8D"><span class="nav-number">1.6.2.</span> <span class="nav-text">外部参数名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">1.7.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E3%80%81I-O%E5%8F%82%E6%95%B0"><span class="nav-number">1.8.</span> <span class="nav-text">常量、变量、I&#x2F;O参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%8F%8A%E4%BD%BF%E7%94%A8"><span class="nav-number">1.9.</span> <span class="nav-text">函数类型及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.9.1.</span> <span class="nav-text">使用函数类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.10.</span> <span class="nav-text">函数类型作为参数类型，函数类型作为返回类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%B5%8C%E5%A5%97"><span class="nav-number">1.11.</span> <span class="nav-text">函数嵌套</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E9%97%AD%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">Swift闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">闭包表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sorted-%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.1.</span> <span class="nav-text">sorted 方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E5%90%8D%E7%A7%B0%E7%BC%A9%E5%86%99"><span class="nav-number">2.3.</span> <span class="nav-text">参数名称缩写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">运算符函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%BE%E9%9A%8F%E9%97%AD%E5%8C%85"><span class="nav-number">2.5.</span> <span class="nav-text">尾随闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%95%E8%8E%B7%E5%80%BC"><span class="nav-number">2.6.</span> <span class="nav-text">捕获值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E6%98%AF%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.7.</span> <span class="nav-text">闭包是引用类型</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
+
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">Swift函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">函数定义和调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">函数参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">不带参数的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">1.4.</span> <span class="nav-text">元组作为函数的返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B2%A1%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.5.</span> <span class="nav-text">没有返回值的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%90%8D%E7%A7%B0"><span class="nav-number">1.6.</span> <span class="nav-text">函数参数名称</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%8F%82%E6%95%B0%E5%90%8D%E5%9C%A8%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%86%85%E9%83%A8%E4%BD%BF%E7%94%A8"><span class="nav-number">1.6.1.</span> <span class="nav-text">局部参数名在函数的实现内部使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E5%8F%82%E6%95%B0%E5%90%8D"><span class="nav-number">1.6.2.</span> <span class="nav-text">外部参数名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">1.7.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E3%80%81I-O%E5%8F%82%E6%95%B0"><span class="nav-number">1.8.</span> <span class="nav-text">常量、变量、I&#x2F;O参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%8F%8A%E4%BD%BF%E7%94%A8"><span class="nav-number">1.9.</span> <span class="nav-text">函数类型及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.9.1.</span> <span class="nav-text">使用函数类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.10.</span> <span class="nav-text">函数类型作为参数类型，函数类型作为返回类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%B5%8C%E5%A5%97"><span class="nav-number">1.11.</span> <span class="nav-text">函数嵌套</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E9%97%AD%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">Swift闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">闭包表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sorted-%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.1.</span> <span class="nav-text">sorted 方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E5%90%8D%E7%A7%B0%E7%BC%A9%E5%86%99"><span class="nav-number">2.3.</span> <span class="nav-text">参数名称缩写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">运算符函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%BE%E9%9A%8F%E9%97%AD%E5%8C%85"><span class="nav-number">2.5.</span> <span class="nav-text">尾随闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%95%E8%8E%B7%E5%80%BC"><span class="nav-number">2.6.</span> <span class="nav-text">捕获值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E6%98%AF%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.7.</span> <span class="nav-text">闭包是引用类型</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/toggle-theme.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/code-block.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/local-search.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+
+    <!-- photos-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

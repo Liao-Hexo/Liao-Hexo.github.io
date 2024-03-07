@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            Swift数据类型 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/brands.min.css">
+    
+        
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/","Apple、Linux":"/Apple、Linux","计算机理论":"/计算机理论","产品、运营":"/产品、运营","我的项目👻":"https://github.com/Liao-Hexo"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"欢迎访问廖家龙的博客网站","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/Liao-Hexo","apple":"https://developer.apple.com/cn/","google":"https://www.google.com","stack-overflow":"https://stackoverflow.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"category":true,"tag":true,"announcement":"如有任何疑问，请联系本人邮箱“2668802570@qq.com”"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["如有任何疑问，请联系本人邮箱2668802570@qq.com"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY年MM月DD日 HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"jsdelivr"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":[null,"/css/custom.css"],"js":[null]},"version":"4.0.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/Apple%E3%80%81Linux"
+                            >
+                                APPLE、LINUX
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA"
+                            >
+                                计算机理论
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/%E4%BA%A7%E5%93%81%E3%80%81%E8%BF%90%E8%90%A5"
+                            >
+                                产品、运营
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://github.com/Liao-Hexo"
+                            >
+                                我的项目👻
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/Apple%E3%80%81Linux">APPLE、LINUX</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">计算机理论</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/%E4%BA%A7%E5%93%81%E3%80%81%E8%BF%90%E8%90%A5">产品、运营</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://github.com/Liao-Hexo">我的项目👻</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Swift数据类型
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">如有任何疑问，请联系本人邮箱2668802570@qq.com</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2018年12月31日 23:58:00</span>
+                <span class="mobile">2018-12-31 23:58</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Tue Nov 21 2023 23:15:11 GMT+0800">2023年11月21日 23:15:11</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <p>在我们使用任何程序语言编程时，需要使用各种数据类型来存储不同的信息，变量的数据类型决定了如何将代表这些值的位存储到计算机的内存中，在声明变量时也可指定它的数据类型，所有变量都有数据类型，以决定能够存储哪种数据</p>
+<h2 id="内置数据类型"><a href="#内置数据类型" class="headerlink" title="内置数据类型"></a>内置数据类型</h2><h3 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h3><p>一般来说，你不需要专门指定整数的长度，Swift提供了一个特殊的整数类型<code>Int</code>,长度与当前平台的原生字长相同，在32位平台上，<code>Int</code>和<code>Int32</code>长度相同，在64位平台上，<code>Int</code>和<code>Int64</code>长度相同</p>
+<p>除非需要特定长度的整数，一般来说使用<code>Int</code>就够了，这可以提高代码一致性和可复用性</p>
+<h3 id="UInt"><a href="#UInt" class="headerlink" title="UInt"></a>UInt</h3><p>Swift也提供了一个特殊的无符号类型<code>UInt</code>，长度与当前平台的原生字长相同，在32位平台上，<code>UInt</code>和<code>UInt32</code>长度相同，在64位平台上，<code>UInt</code>和<code>UInt64</code>长度相同</p>
+<p>注意：尽量不要使用<code>UInt</code>，除非真的需要存储一个和当前平台原生字长相同的无符号整数，除了这种情况，最好使用<code>Int</code>，即使你要存储的值已知是非负的。统一使用<code>Int</code>可以提高代码的可复用性，避免不同类型数字之间的转换，并且匹配数字的类型推断</p>
+<h3 id="浮点数：Float、Double"><a href="#浮点数：Float、Double" class="headerlink" title="浮点数：Float、Double"></a>浮点数：Float、Double</h3><p>浮点数是有小数部分的数字</p>
+<p>浮点类型比整数类型表示的范围更大，可以存储比<code>Int</code>类型更大或者更小的数字</p>
+<p><code>Double</code>：表示64位浮点数，当需要存储很大或者很高精度的浮点数时使用此类型</p>
+<p><code>Float</code>：表示32位浮点数，精度要求不高的话可以使用此类型</p>
+<p>注意：<code>Double</code>精确度很高，至少有15位数字，而<code>Float</code>最少只有6位数字</p>
+<h3 id="布尔值：Bool"><a href="#布尔值：Bool" class="headerlink" title="布尔值：Bool"></a>布尔值：Bool</h3><p>布尔值指逻辑上的值，因为它们只能是真或者假。</p>
+<p>Swift有两个布尔常量：<code>true</code>、<code>false</code></p>
+<h3 id="字符串：String"><a href="#字符串：String" class="headerlink" title="字符串：String"></a>字符串：String</h3><p>字符串是字符的序列集合：<code>Hello,World!</code></p>
+<h3 id="字符：Character"><a href="#字符：Character" class="headerlink" title="字符：Character"></a>字符：Character</h3><p>字符指的是单个字母：<code>C</code></p>
+<h3 id="可选类型：Optional"><a href="#可选类型：Optional" class="headerlink" title="可选类型：Optional"></a>可选类型：Optional</h3><p>使用可选类型来处理值可能缺失的情况，可选类型表示有值或没有值</p>
+<p>此外，Swift还提供了其他更强大的数据类型，<code>Array</code>、<code>Dictionary</code>、<code>Struct</code>、<code>Class</code></p>
+<h2 id="数值范围"><a href="#数值范围" class="headerlink" title="数值范围"></a>数值范围</h2><p>不同变量类型内存的存储空间，及变量类型的最大最小值；</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">大小（字节）</th>
+<th align="left">区间值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Int8</td>
+<td align="left">1 字节</td>
+<td align="left">-128 到 127</td>
+</tr>
+<tr>
+<td align="left">UInt8</td>
+<td align="left">1 字节</td>
+<td align="left">0 到 255</td>
+</tr>
+<tr>
+<td align="left">Int32</td>
+<td align="left">4 字节</td>
+<td align="left">-2147483648 到 2147483647</td>
+</tr>
+<tr>
+<td align="left">UInt32</td>
+<td align="left">4 字节</td>
+<td align="left">0 到 4294967295</td>
+</tr>
+<tr>
+<td align="left">Int64</td>
+<td align="left">8 字节</td>
+<td align="left">-9223372036854775808 到 9223372036854775807</td>
+</tr>
+<tr>
+<td align="left">UInt64</td>
+<td align="left">8 字节</td>
+<td align="left">0 到 18446744073709551615</td>
+</tr>
+<tr>
+<td align="left">Float</td>
+<td align="left">4 字节</td>
+<td align="left">1.2E-38 到 3.4E+38 (~6 digits)</td>
+</tr>
+<tr>
+<td align="left">Double</td>
+<td align="left">8 字节</td>
+<td align="left">2.3E-308 到 1.7E+308 (~15 digits)</td>
+</tr>
+</tbody></table>
+<h2 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h2><p>类型别名对当前的类型定义了另一个名字，类型别名通过使用<code>typealias</code>关键字来定义</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">typealias</span> <span class="type">Feet</span> <span class="operator">=</span> <span class="type">Int</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> distance: <span class="type">Feet</span> <span class="operator">=</span> <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(distance)</span><br></pre></td></tr></table></figure>
+
+<h2 id="类型安全"><a href="#类型安全" class="headerlink" title="类型安全"></a>类型安全</h2><p>Swift是一个类型安全<code>type safe</code>的语言，由于Swift是类型安全的，所以它会在编译你的代码时进行类型检查<code>type checks</code>，并把不匹配的类型标记为错误，这可以让你在开发的时候尽早发现并修复错误</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqux9qf898j30v8050t9n.jpg"></p>
+<h2 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h2><p>如果没有显式指定类型，Swift会使用类型推断<code>type inference</code>来选择合适的类型</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> meaningOfLine <span class="operator">=</span> <span class="number">42</span>  <span class="comment">// meaningOfLine会被推测为Int类型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> pi <span class="operator">=</span> <span class="number">3.14159</span>  <span class="comment">// pi会被推测为Double类型，当推断浮点数的类型时，Swift总是会选择Double而不是Float</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//如果表达式中同时出现了整数和浮点数，会被推断为Double类型</span></span><br><span class="line"><span class="keyword">let</span> anotherPi <span class="operator">=</span> <span class="number">3</span> <span class="operator">+</span> <span class="number">0.14159</span></span><br></pre></td></tr></table></figure>
+
+<p>但是：在Swift中，任何时候都不会做隐式转换，任何两个类型不同的变量或常量不允许直接计算</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gr1bmbsbmpj30y4068dgn.jpg"></p>
+<h2 id="Swift变量"><a href="#Swift变量" class="headerlink" title="Swift变量"></a>Swift变量</h2><p>变量是一种使用方便的占位符，用于引用计算机内存地址，Swift每个变量都指定了特定的类型，该类型决定了变量占用内存的大小，不同的数据类型也决定可存储值的范围</p>
+<h3 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h3><p>变量声明的意思是告诉编译器在内存中的哪个位置上为变量创建多大的存储空间，在使用变量前，你需要使用<code>var</code>关键字声明它</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="comment">//整数默认是Int，小数默认是Double</span></span><br><span class="line"><span class="keyword">var</span> varA <span class="operator">=</span> <span class="number">42</span></span><br><span class="line"><span class="built_in">print</span>(varA)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> varB: <span class="type">Float</span> <span class="operator">=</span> <span class="number">3.14159</span></span><br><span class="line"><span class="built_in">print</span>(varB)</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>变量名可以由字母、数字和下划线组成，变量名需要以字母或下划线开始</p>
+<p>Swift是一个区分大小写的语言，所以字母大写与小写是不一样的</p>
+<p>变量名也可以使用简单的<code>Unicode</code>字符</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> _var <span class="operator">=</span> <span class="string">&quot;Hello,Swift&quot;</span></span><br><span class="line"><span class="built_in">print</span>(_var)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> 你好 <span class="operator">=</span> <span class="string">&quot;你好世界&quot;</span></span><br><span class="line"><span class="built_in">print</span>(你好)</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量输出"><a href="#变量输出" class="headerlink" title="变量输出"></a>变量输出</h3><p>变量和常量可以使用<code>print</code>函数来输出，在字符串中可以使用括号与反斜线来插入变量</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> name <span class="operator">=</span> <span class="string">&quot;菜鸟教程&quot;</span></span><br><span class="line"><span class="keyword">var</span> site <span class="operator">=</span> <span class="string">&quot;http://www.runoob.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;<span class="subst">\(name)</span>的官网地址为：<span class="subst">\(site)</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Swift可选类型-Optionals"><a href="#Swift可选类型-Optionals" class="headerlink" title="Swift可选类型(Optionals)"></a>Swift可选类型(Optionals)</h2><p>Swift的可选类型，用于处理值缺失的情况，可选表示“那儿有一个值，并且它等于x”或者“那儿没有值”</p>
+<p>Swift语言定义后缀<code>?</code>作为命名类型Optional的简写，换句话说，以下两种声明是相等的</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> optionalInteger: <span class="type">Int</span>?</span><br><span class="line"><span class="keyword">var</span> optionalInteger: <span class="type">Optional</span>&lt;<span class="type">Int</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Optional是一个含有两种情况的枚举，用来表示可能有或可能没有值，任何类型都可以明确声明为可选类型</p>
+<p>当声明一个可选类型的时候，要确保用括号给<code>?</code>操作符一个合适的范围，例如声明可选整数数组，应该写成<code>(Int[])?</code>，写成<code>Int[]?</code>会报错</p>
+<p>当你声明一个可选变量或者可选属性的时候没有提供初始值，它的值会默认为nil</p>
+<p>可选项遵照LogicValue协议，因此可以出现在布尔环境中，在这种情况下，如果可选类型<code>T?</code>包含类型为<code>T</code>的任何值，这个可选类型等于true，反之为false</p>
+<p>如果一个可选类型的实例包含一个值，你可以用后缀操作符<code>!</code>来访问这个值，使用操作符<code>!</code>去获取值为nil的可选变量会有运行时错误</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myString: <span class="type">String</span>? <span class="operator">=</span> <span class="literal">nil</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> myString <span class="operator">!=</span> <span class="literal">nil</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(myString)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;字符串为nil&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可选类型类似于Objective-C中指针的nil值，但是nil只对类(class)有用，而可选类型对所有的类型都可用，并且更安全</p>
+<h3 id="强制解析"><a href="#强制解析" class="headerlink" title="强制解析"></a>强制解析</h3><p>当你确定可选类型确实包含值之后，你可以在可选的名字后面加一个感叹号<code>!</code>来获取值，这个感叹号表示“我知道这个可选有值，请使用它”，这被称为可选值的强制解析</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqvm2jgb17j30j20fc415.jpg"></p>
+<p>注意：使用<code>!</code>来获取一个不存在的可选值会导致运行时错误，使用<code>!</code>来强制解析值之前，一定要确定可选包含一个非nil的值</p>
+<h3 id="自动解析❓"><a href="#自动解析❓" class="headerlink" title="自动解析❓"></a>自动解析❓</h3><p>可以在声明可选变量时使用感叹号<code>!</code>替换问号<code>?</code>，这样可选变量在使用时就不需要再加一个感叹号<code>!</code>来获取值，它会自动解析</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqvn2j262kj30j20fcgo2.jpg"></p>
+<h3 id="可选绑定"><a href="#可选绑定" class="headerlink" title="可选绑定"></a>可选绑定</h3><p>使用可选绑定来判断可选类型是否包含值，如果包含就把值赋给一个临时常量或变量，可选绑定可以用在if和while语句中来对可选类型的值进行判断并把值赋给一个常量或者变量</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqvnbdghjjj30j20ecgnj.jpg"></p>
+<h2 id="Swift常量"><a href="#Swift常量" class="headerlink" title="Swift常量"></a>Swift常量</h2><p>常量一旦设定，在程序运行时就无法改变其值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> constA <span class="operator">=</span> <span class="number">12</span></span><br><span class="line"><span class="built_in">print</span>(constA)</span><br><span class="line"></span><br><span class="line"><span class="comment">//常量定义时必须初始值</span></span><br><span class="line"><span class="keyword">let</span> constB: <span class="type">Float</span> <span class="operator">=</span> <span class="number">3.14159</span></span><br><span class="line"><span class="built_in">print</span>(constB)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Swift字面量"><a href="#Swift字面量" class="headerlink" title="Swift字面量"></a>Swift字面量</h2><p>所谓字面量，就是指像特定的数字、字符串或者布尔值这样，能够直截了当的指出自己的类型并为变量进行赋值的值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> aNumber <span class="operator">=</span> <span class="number">3</span>  <span class="comment">//整型字面量</span></span><br><span class="line"><span class="keyword">let</span> aString <span class="operator">=</span> <span class="string">&quot;Hello&quot;</span>  <span class="comment">//字符串字面量</span></span><br><span class="line"><span class="keyword">let</span> aBool <span class="operator">=</span> <span class="literal">true</span>  <span class="comment">//布尔值字面量</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="整型字面量"><a href="#整型字面量" class="headerlink" title="整型字面量"></a>整型字面量</h3><p>整型字面量可以是一个十进制<code>无前缀</code>、二进制<code>0b</code>、八进制<code>0o</code>或十六进制<code>0x</code>常量</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> decimalInteger <span class="operator">=</span> <span class="number">17</span>           <span class="comment">// 17 - 十进制表示</span></span><br><span class="line"><span class="keyword">let</span> binaryInteger <span class="operator">=</span> <span class="number">0b10001</span>       <span class="comment">// 17 - 二进制表示</span></span><br><span class="line"><span class="keyword">let</span> octalInteger <span class="operator">=</span> <span class="number">0o21</span>           <span class="comment">// 17 - 八进制表示</span></span><br><span class="line"><span class="keyword">let</span> hexadecimalInteger <span class="operator">=</span> <span class="number">0x11</span>     <span class="comment">// 17 - 十六进制表示</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="浮点型字面量"><a href="#浮点型字面量" class="headerlink" title="浮点型字面量"></a>浮点型字面量</h3><p>浮点型字面量有整数部分，小数点，小数部分及指数部分</p>
+<p>除非特别指定，浮点型字面量的默认推导类型为 Swift 标准库类型中的 Double，表示64位浮点数</p>
+<p>浮点型字面量默认用十进制表示（无前缀），也可以用十六进制表示（加前缀 0x）</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> decimalDouble <span class="operator">=</span> <span class="number">12.1875</span>       <span class="comment">//十进制浮点型字面量</span></span><br><span class="line"><span class="keyword">let</span> exponentDouble <span class="operator">=</span> <span class="number">1.21875e1</span>    <span class="comment">//十进制浮点型字面量  1.21875 * 10^1</span></span><br><span class="line"><span class="keyword">let</span> hexadecimalDouble <span class="operator">=</span> <span class="number">0xC.3p0</span>   <span class="comment">//十六进制浮点型字面量  12.3 * 2^0</span></span><br></pre></td></tr></table></figure>
+
+<p>浮点型字面量允许使用下划线<code>_</code>来增强数字的可读性，下划线会被系统忽略，因此不会影响字面量的值</p>
+<p>同样的，也可以在数字前加0，并不会影响字面量的值</p>
+<h3 id="字符串型字面量"><a href="#字符串型字面量" class="headerlink" title="字符串型字面量"></a>字符串型字面量</h3><p>字符串型字面量由被包在双引号中的一串字符组成</p>
+<p>字符串型字面量中不能包含未转义的双引号 （”）、未转义的反斜线（\）、回车符或换行符</p>
+<table>
+<thead>
+<tr>
+<th align="left">转义字符</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>\0</code></td>
+<td align="left">空字符</td>
+</tr>
+<tr>
+<td align="left"><code>\\</code></td>
+<td align="left">反斜线 \</td>
+</tr>
+<tr>
+<td align="left"><code>\b</code></td>
+<td align="left">退格(BS) ，将当前位置移到前一列</td>
+</tr>
+<tr>
+<td align="left"><code>\f</code></td>
+<td align="left">换页(FF)，将当前位置移到下页开头</td>
+</tr>
+<tr>
+<td align="left"><code>\n</code></td>
+<td align="left">换行符</td>
+</tr>
+<tr>
+<td align="left"><code>\r</code></td>
+<td align="left">回车符</td>
+</tr>
+<tr>
+<td align="left"><code>\t</code></td>
+<td align="left">水平制表符</td>
+</tr>
+<tr>
+<td align="left"><code>\v</code></td>
+<td align="left">垂直制表符</td>
+</tr>
+<tr>
+<td align="left"><code>\&#39;</code></td>
+<td align="left">单引号</td>
+</tr>
+<tr>
+<td align="left"><code>\&quot;</code></td>
+<td align="left">双引号</td>
+</tr>
+<tr>
+<td align="left"><code>\000</code></td>
+<td align="left">1到3位八进制数所代表的任意字符</td>
+</tr>
+<tr>
+<td align="left"><code>\xhh...</code></td>
+<td align="left">1到2位十六进制所代表的任意字符</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqvogg93euj30vi0g2mzm.jpg"></p>
+<h3 id="布尔型字面量"><a href="#布尔型字面量" class="headerlink" title="布尔型字面量"></a>布尔型字面量</h3><p>布尔型字面量的默认类型是<code>Bool</code></p>
+<p>布尔值字面量有三个值，它们是Swift的保留关键字：<code>true表示真</code>、<code>false表示假</code>、<code>nil表示没有值</code></p>
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/1_Swift%E4%BB%8B%E7%BB%8D/"
+                                   title="Swift介绍"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Swift介绍</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/3_Swift%E8%BF%90%E7%AE%97%E7%AC%A6/"
+                                   title="Swift运算符"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Swift运算符</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">内置数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Int"><span class="nav-number">1.1.</span> <span class="nav-text">Int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UInt"><span class="nav-number">1.2.</span> <span class="nav-text">UInt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%EF%BC%9AFloat%E3%80%81Double"><span class="nav-number">1.3.</span> <span class="nav-text">浮点数：Float、Double</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC%EF%BC%9ABool"><span class="nav-number">1.4.</span> <span class="nav-text">布尔值：Bool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%9AString"><span class="nav-number">1.5.</span> <span class="nav-text">字符串：String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%EF%BC%9ACharacter"><span class="nav-number">1.6.</span> <span class="nav-text">字符：Character</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E7%B1%BB%E5%9E%8B%EF%BC%9AOptional"><span class="nav-number">1.7.</span> <span class="nav-text">可选类型：Optional</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="nav-number">2.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text">类型别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8"><span class="nav-number">4.</span> <span class="nav-text">类型安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD"><span class="nav-number">5.</span> <span class="nav-text">类型推断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%8F%98%E9%87%8F"><span class="nav-number">6.</span> <span class="nav-text">Swift变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">6.1.</span> <span class="nav-text">变量的声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="nav-number">6.2.</span> <span class="nav-text">变量命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%BE%93%E5%87%BA"><span class="nav-number">6.3.</span> <span class="nav-text">变量输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%8F%AF%E9%80%89%E7%B1%BB%E5%9E%8B-Optionals"><span class="nav-number">7.</span> <span class="nav-text">Swift可选类型(Optionals)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E8%A7%A3%E6%9E%90"><span class="nav-number">7.1.</span> <span class="nav-text">强制解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90%E2%9D%93"><span class="nav-number">7.2.</span> <span class="nav-text">自动解析❓</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E7%BB%91%E5%AE%9A"><span class="nav-number">7.3.</span> <span class="nav-text">可选绑定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%B8%B8%E9%87%8F"><span class="nav-number">8.</span> <span class="nav-text">Swift常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.</span> <span class="nav-text">Swift字面量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.1.</span> <span class="nav-text">整型字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.2.</span> <span class="nav-text">浮点型字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.3.</span> <span class="nav-text">字符串型字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.4.</span> <span class="nav-text">布尔型字面量</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
+
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">内置数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Int"><span class="nav-number">1.1.</span> <span class="nav-text">Int</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UInt"><span class="nav-number">1.2.</span> <span class="nav-text">UInt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%EF%BC%9AFloat%E3%80%81Double"><span class="nav-number">1.3.</span> <span class="nav-text">浮点数：Float、Double</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC%EF%BC%9ABool"><span class="nav-number">1.4.</span> <span class="nav-text">布尔值：Bool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%9AString"><span class="nav-number">1.5.</span> <span class="nav-text">字符串：String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%EF%BC%9ACharacter"><span class="nav-number">1.6.</span> <span class="nav-text">字符：Character</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E7%B1%BB%E5%9E%8B%EF%BC%9AOptional"><span class="nav-number">1.7.</span> <span class="nav-text">可选类型：Optional</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="nav-number">2.</span> <span class="nav-text">数值范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text">类型别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%AE%89%E5%85%A8"><span class="nav-number">4.</span> <span class="nav-text">类型安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD"><span class="nav-number">5.</span> <span class="nav-text">类型推断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%8F%98%E9%87%8F"><span class="nav-number">6.</span> <span class="nav-text">Swift变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">6.1.</span> <span class="nav-text">变量的声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="nav-number">6.2.</span> <span class="nav-text">变量命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%BE%93%E5%87%BA"><span class="nav-number">6.3.</span> <span class="nav-text">变量输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%8F%AF%E9%80%89%E7%B1%BB%E5%9E%8B-Optionals"><span class="nav-number">7.</span> <span class="nav-text">Swift可选类型(Optionals)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E8%A7%A3%E6%9E%90"><span class="nav-number">7.1.</span> <span class="nav-text">强制解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A7%A3%E6%9E%90%E2%9D%93"><span class="nav-number">7.2.</span> <span class="nav-text">自动解析❓</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E7%BB%91%E5%AE%9A"><span class="nav-number">7.3.</span> <span class="nav-text">可选绑定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%B8%B8%E9%87%8F"><span class="nav-number">8.</span> <span class="nav-text">Swift常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.</span> <span class="nav-text">Swift字面量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.1.</span> <span class="nav-text">整型字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.2.</span> <span class="nav-text">浮点型字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.3.</span> <span class="nav-text">字符串型字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%9E%8B%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">9.4.</span> <span class="nav-text">布尔型字面量</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/toggle-theme.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/code-block.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/local-search.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+
+    <!-- photos-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

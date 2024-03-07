@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            Swift枚举和结构体 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/font/css/brands.min.css">
+    
+        
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/","Apple、Linux":"/Apple、Linux","计算机理论":"/计算机理论","产品、运营":"/产品、运营","我的项目👻":"https://github.com/Liao-Hexo"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"欢迎访问廖家龙的博客网站","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/Liao-Hexo","apple":"https://developer.apple.com/cn/","google":"https://www.google.com","stack-overflow":"https://stackoverflow.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"category":true,"tag":true,"announcement":"如有任何疑问，请联系本人邮箱“2668802570@qq.com”"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["如有任何疑问，请联系本人邮箱2668802570@qq.com"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY年MM月DD日 HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"jsdelivr"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":true,"css":[null,"/css/custom.css"],"js":[null]},"version":"4.0.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/Apple%E3%80%81Linux"
+                            >
+                                APPLE、LINUX
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA"
+                            >
+                                计算机理论
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/%E4%BA%A7%E5%93%81%E3%80%81%E8%BF%90%E8%90%A5"
+                            >
+                                产品、运营
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://github.com/Liao-Hexo"
+                            >
+                                我的项目👻
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/Apple%E3%80%81Linux">APPLE、LINUX</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">计算机理论</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/%E4%BA%A7%E5%93%81%E3%80%81%E8%BF%90%E8%90%A5">产品、运营</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://github.com/Liao-Hexo">我的项目👻</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Swift枚举和结构体
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">如有任何疑问，请联系本人邮箱2668802570@qq.com</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2018年12月31日 23:52:00</span>
+                <span class="mobile">2018-12-31 23:52</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Tue Nov 21 2023 23:14:30 GMT+0800">2023年11月21日 23:14:30</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h2 id="Swift-枚举"><a href="#Swift-枚举" class="headerlink" title="Swift 枚举"></a>Swift 枚举</h2><p>枚举简单的说也是一种数据类型，只不过是这种数据类型只包含自定义的特定数据，它是一组有共同特性的数据的集合</p>
+<p>枚举的功能为：</p>
+<ul>
+<li>它声明在类中，可以通过实例化类来访问它的值。</li>
+<li>枚举也可以定义构造函数（initializers）来提供一个初始成员值；可以在原始的实现基础上扩展它们的功能。</li>
+<li>可以遵守协议（protocols）来提供标准的功能。</li>
+</ul>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义枚举</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">DaysofaWeek</span> &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">Sunday</span>  <span class="comment">//case关键词表示一行新的成员值将被定义</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Monday</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">TUESDAY</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">WEDNESDAY</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">THURSDAY</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">FRIDAY</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Saturday</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> weekDay <span class="operator">=</span> <span class="type">DaysofaWeek</span>.<span class="type">THURSDAY</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> weekDay &#123;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">case</span> .<span class="type">Sunday</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期天&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> .<span class="type">Monday</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期一&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> .<span class="type">TUESDAY</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期二&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> .<span class="type">WEDNESDAY</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期三&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> .<span class="type">THURSDAY</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期四&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> .<span class="type">FRIDAY</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期五&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> .<span class="type">Saturday</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;星期六&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：和 C 和 Objective-C 不同，Swift 的枚举成员在被创建时不会被赋予一个默认的整型值。在上面的*<code>DaysofaWeek</code><em>例子中，</em><code>Sunday</code><em>，</em><code>Monday</code><em>，</em><code>……</code><em>和</em><code>Saturday</code><em>不会隐式地赋值为</em><code>0</code><em>，</em><code>1</code><em>，</em><code>……</code><em>和</em><code>6</code><em>。相反，这些枚举成员本身就有完备的值，这些值是已经明确定义好的</em><code>DaysofaWeek</code>*类型。</p>
+<p>枚举可分为相关值与原始值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">相关值</th>
+<th align="left">原始值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">不同数据类型</td>
+<td align="left">相同数据类型</td>
+</tr>
+<tr>
+<td align="left">实例: enum {10,0.8,”Hello”}</td>
+<td align="left">实例: enum {10,35,50}</td>
+</tr>
+<tr>
+<td align="left">值的创建基于常量或变量</td>
+<td align="left">预先填充的值</td>
+</tr>
+<tr>
+<td align="left">相关值是当你在创建一个基于枚举成员的新常量或变量时才会被设置，并且每次当你这么做得时候，它的值可以是不同的。</td>
+<td align="left">原始值始终是相同的</td>
+</tr>
+</tbody></table>
+<h3 id="相关值"><a href="#相关值" class="headerlink" title="相关值"></a>相关值</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy7zaz6thj319u0n4wkk.jpg"></p>
+<h3 id="原始值"><a href="#原始值" class="headerlink" title="原始值"></a>原始值</h3><p>原始值可以是字符串，字符，或者任何整型值或浮点型值。每个原始值在它的枚举声明中必须是唯一的。</p>
+<p>在原始值为整数的枚举时，不需要显式的为每一个成员赋值，Swift会自动为你赋值。例如，当使用整数作为原始值时，隐式赋值的值依次递增1。如果第一个值没有被赋初值，将会被自动置为0。</p>
+<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Swift/008i3skNly1gqy83cuaq2j30ia0n4tbw.jpg"></p>
+<h2 id="Swift-结构体"><a href="#Swift-结构体" class="headerlink" title="Swift 结构体"></a>Swift 结构体</h2><p>Swift 结构体是构建代码所用的一种通用且灵活的构造体。我们可以为结构体定义属性（常量、变量）和添加方法，从而扩展结构体的功能。</p>
+<p>与 C 和 Objective C 不同的是：</p>
+<ul>
+<li>结构体不需要包含实现文件和接口。 </li>
+<li>结构体允许我们创建一个单一文件，且系统会自动生成面向其它代码的外部接口。</li>
+</ul>
+<p>结构体总是通过被复制的方式在代码中传递，因此它的值是不可修改的。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">MarkStruct</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> mark1: <span class="type">Int</span> <span class="operator">=</span> <span class="number">100</span></span><br><span class="line">    <span class="keyword">var</span> mark2: <span class="type">Int</span> <span class="operator">=</span> <span class="number">78</span></span><br><span class="line">    <span class="keyword">var</span> mark3: <span class="type">Int</span> <span class="operator">=</span> <span class="number">98</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结构体实例化</span></span><br><span class="line"><span class="keyword">var</span> marks <span class="operator">=</span> <span class="type">MarkStruct</span>()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(marks.mark1, marks.mark2, marks.mark3)</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体应用"><a href="#结构体应用" class="headerlink" title="结构体应用"></a>结构体应用</h3><p>在代码中，你可以使用结构体来定义你的自定义数据类型，结构体实例总是通过值传递来定义你的自定义数据类型</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ReSolution</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> width <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> height <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个结构体</span></span><br><span class="line"><span class="keyword">let</span> hd <span class="operator">=</span> <span class="type">ReSolution</span>(width: <span class="number">1920</span>, height: <span class="number">1080</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体赋值,实际上做的是拷贝操作,cinema和hd结构体在内存中各自占用独立的空间</span></span><br><span class="line"><span class="keyword">var</span> cinema <span class="operator">=</span> hd</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改cinema结构体,不会影响hd结构体</span></span><br><span class="line">cinema.width <span class="operator">=</span> <span class="number">2048</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;cinema is now <span class="subst">\(cinema.width)</span> pixels wide&quot;</span>) <span class="comment">// return:2048</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hd is still <span class="subst">\(hd.width)</span> pixels wide&quot;</span>)       <span class="comment">// return:1920</span></span><br></pre></td></tr></table></figure>
+
+<p>与值类型不同，引用类型在被赋予到一个变量、常量或者被传递到一个函数时，操作的并不是其拷贝。因此，引用的是已存在的实例本身而不是其拷贝。类就是引用类型。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ResolutionClass</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> width <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> height <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(<span class="params">width</span>: <span class="type">Int</span>,<span class="params">height</span>: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.width <span class="operator">=</span> width</span><br><span class="line">        <span class="keyword">self</span>.height <span class="operator">=</span> height</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个类对象</span></span><br><span class="line"><span class="keyword">let</span> hdClass <span class="operator">=</span> <span class="type">ResolutionClass</span>(width: <span class="number">1920</span>, height: <span class="number">1080</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类对象赋值,引用同一个内存空间</span></span><br><span class="line"><span class="keyword">var</span> cinemaClass <span class="operator">=</span> hdClass</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改cinema对象,本质上也是修改hdClass对象</span></span><br><span class="line">cinemaClass.width <span class="operator">=</span> <span class="number">2048</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;cinemaClass is now <span class="subst">\(cinemaClass.width)</span> pixels wide&quot;</span>)  <span class="comment">// return: 2048</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hdClass is also <span class="subst">\(hdClass.width)</span> pixels wide&quot;</span>)         <span class="comment">// return: 2048</span></span><br></pre></td></tr></table></figure>
+
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/7_Swift%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85/"
+                                   title="Swift函数和闭包"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Swift函数和闭包</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/9_Swift%E7%B1%BB/"
+                                   title="Swift类"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Swift类</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift-%E6%9E%9A%E4%B8%BE"><span class="nav-number">1.</span> <span class="nav-text">Swift 枚举</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%80%BC"><span class="nav-number">1.2.</span> <span class="nav-text">相关值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%A7%8B%E5%80%BC"><span class="nav-number">1.3.</span> <span class="nav-text">原始值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift-%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">Swift 结构体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">结构体应用</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
+
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift-%E6%9E%9A%E4%B8%BE"><span class="nav-number">1.</span> <span class="nav-text">Swift 枚举</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%80%BC"><span class="nav-number">1.2.</span> <span class="nav-text">相关值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%A7%8B%E5%80%BC"><span class="nav-number">1.3.</span> <span class="nav-text">原始值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift-%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">Swift 结构体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">结构体应用</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/toggle-theme.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/code-block.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/libs/anime.min.js"></script>
+
+<!-- local-search -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/local-search.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/lazyload.js"></script>
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/post-helper.js"></script>
+
+        <!-- toc -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/toc.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/post/share.js"></script>
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+
+    <!-- photos-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@4.0.0/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>
