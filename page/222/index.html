@@ -199,18 +199,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/2_SHOW%E8%AF%AD%E5%8F%A5HELP%20SHOW/">
-                            SHOW语句HELP SHOW
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">
+                            串的朴素模式匹配算法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            SHOW语句【HELP SHOW;】：
-可使用的数据库名：
-USE选择数据库（必须先使用USE打开数据库，才能读取其中的数据）
-SHOW TABLES；返回当前选择的数据库内可用表的列表
-SHOW COLUMNS FROM…….【DESCRIBE…....
+                            一定是主串中存在的才叫“子串”
+模式串：想尝试在主串中找到的串，未必存在
+串的模式匹配：在主串中找到与模式串相同的子串，并返回其所在位置【就是定位操作】
+朴素模式匹配算法：
+【比较好的情况：每个子串的第一个字符就与模式串不匹配，若模式串长度为m，主串...
                         
                     </div>
 
@@ -220,7 +220,7 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:47:36 GMT+0800">2023-11-21 21:47:36</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:05:13 GMT+0800">2023-11-21 23:05:13</span>
             </span>
         
 
@@ -243,7 +243,7 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/">数据库系统原理-《MySQL必知必会》</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/">数据结构和算法-数据结构笔记</a></li>
                         
                     
                 </ul>
@@ -257,7 +257,7 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/2_SHOW%E8%AF%AD%E5%8F%A5HELP%20SHOW/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -271,18 +271,18 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/3_%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AESELECT%E8%AF%AD%E5%8F%A5/">
-                            检索数据SELECT语句
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">
+                            KMP算法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            检索数据【SELECT语句】：
-检索单个列：
-从db表中检索一个名为Host的列：从db表中检索多个列：从db表中检索所有列：
-检索不同的行？？
-限制结果：LIMIT 1；【指示MySQL返回不多于1行】LIMIT 1，2；【第一个数为开始位置，第二...
+                            朴素模式匹配算法的缺点：当某些子串与模式串能部分匹配时，主串的扫描指针i经常回溯，导致时间开销增加
+改进思路：主串指针不回溯，只有模式串指针回溯
+
+求模式串的next数组：当模式串的第j个字符匹配失败时，令模式串跳到next[j]再继续匹配
+串的前缀...
                         
                     </div>
 
@@ -292,7 +292,7 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:47:50 GMT+0800">2023-11-21 21:47:50</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:05:22 GMT+0800">2023-11-21 23:05:22</span>
             </span>
         
 
@@ -315,7 +315,7 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/">数据库系统原理-《MySQL必知必会》</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/">数据结构和算法-数据结构笔记</a></li>
                         
                     
                 </ul>
@@ -329,7 +329,7 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/3_%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AESELECT%E8%AF%AD%E5%8F%A5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -351,8 +351,8 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
                    type="number"
                    value="222"
                    min="1"
-                   max="391"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">391</span>
+                   max="317"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
         </div>
 
 
@@ -375,45 +375,190 @@ SHOW COLUMNS FROM…….【DESCRIBE…....
         </div>
 
         <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="border-box website-info-box default">
-        
-            <div class="copyright-info info-item default">
-                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
-                
-                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
-                
-            </div>
+            $shields-style-height = 22px
 
-            <div class="theme-info info-item default">
-            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
-            </div>
+.footer {
+  padding 1rem 0
+  color var(--text-color-4)
+  font-size 1rem
 
-            
+  a {
+    color var(--text-color-4)
 
-            
-                <div class="deploy-info info-item default">
-                    
-                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
-                        
-                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
-                        
-                    </a>
-                    
-                </div>
-            
-        
+    &:hover {
+      color var(--primary-color)
+    }
 
-        <div class="count-item info-item default">
-            
+    &.no-pointer {
+      pointer-events none
+    }
+  }
 
-            
 
-            
-        </div>
-    </div>
-</footer>
+  .website-info-box {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+
+    &.shields {
+      padding 0 1rem
+
+      img {
+        height $shields-style-height !important
+      }
+
+
+      a {
+        position relative
+        display inline-flex
+        box-sizing border-box
+        text-decoration none
+      }
+
+
+      .shields-item
+      .count-box {
+        margin 0.3rem 0.2rem
+        user-select none
+      }
+    }
+
+
+    +keep-mobile() {
+      &.shields {
+        .shields-item
+        .count-box {
+          margin 0.12rem -0.3rem
+          transform scale(0.9)
+          transform-origin center center
+        }
+      }
+    }
+
+
+    .info-item {
+      position relative
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content center
+      box-sizing border-box
+      color var(--text-color-4)
+
+
+      &.shields {
+        .count-box {
+          display flex
+          justify-content flex-start
+          height $shields-style-height
+          color #f2f2f2
+          font-size 12.6px
+
+
+          .item-type
+          .item-value {
+            display flex
+            align-items center
+            height 100%
+            padding 0 6px
+          }
+
+
+          .item-type {
+            margin-right 0
+            background #555555
+          }
+
+          .item-value {
+
+            &.uv {
+              background coral
+            }
+
+            &.pv {
+              background orange
+            }
+
+            &.word {
+              background indianred
+            }
+          }
+        }
+      }
+
+
+      &.default {
+        margin 0.2rem 0
+
+        .count-box {
+          margin-right 15px
+
+          &::before {
+            position absolute
+            top 50%
+            left -10px
+            box-sizing border-box
+            transform translateY(-55%)
+            content '|'
+          }
+
+
+          &:first-child {
+            &::before {
+              display none
+            }
+          }
+
+
+          &:last-child {
+            margin-right 0
+          }
+
+
+          .item-type {
+            margin-right 4px
+          }
+        }
+      }
+
+
+      &.count-item {
+        display flex
+
+        .count-box {
+          &.uv
+          &.pv {
+            display none
+          }
+        }
+      }
+
+
+      &.deploy-info {
+
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.08rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation heartbeat-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>

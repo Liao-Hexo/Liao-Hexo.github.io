@@ -199,16 +199,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.13_%E7%AE%A1%E7%A8%8B/">
-                            管程
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.9_HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E5%92%8C%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%9A%84%E6%A0%BC%E5%BC%8F%EF%BC%9F/">
+                            HTTP请求报文和响应报文的格式？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            为什么要引入管程信号量机制存在的问题：编写程序困难，易出错
-能不能设计一种机制，让程序员写程序时不需要再关注复杂的PV操作，让写代码更轻松呢？
-1973年，Brinch Hansen首次在程序设计语言（Pascal）中引入了“管程”成分：一种高级同步...
+                            请求报文格式：
+
+请求行（请求方法+URI协议+版本）
+请求头部
+空行
+请求主体
+
+123456789GET/sample.jspHTTP/1.1 请求行Accept:image/gif.image/jpeg, 请求头部Accept-Language...
                         
                     </div>
 
@@ -218,7 +223,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:08:45 GMT+0800">2023-11-21 22:08:45</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:32:10 GMT+0800">2023-11-21 22:32:10</span>
             </span>
         
 
@@ -241,7 +246,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">操作系统原理-操作系统原理笔记</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/">计算机网络原理-计算机网络原理面试题</a></li>
                         
                     
                 </ul>
@@ -255,7 +260,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.13_%E7%AE%A1%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.9_HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E5%92%8C%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%9A%84%E6%A0%BC%E5%BC%8F%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,15 +274,20 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.14_%E6%AD%BB%E9%94%81/">
-                            死锁
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.10_HTTP%E5%B8%B8%E8%A7%81%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F/">
+                            HTTP常见的状态码有哪些？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            死锁的概念什么是死锁在并发环境下，各进程因竞争资源而造成的一种互相等待对方手里的资源，导致各进程都阻塞，都无法向前推进的现象，就是“死锁”。发生死锁后若无外力干涉，这些进程都将无法向前推进
-进程死锁、饥饿、死循环的区别死锁：各进程互相等待对方手里的资...
+                            常见状态码：
+
+100：表明到目前为止都很正常，客户端可以继续发送请求或者忽略这个响应
+
+200：服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。
+
+301 ： (永久移动) 请求的网页已永久移动到新位置。 服务器返回此响应(对 GET...
                         
                     </div>
 
@@ -287,7 +297,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:08:59 GMT+0800">2023-11-21 22:08:59</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:32:20 GMT+0800">2023-11-21 22:32:20</span>
             </span>
         
 
@@ -310,7 +320,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">操作系统原理-操作系统原理笔记</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/">计算机网络原理-计算机网络原理面试题</a></li>
                         
                     
                 </ul>
@@ -324,7 +334,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.14_%E6%AD%BB%E9%94%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.10_HTTP%E5%B8%B8%E8%A7%81%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +356,8 @@
                    type="number"
                    value="139"
                    min="1"
-                   max="391"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">391</span>
+                   max="317"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
         </div>
 
 
@@ -370,45 +380,190 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="border-box website-info-box default">
-        
-            <div class="copyright-info info-item default">
-                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
-                
-                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
-                
-            </div>
+            $shields-style-height = 22px
 
-            <div class="theme-info info-item default">
-            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
-            </div>
+.footer {
+  padding 1rem 0
+  color var(--text-color-4)
+  font-size 1rem
 
-            
+  a {
+    color var(--text-color-4)
 
-            
-                <div class="deploy-info info-item default">
-                    
-                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
-                        
-                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
-                        
-                    </a>
-                    
-                </div>
-            
-        
+    &:hover {
+      color var(--primary-color)
+    }
 
-        <div class="count-item info-item default">
-            
+    &.no-pointer {
+      pointer-events none
+    }
+  }
 
-            
 
-            
-        </div>
-    </div>
-</footer>
+  .website-info-box {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+
+    &.shields {
+      padding 0 1rem
+
+      img {
+        height $shields-style-height !important
+      }
+
+
+      a {
+        position relative
+        display inline-flex
+        box-sizing border-box
+        text-decoration none
+      }
+
+
+      .shields-item
+      .count-box {
+        margin 0.3rem 0.2rem
+        user-select none
+      }
+    }
+
+
+    +keep-mobile() {
+      &.shields {
+        .shields-item
+        .count-box {
+          margin 0.12rem -0.3rem
+          transform scale(0.9)
+          transform-origin center center
+        }
+      }
+    }
+
+
+    .info-item {
+      position relative
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content center
+      box-sizing border-box
+      color var(--text-color-4)
+
+
+      &.shields {
+        .count-box {
+          display flex
+          justify-content flex-start
+          height $shields-style-height
+          color #f2f2f2
+          font-size 12.6px
+
+
+          .item-type
+          .item-value {
+            display flex
+            align-items center
+            height 100%
+            padding 0 6px
+          }
+
+
+          .item-type {
+            margin-right 0
+            background #555555
+          }
+
+          .item-value {
+
+            &.uv {
+              background coral
+            }
+
+            &.pv {
+              background orange
+            }
+
+            &.word {
+              background indianred
+            }
+          }
+        }
+      }
+
+
+      &.default {
+        margin 0.2rem 0
+
+        .count-box {
+          margin-right 15px
+
+          &::before {
+            position absolute
+            top 50%
+            left -10px
+            box-sizing border-box
+            transform translateY(-55%)
+            content '|'
+          }
+
+
+          &:first-child {
+            &::before {
+              display none
+            }
+          }
+
+
+          &:last-child {
+            margin-right 0
+          }
+
+
+          .item-type {
+            margin-right 4px
+          }
+        }
+      }
+
+
+      &.count-item {
+        display flex
+
+        .count-box {
+          &.uv
+          &.pv {
+            display none
+          }
+        }
+      }
+
+
+      &.deploy-info {
+
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.08rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation heartbeat-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>

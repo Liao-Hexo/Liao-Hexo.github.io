@@ -199,21 +199,43 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2021/04/30/Apple%E3%80%81Linux/Ubuntu%20Server/10_vi%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                            vi的基本使用
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.1_TCP%E5%92%8CUDP%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">
+                            TCP和UDP的区别？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            本文目录
-使用vi的原因
-启动、退出、保存vi
-vi的三种工作模式
-移动光标
-基本编辑 a.撤销命令 b.删除文本 c.剪切、复制和粘贴文本 d.合并行
-查找和替换 a.行内搜索 b.搜索整个文件 c.全局搜索和替换
-编辑多个文件 a.切换文件 b....
+                            
+
+
+
+UDP
+TCP
+
+
+
+是否连接
+无连接
+面向连接
+
+
+是否可靠
+不可靠传输，不使用流量控制和拥塞控制
+可靠传输，使用流量控制和拥塞控制
+
+
+是否有序
+无序
+有序，消息在传输过程中可能会乱序，TCP 会重新排序
+
+
+传输速度
+快
+慢
+
+
+连接对...
                         
                     </div>
 
@@ -223,7 +245,7 @@ vi的三种工作模式
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:07:40 GMT+0800">2023-11-21 21:07:40</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:37:07 GMT+0800">2023-11-21 22:37:07</span>
             </span>
         
 
@@ -234,7 +256,7 @@ vi的三种工作模式
             <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="article-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Apple%E3%80%81Linux/">Apple、Linux</a></li>
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
                         
                     
                 </ul>
@@ -246,7 +268,7 @@ vi的三种工作模式
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Ubuntu-Server/">Ubuntu Server</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/">计算机网络原理-计算机网络原理面试题</a></li>
                         
                     
                 </ul>
@@ -260,7 +282,7 @@ vi的三种工作模式
     </div>
 
     
-        <a class="home-read-more" href="/2021/04/30/Apple%E3%80%81Linux/Ubuntu%20Server/10_vi%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.1_TCP%E5%92%8CUDP%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -274,18 +296,21 @@ vi的三种工作模式
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2021/04/30/Apple%E3%80%81Linux/Ubuntu%20Server/11_%E5%AE%9A%E5%88%B6%E6%8F%90%E7%A4%BA%E7%AC%A6/">
-                            定制提示符
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.2_TCP%E5%92%8CUDP%E5%AF%B9%E5%BA%94%E7%9A%84%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%EF%BC%9F/">
+                            TCP和UDP对应的应用层协议？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            系统的默认提示符：提示符中包含了用户名、主机名和当前的工作目录
-提示符是由名为PS1（提示符字符串1）的环境变量定义的，echo命令可以帮助用户看到PS1的值
+                            TCP 是面向连接，能保证数据的可靠性交付，因此经常用于：
 
-尝试设计提示符：
-备份：在终端会话中，用户随时可以通过这个过程的逆操作来复原最初的提示符...
+FTP文件传输
+HTTP &#x2F; HTTPS
+
+UDP 面向无连接，它可以随时发送数据，再加上UDP本身的处理既简单又高效，因此经常用于：
+
+包总量较少的通信，如 DNS 、SNMP...
                         
                     </div>
 
@@ -295,7 +320,7 @@ vi的三种工作模式
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:07:59 GMT+0800">2023-11-21 21:07:59</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:37:17 GMT+0800">2023-11-21 22:37:17</span>
             </span>
         
 
@@ -306,7 +331,7 @@ vi的三种工作模式
             <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="article-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Apple%E3%80%81Linux/">Apple、Linux</a></li>
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
                         
                     
                 </ul>
@@ -318,7 +343,7 @@ vi的三种工作模式
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Ubuntu-Server/">Ubuntu Server</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/">计算机网络原理-计算机网络原理面试题</a></li>
                         
                     
                 </ul>
@@ -332,7 +357,7 @@ vi的三种工作模式
     </div>
 
     
-        <a class="home-read-more" href="/2021/04/30/Apple%E3%80%81Linux/Ubuntu%20Server/11_%E5%AE%9A%E5%88%B6%E6%8F%90%E7%A4%BA%E7%AC%A6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.2_TCP%E5%92%8CUDP%E5%AF%B9%E5%BA%94%E7%9A%84%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -354,8 +379,8 @@ vi的三种工作模式
                    type="number"
                    value="124"
                    min="1"
-                   max="391"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">391</span>
+                   max="317"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
         </div>
 
 
@@ -378,45 +403,190 @@ vi的三种工作模式
         </div>
 
         <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="border-box website-info-box default">
-        
-            <div class="copyright-info info-item default">
-                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
-                
-                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
-                
-            </div>
+            $shields-style-height = 22px
 
-            <div class="theme-info info-item default">
-            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
-            </div>
+.footer {
+  padding 1rem 0
+  color var(--text-color-4)
+  font-size 1rem
 
-            
+  a {
+    color var(--text-color-4)
 
-            
-                <div class="deploy-info info-item default">
-                    
-                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
-                        
-                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
-                        
-                    </a>
-                    
-                </div>
-            
-        
+    &:hover {
+      color var(--primary-color)
+    }
 
-        <div class="count-item info-item default">
-            
+    &.no-pointer {
+      pointer-events none
+    }
+  }
 
-            
 
-            
-        </div>
-    </div>
-</footer>
+  .website-info-box {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+
+    &.shields {
+      padding 0 1rem
+
+      img {
+        height $shields-style-height !important
+      }
+
+
+      a {
+        position relative
+        display inline-flex
+        box-sizing border-box
+        text-decoration none
+      }
+
+
+      .shields-item
+      .count-box {
+        margin 0.3rem 0.2rem
+        user-select none
+      }
+    }
+
+
+    +keep-mobile() {
+      &.shields {
+        .shields-item
+        .count-box {
+          margin 0.12rem -0.3rem
+          transform scale(0.9)
+          transform-origin center center
+        }
+      }
+    }
+
+
+    .info-item {
+      position relative
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content center
+      box-sizing border-box
+      color var(--text-color-4)
+
+
+      &.shields {
+        .count-box {
+          display flex
+          justify-content flex-start
+          height $shields-style-height
+          color #f2f2f2
+          font-size 12.6px
+
+
+          .item-type
+          .item-value {
+            display flex
+            align-items center
+            height 100%
+            padding 0 6px
+          }
+
+
+          .item-type {
+            margin-right 0
+            background #555555
+          }
+
+          .item-value {
+
+            &.uv {
+              background coral
+            }
+
+            &.pv {
+              background orange
+            }
+
+            &.word {
+              background indianred
+            }
+          }
+        }
+      }
+
+
+      &.default {
+        margin 0.2rem 0
+
+        .count-box {
+          margin-right 15px
+
+          &::before {
+            position absolute
+            top 50%
+            left -10px
+            box-sizing border-box
+            transform translateY(-55%)
+            content '|'
+          }
+
+
+          &:first-child {
+            &::before {
+              display none
+            }
+          }
+
+
+          &:last-child {
+            margin-right 0
+          }
+
+
+          .item-type {
+            margin-right 4px
+          }
+        }
+      }
+
+
+      &.count-item {
+        display flex
+
+        .count-box {
+          &.uv
+          &.pv {
+            display none
+          }
+        }
+      }
+
+
+      &.deploy-info {
+
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.08rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation heartbeat-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>
