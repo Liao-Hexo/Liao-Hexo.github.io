@@ -284,9 +284,39 @@
 <p>存在的问题：为对象的属性赋值的时候，语法上其实只要数据的类型是属性的类型就是可以的，但是情理上这么做是不合的（人的年龄）</p>
 <p>解决问题：<br>1）将属性的@public去掉<br>2）为类提供一个方法，这个方法专门为这个属性赋值，这个方法我们叫做setter</p>
 <p>setter方法：<br>1）这个方法是一个对象方法，因为这个方法要为属性赋值；<br>2）这个方法没有返回值；<br>3）这个方法的名称必须以set开头，跟上去掉下划线首字母大写的属性名；<br>4）这个方法一定是有参数的，参数的类型和属性的类型一致，参数的名称和属性的名称一致（去掉下划线）<br>5）在方法的实现中，判断传入的数据是否符合逻辑，如果符合逻辑则赋值，否则做默认处理<br>6）外界想要为对象的属性赋值，那么就调用这个对象的setter方法，将要赋值的数据传入这个方法</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3o30cn3j308o06v0u1.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3oaai7pj309w08xabx.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3ogduznj308k06s75l.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3o30cn3j308o06v0u1.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3oaai7pj309w08xabx.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3ogduznj308k06s75l.jpg"
+                     
+                ></p>
 <p>以上又有一个问题：在外界无法取出属性的值了</p>
-<p>getter方法：<br>1）是一个对象方法，因为这个方法做的事情是拿到属性的值返回<br>2）有返回值，返回值的类型和属性的类型一致<br>3）这个方法的名称直接就是属性的名称（去掉下划线）<br>4）这个方法没有参数<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3on7kdlj303u00saa3.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3oudea4j303u01yq33.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3p1a4z4j309k01omxi.jpg"></p>
+<p>getter方法：<br>1）是一个对象方法，因为这个方法做的事情是拿到属性的值返回<br>2）有返回值，返回值的类型和属性的类型一致<br>3）这个方法的名称直接就是属性的名称（去掉下划线）<br>4）这个方法没有参数<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3on7kdlj303u00saa3.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3oudea4j303u01yq33.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3p1a4z4j309k01omxi.jpg"
+                     
+                ></p>
 <p>只要属性需要被外界访问，就要为这个属性封装setter和getter，哪怕在赋值或者取值的时候没有任何逻辑验证</p>
 <p>只读封装：为属性封装的时候，只提供getter，不提供setter<br>只写封装：为属性封装的时候，只提供setter，不提供getter</p>
 
@@ -407,190 +437,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

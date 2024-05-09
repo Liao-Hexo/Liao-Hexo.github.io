@@ -280,25 +280,100 @@
 <p>任何两个地址连续的内存单元，N号单元和N+1号单元，可以将它们看成两个内存单元，也可看成一个地址为N的字单元中的高位字节单元和低位字节单元<br>——————————</p>
 <p>CPU要读写一个内存单元的时候，必须先给出这个内存单元的地址，在8086PC中，内存地址由段地址和偏移地址组成，8086CPU中有一个DS寄存器，通常用来存放要访问数据的段地址</p>
 <p>可以使用mov指令将一个内存单元中的内容送入一个寄存器中：mov 寄存器名，内存单元地址</p>
-<p>“[…]”表示一个内存单元，“[…]”中的0表示内存单元的偏移地址，指令执行时，8086CPU自动取ds中的数据为内存单元的段地址<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor98a6bwhj302m01kq2x.jpg"></p>
+<p>“[…]”表示一个内存单元，“[…]”中的0表示内存单元的偏移地址，指令执行时，8086CPU自动取ds中的数据为内存单元的段地址<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor98a6bwhj302m01kq2x.jpg"
+                     
+                ></p>
 <p>8086CPU不支持将数据直接送入段寄存器的操作，ds是一个段寄存器，所以mov ds,1000H这条指令是非法的<br>——————————</p>
-<p>8086CPU是16位结构，有16根数据线，所以可以一次性传送16位的数据，也就是说可以一次性传送一个字，只要在mov指令中给出16位的寄存器就可以进行16位数据的传送了<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor98kuzmmj307t01kwem.jpg"></p>
+<p>8086CPU是16位结构，有16根数据线，所以可以一次性传送16位的数据，也就是说可以一次性传送一个字，只要在mov指令中给出16位的寄存器就可以进行16位数据的传送了<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor98kuzmmj307t01kwem.jpg"
+                     
+                ></p>
 <p>——————————</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor98wn3cvj307t03aq3m.jpg"><br>mov 寄存器，段寄存器<br>mov 内存单元，段寄存器<br>mov 段寄存器，内存单元<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor998bpukj30b604laaw.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor98wn3cvj307t03aq3m.jpg"
+                     
+                ><br>mov 寄存器，段寄存器<br>mov 内存单元，段寄存器<br>mov 段寄存器，内存单元<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor998bpukj30b604laaw.jpg"
+                     
+                ></p>
 <p>mov、add、sub是具有两个操作对象的指令，jmp是具有一个操作对象的指令<br>——————————</p>
-<p>我们可以将一组长度为N（N&lt;&#x3D;64KB）、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor99h7y8sj30a30690tn.jpg"></p>
+<p>我们可以将一组长度为N（N&lt;&#x3D;64KB）、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor99h7y8sj30a30690tn.jpg"
+                     
+                ></p>
 <p>——————————</p>
 <p>栈是一种具有特殊的访问方式的存储空间，最后进入这个空间的数据，最先出去，栈的这种操作规则被称为：LIFO（Last In First Out，后进先出）<br>——————————</p>
-<p>8086CPU提供相关的指令来以栈的方式访问内存空间，这意味着，在基于8086CPU编程的时候，可以将一段内存当作栈来使用：PUSH（入栈）和POP（出栈），8086CPU的入栈和出栈操作都是以字为单位进行的<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor99yjbm6j30cc0gmjuw.jpg"></p>
-<p>CS、IP中存放着当前指令的段地址和偏移地址<br>8086CPU中，有两个寄存器，段寄存器SS和寄存器SP，栈顶的段地址存放在SS中，偏移地址存放在SP中，任意时刻，SS：SP指向栈顶元素，push指令和pop指令执行时，CPU从SS和SP中得到栈顶的地址<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9abl3l9j30cc09ljtr.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9al29e1j30cc03cdgg.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9atrxmhj30cc082gno.jpg"></p>
+<p>8086CPU提供相关的指令来以栈的方式访问内存空间，这意味着，在基于8086CPU编程的时候，可以将一段内存当作栈来使用：PUSH（入栈）和POP（出栈），8086CPU的入栈和出栈操作都是以字为单位进行的<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor99yjbm6j30cc0gmjuw.jpg"
+                     
+                ></p>
+<p>CS、IP中存放着当前指令的段地址和偏移地址<br>8086CPU中，有两个寄存器，段寄存器SS和寄存器SP，栈顶的段地址存放在SS中，偏移地址存放在SP中，任意时刻，SS：SP指向栈顶元素，push指令和pop指令执行时，CPU从SS和SP中得到栈顶的地址<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9abl3l9j30cc09ljtr.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9al29e1j30cc03cdgg.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9atrxmhj30cc082gno.jpg"
+                     
+                ></p>
 <p>——————————————</p>
-<p>当栈满的时候再使用push指令入栈，或栈空的时候再使用pop指令出栈，都将发生栈顶越界问题<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9b37og1j30cc041dh2.jpg"></p>
+<p>当栈满的时候再使用push指令入栈，或栈空的时候再使用pop指令出栈，都将发生栈顶越界问题<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9b37og1j30cc041dh2.jpg"
+                     
+                ></p>
 <p>——————————————</p>
 <p>push和pop指令是可以在寄存器和内存之间传送数据的</p>
-<p>栈空间也是内存空间的一部分，它只是一段可以以一种特殊的方式进行访问的内存空间<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9bchdn9j307l01w0sx.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9brc7egj30co06iwg1.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9bzm36nj30c4029aad.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9c7itqnj30cd0el76p.jpg"></p>
+<p>栈空间也是内存空间的一部分，它只是一段可以以一种特殊的方式进行访问的内存空间<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9bchdn9j307l01w0sx.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9brc7egj30co06iwg1.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9bzm36nj30c4029aad.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9c7itqnj30cd0el76p.jpg"
+                     
+                ></p>
 <p>注意：push、pop等栈操作指令，修改的只是SP，也就是说，栈顶的变化范围最大为0～FFFFH</p>
 <p>提供SS、SP指示栈顶，改变SP后写内存的入栈指令，读内存后改变SP的出栈指令，这就是8086CPU提供的栈操作机制<br>—————————————————</p>
-<p>在编程时，可以根据需要，将一组内存单元定义为一个段，我们可以将长度为N（N&lt;&#x3D;64KB）的一组地址连续、起始地址为16的倍数的内存单元，当作栈空间来用，从而定义了一个栈段<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9ckqxadj30by06u0vx.jpg"></p>
+<p>在编程时，可以根据需要，将一组内存单元定义为一个段，我们可以将长度为N（N&lt;&#x3D;64KB）的一组地址连续、起始地址为16的倍数的内存单元，当作栈空间来用，从而定义了一个栈段<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor9ckqxadj30by06u0vx.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -417,190 +492,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

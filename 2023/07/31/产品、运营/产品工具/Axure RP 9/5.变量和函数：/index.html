@@ -278,11 +278,21 @@
 <li>使用场景非常多</li>
 <li>需要先创建</li>
 <li>只能作用于当前事件</li>
-<li>命名需要注意，只能英文+数字<img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Axure%20RP%209/202311231257860.png"></li>
+<li>命名需要注意，只能英文+数字<img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Axure%20RP%209/202311231257860.png"
+                     
+                ></li>
 </ol>
 <h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><ol>
 <li>需要先创建</li>
-<li>可以作用于整个文档，在任意页面调用或使用<img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Axure%20RP%209/202311231258638.png"></li>
+<li>可以作用于整个文档，在任意页面调用或使用<img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Axure%20RP%209/202311231258638.png"
+                     
+                ></li>
 </ol>
 <h2 id="中继器的属性"><a href="#中继器的属性" class="headerlink" title="中继器的属性"></a>中继器的属性</h2><ol>
 <li>Item：获取数据集一行数据的集合，即数据行的对象</li>
@@ -351,7 +361,12 @@
 <li>lastIndexOf(’searchvalue’)：从右至左查询字符串在当前文本对象中首次出现的位置，未查询到返回值为-1</li>
 <li>replace(‘searchvalue’,’newvalue’)：用新的字符串替换文本对象中指定的字符串</li>
 <li>slice(start,end)：从当前文本对象中截取从指定位置开始到指定位置结束之间的字符串，参数：start为截取部分的起始位置，该数值可为负数，负数代表从文本对象的尾部开始，-1表示末位，-2表示倒数第二位，end为截取部分的结束位置，可省略，省略则表示从截取开始位置一直截取到文本对象末尾，⭐️这里截取的字符串不包含结束位置</li>
-<li>split(‘separator’,limit)：将当前文本对象中与分隔字符相同的字符转为“,”，形成多组字符串，并返回从左开始的指定组数<img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Axure%20RP%209/202311231258489.png"></li>
+<li>split(‘separator’,limit)：将当前文本对象中与分隔字符相同的字符转为“,”，形成多组字符串，并返回从左开始的指定组数<img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Axure%20RP%209/202311231258489.png"
+                     
+                ></li>
 <li>substr(start,length)：当前文本对象中从指定起始位置截取一定长度的字符串。参数：start为截取的起始位置，length为截取的长度，该参数可以省略，省略则表示从起始位置一直截取到文本对象末尾</li>
 <li>substring(from,to)：从当前文本对象中截取从指定位置开始到另一指定位置区间的字符串，to参数可省略，省略则表示从起始位置一直截取到文本对象末尾，⭐️这里截取的字符串不包含结束位置</li>
 <li>toLowerCase()：将文本对象中所有的大写字母转换为小写字母</li>
@@ -553,190 +568,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

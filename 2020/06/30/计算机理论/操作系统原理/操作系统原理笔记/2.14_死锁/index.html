@@ -277,7 +277,12 @@
 <h3 id="进程死锁、饥饿、死循环的区别"><a href="#进程死锁、饥饿、死循环的区别" class="headerlink" title="进程死锁、饥饿、死循环的区别"></a>进程死锁、饥饿、死循环的区别</h3><p>死锁：各进程互相等待对方手里的资源，导致各进程都阻塞，无法向前推进的现象</p>
 <p>饥饿：由于长期得不到想要的资源，某进程无法向前推进的现象</p>
 <p>死循环：某进程执行过程中一直跳不出某个循环的现象。有时是因为程序逻辑bug导致的，有时是程序员故意设计的</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8ab7hbu2j30um09wqhn.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8ab7hbu2j30um09wqhn.jpg"
+                     
+                ></p>
 <h3 id="死锁产生的必要条件"><a href="#死锁产生的必要条件" class="headerlink" title="死锁产生的必要条件"></a>死锁产生的必要条件</h3><p>产生死锁必须同时满足以下四个条件，只要有其中任一条件不成立，死锁就不会发生</p>
 <ol>
 <li>互斥条件：只有对必须互斥使用的资源的争抢才会导致死锁（如哲学家的筷子、打印机设备等），像内存、扬声器这种可以同时让多个进程使用的资源是不会导致死锁的</li>
@@ -286,7 +291,12 @@
 <li>循环等待条件：存在一种进程资源的循环等待链，链中的每一个进程已获得的资源同时被下一个进程所请求</li>
 </ol>
 <p>注意：发生死锁时一定有循环等待，但是发生循环等待时未必死锁（循环等待是死锁的必要不充分条件）</p>
-<h3 id="什么时候会发生死锁"><a href="#什么时候会发生死锁" class="headerlink" title="什么时候会发生死锁"></a>什么时候会发生死锁</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8awftx2wj30v009eq98.jpg"></p>
+<h3 id="什么时候会发生死锁"><a href="#什么时候会发生死锁" class="headerlink" title="什么时候会发生死锁"></a>什么时候会发生死锁</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8awftx2wj30v009eq98.jpg"
+                     
+                ></p>
 <h3 id="死锁的处理策略"><a href="#死锁的处理策略" class="headerlink" title="死锁的处理策略"></a>死锁的处理策略</h3><ol>
 <li>预防死锁（静态策略，不允许死锁发生）：破坏死锁产生的四个必要条件中的一个或几个</li>
 <li>避免死锁（动态策略，不允许死锁发生）：用某种方法防止系统进入不安全状态，从而避免死锁（银行家算法）</li>
@@ -294,34 +304,109 @@
 </ol>
 <h2 id="死锁的处理策略：预防死锁"><a href="#死锁的处理策略：预防死锁" class="headerlink" title="死锁的处理策略：预防死锁"></a>死锁的处理策略：预防死锁</h2><h3 id="破坏互斥条件"><a href="#破坏互斥条件" class="headerlink" title="破坏互斥条件"></a>破坏互斥条件</h3><p>互斥条件：只有对必须互斥使用的资源的争抢才会导致死锁</p>
 <p>如果把只能互斥使用的资源改造为允许共享使用，则系统不会进入死锁状态。比如SPOOLing技术，操作系统可以采用SPOOLing技术把独占设备在逻辑上改造成共享设备</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8bfc9kmjj30w409a7dt.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8bfc9kmjj30w409a7dt.jpg"
+                     
+                ></p>
 <p>该策略的缺点：并不是所有的资源都可以改造成可共享使用的资源。并且为了系统安全，很多地方还必须保护这种互斥性，因此，很多时候都无法破坏互斥条件</p>
-<h3 id="破坏不剥夺条件"><a href="#破坏不剥夺条件" class="headerlink" title="破坏不剥夺条件"></a>破坏不剥夺条件</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8bmnf2jzj30u80dyguv.jpg"></p>
+<h3 id="破坏不剥夺条件"><a href="#破坏不剥夺条件" class="headerlink" title="破坏不剥夺条件"></a>破坏不剥夺条件</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8bmnf2jzj30u80dyguv.jpg"
+                     
+                ></p>
 <h3 id="破坏请求和保持条件"><a href="#破坏请求和保持条件" class="headerlink" title="破坏请求和保持条件"></a>破坏请求和保持条件</h3><p>C类进程可能会饥饿：</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8bqg4rw0j30u80f848h.jpg"></p>
-<h3 id="破坏循环等待条件"><a href="#破坏循环等待条件" class="headerlink" title="破坏循环等待条件"></a>破坏循环等待条件</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8by5l8fgj30u80f8wri.jpg"></p>
-<h2 id="死锁的处理策略：避免死锁（银行家算法）"><a href="#死锁的处理策略：避免死锁（银行家算法）" class="headerlink" title="死锁的处理策略：避免死锁（银行家算法）"></a>死锁的处理策略：避免死锁（银行家算法）</h2><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8parwlp6j317o0u044r.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8bqg4rw0j30u80f848h.jpg"
+                     
+                ></p>
+<h3 id="破坏循环等待条件"><a href="#破坏循环等待条件" class="headerlink" title="破坏循环等待条件"></a>破坏循环等待条件</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8by5l8fgj30u80f8wri.jpg"
+                     
+                ></p>
+<h2 id="死锁的处理策略：避免死锁（银行家算法）"><a href="#死锁的处理策略：避免死锁（银行家算法）" class="headerlink" title="死锁的处理策略：避免死锁（银行家算法）"></a>死锁的处理策略：避免死锁（银行家算法）</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8parwlp6j317o0u044r.jpg"
+                     
+                ></p>
 <h3 id="什么是安全序列"><a href="#什么是安全序列" class="headerlink" title="什么是安全序列"></a>什么是安全序列</h3><p>所谓安全序列，就是指如果系统按照这种序列分配资源，则每个进程都能顺利完成。只要能找出一个安全序列，系统就是安全状态。当然，安全序列可能有多个</p>
 <h3 id="什么是系统的不安全状态，与死锁有何联系"><a href="#什么是系统的不安全状态，与死锁有何联系" class="headerlink" title="什么是系统的不安全状态，与死锁有何联系"></a>什么是系统的不安全状态，与死锁有何联系</h3><p>如果分配了资源之后，系统中找不出任何一个安全序列，系统就进入了不安全状态。这就意味着之后可能所有进程都无法顺利的执行下去。当然，如果有进程提前归还了一些资源，那系统也有可能重新回到安全状态，不过我们在分配资源之前总是要考虑到最坏的情况</p>
 <p>❗️如果系统处于安全状态，就一定不会发生死锁。如果系统进入不安全状态，就可能发生死锁（处于不安全状态未必就是发生了死锁，但发生死锁时一定是在不安全状态）</p>
 <p>因此可以在资源分配之前预先判断这次分配是否会导致系统进入不安全状态，以此决定是否答应资源分配请求。这也是“银行家算法”的核心思想</p>
 <h3 id="如何避免系统进入不安全状态：银行家算法"><a href="#如何避免系统进入不安全状态：银行家算法" class="headerlink" title="如何避免系统进入不安全状态：银行家算法"></a>如何避免系统进入不安全状态：银行家算法</h3><p>银行家算法是荷兰学者Dijkstra为银行系统设计的，以确保银行在发放现金贷款时，不会发生不能满足所有客户需要的情况。后来该算法被用在操作系统中，用于避免死锁</p>
 <p>核心思想：在进程提出资源申请时，先预判此次分配是否会导致系统进入不安全状态。如果会进入不安全状态，就暂时不答应这次请求，让该进程先阻塞等待</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8pj7rqk2j30u20d6h3u.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8q8jsq4uj31fa0pctcg.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8q9heabjj30w60hse6k.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8qd9199tj30tw0e8qbd.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8pj7rqk2j30u20d6h3u.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8q8jsq4uj31fa0pctcg.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8q9heabjj30w60hse6k.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8qd9199tj30tw0e8qbd.jpg"
+                     
+                ></p>
 <h2 id="死锁的处理策略：死锁的检测和解除"><a href="#死锁的处理策略：死锁的检测和解除" class="headerlink" title="死锁的处理策略：死锁的检测和解除"></a>死锁的处理策略：死锁的检测和解除</h2><h3 id="死锁的检测"><a href="#死锁的检测" class="headerlink" title="死锁的检测"></a>死锁的检测</h3><p>用于检测系统状态，以确定系统中是否发生了死锁</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8qxiw5ruj30vq0ge4a3.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8r22pqtlj30ve0bo47j.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8r91zqqgj30tk0fudpe.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8qxiw5ruj30vq0ge4a3.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8r22pqtlj30ve0bo47j.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8r91zqqgj30tk0fudpe.jpg"
+                     
+                ></p>
 <p>最终还连着边的那些进程就是处于死锁状态的进程：</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8r5kf6blj30dy09276k.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20210606190618200.png" alt="image-20210606190618200"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8r5kf6blj30dy09276k.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20210606190618200.png"
+                      alt="image-20210606190618200"
+                ></p>
 <h3 id="死锁的解除"><a href="#死锁的解除" class="headerlink" title="死锁的解除"></a>死锁的解除</h3><p>当认定系统中已经发生了死锁，利用该算法可将系统从死锁状态中解脱出来</p>
 <p>一旦检测出死锁的发生，就应该立即解除死锁</p>
 <p>❗️并不是系统中所有的进程都是死锁状态，用死锁检测算法化简资源分配图后，还连着边的那些进程就是死锁进程</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8rhj7dj2j60tk06kwkr02.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr8rhj7dj2j60tk06kwkr02.jpg"
+                     
+                ></p>
 <p>如何决定先剥夺哪个进程的资源或先对谁动手？</p>
 <ol>
 <li>根据进程优先级（先动手优先级低的）</li>
@@ -448,190 +533,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

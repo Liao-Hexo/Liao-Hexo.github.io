@@ -273,10 +273,20 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <h3 id="顺序表的插入-最好O-1-最坏O-n-平均O-n"><a href="#顺序表的插入-最好O-1-最坏O-n-平均O-n" class="headerlink" title="顺序表的插入(最好O(1),最坏O(n),平均O(n))"></a>顺序表的插入(最好O(1),最坏O(n),平均O(n))</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gogtua5x02j30ie0p10v4.jpg"></p>
+                    <h3 id="顺序表的插入-最好O-1-最坏O-n-平均O-n"><a href="#顺序表的插入-最好O-1-最坏O-n-平均O-n" class="headerlink" title="顺序表的插入(最好O(1),最坏O(n),平均O(n))"></a>顺序表的插入(最好O(1),最坏O(n),平均O(n))</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gogtua5x02j30ie0p10v4.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">//顺序表的插入</span><br><span class="line"></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdbool.h&gt; //可以使用bool了</span><br><span class="line"></span><br><span class="line">#define MaxSize 10  //定义最大长度</span><br><span class="line"></span><br><span class="line">typedef struct&#123;</span><br><span class="line">    int data[MaxSize];  //用静态的“数组”存放数据元素</span><br><span class="line">    int length;  //顺序表的当前长度</span><br><span class="line">&#125;SqList;  //顺序表的类型定义</span><br><span class="line"></span><br><span class="line">//基本操作：初始化一个顺序表</span><br><span class="line">void InitList(SqList *L)&#123;</span><br><span class="line">    for(int i=0;i&lt;MaxSize;i++)&#123;</span><br><span class="line">        L-&gt;data[i]=0;  //将所有数据元素设置为默认初始值</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length=0;  //顺序表初始长度为0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//i的取值：[1,length+1]，因为顺序表是连续排列的</span><br><span class="line">bool ListInsert(SqList *L,int i,int e)&#123;</span><br><span class="line">    </span><br><span class="line">    if(i&lt;1 || i&gt;L-&gt;length+1)&#123;  //判断i的范围是否有效</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    if(L-&gt;length &gt;= MaxSize)&#123;  //当前存储空间已满，不能插入</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for(int j=L-&gt;length;j&gt;=i;j--)&#123;  //将第i个元素及之后的元素后移</span><br><span class="line">        L-&gt;data[i]=L-&gt;data[j-1];</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;data[i-1]=e;  //在位置i处放入e</span><br><span class="line">    L-&gt;length++;  //长度加1</span><br><span class="line">    </span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    SqList L;  //声明一个顺序表</span><br><span class="line">    InitList(&amp;L);  //初始化顺序表</span><br><span class="line">    </span><br><span class="line">    //...此处插入几个元素</span><br><span class="line">    bool b=ListInsert(&amp;L, 3, 4);  //在位置3处放入4</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="顺序表的删除-最好O-1-最坏O-n-平均O-n"><a href="#顺序表的删除-最好O-1-最坏O-n-平均O-n" class="headerlink" title="顺序表的删除(最好O(1),最坏O(n),平均O(n))"></a>顺序表的删除(最好O(1),最坏O(n),平均O(n))</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gogupeoxndj30ih0u0go3.jpg"></p>
+<h3 id="顺序表的删除-最好O-1-最坏O-n-平均O-n"><a href="#顺序表的删除-最好O-1-最坏O-n-平均O-n" class="headerlink" title="顺序表的删除(最好O(1),最坏O(n),平均O(n))"></a>顺序表的删除(最好O(1),最坏O(n),平均O(n))</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gogupeoxndj30ih0u0go3.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">//顺序表的删除</span><br><span class="line"></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdbool.h&gt; //可以使用bool了</span><br><span class="line"></span><br><span class="line">#define MaxSize 10  //定义最大长度</span><br><span class="line"></span><br><span class="line">typedef struct&#123;</span><br><span class="line">    int data[MaxSize];  //用静态的“数组”存放数据元素</span><br><span class="line">    int length;  //顺序表的当前长度</span><br><span class="line">&#125;SqList;  //顺序表的类型定义</span><br><span class="line"></span><br><span class="line">//基本操作：初始化一个顺序表</span><br><span class="line">void InitList(SqList *L)&#123;</span><br><span class="line">    for(int i=0;i&lt;MaxSize;i++)&#123;</span><br><span class="line">        L-&gt;data[i]=0;  //将所有数据元素设置为默认初始值</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length=0;  //顺序表初始长度为0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bool ListDelete(SqList *L,int i,int *e)&#123;</span><br><span class="line">    </span><br><span class="line">    if(i&lt;1 || i&gt;L-&gt;length)&#123;  //判断i的范围是否有效</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    *e=L-&gt;data[i-1];  //将被删除的元素赋值给e</span><br><span class="line">    </span><br><span class="line">    for(int j=i;j&lt;L-&gt;length;j++)&#123;  //将第i个位置后的元素前移</span><br><span class="line">        L-&gt;data[j-1]=L-&gt;data[j];</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length--;  //线性表长度减1</span><br><span class="line">    </span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    SqList L;  //声明一个顺序表</span><br><span class="line">    InitList(&amp;L);  //初始化顺序表</span><br><span class="line">    </span><br><span class="line">    //...此处插入几个元素</span><br><span class="line">    int e=-1;  //用变量e把删除的元素“带回来”</span><br><span class="line">    if(ListDelete(&amp;L, 3, &amp;e))&#123;</span><br><span class="line">        printf(&quot;已删除第3个元素，删除元素值为%d\n&quot;,e);</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        printf(&quot;位序i不合法，删除失败\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
                 </div>
@@ -396,190 +406,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

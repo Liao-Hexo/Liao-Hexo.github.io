@@ -276,7 +276,32 @@
                     <p>ARC机制与垃圾回收机制(GC)的区别：</p>
 <p>GC：程序在运行期间有一个东西叫做垃圾回收器，不断的扫描堆中的对象是否无人使用，若无人使用则回收</p>
 <p>ARC：不是运行时，而是在编译的时候就在合适的地方插入retain，release……..插入的代码足以让对象无人使用的时候引用计数器为0，则回收</p>
-<p>此程序main函数中第一行宝马的引用计数器应为1，第二行执行后p1为1，宝马这时应该为2，但是此程序实际上宝马的引用计数器不是2，还是1；错误原因在于构造方法_car&#x3D;car;这一句，直接将car赋值给属性_car，并没有做retain，release，这一行应该改为self.car&#x3D;car;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4fpmzgpj30940730ty.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4fwyql2j307x04owfj.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4g3ky9qj307x07tta4.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4g9g30sj307x02jdg8.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4gf6minj307x04jaao.jpg"></p>
+<p>此程序main函数中第一行宝马的引用计数器应为1，第二行执行后p1为1，宝马这时应该为2，但是此程序实际上宝马的引用计数器不是2，还是1；错误原因在于构造方法_car&#x3D;car;这一句，直接将car赋值给属性_car，并没有做retain，release，这一行应该改为self.car&#x3D;car;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4fpmzgpj30940730ty.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4fwyql2j307x04owfj.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4g3ky9qj307x07tta4.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4g9g30sj307x02jdg8.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly4gf6minj307x04jaao.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -395,190 +420,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

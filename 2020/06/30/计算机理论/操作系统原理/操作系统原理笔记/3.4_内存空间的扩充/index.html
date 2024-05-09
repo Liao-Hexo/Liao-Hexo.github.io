@@ -282,11 +282,26 @@
 <p>需要常驻内存的段放在“固定区”中，调入后就不再调出（除非运行结束）</p>
 <p>不常用的段放在“覆盖区”，需要用到时调入内存，用不到时调出内存</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9hdlq8snj30vo0eyh24.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9hdlq8snj30vo0eyh24.jpg"
+                     
+                ></p>
 <h3 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h3><p>交换（对换）技术的设计思想：内存空间紧张时，系统将内存中某些进程暂时换出外存，把外存中某些已具备运行条件的进程换入内存（进程在内存与磁盘间动态调度）</p>
 <p>虽然不常用的进程被调出内存了，但是该进程的PCB还在内存中保存着：</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20210607101828325.png" alt="image-20210607101828325"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9hlvalnij30vs0e44cy.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/image-20210607101828325.png"
+                      alt="image-20210607101828325"
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9hlvalnij30vs0e44cy.jpg"
+                     
+                ></p>
 <blockquote>
 <ol>
 <li>应该在外存（磁盘）的什么位置保存被换出的进程？</li>
@@ -294,17 +309,32 @@
 <li>应该换出哪些进程？</li>
 </ol>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9hs0zcgtj30vg0a8dz0.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9hs0zcgtj30vg0a8dz0.jpg"
+                     
+                ></p>
 <p>覆盖与交换的区别：</p>
 <ol>
 <li>覆盖是在同一程序或进程中的</li>
 <li>交换是在不同进程（或作业）之间的</li>
 </ol>
-<h3 id="虚拟存储技术"><a href="#虚拟存储技术" class="headerlink" title="虚拟存储技术"></a>虚拟存储技术</h3><h4 id="传统存储管理方式的特征、缺点"><a href="#传统存储管理方式的特征、缺点" class="headerlink" title="传统存储管理方式的特征、缺点"></a>传统存储管理方式的特征、缺点</h4><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbskf76sjj30vs0f87nh.jpg"></p>
+<h3 id="虚拟存储技术"><a href="#虚拟存储技术" class="headerlink" title="虚拟存储技术"></a>虚拟存储技术</h3><h4 id="传统存储管理方式的特征、缺点"><a href="#传统存储管理方式的特征、缺点" class="headerlink" title="传统存储管理方式的特征、缺点"></a>传统存储管理方式的特征、缺点</h4><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbskf76sjj30vs0f87nh.jpg"
+                     
+                ></p>
 <h4 id="局部性原理"><a href="#局部性原理" class="headerlink" title="局部性原理"></a>局部性原理</h4><p>时间局部性：现在访问的指令、数据在不久后很可能会被再次访问</p>
 <p>空间局部性：现在访问的内存单元周围的内存空间，很可能在不久后会被访问</p>
 <p>高速缓存技术：使用频繁的数据放到更高速的存储器中</p>
-<h4 id="虚拟内存的定义和特征"><a href="#虚拟内存的定义和特征" class="headerlink" title="虚拟内存的定义和特征"></a>虚拟内存的定义和特征</h4><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbspj8jnqj30x60ecdxc.jpg"></p>
+<h4 id="虚拟内存的定义和特征"><a href="#虚拟内存的定义和特征" class="headerlink" title="虚拟内存的定义和特征"></a>虚拟内存的定义和特征</h4><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbspj8jnqj30x60ecdxc.jpg"
+                     
+                ></p>
 <p>虚拟内存的三个主要特征：</p>
 <ol>
 <li>多次性：无需在作业运行时一次性全部装入内存，而是允许被分成多次调入内存</li>
@@ -312,17 +342,52 @@
 <li>虚拟性：从逻辑上扩充了内存的容量，使用户看到的内存容量，远大于实际的容量</li>
 </ol>
 <h4 id="如何实现虚拟内存技术"><a href="#如何实现虚拟内存技术" class="headerlink" title="如何实现虚拟内存技术"></a>如何实现虚拟内存技术</h4><p>虚拟内存技术，允许一个作业分多次调入内存，如果采用连续分配方式，会不方便实现。因此虚拟内存的实现需要建立在离散分配的内存管理方式基础上</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbsyumkpbj30vq0d8tpt.jpg"></p>
-<h4 id="请求分页管理方式"><a href="#请求分页管理方式" class="headerlink" title="请求分页管理方式"></a>请求分页管理方式</h4><h5 id="页表机制"><a href="#页表机制" class="headerlink" title="页表机制"></a>页表机制</h5><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtcnm5nfj30wk0g8nhb.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbsyumkpbj30vq0d8tpt.jpg"
+                     
+                ></p>
+<h4 id="请求分页管理方式"><a href="#请求分页管理方式" class="headerlink" title="请求分页管理方式"></a>请求分页管理方式</h4><h5 id="页表机制"><a href="#页表机制" class="headerlink" title="页表机制"></a>页表机制</h5><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtcnm5nfj30wk0g8nhb.jpg"
+                     
+                ></p>
 <h5 id="缺页中断机构"><a href="#缺页中断机构" class="headerlink" title="缺页中断机构"></a>缺页中断机构</h5><p>如果内存中有空闲块：修改内存号为a，状态位为1</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtfwf1uoj30um0imtua.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtfwf1uoj30um0imtua.jpg"
+                     
+                ></p>
 <p>如果内存中没有空闲块：将c换出内存，将x号块放进c号块</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtngt24vj30um0imnl3.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtngt24vj30um0imnl3.jpg"
+                     
+                ></p>
 <p>缺页中断是因为当前执行的指令想要访问的目标页面未调入内存而产生的，因此属于内中断</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtut3d98j30se0ai7gc.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtut3d98j30se0ai7gc.jpg"
+                     
+                ></p>
 <p>一条指令在执行期间，可能产生多次缺页中断：将逻辑地址A中的数据复制到逻辑地址B，而A、B属于不同的页面，则有可能产生两次中断</p>
-<h5 id="地址变换机构"><a href="#地址变换机构" class="headerlink" title="地址变换机构"></a>地址变换机构</h5><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtvumb67j30r80acwn7.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtxvclqoj30y00iwdxs.jpg"></p>
+<h5 id="地址变换机构"><a href="#地址变换机构" class="headerlink" title="地址变换机构"></a>地址变换机构</h5><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtvumb67j30r80acwn7.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbtxvclqoj30y00iwdxs.jpg"
+                     
+                ></p>
 <p>在具有快表机构的请求分页系统中，访问一个逻辑地址时，若发生缺页，则地址变换步骤是</p>
 <ol>
 <li>查快表（未命中）</li>
@@ -331,23 +396,58 @@
 <li>查快表（命中）</li>
 <li>访问目标内存单元</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbuc2d8oqj30yq0jyhdt.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbuc2d8oqj30yq0jyhdt.jpg"
+                     
+                ></p>
 <h4 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h4><p>页面的换入、换出需要磁盘I&#x2F;O，会有较大的开销，因此好的页面置换算法应该追求更少的缺页率</p>
 <h5 id="最佳置换算法OPT（性能最好）"><a href="#最佳置换算法OPT（性能最好）" class="headerlink" title="最佳置换算法OPT（性能最好）"></a>最佳置换算法OPT（性能最好）</h5><p>每次选择淘汰的页面将是以后永不使用，或者在最长时间内不再被访问的页面，这样可以保证最低的缺页率</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbv2remymj30vc0dodzr.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbv2remymj30vc0dodzr.jpg"
+                     
+                ></p>
 <p>最佳置换算法可以保证最低的缺页率，但实际上，只有在进程执行的过程中才能知道接下来会访问到的是哪个页面。操作系统无法提前预判页面访问序列。因此，最佳置换算法是无法实现的</p>
 <h5 id="先进先出置换算法FIFO"><a href="#先进先出置换算法FIFO" class="headerlink" title="先进先出置换算法FIFO"></a>先进先出置换算法FIFO</h5><p>每次选择淘汰的页面是最早进入内存的页面</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbv8plu0xj60v20ek4fe02.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbv9t10xqj30xc0d0h4u.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbv8plu0xj60v20ek4fe02.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbv9t10xqj30xc0d0h4u.jpg"
+                     
+                ></p>
 <h5 id="最近最久未使用置换算法LRU"><a href="#最近最久未使用置换算法LRU" class="headerlink" title="最近最久未使用置换算法LRU"></a>最近最久未使用置换算法LRU</h5><p>该算法性能最接近最佳置换算法：</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbve8mndnj30vs0fktxy.jpg"></p>
-<h5 id="时钟置换算法CLOCK（NRU）"><a href="#时钟置换算法CLOCK（NRU）" class="headerlink" title="时钟置换算法CLOCK（NRU）"></a>时钟置换算法CLOCK（NRU）</h5><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc0jymx25j30wa0fuqsi.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbve8mndnj30vs0fktxy.jpg"
+                     
+                ></p>
+<h5 id="时钟置换算法CLOCK（NRU）"><a href="#时钟置换算法CLOCK（NRU）" class="headerlink" title="时钟置换算法CLOCK（NRU）"></a>时钟置换算法CLOCK（NRU）</h5><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc0jymx25j30wa0fuqsi.jpg"
+                     
+                ></p>
 <p>实现简单，算法开销小，但未考虑页面是否被修改过</p>
 <h5 id="改进型的时钟置换算法NRU"><a href="#改进型的时钟置换算法NRU" class="headerlink" title="改进型的时钟置换算法NRU"></a>改进型的时钟置换算法NRU</h5><p>第一优先级：最近没访问，且没修改的页面</p>
 <p>第二优先级：最近没访问，但修改过的页面</p>
 <p>第三优先级：最近访问过，但没修改的页面</p>
 <p>第四优先级：最近访问过，且修改过的页面</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc0stxgt9j30x60g6x59.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc0stxgt9j30x60g6x59.jpg"
+                     
+                ></p>
 <p>算法开销较小，性能也不错</p>
 
                 </div>
@@ -467,190 +567,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

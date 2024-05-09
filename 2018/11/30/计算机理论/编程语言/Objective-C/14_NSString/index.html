@@ -282,26 +282,56 @@
 <ol>
 <li><p><code>+ (instancetype)stringWithUTF8String:(const char *)nullTerminatedCString;</code><br>Instancetype作为返回值，代表返回的是当前这个类的对象<br>作用：将C语言的字符串转换为OC字符串对象</p>
 </li>
-<li><p><code>+ (instancetype)stringWithFormat:(NSString *)format,….</code><br>作用：拼接一个字符串对象，使用变量或者其他数据拼接成OC字符串<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3llywhfj30hj05ctav.jpg"></p>
+<li><p><code>+ (instancetype)stringWithFormat:(NSString *)format,….</code><br>作用：拼接一个字符串对象，使用变量或者其他数据拼接成OC字符串<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3llywhfj30hj05ctav.jpg"
+                     
+                ></p>
 </li>
 </ol>
 <hr>
 <p>NSString最常用的对象方法：</p>
 <ol>
-<li><p>length方法，返回值为NSUInteger，其实就是unsigned long<br>得到字符串的字符的个数，可以处理中文<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3lx9vl5j308x044myd.jpg"></p>
+<li><p>length方法，返回值为NSUInteger，其实就是unsigned long<br>得到字符串的字符的个数，可以处理中文<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3lx9vl5j308x044myd.jpg"
+                     
+                ></p>
 </li>
 <li><p>得到字符串中指定下标的字符<br><code>* (unichar)characterAtIndex:(NSUInteger)index;</code><br>返回值是unichar，其实就是unsinged short，占据两个字节</p>
 </li>
 </ol>
-<p>如果要输出unichar变量的值使用%C(中文输出)<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3m5g3snj309h04ldh3.jpg"></p>
+<p>如果要输出unichar变量的值使用%C(中文输出)<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3m5g3snj309h04ldh3.jpg"
+                     
+                ></p>
 <ol start="3">
-<li>判断两个字符串的内容是否相同，不要用&#x3D;&#x3D;去判断，因为这样有可能会出问题：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3me1e4aj30co06ywgl.jpg"></li>
+<li>判断两个字符串的内容是否相同，不要用&#x3D;&#x3D;去判断，因为这样有可能会出问题：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3me1e4aj30co06ywgl.jpg"
+                     
+                ></li>
 </ol>
-<p>判断相等的方式：<br><code>* (BOOL)isEqualToString:(NSString *)aString;</code><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3mkylqvj30cr0900v4.jpg"></p>
+<p>判断相等的方式：<br><code>* (BOOL)isEqualToString:(NSString *)aString;</code><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3mkylqvj30cr0900v4.jpg"
+                     
+                ></p>
 <ol start="4">
 <li>比较字符串的大小</li>
 </ol>
-<p><code>* (NSComparisonResult)compare:(NSString *)string;</code><br>完全可以使用int来接收结果，因为返回值是一个枚举<br>返回值如果是-1（小于），0（等于），1（大于）<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3ms9hzuj308o054gn3.jpg"></p>
+<p><code>* (NSComparisonResult)compare:(NSString *)string;</code><br>完全可以使用int来接收结果，因为返回值是一个枚举<br>返回值如果是-1（小于），0（等于），1（大于）<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/Objective-C/0081Kckwly1gly3ms9hzuj308o054gn3.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -420,190 +450,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

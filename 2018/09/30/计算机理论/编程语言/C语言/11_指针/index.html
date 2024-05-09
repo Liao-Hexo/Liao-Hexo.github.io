@@ -276,37 +276,147 @@
                     <p>变量的值：存储在变量中的数据叫做变量的值<br>变量的地址：一个变量是由一个或多个字节组成的，组成这个变量的低字节的地址，就是这个变量的地址</p>
 <p>变量的地址就叫做指针，指针变量就是专门用来存储地址的变量，专门用来存储另外一个变量的地址，那么我们就说这个指针变量指向了另外一个变量【它自己也有一个地址】，通过指针变量可以间接的访问指针变量指向的另外一个变量</p>
 <p><code>int* p1;</code>，代表声明了一个叫做p1的指针变量，这个指针变量的类型是int<em>，这个</em>代表这个变量不是一个普通变量，而是一个专门用来存储地址的指针变量【只能存储int变量的地址】</p>
-<p>指针变量初始化只能给他一个地址：<code>int* p1=&amp;num;</code><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn91mcrhboj30ae0bodh3.jpg"></p>
+<p>指针变量初始化只能给他一个地址：<code>int* p1=&amp;num;</code><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn91mcrhboj30ae0bodh3.jpg"
+                     
+                ></p>
 <p>使用指针间接的操作指向的变量：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int num = 10;</span><br><span class="line">int* p1=&amp;num;</span><br><span class="line">*p1=100;  //*p1代表指向的变量，也就是num</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>运算符&amp;：获得变量的地址，它的操作数必须是变量:<code>int i;printf(“%p”,&amp;i);</code><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhj9ui8ij307q09odgd.jpg"></p>
+<p>运算符&amp;：获得变量的地址，它的操作数必须是变量:<code>int i;printf(“%p”,&amp;i);</code><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhj9ui8ij307q09odgd.jpg"
+                     
+                ></p>
 <p>*是一个单目运算符，用来访问指针的值所表示的地址上的变量,可以做右值也可以做左值<br><code>int k=*p;</code><br><code>*p=k+1;</code></p>
 <p>指针的一些注意点：</p>
-<p>1）【指针+1】并不是在指针地址的基础之上加一个字节的地址，而是在这个指针地址的基础之上加一个单位变量占用的字节数【这个时候p1指向的就是num1】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhg7ivdkj30c90bkq5b.jpg"></p>
-<p>2）<em>p++的意思是取出p所指的那个数据，之后再把p移到下一个位置去，</em>的优先级虽然高，但是没有++高，常用于数组类的连续空间操作<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhm5m48oj30bb0a0ab0.jpg"></p>
+<p>1）【指针+1】并不是在指针地址的基础之上加一个字节的地址，而是在这个指针地址的基础之上加一个单位变量占用的字节数【这个时候p1指向的就是num1】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhg7ivdkj30c90bkq5b.jpg"
+                     
+                ></p>
+<p>2）<em>p++的意思是取出p所指的那个数据，之后再把p移到下一个位置去，</em>的优先级虽然高，但是没有++高，常用于数组类的连续空间操作<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhm5m48oj30bb0a0ab0.jpg"
+                     
+                ></p>
 <p>3）<code>int* p1;</code><br>我们声明一个指针变量，如果没有为其初始化，那么这个时候这个指针变量是有值的，这个值是一个垃圾值，，这个时候，这个指针变量就有可能指向了一块随机的空间，像这样的指针我们就叫做野指针【最好给他初始化一下：<code>int *p1=NULL;</code>NULL值代表指针变量不指向内存中的任何地址】</p>
-<p>4）多个指针指向同一变量：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn91xcb2vdj315g0ni0to.jpg"></p>
+<p>4）多个指针指向同一变量：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn91xcb2vdj315g0ni0to.jpg"
+                     
+                ></p>
 <p>5）指针分好多类型，但无论指针什么类型，在内存中都是占据着8个字节，指向不同类型的指针是不能直接互相赋值的，这是为了避免用错指针</p>
-<p>6）p1指针变量中存储的是num变量的地址，也就是num变量的低字节的地址，这个时候p1指针能操作多少个字节是根据指针的类型来决定的【这就是为什么指针要分类型，还必须跟指向的普通变量的类型一致】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhf08v8wj30b7084taf.jpg"></p>
+<p>6）p1指针变量中存储的是num变量的地址，也就是num变量的低字节的地址，这个时候p1指针能操作多少个字节是根据指针的类型来决定的【这就是为什么指针要分类型，还必须跟指向的普通变量的类型一致】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhf08v8wj30b7084taf.jpg"
+                     
+                ></p>
 <p>一级指针和多级指针：</p>
-<p>一个指针变量中存储的是一个普通变量的地址，像这样的指针，我们就叫做一级指针<br>一个指针变量中存储的是一个一级指针变量的地址，像这样的指针，我们就叫做二级指针<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn92ltsw2wj31120mcmxz.jpg"></p>
-<p>声明多级指针：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn998qjxb7j30af0icdho.jpg"></p>
+<p>一个指针变量中存储的是一个普通变量的地址，像这样的指针，我们就叫做一级指针<br>一个指针变量中存储的是一个一级指针变量的地址，像这样的指针，我们就叫做二级指针<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn92ltsw2wj31120mcmxz.jpg"
+                     
+                ></p>
+<p>声明多级指针：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn998qjxb7j30af0icdho.jpg"
+                     
+                ></p>
 <p>一级指针只能存储普通变量的地址，二级指针只能存储一级指针变量的地址</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn98zgc3j9j318a0rlaby.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn98zgc3j9j318a0rlaby.jpg"
+                     
+                ></p>
 <p>指针与数组：</p>
-<p>使用指针来遍历数组：<br>1）<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99jgtfkfj30fr0c43zp.jpg"><br>2）本方法中不能换成*(arr++)，数组名代表数组的地址，而数组一旦创建，数组的地址就确定了，不能改变，所以我们不能为数组名赋值，不能修改数组名的值，但是可以使用数组名的值<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99mgl7u2j30aj0c4dgp.jpg"><br>3）此方法跟前两种不一样<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99qqsj9pj30aj0hl3zt.jpg"></p>
-<p>中括弧的本质【数组arr[0]等价于*(arr+0)，操作数组我们虽然使用中括弧下标来操作，实际上内部仍然是使用指针来操作】：<br>指针变量后面可以使用中括弧，在中括弧中写上下标来访问数据：p1[n]完全等价于*(p1+n)<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99xbws2zj30ar0as3zf.jpg"></p>
+<p>使用指针来遍历数组：<br>1）<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99jgtfkfj30fr0c43zp.jpg"
+                     
+                ><br>2）本方法中不能换成*(arr++)，数组名代表数组的地址，而数组一旦创建，数组的地址就确定了，不能改变，所以我们不能为数组名赋值，不能修改数组名的值，但是可以使用数组名的值<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99mgl7u2j30aj0c4dgp.jpg"
+                     
+                ><br>3）此方法跟前两种不一样<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99qqsj9pj30aj0hl3zt.jpg"
+                     
+                ></p>
+<p>中括弧的本质【数组arr[0]等价于*(arr+0)，操作数组我们虽然使用中括弧下标来操作，实际上内部仍然是使用指针来操作】：<br>指针变量后面可以使用中括弧，在中括弧中写上下标来访问数据：p1[n]完全等价于*(p1+n)<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn99xbws2zj30ar0as3zf.jpg"
+                     
+                ></p>
 <p>函数参数表中的数组实际上是指针,但是可以用数组的运算符[]进行运算</p>
 <p>数组变量是特殊的指针：<br>1）数组变量本身表达地址，所以<code>int a[10];int *p=a;</code>无需用&amp;取地址，但是数组的单元表达的是变量，需要用&amp;取地址<br>2）[]运算符可以对数组做，也可以对指针做<br>3）*运算符可以对指针做，也可以对数组做<br>4）数组变量是const的指针，所以不能被赋值：<code>int a[];int * const a;</code></p>
-<p>如果一个数组是用来存储指针类型的数据的话，那么这个数组就叫做存储指针的数组：<code>int* arr[3];</code><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9a4ckuynj30ar0cejsi.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9agvrf6oj30l40ee0uo.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9b10dl9tj312r0u0jt3.jpg"></p>
+<p>如果一个数组是用来存储指针类型的数据的话，那么这个数组就叫做存储指针的数组：<code>int* arr[3];</code><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9a4ckuynj30ar0cejsi.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9agvrf6oj30l40ee0uo.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9b10dl9tj312r0u0jt3.jpg"
+                     
+                ></p>
 <p>指针之间的运算：指针与指针之间只能做减法运算，不能做加乘除运算，可以做比较运算</p>
-<p>指针与指针之间可以做减法运算，结果是一个long类型的数据，代表两个指针指向的变量之间相差多少个单位变量<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9b7tzxtoj30b90a4wfi.jpg"></p>
-<p>如果参与减法运算的两个指针不指向同一个数组，先求出两个指针的差&#x2F;每一个指针变量对应的普通变量占用的字节数<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9c45qb5jj30820b9q3s.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9cb0hgoej30wj0o5gm5.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhlrqxiyj309l0ea400.jpg"></p>
-<p>指针的比较运算：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9cewazj5j30aw0aiq3r.jpg"></p>
+<p>指针与指针之间可以做减法运算，结果是一个long类型的数据，代表两个指针指向的变量之间相差多少个单位变量<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9b7tzxtoj30b90a4wfi.jpg"
+                     
+                ></p>
+<p>如果参与减法运算的两个指针不指向同一个数组，先求出两个指针的差&#x2F;每一个指针变量对应的普通变量占用的字节数<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9c45qb5jj30820b9q3s.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9cb0hgoej30wj0o5gm5.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhlrqxiyj309l0ea400.jpg"
+                     
+                ></p>
+<p>指针的比较运算：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gn9cewazj5j30aw0aiq3r.jpg"
+                     
+                ></p>
 <p>指向函数的指针：<br>程序在运行的时候，会将程序加载到内存，程序中的函数肯定存在于内存的代码段中，我们可以声明一个指针，存储这个函数的地址，让这个指针指向这个函数，使用指针来间接的调用函数</p>
-<p>一个指向函数的指针，并不是任意的函数都可以指向，要求指向的函数的返回值类型和参数类型必须要与指针的描述一样<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gna41zr25bj30ci0cemy8.jpg"><br>函数的名称就代表这个函数的地址：【注意不要在函数名后加小括弧，如果加了小括弧，就代表指向这个函数，拿到这个函数的返回值】</p>
+<p>一个指向函数的指针，并不是任意的函数都可以指向，要求指向的函数的返回值类型和参数类型必须要与指针的描述一样<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEgy1gna41zr25bj30ci0cemy8.jpg"
+                     
+                ><br>函数的名称就代表这个函数的地址：【注意不要在函数名后加小括弧，如果加了小括弧，就代表指向这个函数，拿到这个函数的返回值】</p>
 <p>如果指向的函数有参数有返回值，调用的时候有参数就传参，有返回值就接！</p>
 
                 </div>
@@ -426,190 +536,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

@@ -277,7 +277,12 @@
 
 <h3 id="解法1："><a href="#解法1：" class="headerlink" title="解法1："></a>解法1：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//字符串转换函数</span></span><br><span class="line"><span class="function">string <span class="title">conversionString</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string res;  <span class="comment">//res是返回的最终结果</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (s.<span class="built_in">size</span>() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">//判断输入值为空的情况</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt; s.<span class="built_in">size</span>() ; ++i) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//第一种情况：输入 validHTTPRequest</span></span><br><span class="line">        <span class="comment">//如果该字符是大写并且左右两边都是大写的话，只需要把该字符转换成小写就可以了</span></span><br><span class="line">        <span class="keyword">if</span> (s[i - <span class="number">1</span>] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i - <span class="number">1</span>] &lt;= <span class="string">&#x27;Z&#x27;</span> &amp;&amp;</span><br><span class="line">            s[i] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;Z&#x27;</span> &amp;&amp;</span><br><span class="line">            s[i + <span class="number">1</span>] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i + <span class="number">1</span>] &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">                </span><br><span class="line">            res.<span class="built_in">push_back</span>(s[i] - <span class="string">&#x27;A&#x27;</span> + <span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">            </span><br><span class="line">          <span class="comment">//第二种情况：输入 HTTPNameHTTP 或 HTTP</span></span><br><span class="line">          <span class="comment">//字符串开头和结尾都是大写的情况下，也只需要把该字符转换成小写就可以了</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((i == <span class="number">0</span> || i == s.<span class="built_in">size</span>() - <span class="number">1</span>) &amp;&amp; s[i] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">            </span><br><span class="line">            res.<span class="built_in">push_back</span>(s[i] - <span class="string">&#x27;A&#x27;</span> + <span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">            </span><br><span class="line">          <span class="comment">//第三种情况：除了以上两种特殊情况，其他字符为大写的时候</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (s[i] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; s[i] &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">            </span><br><span class="line">            res.<span class="built_in">push_back</span>(<span class="string">&#x27;_&#x27;</span>);</span><br><span class="line">            res.<span class="built_in">push_back</span>(s[i] - <span class="string">&#x27;A&#x27;</span> + <span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">            </span><br><span class="line">          <span class="comment">//第四种情况：字符为小写的时候</span></span><br><span class="line">        &#125; <span class="keyword">else</span> res.<span class="built_in">push_back</span>(s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;  <span class="comment">//for循环结束后，返回res结果</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//以下是测试代码：</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string s, res;</span><br><span class="line">    </span><br><span class="line">    s = <span class="string">&quot;HTTP&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    res = <span class="built_in">conversionString</span>(s);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入：HTTP，输出：&quot;</span> &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string s, res;</span><br><span class="line">    </span><br><span class="line">    s = <span class="string">&quot;HTTPNameHTTP&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    res = <span class="built_in">conversionString</span>(s);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入：HTTPNameHTTP，输出：&quot;</span> &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string s, res;</span><br><span class="line">    </span><br><span class="line">    s = <span class="string">&quot;myFirstName&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    res = <span class="built_in">conversionString</span>(s);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入：myFirstName，输出：&quot;</span> &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test4</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string s, res;</span><br><span class="line">    </span><br><span class="line">    s = <span class="string">&quot;OnlineUsers&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    res = <span class="built_in">conversionString</span>(s);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入：OnlineUsers，输出：&quot;</span> &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string s, res;</span><br><span class="line">    </span><br><span class="line">    s = <span class="string">&quot;Address&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    res = <span class="built_in">conversionString</span>(s);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入：Address，输出：&quot;</span> &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test6</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    string s, res;</span><br><span class="line">    </span><br><span class="line">    s = <span class="string">&quot;validHTTPRequest&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    res = <span class="built_in">conversionString</span>(s);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;输入：validHTTPRequest，输出：&quot;</span> &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">test1</span>();</span><br><span class="line">    <span class="built_in">test2</span>();</span><br><span class="line">    <span class="built_in">test3</span>();</span><br><span class="line">    <span class="built_in">test4</span>();</span><br><span class="line">    <span class="built_in">test5</span>();</span><br><span class="line">    <span class="built_in">test6</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/LeetCode/008i3skNgy1gtz5j25x5qj60ma0963zh02.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/LeetCode/008i3skNgy1gtz5j25x5qj60ma0963zh02.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -396,190 +401,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

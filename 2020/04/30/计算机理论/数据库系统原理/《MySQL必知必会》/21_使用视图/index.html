@@ -276,24 +276,94 @@
                     <p>使用视图</p>
 <p>视图是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询</p>
 <p>SELECT custname,custcontact<br>FROM customers,orders,orderitems<br>WHERE customers.custid&#x3D;orders.custid<br>     AND orderitems.ordernum&#x3D;orders.ordernum<br>     AND prod_id&#x3D;’TNT2’;</p>
-<p>现在，假如可以把整个查询包装成一个名为productcustomers的虚拟表，则可以如下轻松地检索出相同的数据：<br>SELECT custname,custcontact<br>FROM productcustomers<br>WHERE prod_id&#x3D;’TNT2’;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwsap1tbj30bt01pt9d.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwslo79tj30bt0dy44n.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwssjvutj30bt08gwha.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwszim7yj30bt05iwgf.jpg"></p>
+<p>现在，假如可以把整个查询包装成一个名为productcustomers的虚拟表，则可以如下轻松地检索出相同的数据：<br>SELECT custname,custcontact<br>FROM productcustomers<br>WHERE prod_id&#x3D;’TNT2’;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwsap1tbj30bt01pt9d.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwslo79tj30bt0dy44n.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwssjvutj30bt08gwha.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwszim7yj30bt05iwgf.jpg"
+                     
+                ></p>
 <p>1）<br>CREATE VIEW productcustomers AS<br>SELECT custname,custcontact,prod_id<br>FROM customers,orders,orderitems<br>WHERE customers.custid&#x3D;orders.custid<br>   AND orderitems.ordernum&#x3D;orders.ordernum;</p>
-<p>为检索订购了产品TNT2的客户：<br>SELECT custname,custcontact<br>FROM productcustomers<br>WHERE prod_id&#x3D;’TNT2’;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwt8av55j304u01tdg1.jpg"></p>
-<p>可以看出，视图极大的简化了复杂SQL语句的使用，利用视图，可一次性编写基础的SQL，然后根据需要多次使用<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwtgi1k8j30b7033wgk.jpg"></p>
-<p>2）<br>SELECT Concat(RTrim(vendname)，‘ （’，RTrim(vendcountry)，‘）’）AS vend_title<br>FROM vendors<br>ORDER BY vend_name;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwtp24azj303z03at93.jpg"></p>
+<p>为检索订购了产品TNT2的客户：<br>SELECT custname,custcontact<br>FROM productcustomers<br>WHERE prod_id&#x3D;’TNT2’;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwt8av55j304u01tdg1.jpg"
+                     
+                ></p>
+<p>可以看出，视图极大的简化了复杂SQL语句的使用，利用视图，可一次性编写基础的SQL，然后根据需要多次使用<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwtgi1k8j30b7033wgk.jpg"
+                     
+                ></p>
+<p>2）<br>SELECT Concat(RTrim(vendname)，‘ （’，RTrim(vendcountry)，‘）’）AS vend_title<br>FROM vendors<br>ORDER BY vend_name;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwtp24azj303z03at93.jpg"
+                     
+                ></p>
 <p>CREATE VIEW vendorlocations AS<br>SELECT Concat(RTrim(vendname)，‘ （’，RTrim(vendcountry)，‘）’）AS vend_title<br>FROM vendors<br>ORDER BY vend_name;</p>
-<p>SELECT *<br>FROM vendorlocations;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwtxskgrj303z03aq3b.jpg"></p>
+<p>SELECT *<br>FROM vendorlocations;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwtxskgrj303z03aq3b.jpg"
+                     
+                ></p>
 <ol start="3">
 <li>CREATE VIEW customeremaillist AS<br>SELECT custid,custname,cust_email<br>FROM customers<br>WHERE cust_email IS NOT NULL;</li>
 </ol>
-<p>SELECT *<br>FROM customeremaillist;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwu5zx20j307e0280t8.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwufd723j30b401xgmw.jpg"></p>
+<p>SELECT *<br>FROM customeremaillist;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwu5zx20j307e0280t8.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwufd723j30b401xgmw.jpg"
+                     
+                ></p>
 <ol start="4">
 <li>SELECT prod_id,<br>        quantity,<br>        item_price,<br>        quantity*itemprice AS expandedprice</li>
 </ol>
-<p>FROM orderitems<br>WHERE order_num&#x3D;20005;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwumtgq4j307r02i3yz.jpg"></p>
+<p>FROM orderitems<br>WHERE order_num&#x3D;20005;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwumtgq4j307r02i3yz.jpg"
+                     
+                ></p>
 <p>CREATE VIEW orderitemsexpanded AS<br>SELECT prod_id,<br>              quantity,<br>              item_price,<br>              quantity*itemprice AS expandedprice<br>FROM orderitems;</p>
-<p>SELECT *<br>FROM orderitemsexpanded<br>WHERE order_num&#x3D;20005;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwuxuy21j309i02kjs1.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwv6q1svj30bu08twhc.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwvecw9wj30bu070juj.jpg"></p>
+<p>SELECT *<br>FROM orderitemsexpanded<br>WHERE order_num&#x3D;20005;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwuxuy21j309i02kjs1.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwv6q1svj30bu08twhc.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwvecw9wj30bu070juj.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -412,190 +482,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

@@ -275,23 +275,53 @@
 
                     <p>PPP协议和HDLC协议：</p>
 <p>广域网：WAN，通常跨接很大的物理范围，所覆盖的范围从几十公里到几千公里，它能连接多个城市或国家，或横跨几个洲并能提供远距离通信，形成国际性的远程网络</p>
-<p>广域网的通信子网主要使用分组交换技术，广域网的通信子网可以利用公用分组交换网、卫星通信网和无线分组交换网，它将分布在不同地区的局域网或计算机系统互连起来，达到资源共享的目的，如因特网（Internet）是世界范围内最大的广域网<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfetx8q2j30w70bf0wl.jpg"></p>
+<p>广域网的通信子网主要使用分组交换技术，广域网的通信子网可以利用公用分组交换网、卫星通信网和无线分组交换网，它将分布在不同地区的局域网或计算机系统互连起来，达到资源共享的目的，如因特网（Internet）是世界范围内最大的广域网<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfetx8q2j30w70bf0wl.jpg"
+                     
+                ></p>
 <p>————————————</p>
 <p>点对点协议PPP是目前使用最广泛的数据链路层协议，用户使用拨号电话接入因特网时一般都使用PPP协议</p>
 <p>PPP协议只支持全双工链路</p>
 <p>PPP协议应满足的要求：<br>1）简单：对于链路层的帧，无需纠错，无需序号，无需流量控制<br>2）封装成帧：帧定界符<br>3）透明传输：与帧定界符一样比特组合的数据应该如何处理：异步线路用字节填充，同步线路用比特填充<br>4）多种网络层协议：封装的IP数据报可以采用多种协议<br>5）多种类型链路：串行&#x2F;并行，同步&#x2F;异步，电&#x2F;光<br>6）差错检测：错就丢弃<br>7）检测连接状态：链路是否正常工作<br>8）最大传送单元：数据部分最大长度MTU<br>9）网络层地址协商：知道通信双方的网络层地址<br>10）数据压缩协商</p>
 <p>PPP协议无需满足的要求：<br>1）纠错<br>2）流量控制<br>3）序号<br>4）支持多点线路</p>
 <p>PPP协议的三个组成部分：<br>1）一个将IP数据报封装到串行链路（同步串行&#x2F;异步串行）的方法<br>2）链路控制协议LCP：建立并维护数据链路连接（身份验证）<br>3）网络控制协议NCP：PPP可支持多种网络层协议，每个不同的网络层协议都要一个相应的NCP来配置，为网络层协议建立和配置逻辑连接</p>
-<p>PPP协议的状态图：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosff6jyuoj30nu0fjaex.jpg"></p>
-<p>PPP协议的帧格式：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosffl3cllj30vo0ebagh.jpg"></p>
+<p>PPP协议的状态图：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosff6jyuoj30nu0fjaex.jpg"
+                     
+                ></p>
+<p>PPP协议的帧格式：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosffl3cllj30vo0ebagh.jpg"
+                     
+                ></p>
 <p>———————————</p>
 <p>HDLC协议：高级数据链路控制，是一个在同步网上传输数据、面向比特的数据链路层协议，它是由国际标准化组织ISO根据IBM公司的SDLC协议扩展开发而成的</p>
 <p>数据报文可透明传输，用于实现透明传输的“0比特插入法”易于硬件实现</p>
 <p>采用全双工通信</p>
 <p>所有帧采用CRC检验，对信息帧进行顺序编号，可防止漏收或重份，传输可靠性高</p>
-<p>HDLC的站：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfg2jsnuj30z30be0zl.jpg"></p>
-<p>HDLC的帧格式：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfgf2mnzj30za0czn4h.jpg"></p>
-<p>PPP协议和HDLC协议：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfgrg2hej30rx0hqn43.jpg"></p>
+<p>HDLC的站：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfg2jsnuj30z30be0zl.jpg"
+                     
+                ></p>
+<p>HDLC的帧格式：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfgf2mnzj30za0czn4h.jpg"
+                     
+                ></p>
+<p>PPP协议和HDLC协议：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosfgrg2hej30rx0hqn43.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -410,190 +440,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

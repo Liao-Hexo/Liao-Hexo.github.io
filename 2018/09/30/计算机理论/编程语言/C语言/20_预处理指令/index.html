@@ -279,7 +279,12 @@
 <h3 id="文件包含指令："><a href="#文件包含指令：" class="headerlink" title="文件包含指令："></a>文件包含指令：</h3><p>文件包含指令作用：可以将指定的文件的内容拷贝到写指令的地方<br><code>#include”文件路径”</code><br><code>#include&lt;文件路径&gt;</code></p>
 <p>绝对路径：路径从根目录开始<br>相对路径：相对于当前这个文件夹的路径，和当前文件路径相同的部分删除【一般把导入文件放到和main.c相同的文件夹下】</p>
 <p><code>#include”文件路径”和#include&lt;文件路径&gt;</code>的寻找指定文件的方式不一样：<br>1）前者先去当前源文件所在的目录中查找这个文件，如果有直接包含，如果没有再去系统自带的编译器目录中查找，如果有直接包含，如果没有报错<br>2）后者直接去编译器目录中查找，如果有包含，没有报错</p>
-<h3 id="宏定义："><a href="#宏定义：" class="headerlink" title="宏定义："></a>宏定义：</h3><p>它是一个预处理指令，所以它在编译之前执行，可以将一段C代码定义为一个标识，使用这个标识就可以使用这段代码<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxijf41hgj308005tdgi.jpg"></p>
+<h3 id="宏定义："><a href="#宏定义：" class="headerlink" title="宏定义："></a>宏定义：</h3><p>它是一个预处理指令，所以它在编译之前执行，可以将一段C代码定义为一个标识，使用这个标识就可以使用这段代码<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxijf41hgj308005tdgi.jpg"
+                     
+                ></p>
 <p>宏的原理：在预编译的时候，就会执行源文件中的预处理指令，会将C代码中使用宏名的地方替换为宏值【任意的C代码】，将C代码中的宏名替换为宏值的过程叫做宏替换&#x2F;宏代换</p>
 <p>在定义宏的时候不会去检查语法，只有当完成了宏替换的时候，才会去检查替换以后是否符合语法规范</p>
 <p>如果宏值是一个表达式，那么宏值并不是这个表达式的结果，而是这个表达式本身</p>
@@ -287,20 +292,70 @@
 <p>【默认情况下，宏从定义的地方一直到文件结束都可以使用，#undef 宏名可以让指定的宏提前失效】<br><code>#define N 10</code></p>
 <p>只能在中间使用这个宏，#undef N下面宏失效</p>
 <p><code>#undef N</code></p>
-<p>字符串中如果出现了宏名，系统不会认为这是一个宏，而是认为是字符串的一部分<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxijrlkunj30i40570tm.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxik0ojunj308u023jrv.jpg"></p>
+<p>字符串中如果出现了宏名，系统不会认为这是一个宏，而是认为是字符串的一部分<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxijrlkunj30i40570tm.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxik0ojunj308u023jrv.jpg"
+                     
+                ></p>
 <p>如果宏后面跟了分号，那么就会把分号作为宏值的一部分</p>
-<p>我们在定义宏的时候，宏名是可以带参数的，在这个宏值中可以直接使用这个参数，如果使用的宏有参数，那么就必须要在使用它的时候为这个宏的参数传值<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxik7s408j308804njsj.jpg"></p>
+<p>我们在定义宏的时候，宏名是可以带参数的，在这个宏值中可以直接使用这个参数，如果使用的宏有参数，那么就必须要在使用它的时候为这个宏的参数传值<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxik7s408j308804njsj.jpg"
+                     
+                ></p>
 <p>宏不是函数，所以宏的参数不需要加类型说明符</p>
-<p>为带参数的宏传值的时候，是本色传递，如果传递一个变量，并不是传递这个变量的值<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikggxayj308907lmyp.jpg"></p>
+<p>为带参数的宏传值的时候，是本色传递，如果传递一个变量，并不是传递这个变量的值<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikggxayj308907lmyp.jpg"
+                     
+                ></p>
 <h3 id="条件编译指令："><a href="#条件编译指令：" class="headerlink" title="条件编译指令："></a>条件编译指令：</h3><p>默认的情况下，所有的C代码都会被编译为二进制代码，条件编译指令可以让编译器只编译指定部分的代码</p>
-<p>在预编译的时候，如果条件成立，就会将其中的C代码编译成二进制指令，如果条件不成立，就不会将其中的C代码编译成二进制指令【条件只能是宏，不能是变量】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikpk32qj308l0agdhp.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikxggnsj30im0auq53.jpg"></p>
+<p>在预编译的时候，如果条件成立，就会将其中的C代码编译成二进制指令，如果条件不成立，就不会将其中的C代码编译成二进制指令【条件只能是宏，不能是变量】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikpk32qj308l0agdhp.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikxggnsj30im0auq53.jpg"
+                     
+                ></p>
 <p>If语句无论如何全部都要被编译为二进制指令，条件编译指令只会将符合条件的C代码编译为二进制指令</p>
-<p>如果定义了指定的宏，就编译其中的代码<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxil58iv2j308a08mjte.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilbvot6j308a02r3z1.jpg"></p>
-<p>无论一个文件被#include多少次，只希望它最终只会被包含一次<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilixiwnj308a038jrv.jpg"></p>
+<p>如果定义了指定的宏，就编译其中的代码<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxil58iv2j308a08mjte.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilbvot6j308a02r3z1.jpg"
+                     
+                ></p>
+<p>无论一个文件被#include多少次，只希望它最终只会被包含一次<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilixiwnj308a038jrv.jpg"
+                     
+                ></p>
 <h3 id="static和extern："><a href="#static和extern：" class="headerlink" title="static和extern："></a>static和extern：</h3><p>C语言中的关键字，用来修饰变量和函数</p>
-<p>如果局部变量被static修饰，这个变量就叫做静态变量，静态变量不再存储在栈区域，而是存储在常量区，当函数执行完之后，这个静态变量不会被回收，后面再去执行这个函数的时候，声明静态变量的这句话就不会再执行了，直接略过，直接使用这个静态变量的值【静态变量只有一份】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilridhgj30ic0c0tas.jpg"></p>
+<p>如果局部变量被static修饰，这个变量就叫做静态变量，静态变量不再存储在栈区域，而是存储在常量区，当函数执行完之后，这个静态变量不会被回收，后面再去执行这个函数的时候，声明静态变量的这句话就不会再执行了，直接略过，直接使用这个静态变量的值【静态变量只有一份】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilridhgj30ic0c0tas.jpg"
+                     
+                ></p>
 <p>extern不能修饰局部变量</p>
 <p>当我们分模块开发的时候，如果要在模块中声明全局变量，全局变量的声明要写在.h文件中，全局变量的实现要写在.c文件中【如果将全局变量定义在模块中，这个全局变量就必须要使用static或者extern修饰】</p>
 <p>如果定义在模块中的全局变量使用extern修饰，这个模块中的全局变量就可以跨模块访问；使用static修饰，这个模块中的全局变量就只能在当前模块中访问</p>
@@ -408,190 +463,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

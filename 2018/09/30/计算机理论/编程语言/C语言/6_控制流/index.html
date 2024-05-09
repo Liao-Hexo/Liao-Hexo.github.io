@@ -277,7 +277,17 @@
 
 <h3 id="控制流的一些注意点"><a href="#控制流的一些注意点" class="headerlink" title="控制流的一些注意点"></a>控制流的一些注意点</h3><p>1）小技巧：Xcode中选中要对齐的代码：control+i，就会自动对齐</p>
 <p>2）while循环应用场景：</p>
-<p>-循环体确定，循环次数也确定<br>-循环体确定，循环的次数不确定，但是循环继续或者结束的条件确定<br>-遍历指定范围的数<br>-找出指定范围中符合特定条件的数<br>-求累加和与平均值<br>-找一堆数中的最大数和最小数<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh49zsp4j30ah0fuq4f.jpg"><br>-计数<br>-穷举【一个一个试】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh4kw3e2j30ah0c0wfe.jpg"></p>
+<p>-循环体确定，循环次数也确定<br>-循环体确定，循环的次数不确定，但是循环继续或者结束的条件确定<br>-遍历指定范围的数<br>-找出指定范围中符合特定条件的数<br>-求累加和与平均值<br>-找一堆数中的最大数和最小数<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh49zsp4j30ah0fuq4f.jpg"
+                     
+                ><br>-计数<br>-穷举【一个一个试】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh4kw3e2j30ah0c0wfe.jpg"
+                     
+                ></p>
 <p>3）定义在一个大括弧中的变量，只能在这个大括弧中访问，出了大括弧，CPU立即将变量回收，无法访问到了:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc,<span class="type">const</span> <span class="type">char</span> * argv[])</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(num &gt; <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> age = <span class="number">10</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;age=%d\n&quot;</span>,age);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;age=%d\n&quot;</span>,age);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -285,27 +295,72 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;i=%d\n&quot;</span>,i);</span><br><span class="line">&#125;   <span class="comment">//这个时候，i就会在这里释放</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>4）无大括号else的匹配：else总是和最近的那个if匹配</p>
-<p>5）if-else与switch-case的区别：前者从头开始遍历，后者直接跳转到符合要求处<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh4xnkazj30a60bsdgw.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh58mcvwj30a60cw3zv.jpg"></p>
+<p>5）if-else与switch-case的区别：前者从头开始遍历，后者直接跳转到符合要求处<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh4xnkazj30a60bsdgw.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh58mcvwj30a60cw3zv.jpg"
+                     
+                ></p>
 <p>每一个case块后面的break在语法上是可以不写的，break的意思代表立即结束整个switch-case结构，如果case块中没有break，那么就会直接穿透到下一个case中执行代码，直到遇到break才会结束switch结构，或者执行完</p>
 <p>如果多个case块的处理逻辑是一样的，那么我们可以利用case穿透简写代码</p>
 <p>switch后面的表达式任何类型都是可以的，除了实型</p>
 <p>如果case块中要声明变量，那么这个case块就必须要使用大括弧</p>
 <p>switch结构只能做等值判断，不能直接做范围判断，并且case后面的数据不能有变量</p>
-<p>break的作用：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh5fvmj6j309u0cf3zj.jpg"></p>
+<p>break的作用：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh5fvmj6j309u0cf3zj.jpg"
+                     
+                ></p>
 <p>6）break和continue的区别：</p>
 <p>如果在循环体中遇到了break，就会立即结束当前循环结构，但是还会继续外层循环</p>
 <p>continue只能使用在循环体中，如果遇到了continue，会立即结束本次循环，然后回去判断循环条件【注意一下while循环体和for循环体不一样(前者可能包括i++，后者不包括)】</p>
 <p>break和continue都只能作用于当前循环体！</p>
-<p>一道比较有意思的面试题：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh5o8fj7j309y07g0te.jpg"></p>
+<p>一道比较有意思的面试题：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh5o8fj7j309y07g0te.jpg"
+                     
+                ></p>
 <p>7）while和do-while的区别：前者先判断条件后进循环体，后者先进循环体再判断条件</p>
 <p>8）for循环中，三个表达式都可以省略，但是分号不能省略；如果第二个表达式省略，那么循环条件默认就是成立的</p>
-<p>for循环三个表达式其实可以是任意的C语句：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotjwcr25nj30e40c2dgf.jpg"></p>
+<p>for循环三个表达式其实可以是任意的C语句：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotjwcr25nj30e40c2dgf.jpg"
+                     
+                ></p>
 <p>9）goto：可以将CPU的执行跳转到当前函数的别的地方继续执行</p>
 <p>当执行到goto语句的时候，CPU就会跳转到指定的标签的地方继续往下执行</p>
-<p>goto语句也可以实现循环操作<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotk2627j4j30bg09tjsd.jpg"></p>
+<p>goto语句也可以实现循环操作<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotk2627j4j30bg09tjsd.jpg"
+                     
+                ></p>
 <p>goto可以往前跳，也可以往后跳，但是只能在当前函数中跳</p>
-<p>取标签名下面的那一句代码不能是声明变量：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotk3hqcfrj30cg09tdgu.jpg"></p>
-<p>10）break和goto：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh67f0xwj30hz0dstai.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh6f018yj30hz0dsjt1.jpg"></p>
+<p>取标签名下面的那一句代码不能是声明变量：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotk3hqcfrj30cg09tdgu.jpg"
+                     
+                ></p>
+<p>10）break和goto：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh67f0xwj30hz0dstai.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh6f018yj30hz0dsjt1.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -424,190 +479,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

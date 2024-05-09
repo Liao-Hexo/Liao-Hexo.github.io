@@ -282,27 +282,72 @@
 <p>局部置换：发生缺页时只能选进程自己的物理块进行置换</p>
 <p>全局置换：可以将操作系统保留的空闲物理块分配给缺页进程，也可以将别的进程持有的物理块置换到外存，再分配给缺页进程</p>
 <p>⭐️没有固定分配的全局置换：全局置换意味着一个进程拥有的物理块数量必然会改变，因此不可能是固定分配</p>
-<h3 id="固定分配局部置换"><a href="#固定分配局部置换" class="headerlink" title="固定分配局部置换"></a>固定分配局部置换</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc51pv674j30v203kaev.jpg"></p>
+<h3 id="固定分配局部置换"><a href="#固定分配局部置换" class="headerlink" title="固定分配局部置换"></a>固定分配局部置换</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc51pv674j30v203kaev.jpg"
+                     
+                ></p>
 <h3 id="可变分配全局置换"><a href="#可变分配全局置换" class="headerlink" title="可变分配全局置换"></a>可变分配全局置换</h3><p>系统会锁定一些页面，这些页面中的内容不能置换出外存（如重要的内核数据可以设为“锁定”）</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc52aftxtj30v204qqcm.jpg"></p>
-<h3 id="可变分配局部置换（该策略最好）"><a href="#可变分配局部置换（该策略最好）" class="headerlink" title="可变分配局部置换（该策略最好）"></a>可变分配局部置换（该策略最好）</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc562tifaj30v2040n36.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc52aftxtj30v204qqcm.jpg"
+                     
+                ></p>
+<h3 id="可变分配局部置换（该策略最好）"><a href="#可变分配局部置换（该策略最好）" class="headerlink" title="可变分配局部置换（该策略最好）"></a>可变分配局部置换（该策略最好）</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc562tifaj30v2040n36.jpg"
+                     
+                ></p>
 <p>可变分配全局置换：只要缺页就给分配新物理块</p>
 <p>可变分配局部置换：要根据发生缺页的频率来动态的增加或减少进程的物理块</p>
-<h2 id="何时调入页面"><a href="#何时调入页面" class="headerlink" title="何时调入页面"></a>何时调入页面</h2><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5d19692j30vw0bu4h1.jpg"></p>
+<h2 id="何时调入页面"><a href="#何时调入页面" class="headerlink" title="何时调入页面"></a>何时调入页面</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5d19692j30vw0bu4h1.jpg"
+                     
+                ></p>
 <h2 id="从何处调入页面"><a href="#从何处调入页面" class="headerlink" title="从何处调入页面"></a>从何处调入页面</h2><ol>
 <li><p>系统拥有足够的对换区空间：页面的调入、调出都是在内存与对换区之间进行，这样可以保证页面的调入、调出速度很快。在进程运行前，需将进程相关的数据从文件区复制到对换区</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5hckzxqj30h40ckqbe.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5hckzxqj30h40ckqbe.jpg"
+                     
+                ></p>
 </li>
 <li><p>系统缺少足够的对换区空间：凡是不会被修改的数据都直接从文件区调入，由于这些页面不会被修改，因此换出时不必写回磁盘，下次需要时再从文件区调入即可。对于可能被修改的部分，换出时需写回磁盘对换区，下次需要时再从对换区调入</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5om9ta6j30gc0dodpi.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5om9ta6j30gc0dodpi.jpg"
+                     
+                ></p>
 </li>
 <li><p>UNIX方式：运行之前进程有关的数据全部放在文件区，故未使用过的页面，都可从文件区调入。若被使用过的页面需要换出，则写回对换区，下次需要时从对换区调入</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5tegmw9j30gc0dethb.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5tegmw9j30gc0dethb.jpg"
+                     
+                ></p>
 </li>
 </ol>
-<h2 id="抖动（颠簸）现象"><a href="#抖动（颠簸）现象" class="headerlink" title="抖动（颠簸）现象"></a>抖动（颠簸）现象</h2><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5vgfoq7j30v808kqer.jpg"></p>
+<h2 id="抖动（颠簸）现象"><a href="#抖动（颠簸）现象" class="headerlink" title="抖动（颠簸）现象"></a>抖动（颠簸）现象</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc5vgfoq7j30v808kqer.jpg"
+                     
+                ></p>
 <h2 id="工作集"><a href="#工作集" class="headerlink" title="工作集"></a>工作集</h2><p>根据工作集来分配驻留集：</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc61ciabrj30v80fktl8.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grc61ciabrj30v80fktl8.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -421,190 +466,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

@@ -278,12 +278,67 @@
 <p>值得注意的是，在使用交互式工具时，实际上使用的是MySQL语句，但是这些语句不是用户编写的，界面工具会自动生成并执行相应的MySQL语句（更改现有表时也是这样）</p>
 <p>为利用CREATE TABLE创建表，必须给出下列信息：<br>1）新表的名字，在关键字CREATE TABLE之后给出<br>2）表列的名字和定义，用逗号分隔</p>
 <p>1）表的主键可以在创建表时用PRIMARY KEY关键字指定，为创建由多个列组成的主键，应该以逗号分隔的列表给出各列名；主键为其值唯一标识表中每个行的列，主键中只能使用不允许NULL值的列，允许NULL值的列不能作为唯一标识<br>CREATE TABLE customers<br>(<br>     custid              int                NOT NULL AUTOINCREMENT,<br>     cust_name        char(50)     NOT NULL,<br>     cust_address    char(50)     NULL,<br>     cust_city           char(50)     NULL,<br>     cust_state         char(5)       NULL,<br>     cust_zip             char(10)     NULL,<br>     cust_country     char(50)     NULL,<br>     cust_contact     char(50)     NULL,<br>     cust_email         char(255)   NULL,<br>     PRIMARY KEY (cust_id)<br>)ENGINE-InnoDB;</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwon1sojj30b4044ju1b.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwoulrokj30b4102lwgb.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwp2xsdhj310b402l40a.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwp9p6ubj30b402l761.jpg"></p>
-<p>AUTOINCREMENT告诉MySQL，本列每当增加一行时自动增量。每次执行一个INSERT操作时，MySQL自动对该列增量（从而才有这个关键字AUTOINCREMENT），给该列赋予下一个可用的值。这样给每个行分配一个唯一的custid，从而可以用作主键值；每个表只允许一个AUTOINCREMENT列，而且它必须被索引（如通过使它成为主键）<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwpk2xfbj30b40bjjz3.jpg"></p>
-<p>2）如果在插入行时没有给出值，MySQL允许指定此时使用的默认值。默认值用CREATE TABLE语句的列定义中的DEFAULT关键字指定<br>CREATE TABLE orderitems<br>(<br>     order_num        int                     NOT NULL,<br>     order_item        int                     NOT NULL,<br>     prod_id             char(10)           NOT NULL,<br>     quantity            int                     NOT NULL DEFAULT 1,<br>     item_price        decimal(8,2)    NOT NULL,<br>     PRIMARY KEY(ordernum,orderitem)<br>)ENGINE-InnoDB;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwptvtivj30b404d40w.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwq1d6f2j30bw07ndis.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwq88t37j30bw0f0wlh.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwon1sojj30b4044ju1b.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwoulrokj30b4102lwgb.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwp2xsdhj310b402l40a.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwp9p6ubj30b402l761.jpg"
+                     
+                ></p>
+<p>AUTOINCREMENT告诉MySQL，本列每当增加一行时自动增量。每次执行一个INSERT操作时，MySQL自动对该列增量（从而才有这个关键字AUTOINCREMENT），给该列赋予下一个可用的值。这样给每个行分配一个唯一的custid，从而可以用作主键值；每个表只允许一个AUTOINCREMENT列，而且它必须被索引（如通过使它成为主键）<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwpk2xfbj30b40bjjz3.jpg"
+                     
+                ></p>
+<p>2）如果在插入行时没有给出值，MySQL允许指定此时使用的默认值。默认值用CREATE TABLE语句的列定义中的DEFAULT关键字指定<br>CREATE TABLE orderitems<br>(<br>     order_num        int                     NOT NULL,<br>     order_item        int                     NOT NULL,<br>     prod_id             char(10)           NOT NULL,<br>     quantity            int                     NOT NULL DEFAULT 1,<br>     item_price        decimal(8,2)    NOT NULL,<br>     PRIMARY KEY(ordernum,orderitem)<br>)ENGINE-InnoDB;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwptvtivj30b404d40w.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwq1d6f2j30bw07ndis.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwq88t37j30bw0f0wlh.jpg"
+                     
+                ></p>
 <p>3)更新表<br>为了使用ALTER TABLE更改表结构，必须给出下面的信息：<br>1）在ALTER TABLE之后给出要更改的表名（该表必须存在，否则将出错）<br>2）所做更改的列表</p>
 <p>ALTER TABLE vendors<br>ADD vend_phone CHAR(20);</p>
-<p>删除刚刚添加的列：<br>ALTER TABLE Vendors<br>DROP COLUMN vend_phone;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwqhn92kj30bw08l76r.jpg"><br><img src="/Users/liaojialong/Desktop/%E5%BB%96%E5%AE%B6%E9%BE%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/source/_posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/assets/008eGmZEly1gorwqphxx2j30bw01ldg7.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwqwbdwtj30bw07e0wg.jpg"></p>
+<p>删除刚刚添加的列：<br>ALTER TABLE Vendors<br>DROP COLUMN vend_phone;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwqhn92kj30bw08l76r.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="/Users/liaojialong/Desktop/%E5%BB%96%E5%AE%B6%E9%BE%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/source/_posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/assets/008eGmZEly1gorwqphxx2j30bw01ldg7.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorwqwbdwtj30bw07e0wg.jpg"
+                     
+                ></p>
 <p>4)删除表：删除整个表而不是其内容，删除表没有确认，也不能撤销，执行这条语句将永久删除该表</p>
 <p>DROP TABLE customers2;</p>
 <p>5)重命名表</p>
@@ -406,190 +461,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

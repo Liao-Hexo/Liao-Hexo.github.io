@@ -273,14 +273,34 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <p>串的顺序存储：【默认使用方案四】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gonwq62wcbj31ac0r1juc.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gonwryrdbvj30f20fgwgm.jpg"></p>
+                    <p>串的顺序存储：【默认使用方案四】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gonwq62wcbj31ac0r1juc.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gonwryrdbvj30f20fgwgm.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXIEN 255  //预定义最大串长为255</span><br><span class="line"></span><br><span class="line">//静态数组实现(定长顺序存储)</span><br><span class="line">typedef struct&#123;</span><br><span class="line">    char ch[MAXIEN];  //每个分量存储一个字符</span><br><span class="line">    int length;  //串的实际长度</span><br><span class="line">&#125;SString;</span><br><span class="line"></span><br><span class="line">//动态数组实现(堆分配存储)</span><br><span class="line">typedef struct&#123;</span><br><span class="line">    char *ch;  //按串长分配存储区，ch指向串的基地址</span><br><span class="line">    int length;  //串的长度</span><br><span class="line">&#125;HString;</span><br><span class="line"></span><br><span class="line">//初始化动态数组</span><br><span class="line">void Init(HString *S)&#123;</span><br><span class="line">    </span><br><span class="line">    S-&gt;ch=(char *)malloc(MAXIEN * sizeof(char));  //用完需要手动free</span><br><span class="line">    S-&gt;length=0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    HString S;</span><br><span class="line">    Init(&amp;S);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>串的基本操作实现：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goob7yygk1j30ik0xoadi.jpg"></p>
+<p>串的基本操作实现：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goob7yygk1j30ik0xoadi.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">#include&lt;stdbool.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXIEN 255  //预定义最大串长为255</span><br><span class="line"></span><br><span class="line">//静态数组实现(定长顺序存储)</span><br><span class="line">typedef struct&#123;</span><br><span class="line">    char ch[MAXIEN];  //每个分量存储一个字符</span><br><span class="line">    int length;  //串的实际长度</span><br><span class="line">&#125;SString;</span><br><span class="line"></span><br><span class="line">//基本操作的实现</span><br><span class="line">//1.求子串：用Sub返回串S的第pos个字符起长度为len的子串</span><br><span class="line">bool SubString(SString *Sub,SString *S,int pos,int len)&#123;</span><br><span class="line">    //子串范围越界</span><br><span class="line">    if(pos+len-1 &gt; S-&gt;length)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=pos-1;i&lt;pos+len-1;i++)&#123;</span><br><span class="line">        Sub-&gt;ch[i-pos+1]=S-&gt;ch[i];</span><br><span class="line">    &#125;</span><br><span class="line">    Sub-&gt;length=len;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//2.比较操作：若S&gt;T，则返回值&gt;0；若S=T，则返回值=0；若S&lt;T，则返回值&lt;0</span><br><span class="line">int StrCompare(SString *S,SString *T)&#123;</span><br><span class="line">    for(int i=1;i&lt;=S-&gt;length &amp;&amp; i&lt;=T-&gt;length;i++)&#123;</span><br><span class="line">        if(S-&gt;ch[i] != T-&gt;ch[i])&#123;</span><br><span class="line">            return S-&gt;ch[i]-T-&gt;ch[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //扫描过的所有字符都相同，则长度长的串更大</span><br><span class="line">    return S-&gt;length-T-&gt;length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//求串长，返回串S的元素个数[未完成代码]</span><br><span class="line">int StrLength(SString *S)&#123;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//3.定位操作，若主串S中存在与串T值相同的子串，则返回它在主串S中第一次出现的位置，否则函数值为0</span><br><span class="line">int Index(SString *S,SString *T)&#123;</span><br><span class="line">    int i=1,n=StrLength(S),m=StrLength(T);</span><br><span class="line">    SString sub;  //用于暂存字符串</span><br><span class="line">    while(i&lt;=n-m+1)&#123;</span><br><span class="line">        SubString(&amp;sub, S, i, m);</span><br><span class="line">        if(StrCompare(&amp;sub, T) != 0)&#123;</span><br><span class="line">            ++i;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return i;  //返回子串在主串中的位置</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;  //S中不存在与T相等的子串</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    SString S=&#123;&quot;hello world!&quot;,12&#125;;</span><br><span class="line">    </span><br><span class="line">    SString Sub=&#123;&quot;&quot;,0&#125;;  //初始化时清空数组</span><br><span class="line">    if(SubString(&amp;Sub, &amp;S, 3, 5))&#123;</span><br><span class="line">        printf(&quot;%s\n&quot;,Sub.ch);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>串的链式存储：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gonwzq5qfqj30dp076jsb.jpg"></p>
+<p>串的链式存储：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1gonwzq5qfqj30dp076jsb.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -399,190 +419,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

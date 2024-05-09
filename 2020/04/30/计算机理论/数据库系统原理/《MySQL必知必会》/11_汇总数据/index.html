@@ -274,20 +274,120 @@
                     
 
                     <p>汇总数据</p>
-<p>聚集函数：运行在行组上，计算和返回单个值的函数<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorub8jfypj3080045wf3.jpg"></p>
+<p>聚集函数：运行在行组上，计算和返回单个值的函数<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorub8jfypj3080045wf3.jpg"
+                     
+                ></p>
 <p>1）AVG()函数：AVG()通过对表中行数计算并计算特定列值之和，求得该列的平均值。AVG()可用来返回所有列的平均值，也可以用来返回特定列或行的平均值</p>
-<p>返回products表中所有产品的平均价格<br>SELECT AVG(prodprice) AS avgprice<br>FROM products;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorubgpm52j301v01kaa3.jpg"></p>
-<p>返回特定供应商所提供产品的平均价格<br>SELECT AVG(prodprice) AS avgprice<br>FROM products<br>WHERE vend_id &#x3D;1003;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorubopzzmj301v01kaa3.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorubwhuxfj30b603kgnu.jpg"></p>
-<p>2)COUNT()函数<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruc4a991j30bm04b3zr.jpg"></p>
-<p>返回customers表中客户的总数：<br>SELECT COUNT(*) AS num_cust<br>FROM customers;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorucbxi9yj301r01l3yi.jpg"></p>
-<p>只对具有电子邮件地址的客户计数<br>SELECT COUNT(custemail) AS numcust<br>FROM customers;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruclrzijj301r01ldfu.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goructfdt3j30b601p3zn.jpg"></p>
-<p>3)MAX()函数：要求指定列名<br>SELECT MAX(prodprice) AS maxprice<br>FROM products;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorud22nwpj301x01gjre.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorud9vrdwj30b803zwgv.jpg"></p>
-<p>4)MIN()函数：要求指定列名<br>SELECT MIN(prodprice) AS minprice<br>FROM products;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorudhl35tj301u01haa2.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorudpylkmj30b8044jtz.jpg"></p>
+<p>返回products表中所有产品的平均价格<br>SELECT AVG(prodprice) AS avgprice<br>FROM products;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorubgpm52j301v01kaa3.jpg"
+                     
+                ></p>
+<p>返回特定供应商所提供产品的平均价格<br>SELECT AVG(prodprice) AS avgprice<br>FROM products<br>WHERE vend_id &#x3D;1003;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorubopzzmj301v01kaa3.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorubwhuxfj30b603kgnu.jpg"
+                     
+                ></p>
+<p>2)COUNT()函数<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruc4a991j30bm04b3zr.jpg"
+                     
+                ></p>
+<p>返回customers表中客户的总数：<br>SELECT COUNT(*) AS num_cust<br>FROM customers;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorucbxi9yj301r01l3yi.jpg"
+                     
+                ></p>
+<p>只对具有电子邮件地址的客户计数<br>SELECT COUNT(custemail) AS numcust<br>FROM customers;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruclrzijj301r01ldfu.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goructfdt3j30b601p3zn.jpg"
+                     
+                ></p>
+<p>3)MAX()函数：要求指定列名<br>SELECT MAX(prodprice) AS maxprice<br>FROM products;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorud22nwpj301x01gjre.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorud9vrdwj30b803zwgv.jpg"
+                     
+                ></p>
+<p>4)MIN()函数：要求指定列名<br>SELECT MIN(prodprice) AS minprice<br>FROM products;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorudhl35tj301u01haa2.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorudpylkmj30b8044jtz.jpg"
+                     
+                ></p>
 <p>5)SUM()函数：用来返回指定列值的和（总计）</p>
-<p>检索所订购物品的总数（所有quantity值之和）<br>SELECT SUM(quantity) AS items_ordered<br>FROM orderitems<br>WHERE order_num&#x3D;20005;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorudypxc9j302g01lq2z.jpg"></p>
-<p>合计每项物品的items_price<em>quantity，得到总的订单金额<br>SELECT SUM(itemprice</em>quantity) AS totalprice<br>FROM orderitems<br>WHERE order_num&#x3D;20005;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorue994hlj302701idfv.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorueib4iij30b802vgnf.jpg"></p>
-<p>6)聚集不同值<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorueq3r3qj30ba042jt8.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruexsptij30ba06r40f.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruf5cszrj30ba056adj.jpg"></p>
-<p>7）组合聚集函数<br>SELECT COUNT(*) AS num_items,<br>               MIN(prodprice) AS pricemin,<br>               MAX(prodprice) AS pricemax,<br>               AVG(prodprice) AS priceavg<br>FROM products;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorufd6iwpj307b01gmxf.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorufl6iwxj30b501z75o.jpg"></p>
+<p>检索所订购物品的总数（所有quantity值之和）<br>SELECT SUM(quantity) AS items_ordered<br>FROM orderitems<br>WHERE order_num&#x3D;20005;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorudypxc9j302g01lq2z.jpg"
+                     
+                ></p>
+<p>合计每项物品的items_price<em>quantity，得到总的订单金额<br>SELECT SUM(itemprice</em>quantity) AS totalprice<br>FROM orderitems<br>WHERE order_num&#x3D;20005;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorue994hlj302701idfv.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorueib4iij30b802vgnf.jpg"
+                     
+                ></p>
+<p>6)聚集不同值<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorueq3r3qj30ba042jt8.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruexsptij30ba06r40f.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1goruf5cszrj30ba056adj.jpg"
+                     
+                ></p>
+<p>7）组合聚集函数<br>SELECT COUNT(*) AS num_items,<br>               MIN(prodprice) AS pricemin,<br>               MAX(prodprice) AS pricemax,<br>               AVG(prodprice) AS priceavg<br>FROM products;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorufd6iwpj307b01gmxf.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/008eGmZEly1gorufl6iwxj30b501z75o.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -406,190 +506,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

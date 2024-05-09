@@ -274,21 +274,111 @@
                     
 
                     <p>传统的UNIX操作系统与那些传统的MS-DOS操作系统不同，区别在于它们不仅是多重任务处理系统，而且还是多用户系统,这意味着同一时间内可以有多个用户使用同一台计算机</p>
-<p>id命令可以获得用户身份标识的相关信息<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizu9qa41j30lz00x749.jpg"></p>
+<p>id命令可以获得用户身份标识的相关信息<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizu9qa41j30lz00x749.jpg"
+                     
+                ></p>
 <p>1）用户账户定义在文件&#x2F;etc&#x2F;passwd中，对于每一个用户账户，文件&#x2F;etc&#x2F;passwd中都定义了对应用户的用户（登录）名、uid、gid、账户的真实姓名、主目录以及登录shell信息<br>2）用户组定义在文件&#x2F;etc&#x2F;group中，如果查看文件&#x2F;etc&#x2F;passwd和文件&#x2F;etc&#x2F;group的内容，可以发现除了普通用户账户信息之外，文件中还有对应于超级用户（uid为0）和其他不同种类的系统用户的账户信息<br>3）在创建用户账户和群组时，这些文件随着文件&#x2F;etc&#x2F;shadow的变动而修改，文件&#x2F;etc&#x2F;shadow中保存了用户的密码信息</p>
-<p>对文件和目录的访问权限是按照读访问、写访问以及执行访问来定义的：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizuixqg3j30cb0gudhc.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizuvora2j30cb0azjse.jpg"></p>
-<p>chmod：更改文件或者目录的模式（权限），只有文件所有者和超级用户才可以更改文件或者目录的模式<br>1）八进制数字表示法：使用八进制数字来设置所期望的权限模式<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizv3e7itj30cb04uzk8.jpg"></p>
-<p>通过使用3位八进制数字，我们可以分别设置文件所有者、组成员和其他所有用户的文件模式<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvc9v8ej30b002nglq.jpg"></p>
-<p>2）符号表示法：分为三部分：更改会影响谁、要执行哪个操作、要设置哪种权限<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvjhikhj30c007lwf2.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvpqhcgj30c006pdgh.jpg"></p>
-<p>umask命令控制着创建文件时指定给文件的默认权限，它使用八进制表示法来表示从文件模式属性中删除一个位掩码<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvxxw2dj30c00bp75h.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizw5zh8jj30c0075wf6.jpg"></p>
+<p>对文件和目录的访问权限是按照读访问、写访问以及执行访问来定义的：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizuixqg3j30cb0gudhc.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizuvora2j30cb0azjse.jpg"
+                     
+                ></p>
+<p>chmod：更改文件或者目录的模式（权限），只有文件所有者和超级用户才可以更改文件或者目录的模式<br>1）八进制数字表示法：使用八进制数字来设置所期望的权限模式<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizv3e7itj30cb04uzk8.jpg"
+                     
+                ></p>
+<p>通过使用3位八进制数字，我们可以分别设置文件所有者、组成员和其他所有用户的文件模式<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvc9v8ej30b002nglq.jpg"
+                     
+                ></p>
+<p>2）符号表示法：分为三部分：更改会影响谁、要执行哪个操作、要设置哪种权限<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvjhikhj30c007lwf2.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvpqhcgj30c006pdgh.jpg"
+                     
+                ></p>
+<p>umask命令控制着创建文件时指定给文件的默认权限，它使用八进制表示法来表示从文件模式属性中删除一个位掩码<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizvxxw2dj30c00bp75h.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizw5zh8jj30c0075wf6.jpg"
+                     
+                ></p>
 <p>有三种方法用来转换身份：<br>1）注销系统并以其他用户的身份重新登录系统<br>2）使用su命令<br>3）使用sudo命令</p>
 <p>在shell会话状态下，使用su命令将允许你假定为另一个用户的身份，既可以以这个用户的ID来启动一个新的shell会话，也可以以这个用户的身份来发布一个命令<br>使用sudo命令将允许管理者创建一个称为&#x2F;etc&#x2F;sudoer的配置文件，并且定义一些特定的命令，这些命令只有被赋予为假定身份的特定用户才允许执行</p>
-<p>su：以其他用户和组ID的身份来运行shell<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizwesdzhj30c00d1myp.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizwn6pxpj30c0026746.jpg"></p>
-<p>sudo：以另一个用户的身份执行命令<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizwu31xvj30c00au75q.jpg"></p>
-<p>chown：更改文件或者目录的所有者和所属群组，需要超级用户的权限<br><img src="/Users/liaojialong/Desktop/%E5%BB%96%E5%AE%B6%E9%BE%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/source/_posts/%E8%8B%B9%E6%9E%9C%E5%85%A8%E5%AE%B6%E6%A1%B6/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/assets/0081Kckwly1glizx1ua7rj30c0053t91.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizx8o30ej30c008ldgs1.jpg"></p>
+<p>su：以其他用户和组ID的身份来运行shell<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizwesdzhj30c00d1myp.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizwn6pxpj30c0026746.jpg"
+                     
+                ></p>
+<p>sudo：以另一个用户的身份执行命令<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizwu31xvj30c00au75q.jpg"
+                     
+                ></p>
+<p>chown：更改文件或者目录的所有者和所属群组，需要超级用户的权限<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="/Users/liaojialong/Desktop/%E5%BB%96%E5%AE%B6%E9%BE%99%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/source/_posts/%E8%8B%B9%E6%9E%9C%E5%85%A8%E5%AE%B6%E6%A1%B6/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/assets/0081Kckwly1glizx1ua7rj30c0053t91.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizx8o30ej30c008ldgs1.jpg"
+                     
+                ></p>
 <p>chgrp：在更早的UNIX版本中，chown命令只能更改文件的所有者，而不能改变文件所属群组，为了达到这个目的，可以使用chgrp</p>
-<p>实例：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizxgbk8yj30c004iaah.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizxn0wz4j30c00hfabs.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizxun33nj30c00e5jt6.jpg"></p>
-<p>passwd：设置或者更改密码<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizy2rqv9j30c009fdgm.jpg"></p>
+<p>实例：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizxgbk8yj30c004iaah.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizxn0wz4j30c00hfabs.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizxun33nj30c00e5jt6.jpg"
+                     
+                ></p>
+<p>passwd：设置或者更改密码<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizy2rqv9j30c009fdgm.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -407,190 +497,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

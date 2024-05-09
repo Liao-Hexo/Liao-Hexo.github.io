@@ -279,22 +279,87 @@
 <p>对象的初始化和清理工作是编译器强制要我们做的事情，因此如果我们不提供构造和析构，编译器会提供；但是编译器提供的构造函数和析构函数是空实现</p>
 <p>构造函数：主要作用于创建对象时为对象的成员属性赋值，构造函数由编译器自动调用，无须手动调用<br>析构函数：主要作用在对象销毁前系统自动调用，执行一些清理工作</p>
 <p>构造函数语法：类名(){}<br>1）构造函数没有返回值也不写void<br>2）函数名称与类名相同<br>3）构造函数可以有参数，因此可以发生重载<br>4）程序在调用对象时会自动调用构造，无须手动调用，而且只会调用一次</p>
-<p>析构函数语法：～类名(){}<br>1）析构函数没有返回值也不写void<br>2）函数名称与类名相同，在名称前加上符号～<br>3）析构函数不可以有参数，因此不可以发生重载<br>4）程序在对象销毁前会自动调用析构，无须手动调用，而且只会调用一次<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf5w62rwj30ng0ja77a.jpg"></p>
+<p>析构函数语法：～类名(){}<br>1）析构函数没有返回值也不写void<br>2）函数名称与类名相同，在名称前加上符号～<br>3）析构函数不可以有参数，因此不可以发生重载<br>4）程序在对象销毁前会自动调用析构，无须手动调用，而且只会调用一次<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf5w62rwj30ng0ja77a.jpg"
+                     
+                ></p>
 <p>——————————2、构造函数的分类及调用：</p>
 <p>两种分类方式：<br>1）按参数分类：有参构造和无参构造<br>2）按类型分类：普通构造和拷贝构造</p>
-<p>三种调用方式：括号法、显示法、隐式转换法<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf69o0y8j30si10tahi.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6eitw1j30ng0bg76h.jpg"></p>
+<p>三种调用方式：括号法、显示法、隐式转换法<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf69o0y8j30si10tahi.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6eitw1j30ng0bg76h.jpg"
+                     
+                ></p>
 <p>——————3、拷贝构造函数调用时机：</p>
-<p>C++中拷贝构造函数调用时机通常有三种情况：<br>1）使用一个已经创建完毕的对象来初始化一个新对象<br>2）值传递的方式给函数参数传值<br>3）以值方式返回局部对象<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6ly3kzj30ma0yqaeu.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6sxmzfj30cm038t8y.jpg"><br>—————————4、构造函数调用规则：</p>
+<p>C++中拷贝构造函数调用时机通常有三种情况：<br>1）使用一个已经创建完毕的对象来初始化一个新对象<br>2）值传递的方式给函数参数传值<br>3）以值方式返回局部对象<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6ly3kzj30ma0yqaeu.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6sxmzfj30cm038t8y.jpg"
+                     
+                ><br>—————————4、构造函数调用规则：</p>
 <p>默认情况下，C++编译器至少给一个类添加三个函数：<br>1）默认构造函数（无参，函数体为空）<br>2）默认析构函数（无参，函数体为空）<br>3）默认拷贝构造函数，对属性进行值拷贝</p>
 <p>构造函数调用规则：<br>1）如果用户定义有参构造函数，C++不再提供默认无参构造函数，但是会提供默认拷贝构造<br>2）如果用户定义拷贝构造函数，C++不会再提供其他构造函数</p>
 <p>—————————5、深拷贝与浅拷贝</p>
-<p>浅拷贝：简单的赋值拷贝操作<br>深拷贝：在堆区重新申请空间，进行拷贝操作<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6zji4uj30na0xgagk.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf77h74qj30fp03q0tc.jpg"><br>—————————6、初始化列表：</p>
-<p>C++提供了初始化列表语法，用来初始化属性<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7dnq68j30fp0jzac3.jpg"></p>
+<p>浅拷贝：简单的赋值拷贝操作<br>深拷贝：在堆区重新申请空间，进行拷贝操作<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf6zji4uj30na0xgagk.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf77h74qj30fp03q0tc.jpg"
+                     
+                ><br>—————————6、初始化列表：</p>
+<p>C++提供了初始化列表语法，用来初始化属性<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7dnq68j30fp0jzac3.jpg"
+                     
+                ></p>
 <p>———————————7、类对象作为类成员</p>
-<p>C++类中的成员可以是另一个类的对象，我们称该成员为对象成员<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7kcayoj309p03et8w.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7qliq9j30ma0nyadf.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7xfr3fj309p03eaag.jpg"></p>
+<p>C++类中的成员可以是另一个类的对象，我们称该成员为对象成员<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7kcayoj309p03et8w.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7qliq9j30ma0nyadf.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf7xfr3fj309p03eaag.jpg"
+                     
+                ></p>
 <p>————8、静态成员</p>
 <p>静态成员就是在成员变量和成员函数前加上关键字static，称为静态成员</p>
-<p>静态成员分为：<br>1）静态成员变量：所有对象共享同一份数据，在编译阶段分配内存，类内声明，类外初始化<br>2）静态成员函数：所有对象共享同一个函数，静态成员函数只能访问静态成员变量<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf8483bqj30hj0kb40y.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf8cyj27j30hj0jsgo8.jpg"></p>
+<p>静态成员分为：<br>1）静态成员变量：所有对象共享同一份数据，在编译阶段分配内存，类内声明，类外初始化<br>2）静态成员函数：所有对象共享同一个函数，静态成员函数只能访问静态成员变量<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf8483bqj30hj0kb40y.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwf8cyj27j30hj0jsgo8.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -413,190 +478,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

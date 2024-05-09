@@ -275,17 +275,67 @@
 
                     <p>多态是C++面向对象三大特性之一</p>
 <p>多态分为两类：<br>1）静态多态：函数重载和运算符重载属于静态多态，复用函数名<br>2）动态多态：派生类和虚函数实现运行时多态</p>
-<p>静态多态和动态多态的区别：<br>1）静态多态的函数地址早绑定，编译阶段确定函数地址<br>2）动态多态的函数地址晚绑定，运行阶段确定函数地址<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfjeqhc7j30l50o2wi6.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfjmkiwbj30df01z0st.jpg"></p>
-<p>多态的底层原理：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfjthhbpj30n90q042l.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfk02il6j30df01zq32.jpg"></p>
+<p>静态多态和动态多态的区别：<br>1）静态多态的函数地址早绑定，编译阶段确定函数地址<br>2）动态多态的函数地址晚绑定，运行阶段确定函数地址<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfjeqhc7j30l50o2wi6.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfjmkiwbj30df01z0st.jpg"
+                     
+                ></p>
+<p>多态的底层原理：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfjthhbpj30n90q042l.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfk02il6j30df01zq32.jpg"
+                     
+                ></p>
 <p>分别利用普通写法和多态技术，设计实现两个操作数进行运算的计算器类：</p>
-<p>多态的优点：代码组织结构清晰、可读性强、利于前期和后期的扩展以及维护<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfk8x4hfj30ku1kztgz.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfkg0659j30df02uq32.jpg"></p>
+<p>多态的优点：代码组织结构清晰、可读性强、利于前期和后期的扩展以及维护<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfk8x4hfj30ku1kztgz.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfkg0659j30df02uq32.jpg"
+                     
+                ></p>
 <p>纯虚函数和抽象类：在多态中，通常父类中虚函数的实现是毫无意义的，主要都是调用子类重写的内容，因此可以将虚函数改为纯虚函数，当类中有了纯虚函数，这个类也称为抽象类</p>
-<p>抽象类特点：<br>1）无法实例化对象<br>2）子类必须重写抽象类中的纯虚函数，否则也属于抽象类<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfkmuqnij30je0m9go6.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfku0kk3j30df02u0sw.jpg"></p>
+<p>抽象类特点：<br>1）无法实例化对象<br>2）子类必须重写抽象类中的纯虚函数，否则也属于抽象类<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfkmuqnij30je0m9go6.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfku0kk3j30df02u0sw.jpg"
+                     
+                ></p>
 <p>虚析构和纯虚析构：</p>
 <p>多态使用时，如果子类中有属性开辟到堆区，那么父类指针在释放时无法调用到子类的析构代码</p>
 <p>解决方式：将父类中的析构函数改为虚析构或者纯虚析构</p>
 <p>虚析构和纯虚析构共性：<br>1）可以解决父类指针释放子类对象<br>2）都需要有具体的函数实现</p>
-<p>虚析构和纯虚析构的区别：如果是纯虚析构，该类属于抽象类，无法实例化对象<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfl0lls5j30kx10cjwj.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfl89z45j30df03dq3d.jpg"></p>
+<p>虚析构和纯虚析构的区别：如果是纯虚析构，该类属于抽象类，无法实例化对象<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfl0lls5j30kx10cjwj.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%252B%252B/0081Kckwly1glwfl89z45j30df03dq3d.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -404,190 +454,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

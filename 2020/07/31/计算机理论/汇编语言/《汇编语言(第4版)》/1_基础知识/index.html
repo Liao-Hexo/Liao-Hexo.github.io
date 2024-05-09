@@ -279,13 +279,23 @@
 <p>CPU是一种微处理器，每一种微处理器，由于硬件设计和内部结构的不同，就需要不同的电平脉冲来控制，使他工作，所以每一种微处理器都有自己的机器指令集，也就是机器语言<br>————————</p>
 <p>汇编语言的主体是汇编指令</p>
 <p>汇编指令和机器指令的差别在于指令的表示方法上，汇编指令是机器指令便于记忆的书写格式，汇编指令是机器指令的助记符</p>
-<p>寄存器，简单的讲是CPU中可以存储数据的器件，一个CPU中有多个寄存器，AX是其中一个寄存器的代号，BX是另一个寄存器的代号<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8lthws7j30bl02xaai.jpg"><br>————————</p>
+<p>寄存器，简单的讲是CPU中可以存储数据的器件，一个CPU中有多个寄存器，AX是其中一个寄存器的代号，BX是另一个寄存器的代号<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8lthws7j30bl02xaai.jpg"
+                     
+                ><br>————————</p>
 <p>汇编语言由以下三类组成：<br>1）汇编指令（机器码的助记符，有对应的机器码）<br>2）伪指令（没有对应的机器码，由编译器执行，计算机并不执行）<br>3）其他符号如+-*&#x2F;（由编译器识别，没有对应的机器码）</p>
 <p>汇编语言的核心是汇编指令，它决定了汇编语言的特性<br>————————</p>
 <p>CPU是计算机的核心部件，它控制着整个计算机的运作并进行运算，要想让一个CPU工作，就必须向它提供指令和数据，指令和数据在存储器中存放，也就是平时所说的内存</p>
 <p>在一台PC机中内存的作用仅次于CPU，离开了内存，性能再好的CPU也无法工作，磁盘不同于内存，磁盘上的数据或程序如果不读到内存中，就无法被CPU使用<br>————————</p>
 <p>指令和数据是应用上的概念，在内存或磁盘上，指令和数据没有任何区别，都是二进制信息<br>————————</p>
-<p>存储器被划分为若干个存储单元，每个存储单元从0开始顺序编号【电子计算机的最小信息单位是bit（比特），也就是一个二进制位，8个bit组成一个Byte（字节），微型机存储器的存储单位可以存储一个Byte】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8mb0lbkj30ga09s79g.jpg"><br>—————————</p>
+<p>存储器被划分为若干个存储单元，每个存储单元从0开始顺序编号【电子计算机的最小信息单位是bit（比特），也就是一个二进制位，8个bit组成一个Byte（字节），微型机存储器的存储单位可以存储一个Byte】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8mb0lbkj30ga09s79g.jpg"
+                     
+                ><br>—————————</p>
 <p>CPU要想进行数据的读写，必须和外部器件（芯片）进行三类信息的交互：<br>1）地址信息：存储单元的地址<br>2）控制信息：器件的选择，读或写命令<br>3）数据信息：读或写的数据</p>
 <p>每一个CPU芯片都有许多管脚，这些管脚和总线相连，也可以说，这些管脚引出总线，一个CPU可以引出三种总线的宽度标志着这个CPU的不同方面的性能：<br>地址总线的宽度决定了CPU的寻址能力<br>数据总线的宽度决定了CPU与其他器件进行数据传送时的一次数据传送量<br>控制总线的宽度决定了CPU对系统中其他器件的控制能力</p>
 <p>电子计算机能处理、传输的信息都是电信号，电信号当然要用导线传送，在计算机中专门有连接CPU和其他芯片的导线，通常称为总线<br>物理上：一根根导线的集合<br>逻辑上划分为：<br>1）地址总线：CPU是通过地址总线来指定存储单元的，地址总线上能传送多少个不同的信息，CPU就可以对多少个存储单元进行寻址</p>
@@ -297,12 +307,42 @@
 <p>一个CPU的地址线宽度为10，那么可以寻址1024个内存单元，这1024个可寻到的内存单元就构成了这个CPU的内存地址空间<br>——————————</p>
 <p>在每一台PC机中，都有一个主板，主板上有核心器件和一些主要器件，这些器件通过总线（地址总线、数据总线、控制总线）相连，这些器件有CPU、存储器、外围芯片组、扩展插槽等，扩展插槽上一般插有RAM内存条和各类接口卡<br>——————————</p>
 <p>计算机系统中，所有可用程序控制其互作的设备，必须受到CPU的控制，CPU对外部设备不能直接控制，如显示器、音箱、打印机等，直接控制这些设备进行工作的是插在扩展插槽上的接口卡，扩展插槽通过总线和CPU相连，所以接口卡也通过总线同CPU相连<br>——————————</p>
-<p>各类存储器芯片：<br>1）从读写属性上看分为两类：随机存储器（RAM）和只读存储器（ROM），随机存储器可读可写，但必须带电存储，关机后存储的内容丢失；只读存储器只能读取不能写入，关机后其中的内容不丢失<br>2）从功能和连接上分类：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8mt9rgpj30bl05mjta.jpg"></p>
-<p>这些存储器在物理上是独立的器件：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8n32ur5j30fm0cqwgj.jpg"></p>
-<p>但是它们在以下两点上相同：<br>1）都和CPU的总线相连<br>2）CPU对它们进行读或写的时候都通过控制线发出内存读写命令<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8nmj07vj30fm0cigpr.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8nvqh13j30fm06on1b.jpg"></p>
-<p>不同的计算机系统的内存地址空间分配情况是不同的<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8o3v5oqj30cx0coq4l.jpg"></p>
+<p>各类存储器芯片：<br>1）从读写属性上看分为两类：随机存储器（RAM）和只读存储器（ROM），随机存储器可读可写，但必须带电存储，关机后存储的内容丢失；只读存储器只能读取不能写入，关机后其中的内容不丢失<br>2）从功能和连接上分类：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8mt9rgpj30bl05mjta.jpg"
+                     
+                ></p>
+<p>这些存储器在物理上是独立的器件：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8n32ur5j30fm0cqwgj.jpg"
+                     
+                ></p>
+<p>但是它们在以下两点上相同：<br>1）都和CPU的总线相连<br>2）CPU对它们进行读或写的时候都通过控制线发出内存读写命令<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8nmj07vj30fm0cigpr.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8nvqh13j30fm06on1b.jpg"
+                     
+                ></p>
+<p>不同的计算机系统的内存地址空间分配情况是不同的<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8o3v5oqj30cx0coq4l.jpg"
+                     
+                ></p>
 <p>内存地址空间的大小受CPU地址总线宽度的限制</p>
-<p>对CPU来讲，系统中的所有存储器中的存储单元都处于一个统一的逻辑存储器中，它的容量受CPU寻址能力的限制，这个逻辑存储器即是我们所说的内存地址空间<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8oeidamj30c402gaax.jpg"></p>
+<p>对CPU来讲，系统中的所有存储器中的存储单元都处于一个统一的逻辑存储器中，它的容量受CPU寻址能力的限制，这个逻辑存储器即是我们所说的内存地址空间<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8oeidamj30c402gaax.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -421,190 +461,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

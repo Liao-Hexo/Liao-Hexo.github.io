@@ -277,32 +277,107 @@
 <p>数据链路层的流量控制：较高的发送速度和较低的接收能力的不匹配，会造成传输出错，因此流量控制也是数据链路层的一项重要工作</p>
 <p>数据链路层的流量控制是点对点的，而传输层的流量控制是端到端的</p>
 <p>数据链路层流量控制的手段：接收方收不下就不回复确认<br>传输层流量控制的手段：接收端给发送端一个窗口公告</p>
-<p>流量控制的方法：<br>1）停止-等待协议：每发送完一个帧就停止发送，等待对方的确认，在收到确认后再发送下一个帧<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose7dgvq7j30f70c2abu.jpg"><br>2）滑动窗口协议：后退N帧协议(GBN)、选择重传协议(SR)<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose7lkb7hj30m309kn0s.jpg"></p>
+<p>流量控制的方法：<br>1）停止-等待协议：每发送完一个帧就停止发送，等待对方的确认，在收到确认后再发送下一个帧<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose7dgvq7j30f70c2abu.jpg"
+                     
+                ><br>2）滑动窗口协议：后退N帧协议(GBN)、选择重传协议(SR)<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose7lkb7hj30m309kn0s.jpg"
+                     
+                ></p>
 <p>停止-等待协议：发送窗口大小&#x3D;1，接收窗口大小&#x3D;1<br>后退N帧协议(GBN)：发送窗口大小&gt;1，接收窗口大小&#x3D;1<br>选择重传协议(SR)：发送窗口大小&gt;1，接收窗口大小&gt;1</p>
-<p>可靠传输、流量控制、滑动窗口：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose7tibf8j30p408on08.jpg"></p>
+<p>可靠传输、流量控制、滑动窗口：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose7tibf8j30p408on08.jpg"
+                     
+                ></p>
 <p>————————————</p>
 <p>停止等待协议：</p>
 <p>为什么要有停止等待协议：除了比特出差错，底层信道还会出现丢包问题，为了实现流量控制【丢包：物理线路故障、设备故障、病毒攻击、路由信息错误等原因，会导致数据包的丢失】</p>
 <p>研究停止等待协议的前提：<br>1）虽然现在常用全双工通信方式，但为了讨论问题方便，仅考虑一方发送数据（发送方），一方接收数据（接收方）<br>2）因为是在讨论可靠传输的原理，所以并不考虑数据是在哪一个层次上传送的</p>
-<p>停止等待协议的几种应用情况：<br>1）无差错情况<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose82wz9vj30ro0h5442.jpg"><br>2）有差错情况<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose8bu6k7j31480gxjzn.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose8jewbqj30so0gq7aa.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose8rsaukj30rt0gqaf2.jpg"></p>
-<p>停止等待协议的性能分析：简单、信道利用率太低<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose90ohdvj30zw0ec78y.jpg"></p>
+<p>停止等待协议的几种应用情况：<br>1）无差错情况<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose82wz9vj30ro0h5442.jpg"
+                     
+                ><br>2）有差错情况<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose8bu6k7j31480gxjzn.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose8jewbqj30so0gq7aa.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose8rsaukj30rt0gqaf2.jpg"
+                     
+                ></p>
+<p>停止等待协议的性能分析：简单、信道利用率太低<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose90ohdvj30zw0ec78y.jpg"
+                     
+                ></p>
 <p>信道利用率：发送方在一个发送周期内，有效的发送数据所需要的时间占整个发送周期的比率</p>
 <p>信道利用率&#x3D;(L&#x2F;C)&#x2F;T<br>L：T内发送L比特数据<br>C：发送方数据传输率<br>T；发送周期，从开始发送数据，到收到第一个确认帧为止</p>
 <p>信道吞吐率：信道利用率*发送方的发送速率</p>
 <p>停止等待协议的弊端：</p>
-<p>流水线技术：必须增加序号范围、发送方需要缓存多个分组<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose9cgzfpj30f50h5gpw.jpg"></p>
+<p>流水线技术：必须增加序号范围、发送方需要缓存多个分组<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose9cgzfpj30f50h5gpw.jpg"
+                     
+                ></p>
 <p>—————————————</p>
 <p>后退N帧协议(GBN)：</p>
-<p>后退N帧协议中的滑动窗口：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose9nxmbfj30mk0gb7a2.jpg"></p>
+<p>后退N帧协议中的滑动窗口：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gose9nxmbfj30mk0gb7a2.jpg"
+                     
+                ></p>
 <p>GBN发送方必须响应的三件事：<br>1）上层的调用：上层要发送数据时，发送方先检查发送窗口是否已满，如果未满，则产生一个帧并将其发送；如果窗口已满，发送方只需将数据返回给上层，暗示上层窗口已满。上层等一会再发送（实际实现中，发送方可以缓存这些数据，窗口不满时再发送帧）<br>2）收到了一个ACK：GBN协议中，对n号帧的确认采用累计确认的方式，标明接收方已经收到n号帧和它之前的全部帧<br>3）超时事件：协议的名字为后退N帧&#x2F;回退N帧，来源于出现丢失和时延过长帧时发送方的行为。就像在停等协议中一样，定时器将再次用于恢复数据帧或确认帧的丢失，如果出现超时，发送方重传所有已发送但未被确认的帧</p>
-<p>GBN接收方要做的事：<br>1）如果正确收到n号帧，并且按序，那么接收方为n帧发送一个ACK，并将该帧中的数据部分交付给上层<br>2）其余情况都丢弃帧，并为最近按序接收的帧重新发送ACK，接收方无需缓存任何失序帧，只需要维护一个信息：expectedseqnum（下一个按序接收的帧序号）【接收方只按序接收帧，不按序无情丢弃】【确认序列号最大的，按序到达的帧】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseacfu9xj30gb0fhdji.jpg"><br>滑动窗口长度：若采用n个比特对帧编号，那么发送窗口的尺寸WT应满足：1&lt;&#x3D;WT&lt;&#x3D;2^n-1，因为发送窗口尺寸过大，就会使得接收方无法区别新帧和旧帧</p>
+<p>GBN接收方要做的事：<br>1）如果正确收到n号帧，并且按序，那么接收方为n帧发送一个ACK，并将该帧中的数据部分交付给上层<br>2）其余情况都丢弃帧，并为最近按序接收的帧重新发送ACK，接收方无需缓存任何失序帧，只需要维护一个信息：expectedseqnum（下一个按序接收的帧序号）【接收方只按序接收帧，不按序无情丢弃】【确认序列号最大的，按序到达的帧】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseacfu9xj30gb0fhdji.jpg"
+                     
+                ><br>滑动窗口长度：若采用n个比特对帧编号，那么发送窗口的尺寸WT应满足：1&lt;&#x3D;WT&lt;&#x3D;2^n-1，因为发送窗口尺寸过大，就会使得接收方无法区别新帧和旧帧</p>
 <p>GBN协议性能分析：<br>1）因连续发送数据帧而提高了信道利用率<br>2）在重传时必须把原来已经正确传送的数据帧重传，使得传送效率降低</p>
 <p>—————————————</p>
 <p>选择重传协议(SR)：</p>
 <p>解决GBN的弊端：可不可以只重传出错的帧？设置单个确认，同时加大接收窗口，设置接收缓存，缓存乱序到达的帧</p>
-<p>选择重传协议中的滑动窗口：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseanqvpaj30t10i0dh2.jpg"></p>
-<p>SR发送方必须要响应的三件事：<br>1）上层的调用：从上层收到数据后，SR发送方检查下一个可用于该帧的序号，如果序号位于发送窗口内，则发送数据帧，否则就像GBN一样，要么将数据缓存，要么返回给上层之后再传输<br>2）收到了一个ACK：如果收到ACK，假如该帧序号在窗口内，则SR发送方将那个被确认的帧标记为已接收。如果该帧序号是窗口的下界（最左边第一个窗口对应的序号），则窗口向前移动到具有最小序号的未确认帧处，如果窗口移动了并且有序号在窗口内的未发送帧，则发送这些帧<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseay44m7j30ku03mjre.jpg"><br>3)超时事件：每个帧都有自己的定时器，一个超时事件发生后只重传一个帧【只重传出错帧】</p>
-<p>SR接收方要做的事：窗口内的帧来者不拒<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseb7f1rfj30qv0e33zp.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosebm7sfsj30gb0gywjj.jpg"><br>滑动窗口的长度：发送窗口最好等于接收窗口（大了会溢出，小了没意义）【WTmax&#x3D;WRmax&#x3D;2^(n-1)】</p>
+<p>选择重传协议中的滑动窗口：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseanqvpaj30t10i0dh2.jpg"
+                     
+                ></p>
+<p>SR发送方必须要响应的三件事：<br>1）上层的调用：从上层收到数据后，SR发送方检查下一个可用于该帧的序号，如果序号位于发送窗口内，则发送数据帧，否则就像GBN一样，要么将数据缓存，要么返回给上层之后再传输<br>2）收到了一个ACK：如果收到ACK，假如该帧序号在窗口内，则SR发送方将那个被确认的帧标记为已接收。如果该帧序号是窗口的下界（最左边第一个窗口对应的序号），则窗口向前移动到具有最小序号的未确认帧处，如果窗口移动了并且有序号在窗口内的未发送帧，则发送这些帧<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseay44m7j30ku03mjre.jpg"
+                     
+                ><br>3)超时事件：每个帧都有自己的定时器，一个超时事件发生后只重传一个帧【只重传出错帧】</p>
+<p>SR接收方要做的事：窗口内的帧来者不拒<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1goseb7f1rfj30qv0e33zp.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosebm7sfsj30gb0gywjj.jpg"
+                     
+                ><br>滑动窗口的长度：发送窗口最好等于接收窗口（大了会溢出，小了没意义）【WTmax&#x3D;WRmax&#x3D;2^(n-1)】</p>
 
                 </div>
 
@@ -421,190 +496,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

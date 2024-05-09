@@ -274,7 +274,12 @@
                     
 
                     <p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建新进程、撤销已有进程、实现进程状态转换等功能</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3q0kpcv2j30vo08a77r.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3q0kpcv2j30vo08a77r.jpg"
+                     
+                ></p>
 <p>如何实现进程控制：用“原语”实现，原语的执行具有“原子性”，一气呵成</p>
 <p>如果不能“一气呵成”，就有可能导致操作系统中的某些关键数据结构信息不统一的情况，这会影响操作系统进行别的管理工作</p>
 <p>假设此时进程2等待的事件发生，则操作系统中，负责进程控制的内核程序至少需要做两件事</p>
@@ -283,19 +288,49 @@
 <li>将PCB2从阻塞队列放到就绪队列</li>
 </ul>
 <p>完成了第一步后收到中断信号，那么PCB2的state &#x3D; 1，但是它却被放在阻塞队列里</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3q90gc5nj30py080q6h.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3q90gc5nj30py080q6h.jpg"
+                     
+                ></p>
 <h3 id="如何实现原语的“原子性”"><a href="#如何实现原语的“原子性”" class="headerlink" title="如何实现原语的“原子性”"></a>如何实现原语的“原子性”</h3><p>可以用“关中断指令”和“开中断指令”这两个特权指令实现原子性，CPU执行了关中断指令之后，就不再例行检查中断信号，直到执行开中断指令之后才会恢复检查，这样，关中断、开中断之间的这些指令序列就是不可被中断的，这就实现了“原子性”</p>
-<h2 id="进程控制相关的原语"><a href="#进程控制相关的原语" class="headerlink" title="进程控制相关的原语"></a>进程控制相关的原语</h2><h3 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qm1xonqj30yq0c6dpg.jpg"></p>
-<h3 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qt7pvdaj30ww0ekgx1.jpg"></p>
-<h3 id="进程的阻塞和唤醒"><a href="#进程的阻塞和唤醒" class="headerlink" title="进程的阻塞和唤醒"></a>进程的阻塞和唤醒</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qy2vsl5j30z00daals.jpg"></p>
-<h3 id="进程的切换"><a href="#进程的切换" class="headerlink" title="进程的切换"></a>进程的切换</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qzmsaihj30rw0eqjzx.jpg"></p>
+<h2 id="进程控制相关的原语"><a href="#进程控制相关的原语" class="headerlink" title="进程控制相关的原语"></a>进程控制相关的原语</h2><h3 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qm1xonqj30yq0c6dpg.jpg"
+                     
+                ></p>
+<h3 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qt7pvdaj30ww0ekgx1.jpg"
+                     
+                ></p>
+<h3 id="进程的阻塞和唤醒"><a href="#进程的阻塞和唤醒" class="headerlink" title="进程的阻塞和唤醒"></a>进程的阻塞和唤醒</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qy2vsl5j30z00daals.jpg"
+                     
+                ></p>
+<h3 id="进程的切换"><a href="#进程的切换" class="headerlink" title="进程的切换"></a>进程的切换</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3qzmsaihj30rw0eqjzx.jpg"
+                     
+                ></p>
 <p>无论哪个进程控制原语，要做的无非三类事情：</p>
 <ul>
 <li>更新PCB中的信息：修改进程状态state、保存&#x2F;恢复运行环境</li>
 <li>将PCB插入合适的队列</li>
 <li>分配&#x2F;回收资源</li>
 </ul>
-<h2 id="程序是如何运行的"><a href="#程序是如何运行的" class="headerlink" title="程序是如何运行的"></a>程序是如何运行的</h2><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3r1hyv0pj30ws0fuwn1.jpg"></p>
+<h2 id="程序是如何运行的"><a href="#程序是如何运行的" class="headerlink" title="程序是如何运行的"></a>程序是如何运行的</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr3r1hyv0pj30ws0fuwn1.jpg"
+                     
+                ></p>
 <ul>
 <li>PSW程序状态字寄存器</li>
 <li>PC程序计数器：存放下一条指令的地址</li>
@@ -423,190 +458,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

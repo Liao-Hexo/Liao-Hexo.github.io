@@ -276,8 +276,23 @@
                     <h3 id="算法时间复杂度和空间复杂度"><a href="#算法时间复杂度和空间复杂度" class="headerlink" title="算法时间复杂度和空间复杂度"></a>算法时间复杂度和空间复杂度</h3><p>如何评估算法时间开销：<br>让算法先运行，事后统计运行时间？【存在问题：和机器性能有关；和编程语言有关，越高级的语言执行效率越低；和编译程序产生的机器指令质量有关；有些算法是不能事后再统计的(导弹控制算法)】</p>
 <p>算法时间复杂度：事前预估算法时间开销T(n)与问题规模n的关系<br>1）最坏时间复杂度<br>2）平均时间复杂度<br>3）最好时间复杂度</p>
 <p>O(1)&lt;O(log2n)&lt;O(n)&lt;O(nlog2n)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)</p>
-<h3 id="测试算法效率-时钟打点"><a href="#测试算法效率-时钟打点" class="headerlink" title="测试算法效率(时钟打点)"></a>测试算法效率(时钟打点)</h3><p>问题：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/0081Kckwly1gly1qehby1j30h702j76c.jpg"></p>
-<p>源代码：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goftlp7nyuj30rr0x10wm.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goftm5v1nzj307g02hjrk.jpg"></p>
+<h3 id="测试算法效率-时钟打点"><a href="#测试算法效率-时钟打点" class="headerlink" title="测试算法效率(时钟打点)"></a>测试算法效率(时钟打点)</h3><p>问题：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/0081Kckwly1gly1qehby1j30h702j76c.jpg"
+                     
+                ></p>
+<p>源代码：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goftlp7nyuj30rr0x10wm.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goftm5v1nzj307g02hjrk.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//clock():捕捉从程序开始运行到clock()被调用时所耗费的时间。这个时间单位是clock tick，即“时钟打点”</span><br><span class="line">//常数CLK_TCK:机器时钟每秒所走的时钟打点数</span><br><span class="line"></span><br><span class="line">//让被测函数重复运行充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数平均每次运行的时间即可</span><br><span class="line"></span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;time.h&gt;</span><br><span class="line">#include&lt;math.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXN 10</span><br><span class="line">#define MAXK 1e7//被测函数最大重复调用次数</span><br><span class="line"></span><br><span class="line">clock_t start,stop;//clock_t是clock()函数返回的变量类型</span><br><span class="line">double duration;//记录被测函数运行时间，以秒为单位</span><br><span class="line"></span><br><span class="line">double f1(int n,double a[],double x)&#123;</span><br><span class="line">    int i;</span><br><span class="line">    double p=a[0];</span><br><span class="line">    for(i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        p += (a[i]*pow(x,i));</span><br><span class="line">    &#125;</span><br><span class="line">    return p;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">double f2(int n,double a[],double x)&#123;</span><br><span class="line">    int i;</span><br><span class="line">    double p=a[0];</span><br><span class="line">    for(i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        p+=(a[i]*pow(x,i));</span><br><span class="line">    &#125;</span><br><span class="line">    return p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int i,CLK_TCK;</span><br><span class="line">    double a[MAXN];//存储多项式的系数</span><br><span class="line">    for(i=0;i&lt;MAXN;i++)&#123;</span><br><span class="line">        a[i]=(double)i;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //不在测试范围内的准备工作写在clock()调用之前</span><br><span class="line">    </span><br><span class="line">    start=clock();//开始计时</span><br><span class="line">    for(i=0;i&lt;MAXK;i++)&#123;</span><br><span class="line">        f1(MAXN-1,a,1.1);//把被测函数加在这里</span><br><span class="line">    &#125;</span><br><span class="line">    stop=clock();//停止计时</span><br><span class="line">    duration=((double)(stop-start))/CLK_TCK/MAXK;//计算函数单次运行时间</span><br><span class="line">    printf(&quot;ticks1=%f\n&quot;,(double)(stop-start));</span><br><span class="line">    printf(&quot;duration1=%6.2e\n&quot;,duration);</span><br><span class="line">    </span><br><span class="line">    //其他不在测试范围的处理写在后面，例如输出duration的值</span><br><span class="line">    </span><br><span class="line">    start=clock();//开始计时</span><br><span class="line">    for(i=0;i&lt;MAXK;i++)&#123;</span><br><span class="line">        f2(MAXN-1,a,1.1);//把被测函数加在这里</span><br><span class="line">    &#125;</span><br><span class="line">    stop=clock();//停止计时</span><br><span class="line">    duration=((double)(stop-start))/CLK_TCK/MAXK;//计算函数单次运行时间</span><br><span class="line">    printf(&quot;ticks2=%f\n&quot;,(double)(stop-start));</span><br><span class="line">    printf(&quot;duration2=%6.2e\n&quot;,duration);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
                 </div>
@@ -397,190 +412,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

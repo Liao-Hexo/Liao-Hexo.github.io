@@ -274,24 +274,114 @@
                     
 
                     <p>扩展：每次输入命令行按下Enter键时，bash都会在执行命令之前对文本进行多重处理，产生这个结果的处理过程称为扩展，有了扩展功能，在输入内容后，这些内容将在shell对其执行之前被扩展成其他内容</p>
-<p>echo:shell内置命令，把文本参数内容打印到标准输出<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizlv90o7j30c206kaat.jpg"></p>
-<p>路径名扩展：通过使用通配符来实现扩展的机制<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizmabgl6j30c2076aae.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizmhqyvqj30bj0833zm.jpg"></p>
-<p>波浪线扩展：如果把～用在一个单词的开头，那么它将被扩展为指定用户的主目录名，如果没有指定用户命名，则扩展为当前用户的主目录<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizmpa600j306p02bmx1.jpg"></p>
-<p>算术扩展：shell支持通过扩展来运行算术表达式，这允许我们把shell提示符当作计算器来使用：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizn0yi1kj306700pwe9.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizn83eygj30by0dbjsd.jpg"></p>
-<p>花括号扩展：可以按照花括号里面的模式创建多种文本字符串<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gliznh6ye2j30b400ywed.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gliznog9xaj30ch0c5q4c.jpg"></p>
-<p>参数扩展：<br>命名为USER的变量包含你的用户名，为了触发参数扩展，并显示出USER的内容：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizo60m0lj30ch06b74o.jpg"></p>
-<p>命令替换：可以把一个命令的输出作为一个扩展模式使用<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizoeshhdj30ch0a5my8.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizommplyj30ch02p0sq-20230308102439696.jpg"></p>
+<p>echo:shell内置命令，把文本参数内容打印到标准输出<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizlv90o7j30c206kaat.jpg"
+                     
+                ></p>
+<p>路径名扩展：通过使用通配符来实现扩展的机制<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizmabgl6j30c2076aae.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizmhqyvqj30bj0833zm.jpg"
+                     
+                ></p>
+<p>波浪线扩展：如果把～用在一个单词的开头，那么它将被扩展为指定用户的主目录名，如果没有指定用户命名，则扩展为当前用户的主目录<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizmpa600j306p02bmx1.jpg"
+                     
+                ></p>
+<p>算术扩展：shell支持通过扩展来运行算术表达式，这允许我们把shell提示符当作计算器来使用：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizn0yi1kj306700pwe9.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizn83eygj30by0dbjsd.jpg"
+                     
+                ></p>
+<p>花括号扩展：可以按照花括号里面的模式创建多种文本字符串<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gliznh6ye2j30b400ywed.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gliznog9xaj30ch0c5q4c.jpg"
+                     
+                ></p>
+<p>参数扩展：<br>命名为USER的变量包含你的用户名，为了触发参数扩展，并显示出USER的内容：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizo60m0lj30ch06b74o.jpg"
+                     
+                ></p>
+<p>命令替换：可以把一个命令的输出作为一个扩展模式使用<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizoeshhdj30ch0a5my8.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizommplyj30ch02p0sq-20230308102439696.jpg"
+                     
+                ></p>
 <hr>
 <p>引用：</p>
-<p>在第一个例子中，shell会对echo命令的参数列表进行单词分割，去除多余的空白；在第二个例子中，因为$1是一个未定义的变量，所以参数扩展将把$1的值替换为空字符串<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gm4jbr4pelj30e4020q37.jpg"></p>
+<p>在第一个例子中，shell会对echo命令的参数列表进行单词分割，去除多余的空白；在第二个例子中，因为$1是一个未定义的变量，所以参数扩展将把$1的值替换为空字符串<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gm4jbr4pelj30e4020q37.jpg"
+                     
+                ></p>
 <p>shell提供了一种称为引用（quoting）的机制，用来有选择性的避免不想要的扩展</p>
-<p>双引号：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizp18fyjj30ch06qdgm.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizp8g70bj30ch0h9q4q.jpg"><br>在第一个例子中，没有加上引号的命令替换将导致命令行被识别为命令后面跟着38个参数；而在第二个例子中加了双引号，使得命令行被识别为命令后面只跟着一个参数，这个参数包含着嵌入空格和换行字符</p>
-<p>单引号：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizpo276cj30ch044q36.jpg"></p>
+<p>双引号：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizp18fyjj30ch06qdgm.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizp8g70bj30ch0h9q4q.jpg"
+                     
+                ><br>在第一个例子中，没有加上引号的命令替换将导致命令行被识别为命令后面跟着38个参数；而在第二个例子中加了双引号，使得命令行被识别为命令后面只跟着一个参数，这个参数包含着嵌入空格和换行字符</p>
+<p>单引号：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizpo276cj30ch044q36.jpg"
+                     
+                ></p>
 <p>转义字符：</p>
-<p>有时候我们只是想要引用单个字符，这种情况可以通过在该字符前加上反斜杠来实现，这里的反斜杠称为转义字符，转义字符经常在双引号中用来有选择性的阻止扩展：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gm4jwvu1dtj30ii01a0sy.jpg"></p>
+<p>有时候我们只是想要引用单个字符，这种情况可以通过在该字符前加上反斜杠来实现，这里的反斜杠称为转义字符，转义字符经常在双引号中用来有选择性的阻止扩展：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1gm4jwvu1dtj30ii01a0sy.jpg"
+                     
+                ></p>
 <p>转义字符也常用来消除文件名中某个字符的特殊含义，比如文件名中可以使用在shell中通常具有特殊含义的字符，这些字符包括“$”、“!”、“&amp;”、空格等</p>
 <p>如果想要显示反斜杠字符，可以通过使用两个反斜杠“\”来实现，需要注意的是，单引号中的反斜杠将失去它的特殊含义，而只被当成一个普通字符</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizq34wvej30bh034mxg.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizqb1nrij30bh08hjse.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizq34wvej30bh034mxg.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E3%80%8B/0081Kckwly1glizqb1nrij30bh08hjse.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -410,190 +500,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

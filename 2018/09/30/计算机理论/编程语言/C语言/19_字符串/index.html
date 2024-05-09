@@ -289,12 +289,27 @@
 </li>
 </ol>
 <p>1）当它们都是局部变量的时候：</p>
-<p>字符数组是申请在栈区，字符串的每一个字符存储在这个字符数组的每一个元素中；<br>指针变量是声明在栈区的，字符串数据是以字符数组的形式存储在常量区的，指针变量中存储的是字符串在常量区的地址<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffrlt05vj30k30ebdgq.jpg"></p>
+<p>字符数组是申请在栈区，字符串的每一个字符存储在这个字符数组的每一个元素中；<br>指针变量是声明在栈区的，字符串数据是以字符数组的形式存储在常量区的，指针变量中存储的是字符串在常量区的地址<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffrlt05vj30k30ebdgq.jpg"
+                     
+                ></p>
 <p>2）当它们作为全局变量的时候：</p>
-<p>字符数组是存储在常量区的，字符串的每一个字符存储在这个字符数组的每一个元素中；<br>指针变量也是存储在常量区的，字符串数据是以字符数组的形式存储在常量区的，指针变量中存储的是字符串在常量区的地址<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffruf6mdj30bb0d20tf.jpg"></p>
+<p>字符数组是存储在常量区的，字符串的每一个字符存储在这个字符数组的每一个元素中；<br>指针变量也是存储在常量区的，字符串数据是以字符数组的形式存储在常量区的，指针变量中存储的是字符串在常量区的地址<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffruf6mdj30bb0d20tf.jpg"
+                     
+                ></p>
 <p>3）<br>以字符数组的形式存储字符串数据，不管是全局的还是局部的，都可以使用下标去修改字符数组中的每一个元素；<br>以字符指针的形式存储字符串数据，不管是全局的还是局部的，都不能通过指针去修改指向的字符串数据</p>
 <p>当我们以字符指针的形式要将字符串数据存储到常量区的时候，并不是直接将字符串存储到常量区，而是先检查常量区中是否有相同内容的字符串，如果有直接将这个字符串的地址拿过来返回，如果没有，才会将这个字符串数据存储在常量区中</p>
-<p>当我们重新为字符指针初始化一个字符串的时候，并不是修改原来的字符串，而是重新的创建了一个字符串，把这个新的字符串的地址赋值给它<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffs2gcrdj30hj0dwmyx.jpg"></p>
+<p>当我们重新为字符指针初始化一个字符串的时候，并不是修改原来的字符串，而是重新的创建了一个字符串，把这个新的字符串的地址赋值给它<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffs2gcrdj30hj0dwmyx.jpg"
+                     
+                ></p>
 <p>几个比较容易混的点：</p>
 <ol>
 <li><p>这样是可以的，但是不是把“jack”改成了“rose”，而是重新创建了一个“rose”，把“rose”的地址赋值给name<br><code>char *name = &quot;jack&quot;;</code><br><code>name = &quot;rose&quot;;</code></p>
@@ -305,43 +320,213 @@
 </li>
 </ol>
 <hr>
-<h3 id="统计字符串中某一个字符出现的次数："><a href="#统计字符串中某一个字符出现的次数：" class="headerlink" title="统计字符串中某一个字符出现的次数："></a>统计字符串中某一个字符出现的次数：</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffsbyo8oj30lt0da75z.jpg"></p>
+<h3 id="统计字符串中某一个字符出现的次数："><a href="#统计字符串中某一个字符出现的次数：" class="headerlink" title="统计字符串中某一个字符出现的次数："></a>统计字符串中某一个字符出现的次数：</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffsbyo8oj30lt0da75z.jpg"
+                     
+                ></p>
 <hr>
 <h3 id="使用字符指针数组来存储多个字符串数据："><a href="#使用字符指针数组来存储多个字符串数据：" class="headerlink" title="使用字符指针数组来存储多个字符串数据："></a>使用字符指针数组来存储多个字符串数据：</h3><p>这是一个一维数组，每一个元素的类型是char指针：<br><code>char* names[4] = &#123;&quot;jack&quot;,&quot;rose&quot;,&quot;lily&quot;,&quot;lilei&quot;&#125;;</code></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffskcpb7j3q0iw0b00u6.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffskcpb7j3q0iw0b00u6.jpg"
+                     
+                ></p>
 <hr>
 <p>在声明字符数组的同时，如果初始化了部分元素，那么其他的字符会被初始化为’\0’，‘\0’是一个字符，是一个不可见的字符，打印出来啥都没有，这个字符的ASCII码是0</p>
 <p>在C语言中字符串数据必须要用双引号引起来</p>
-<p>C语言中存储字符串数据：将字符串数据的每一个字符存储到字符数组中，并在后面追加一个’\0’代表字符串存储完毕<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi8i55dkj30db05zaap.jpg"></p>
+<p>C语言中存储字符串数据：将字符串数据的每一个字符存储到字符数组中，并在后面追加一个’\0’代表字符串存储完毕<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi8i55dkj30db05zaap.jpg"
+                     
+                ></p>
 <p>最根本的方式存储字符串：<br><code>char name[5]=&#123;‘j’,’a’,’c’,’k’,’\0’&#125;;</code></p>
 <p><code>char name[]=&#123;“jack”&#125;;</code><br>系统会自动的将这个字符串中的每一个字符存储到字符数组中，并自动的追加一个’\0’</p>
 <p>最常用的方式：<br><code>char name[]=“jack”;</code></p>
 <p>如果我们使用字符数组存储字符串数据的时候，没有指定这个字符数组的长度，那么这个时候这个字符数组的长度为字符串长度+1</p>
 <p>我们在使用字符数组存储字符串数据的时候，最好不要指定长度了</p>
-<p>如果在声明一个字符数组的同时我们就初始化一个字符数据给这个数组，那么这个时候是可以用中文的【这个字符数组的长度为7，因为一个中文占3个字节】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi8rla1wj3050014jrg.jpg"></p>
-<p>使用格式控制符%s就可以输出存储在字符数组中的字符串数据【%s从给定的数组的地址开始，一个字节一个字节的输出，直到遇到’\0’为止】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi91mct2j3092056gm5.jpg"></p>
-<p>无需&amp;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9bfcgxj304n04ijrv.jpg"></p>
+<p>如果在声明一个字符数组的同时我们就初始化一个字符数据给这个数组，那么这个时候是可以用中文的【这个字符数组的长度为7，因为一个中文占3个字节】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi8rla1wj3050014jrg.jpg"
+                     
+                ></p>
+<p>使用格式控制符%s就可以输出存储在字符数组中的字符串数据【%s从给定的数组的地址开始，一个字节一个字节的输出，直到遇到’\0’为止】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi91mct2j3092056gm5.jpg"
+                     
+                ></p>
+<p>无需&amp;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9bfcgxj304n04ijrv.jpg"
+                     
+                ></p>
 <p>使用scanf函数：<br>1）如果用户输入的字符串数据在给定的字符数组中存储不下的时候，就会运行报错<br>2）用户在输入字符串的时候，如果输入了空格，就会认为输入结束</p>
-<p>不能使用sizeof去计算字符数组的长度来得到字符串的长度，因为有可能字符串数据存储在字符数组中只占了一部分空间<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9jg8u9j308707xt9x.jpg"><br>解决方法：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9se9s7j30930bnq4h.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxia1pfybj30h10c741i.jpg"></p>
+<p>不能使用sizeof去计算字符数组的长度来得到字符串的长度，因为有可能字符串数据存储在字符数组中只占了一部分空间<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9jg8u9j308707xt9x.jpg"
+                     
+                ><br>解决方法：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9se9s7j30930bnq4h.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxia1pfybj30h10c741i.jpg"
+                     
+                ></p>
 <p>字符串常量：<br>“Hello”会被编译器变成一个字符数组放在某处，这个数组的长度是6，结尾还有表示结束的0<br>两个相邻的字符串常量会被自动连接起来</p>
 <p>C语言的字符串是以字符数组的形态存在的，不能用运算符对字符串做运算，通过数组的方式可以遍历字符串，唯一特殊的地方是字符串字面量可以用来初始化字符数组</p>
-<p><code>char *s=“Hello,world!”;</code><br>s是一个指针，初始化为指向一个字符串常量，由于这个常量所在的地方，所以实际上s是const char *s，但是由于历史的原因，编译器接受不带const的写法，但是试图对s所指的字符串做写入会导致严重的后果<br>如果需要修改字符串，应该用数组：char s[]&#x3D;“Hello,world!”;<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxia9htm4j309h0bbt9t.jpg"><br>数组：这个字符串在这里，作为本地变量空间自动被回收<br>指针：这个字符串不知道在哪里，处理参数，动态分配空间</p>
-<p>如果要构造一个字符串，用数组<br>如果要处理一个字符串，用指针<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiakld2vj30fp0a8tb0.jpg"></p>
-<p>在%和s之间的数字表示最多允许读入的字符的数量，这个数字应该比数组的大小小一<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiasvnmmj30b708cab2.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxib200p8j30gr0b2gnl.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxib903fkj30dc0adt9x.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibg4a5qj30pk06kabt.jpg"></p>
-<h3 id="stdio-h文件："><a href="#stdio-h文件：" class="headerlink" title="stdio.h文件："></a>stdio.h文件：</h3><p>puts()函数：用来输出字符串的【优点是输出完毕之后自动换行，缺点是只能输出字符串，也不能使用占位符】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibov60sj308c04i0tg.jpg"></p>
-<p>fputs()函数：将字符串数据输出到指定的流中【标准输出流：控制台；文件流：磁盘上的文件】<br>输出到标准输出流中：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibzbnetj308v04aaaw.jpg"><br>将字符串存储到文件中：<br>1）要先声明一个文件指针，指向磁盘上的文件【fopen函数可以创建一个指向文件的指针】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicgau45j30cf04ajto.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicneawlj30cc036jsu.jpg"><br>2）使用fputs()函数将字符串写入到指定的文件流中<br>3）写完之后一定要记得使用fclose()函数将这个文件关闭<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicvtjlej30dr07o0ue.jpg"></p>
-<p>gets()函数：从控制台接收用户输入一个字符串数据【优点是当用户输入的数据包含空格的时候，会连空格一起接收；缺点是和scanf函数一样不安全，当用来存储字符串的数据的字符数组的长度不够的时候，程序就会崩溃】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxid4nt7oj30cd05rjt7.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidd0fioj305d068my6.jpg"></p>
-<p>fgets()函数：从指定的流中读取字符串，这个流可以是标准输入流：控制台，也可以是文件流<br>1）从标准输入流中读取数据<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidlb0bhj30e701j0tw.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidswxpij3094049wfb.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidzv4r0j30hr04ptba.jpg"><br>解决方案：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxie6ulcrj30aa01e3z8.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiednglnj308m0aumzb.jpg"><br>2）从文件流中读取数据<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiekzz5jj30dq09xtby.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxieru4tnj30an03ydgj.jpg"></p>
-<h3 id="string-h头文件：strlen-strcmp-strcpy-strcat-strchr-strstr"><a href="#string-h头文件：strlen-strcmp-strcpy-strcat-strchr-strstr" class="headerlink" title="string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr"></a>string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr</h3><p>strlen:<br><code>size_t strlen(const char *s);</code><br>返回s的字符串长度（不包括结尾的0）<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiezump7j30a00a73zm.jpg"></p>
-<p>strcmp:<br><code>int strcmp(const char *s1,const char *s2);</code><br>比较两个字符串，返回：<br>0:  s1&#x3D;&#x3D;s2<br>1:   s1&gt;s2<br>-1:  s1&lt;s2<br><code>int strncmp(const char *s1,const char *s2,size_t n);</code>只比较前几个字符<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxifahbiyj30fd0grgo7.jpg"></p>
+<p><code>char *s=“Hello,world!”;</code><br>s是一个指针，初始化为指向一个字符串常量，由于这个常量所在的地方，所以实际上s是const char *s，但是由于历史的原因，编译器接受不带const的写法，但是试图对s所指的字符串做写入会导致严重的后果<br>如果需要修改字符串，应该用数组：char s[]&#x3D;“Hello,world!”;<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxia9htm4j309h0bbt9t.jpg"
+                     
+                ><br>数组：这个字符串在这里，作为本地变量空间自动被回收<br>指针：这个字符串不知道在哪里，处理参数，动态分配空间</p>
+<p>如果要构造一个字符串，用数组<br>如果要处理一个字符串，用指针<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiakld2vj30fp0a8tb0.jpg"
+                     
+                ></p>
+<p>在%和s之间的数字表示最多允许读入的字符的数量，这个数字应该比数组的大小小一<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiasvnmmj30b708cab2.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxib200p8j30gr0b2gnl.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxib903fkj30dc0adt9x.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibg4a5qj30pk06kabt.jpg"
+                     
+                ></p>
+<h3 id="stdio-h文件："><a href="#stdio-h文件：" class="headerlink" title="stdio.h文件："></a>stdio.h文件：</h3><p>puts()函数：用来输出字符串的【优点是输出完毕之后自动换行，缺点是只能输出字符串，也不能使用占位符】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibov60sj308c04i0tg.jpg"
+                     
+                ></p>
+<p>fputs()函数：将字符串数据输出到指定的流中【标准输出流：控制台；文件流：磁盘上的文件】<br>输出到标准输出流中：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibzbnetj308v04aaaw.jpg"
+                     
+                ><br>将字符串存储到文件中：<br>1）要先声明一个文件指针，指向磁盘上的文件【fopen函数可以创建一个指向文件的指针】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicgau45j30cf04ajto.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicneawlj30cc036jsu.jpg"
+                     
+                ><br>2）使用fputs()函数将字符串写入到指定的文件流中<br>3）写完之后一定要记得使用fclose()函数将这个文件关闭<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicvtjlej30dr07o0ue.jpg"
+                     
+                ></p>
+<p>gets()函数：从控制台接收用户输入一个字符串数据【优点是当用户输入的数据包含空格的时候，会连空格一起接收；缺点是和scanf函数一样不安全，当用来存储字符串的数据的字符数组的长度不够的时候，程序就会崩溃】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxid4nt7oj30cd05rjt7.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidd0fioj305d068my6.jpg"
+                     
+                ></p>
+<p>fgets()函数：从指定的流中读取字符串，这个流可以是标准输入流：控制台，也可以是文件流<br>1）从标准输入流中读取数据<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidlb0bhj30e701j0tw.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidswxpij3094049wfb.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidzv4r0j30hr04ptba.jpg"
+                     
+                ><br>解决方案：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxie6ulcrj30aa01e3z8.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiednglnj308m0aumzb.jpg"
+                     
+                ><br>2）从文件流中读取数据<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiekzz5jj30dq09xtby.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxieru4tnj30an03ydgj.jpg"
+                     
+                ></p>
+<h3 id="string-h头文件：strlen-strcmp-strcpy-strcat-strchr-strstr"><a href="#string-h头文件：strlen-strcmp-strcpy-strcat-strchr-strstr" class="headerlink" title="string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr"></a>string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr</h3><p>strlen:<br><code>size_t strlen(const char *s);</code><br>返回s的字符串长度（不包括结尾的0）<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiezump7j30a00a73zm.jpg"
+                     
+                ></p>
+<p>strcmp:<br><code>int strcmp(const char *s1,const char *s2);</code><br>比较两个字符串，返回：<br>0:  s1&#x3D;&#x3D;s2<br>1:   s1&gt;s2<br>-1:  s1&lt;s2<br><code>int strncmp(const char *s1,const char *s2,size_t n);</code>只比较前几个字符<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxifahbiyj30fd0grgo7.jpg"
+                     
+                ></p>
 <p>strcpy:【存储字符串1的字符数组长度不够，无法存储字符串2，这个时候运行就会崩溃】<br><code>char *strcpy(char *restrict dst,const char *restrict src);</code><br>把src的字符串拷贝到dst，restrict表明src和dst不重叠<br>返回dst,为了能链起代码来</p>
-<p>复制一个字符串：<br><code>char *dst=(char *)malloc(strlen(src)+1);</code><br><code>strcpy(dst,src);</code><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxigx7as1j30at0f4dh5.jpg"><br>把name2拷贝到name1:<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxih2cxooj30h107idhj.jpg"></p>
+<p>复制一个字符串：<br><code>char *dst=(char *)malloc(strlen(src)+1);</code><br><code>strcpy(dst,src);</code><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxigx7as1j30at0f4dh5.jpg"
+                     
+                ><br>把name2拷贝到name1:<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxih2cxooj30h107idhj.jpg"
+                     
+                ></p>
 <p>strcat:【接的时候会把第一个字符串后的’\0’干掉】<br><code>char *strcat(char *restrict s1,const char *restrict s2);</code><br>把s2拷贝到s1的后面，接成一个长的字符串<br>返回s1<br>s1必须具有足够的空间</p>
 <p>strcpy,strcat不安全！！</p>
 <p>安全版本：<br><code>char *strncpy(char *restrict dst,const char *restrict src,size_t n);</code><br><code>char *strncat(char *restrict s1,const char *restrict s2,size_t n);</code></p>
-<p>字符串中找字符：<br><code>char *strchr(const char *s,int c);</code><br><code>char *strrchr(const char *s,int c);</code><br>返回NULL表示没有找到<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxihcb8s7j30b90hmjt5.jpg"></p>
+<p>字符串中找字符：<br><code>char *strchr(const char *s,int c);</code><br><code>char *strrchr(const char *s,int c);</code><br>返回NULL表示没有找到<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxihcb8s7j30b90hmjt5.jpg"
+                     
+                ></p>
 <p>字符串中找字符串：<br><code>char *strstr(const char *s1,const char *s2);</code><br><code>char *strcasestr(const char *s1,const char *s2);</code></p>
 
                 </div>
@@ -461,190 +646,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

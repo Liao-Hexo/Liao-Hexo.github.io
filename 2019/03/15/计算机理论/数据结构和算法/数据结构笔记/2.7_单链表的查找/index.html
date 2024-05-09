@@ -273,10 +273,20 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <h3 id="单链表的按位查找-带头结点-：获取表L中第i个位置的元素的值，平均时间复杂度O-n"><a href="#单链表的按位查找-带头结点-：获取表L中第i个位置的元素的值，平均时间复杂度O-n" class="headerlink" title="单链表的按位查找(带头结点)：获取表L中第i个位置的元素的值，平均时间复杂度O(n)"></a>单链表的按位查找(带头结点)：获取表L中第i个位置的元素的值，平均时间复杂度O(n)</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goib2xe0mbj30ls0oawh3.jpg"></p>
+                    <h3 id="单链表的按位查找-带头结点-：获取表L中第i个位置的元素的值，平均时间复杂度O-n"><a href="#单链表的按位查找-带头结点-：获取表L中第i个位置的元素的值，平均时间复杂度O-n" class="headerlink" title="单链表的按位查找(带头结点)：获取表L中第i个位置的元素的值，平均时间复杂度O(n)"></a>单链表的按位查找(带头结点)：获取表L中第i个位置的元素的值，平均时间复杂度O(n)</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goib2xe0mbj30ls0oawh3.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdbool.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">typedef struct LNode&#123;  //LNode:结点</span><br><span class="line">    int data;  //数据域：每个结点存放一个数据元素</span><br><span class="line">    struct LNode *next;  //指针域：指针指向下一个结点</span><br><span class="line">&#125;LNode,*LinkList;  //typedef struct LNode *LinkList;  要表示一个单链表时，只需声明一个头指针L，指向单链表的第一个结点</span><br><span class="line"></span><br><span class="line">//初始化一个单链表(带头结点)</span><br><span class="line">bool InitList(LinkList *L)&#123;</span><br><span class="line">    (*L)=(LNode *)malloc(sizeof(LNode));  //分配一个头结点,并使得头指针*L指向这个头结点</span><br><span class="line">    if((*L) == NULL)&#123;  //内存不足，分配失败</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    (*L)-&gt;data=0;  //头结点不存储数据</span><br><span class="line">    (*L)-&gt;next=NULL;  //头结点之后暂时还没有结点</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//按位查找，返回第i个元素(带头结点)</span><br><span class="line">LNode * GetElem(LinkList *L,int i)&#123;</span><br><span class="line">    if(i&lt;0)&#123;</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    LNode *p;  //指针p指向当前扫描到的结点</span><br><span class="line">    int j=0;  //当前p指向的是第几个结点</span><br><span class="line">    p=*L;  //L指向头结点，头结点是第0个结点（不存数据）</span><br><span class="line">    while(p != NULL &amp;&amp; j&lt;i)&#123;  //循环找到第i个结点</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">    return p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    LinkList L;  //等价于LNode *L;  声明一个指向单链表的第一个结点的指针，注意此处并没有创建一个结点</span><br><span class="line">    InitList(&amp;L);  //初始化一个空表</span><br><span class="line">    </span><br><span class="line">    //...后续代码</span><br><span class="line">    </span><br><span class="line">    LNode * a=GetElem(&amp;L, 3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="单链表的按值查找-带头结点-：在表L中查找具有给定关键字值的元素-平均时间复杂度O-n"><a href="#单链表的按值查找-带头结点-：在表L中查找具有给定关键字值的元素-平均时间复杂度O-n" class="headerlink" title="单链表的按值查找(带头结点)：在表L中查找具有给定关键字值的元素,平均时间复杂度O(n)"></a>单链表的按值查找(带头结点)：在表L中查找具有给定关键字值的元素,平均时间复杂度O(n)</h3><p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goic3zc0vij30m30sx0vx.jpg"></p>
+<h3 id="单链表的按值查找-带头结点-：在表L中查找具有给定关键字值的元素-平均时间复杂度O-n"><a href="#单链表的按值查找-带头结点-：在表L中查找具有给定关键字值的元素-平均时间复杂度O-n" class="headerlink" title="单链表的按值查找(带头结点)：在表L中查找具有给定关键字值的元素,平均时间复杂度O(n)"></a>单链表的按值查找(带头结点)：在表L中查找具有给定关键字值的元素,平均时间复杂度O(n)</h3><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/008eGmZEly1goic3zc0vij30m30sx0vx.jpg"
+                     
+                ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdbool.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">typedef struct LNode&#123;  //LNode:结点</span><br><span class="line">    int data;  //数据域：每个结点存放一个数据元素</span><br><span class="line">    struct LNode *next;  //指针域：指针指向下一个结点</span><br><span class="line">&#125;LNode,*LinkList;  //typedef struct LNode *LinkList;  要表示一个单链表时，只需声明一个头指针L，指向单链表的第一个结点</span><br><span class="line"></span><br><span class="line">//初始化一个单链表(带头结点)</span><br><span class="line">bool InitList(LinkList *L)&#123;</span><br><span class="line">    (*L)=(LNode *)malloc(sizeof(LNode));  //分配一个头结点,并使得头指针*L指向这个头结点</span><br><span class="line">    if((*L) == NULL)&#123;  //内存不足，分配失败</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    (*L)-&gt;data=0;  //头结点不存储数据</span><br><span class="line">    (*L)-&gt;next=NULL;  //头结点之后暂时还没有结点</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//按值查找，找到数据域==e的结点(带头结点)</span><br><span class="line">LNode * LocateElem(LinkList *L,int e)&#123;</span><br><span class="line">    </span><br><span class="line">    LNode *p =(*L)-&gt;next;</span><br><span class="line">    </span><br><span class="line">    //从第1个结点开始查找数据域为e的结点</span><br><span class="line">    while(p != NULL &amp;&amp; p-&gt;data != e)&#123;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return p;  //找到后返回该结点指针，否则返回NULL</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//求表的长度（时间复杂度O(n)）</span><br><span class="line">int Length(LinkList *L)&#123;</span><br><span class="line">    int len=0;  //统计表长</span><br><span class="line">    LNode *p=*L;</span><br><span class="line">    while(p-&gt;next != NULL)&#123;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        len++;</span><br><span class="line">    &#125;</span><br><span class="line">    return len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    LinkList L;  //等价于LNode *L;  声明一个指向单链表的第一个结点的指针，注意此处并没有创建一个结点</span><br><span class="line">    InitList(&amp;L);  //初始化一个空表</span><br><span class="line">    </span><br><span class="line">    //...后续代码</span><br><span class="line">    </span><br><span class="line">    LNode * a=LocateElem(&amp;L, 3);  //找到数据域为3的结点，并返回</span><br><span class="line">    </span><br><span class="line">    int b=Length(&amp;L);  //返回表的长度</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
                 </div>
@@ -396,190 +406,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

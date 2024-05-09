@@ -277,30 +277,95 @@
 <p>——————————————</p>
 <p>TCP协议特点和TCP报文段格式<br>TCP连接管理<br>TCP可靠传输<br>TCP流量控制<br>TCP拥塞控制</p>
 <p>——————————————</p>
-<p>TCP协议的特点：<br>1）TCP是面向连接（虚连接）的传输层协议<br>2）每一条TCP连接只能有两个端点，每一条TCP连接只能是点对点的<br>3）TCP提供可靠交付的服务，无差错、不丢失、不重复、按序到达【可靠有序，不丢不重】<br>4）TCP提供全双工通信：【发送缓存：准备发送的数据、已发送但尚未收到确认的数据；接收缓存：按序到达但尚未被接受应用程序读取的数据、不按序到达的数据】<br>5）TCP面向字节流：TCP把应用程序交下来的数据看成仅仅是一连串的无结构的字节流【流：流入到进程或从进程流出的字节序列】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl4s29f9j31280ef7a5.jpg"></p>
-<p>TCP报文段首部格式：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl58chpsj30gj0e1myz.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl5wz7mrj30gj07mdi6.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl6h81urj30gj0hhq87.jpg"><br>——————————————————</p>
+<p>TCP协议的特点：<br>1）TCP是面向连接（虚连接）的传输层协议<br>2）每一条TCP连接只能有两个端点，每一条TCP连接只能是点对点的<br>3）TCP提供可靠交付的服务，无差错、不丢失、不重复、按序到达【可靠有序，不丢不重】<br>4）TCP提供全双工通信：【发送缓存：准备发送的数据、已发送但尚未收到确认的数据；接收缓存：按序到达但尚未被接受应用程序读取的数据、不按序到达的数据】<br>5）TCP面向字节流：TCP把应用程序交下来的数据看成仅仅是一连串的无结构的字节流【流：流入到进程或从进程流出的字节序列】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl4s29f9j31280ef7a5.jpg"
+                     
+                ></p>
+<p>TCP报文段首部格式：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl58chpsj30gj0e1myz.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl5wz7mrj30gj07mdi6.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl6h81urj30gj0hhq87.jpg"
+                     
+                ><br>——————————————————</p>
 <p>TCP连接管理：</p>
 <p>TCP连接传输三个阶段：<br>1）连接建立<br>2）数据传送<br>3）连接释放</p>
 <p>TCP连接的建立采用客户服务器方式，主动发起连接建立的应用进程叫做客户，而被动等待连接建立的应用进程叫服务器</p>
-<p>TCP的连接建立(三次握手)：假设运行在一台主机（客户）上的一个进程想与另一台主机（服务器）上的一个进程建立一条连接，客户应用进程首先通知客户TCP，它想建立一个与服务器上某个进程之间的连接，客户中的TCP会用以下步骤与服务器中的TCP建立一条TCP连接：【seq：序号，ack：确认号】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl6snr8fj312r0dhq9j.jpg"></p>
-<p>SYN洪泛攻击：【解决办法：SYN cookie】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl70q24oj30ul07244c.jpg"></p>
-<p>TCP的连接释放(四次挥手)：参与一条TCP连接的两个进程中的任何一个都能终止该连接，连接结束后，主机中的“资源”（缓存和变量）将被释放<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl79qn5tj313o0fpwn7.jpg"></p>
+<p>TCP的连接建立(三次握手)：假设运行在一台主机（客户）上的一个进程想与另一台主机（服务器）上的一个进程建立一条连接，客户应用进程首先通知客户TCP，它想建立一个与服务器上某个进程之间的连接，客户中的TCP会用以下步骤与服务器中的TCP建立一条TCP连接：【seq：序号，ack：确认号】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl6snr8fj312r0dhq9j.jpg"
+                     
+                ></p>
+<p>SYN洪泛攻击：【解决办法：SYN cookie】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl70q24oj30ul07244c.jpg"
+                     
+                ></p>
+<p>TCP的连接释放(四次挥手)：参与一条TCP连接的两个进程中的任何一个都能终止该连接，连接结束后，主机中的“资源”（缓存和变量）将被释放<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl79qn5tj313o0fpwn7.jpg"
+                     
+                ></p>
 <p>————————————————</p>
 <p>TCP可靠传输：</p>
 <p>网络层：提供尽最大努力交付，不可靠传输<br>传输层：使用TCP实现可靠传输【如果使用UDP协议，则在应用层实现可靠传输】</p>
 <p>可靠：保证接收方进程从缓存区读出的字节流与发送方发出的字节流是完全一样的</p>
-<p>TCP实现可靠传输的机制：<br>1）校验：与UDP校验一样，增加伪首部<br>2）序号<br>3）确认：TCP默认使用累计确认<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl8h724mj312n0ein4h.jpg"><br>4）重传：确认重传不分家，TCP的发送方在规定的时间内没有收到确认就要重传已发送的报文段【超时重传，TCP采用自适应算法，动态改变重传时间RTTs(加权平均往返时间)】</p>
-<p>等太久了怎么办？？？<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl8q47l9j30v10a7445.jpg"></p>
+<p>TCP实现可靠传输的机制：<br>1）校验：与UDP校验一样，增加伪首部<br>2）序号<br>3）确认：TCP默认使用累计确认<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl8h724mj312n0ein4h.jpg"
+                     
+                ><br>4）重传：确认重传不分家，TCP的发送方在规定的时间内没有收到确认就要重传已发送的报文段【超时重传，TCP采用自适应算法，动态改变重传时间RTTs(加权平均往返时间)】</p>
+<p>等太久了怎么办？？？<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl8q47l9j30v10a7445.jpg"
+                     
+                ></p>
 <p>—————————————————</p>
 <p>TCP流量控制：让发送方慢点，要让接收方来得及接收</p>
 <p>TCP利用滑动窗口机制实现流量控制</p>
-<p>在通信过程中，接收方根据自己接收缓存的大小，动态的调整发送方的发送窗口大小，即接收窗口rwnd（接收方设置确认报文段的窗口字段来将rwnd通知给发送方），发送方的发送窗口取接收窗口rwnd和拥塞窗口cwnd的最小值【接收窗口：接收方根据接受缓存设置的值，并告知给发送方，反映接收方容量；拥塞窗口：发送方根据自己估算的网络拥塞程度而设置的窗口值，反映网络当前容量】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl92k8sdj31310gndr9.jpg"></p>
+<p>在通信过程中，接收方根据自己接收缓存的大小，动态的调整发送方的发送窗口大小，即接收窗口rwnd（接收方设置确认报文段的窗口字段来将rwnd通知给发送方），发送方的发送窗口取接收窗口rwnd和拥塞窗口cwnd的最小值【接收窗口：接收方根据接受缓存设置的值，并告知给发送方，反映接收方容量；拥塞窗口：发送方根据自己估算的网络拥塞程度而设置的窗口值，反映网络当前容量】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl92k8sdj31310gndr9.jpg"
+                     
+                ></p>
 <p>这个时候假设B给A发了一个非零的rwnd，但是在路上丢失了，主机A在等着B发送非零窗口，主机B在等着A的确认消息，两者相互等待，造成死锁</p>
 <p>解决方法：<br>1）TCP为每一个连接设有一个持续计时器，只要TCP连接的一方收到对方的零窗口通知，就启动持续计时器<br>2）若持续计时器设置的时间到期，就发送一个零窗口探测报文段，接收方收到探测报文段时给出现在的窗口值<br>3）若窗口仍然是0，那么发送方就重新设置持续计时器</p>
 <p>————————————————</p>
 <p>TCP拥塞控制：防止过多的数据注入到网络中【全局性】</p>
 <p>出现拥塞的条件：对资源需求的总和&gt;可用资源【网络中有许多资源同时呈现供应不足—&gt;网络性能变坏—&gt;网络吞吐量将随输入负荷增大而下降】</p>
-<p>拥塞控制四种算法：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl9hagnxj30oh054dhr.jpg"><br>1）慢开始、拥塞避免<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl9ovga8j31260efqae.jpg"><br>2）快重传、快恢复<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl9yhkk7j310e0cpn4t.jpg"></p>
+<p>拥塞控制四种算法：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl9hagnxj30oh054dhr.jpg"
+                     
+                ><br>1）慢开始、拥塞避免<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl9ovga8j31260efqae.jpg"
+                     
+                ><br>2）快重传、快恢复<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosl9yhkk7j310e0cpn4t.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -419,190 +484,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

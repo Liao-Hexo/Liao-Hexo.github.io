@@ -277,8 +277,18 @@
 <p>当将全局变量声明出来以后，系统会自动的将全局变量中的数据清零</p>
 <p>一维数组：</p>
 <p><code>int arr[3];</code>，其中所有的元素具有相同的数据类型，一旦创建，不能改变大小</p>
-<p>数组中的元素在内存中是连续依次排列的：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotkioh0zmj30ji0cwq31.jpg"></p>
-<p>遍历数组：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh93cc4nj30a80an751.jpg"></p>
+<p>数组中的元素在内存中是连续依次排列的：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotkioh0zmj30ji0cwq31.jpg"
+                     
+                ></p>
+<p>遍历数组：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh93cc4nj30a80an751.jpg"
+                     
+                ></p>
 <p>一维数组的初始化：<br>1）使用这种方式初始化，数组的长度就不能使用变量了，但是使用宏可以【也可以干脆直接省略数组中的长度，这样数组的长度就是由大括弧中的数据的个数来决定的】</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int len=3;</span><br><span class="line">int arr[len]=&#123;10,20,30&#125;;  //错误</span><br></pre></td></tr></table></figure>
 
@@ -286,30 +296,75 @@
 <p>3）指定下标的初始化，其他的元素的值就自动初始化为0：<br><code>int arr[3]=&#123;[1]=10,[2]=20&#125;;</code></p>
 <p>声明一个数组，在内存中从高字节向低字节申请连续的（数组的长度*每个元素的字节数）个字节的空间</p>
 <p>数组的元素的本质就是一个普通类型的变量，一个数组就是由多个普通类型的变量联合而成的</p>
-<p>C语言的数组名中存储的就是数组的地址！<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh9jcmngj30cs0a7t9s.jpg"></p>
+<p>C语言的数组名中存储的就是数组的地址！<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh9jcmngj30cs0a7t9s.jpg"
+                     
+                ></p>
 <p>数组的大小：<code>sizeof(a)/sizeof(a[0])</code><br>sizeof给出整个数组所占据的内容的大小，单位是字节；sizeof(a[0])给出数组中单个元素的大小，于是相除就得到了数组的单元个数；这样的代码，一旦修改数组中初始的数据，不需要修改遍历的代码</p>
 <p>数组的赋值：数组变量本身不能被赋值，要把一个数组的所有元素交给另一个数组，必须采用遍历</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</span><br><span class="line">     b[i]=a[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>二维数组：</p>
 <p>二维数组的长度一般认为是元素的个数【行*列】</p>
-<p>二维数组的遍历：a[i][j]是一个int，表示第i行第j列上的单元<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh9v4el4j307402jdfy.jpg"></p>
+<p>二维数组的遍历：a[i][j]是一个int，表示第i行第j列上的单元<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxh9v4el4j307402jdfy.jpg"
+                     
+                ></p>
 <p>二维数组的初始化：</p>
-<p>1）<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxha9wqxbj305s01zwej.jpg"><br>1.列数是必须给出的，行数可以由编译器来数<br>2.每行一个{}，逗号分隔<br>3.最后的逗号可以存在，有古老的传统</p>
+<p>1）<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxha9wqxbj305s01zwej.jpg"
+                     
+                ><br>1.列数是必须给出的，行数可以由编译器来数<br>2.每行一个{}，逗号分隔<br>3.最后的逗号可以存在，有古老的传统</p>
 <p>2）</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">3</span>][<span class="number">4</span>]=&#123;&#123;<span class="number">10</span>&#125;,&#123;<span class="number">20</span>&#125;,&#123;<span class="number">30</span>&#125;&#125;;</span><br><span class="line">a[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">10</span></span><br><span class="line">a[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">20</span></span><br><span class="line">a[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">30</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>其他元素会自动初始化为0<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhb8rvt3j30a60a5gmg.jpg"></p>
-<p>3）<br><code>int arr[3][4]=&#123;10,20,30,40,50&#125;;</code><br>按照顺序去初始化每一个元素，其他的元素的值就会被自动初始化为0<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhbelj0nj30a60a5gmh.jpg"></p>
-<p>4）<br><code>int arr[3][4]=&#123;[1]=&#123;10,20,30,40&#125;,[2]=&#123;50,60,70,80&#125;&#125;;</code><br>给指定的行初始化，其他的元素自动初始化为0<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhc1anppj30d20a5t9o.jpg"></p>
+<p>其他元素会自动初始化为0<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhb8rvt3j30a60a5gmg.jpg"
+                     
+                ></p>
+<p>3）<br><code>int arr[3][4]=&#123;10,20,30,40,50&#125;;</code><br>按照顺序去初始化每一个元素，其他的元素的值就会被自动初始化为0<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhbelj0nj30a60a5gmh.jpg"
+                     
+                ></p>
+<p>4）<br><code>int arr[3][4]=&#123;[1]=&#123;10,20,30,40&#125;,[2]=&#123;50,60,70,80&#125;&#125;;</code><br>给指定的行初始化，其他的元素自动初始化为0<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhc1anppj30d20a5t9o.jpg"
+                     
+                ></p>
 <p>二维数组从高地址向低地址申请了连续的（行<em>列</em>每一个元素占用的字节）个字节空间</p>
-<p>二维数组在内存中仍然是一块连续的空间，并不是一个表格<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhcaulzwj307309pq4i.jpg"></p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhcl3fthj30h60a13zp.jpg"></p>
+<p>二维数组在内存中仍然是一块连续的空间，并不是一个表格<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhcaulzwj307309pq4i.jpg"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxhcl3fthj30h60a13zp.jpg"
+                     
+                ></p>
 <p>求二维数组的长度的方法与一维数组一样：<code>sizeof(arr)/sizeof(arr[0][0]);</code></p>
 <p>求二维数组的行数：<code>sizeof(arr)/sizeof(arr[0]);</code></p>
 <p>求二维数组的列数：<code>sizeof(arr[0])/sizeof(arr[0][0]);</code></p>
 <p>如果函数的参数是一个一维数组，那么我们在传递的时候可以传递二维数组的某一行，二维数组的行其实是一个一维数组</p>
 <p>二维数组也可以作为函数的参数【与一维数组类似】，但是其中形参的行数可以省略，列数不能省略，实参与形参的行数可以任意，实参的列数与形参的列数必须一致</p>
-<p>解决方案【与一维数组稍微不同！】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotl11m25ij30ec0ejta1.jpg"></p>
+<p>解决方案【与一维数组稍微不同！】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/008eGmZEly1gotl11m25ij30ec0ejta1.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -428,190 +483,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>

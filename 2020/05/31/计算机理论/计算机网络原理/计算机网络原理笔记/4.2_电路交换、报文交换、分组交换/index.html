@@ -275,7 +275,12 @@
 
                     <p>电路交换、报文交换、分组交换：</p>
 <p>如何使数据通过网络核心(路由器)从源主机到目的主机？——数据交换</p>
-<p>为什么要数据交换：<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjekpeo8j312a0fcn56.jpg"></p>
+<p>为什么要数据交换：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjekpeo8j312a0fcn56.jpg"
+                     
+                ></p>
 <p>数据交换方式：<br>1）电路交换<br>2）报文交换<br>3）分组交换：数据报方式、虚电路方式</p>
 <p>—————————————</p>
 <p>电路交换：电话网络(多路复用)</p>
@@ -285,22 +290,52 @@
 <p>缺点：建立连接时间长、线路独占，使用效率低、灵活性差、无差错控制能力</p>
 <p>—————————————</p>
 <p>报文交换：</p>
-<p>报文：源应用发送的信息整体<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjeyl2ofj30xy063773.jpg"></p>
+<p>报文：源应用发送的信息整体<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjeyl2ofj30xy063773.jpg"
+                     
+                ></p>
 <p>优点：<br>1）无需建立连接<br>2）存储转发，动态分配线路<br>3）线路可靠性较高<br>4）线路利用率较高<br>5）多目标服务</p>
 <p>缺点：<br>1）有存储转发时延<br>2）报文大小不定，需要网络节点有较大缓存空间</p>
 <p>—————————————</p>
 <p>分组交换：</p>
-<p>分组：把大的数据块分割成小的数据块<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjfnqa67j30wt064q56.jpg"></p>
+<p>分组：把大的数据块分割成小的数据块<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjfnqa67j30wt064q56.jpg"
+                     
+                ></p>
 <p>优点：<br>1）无需建立连接<br>2）存储转发，动态分配线路<br>3）线路可靠性较高<br>4）线路利用率较高<br>5）相对于报文交换，存储管理更容易</p>
 <p>缺点：<br>1）有存储转发时延<br>2）需要传输额外的信息量<br>3）乱序到目的主机时，要对分组排序重组</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjfztu79j31330ge46c.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjfztu79j31330ge46c.jpg"
+                     
+                ></p>
 <p>————————————————</p>
-<p>数据报方式为网络层提供无连接服务【无连接服务：不事先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组传输路径可能不同】【每个分组携带源和目的地址】【路由器根据分组的目的地址转发分组：基于路由协议&#x2F;算法构建转发表；检索转发表；每个分组独立选路】<br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjgapxlfj30qe0c678k.jpg"></p>
+<p>数据报方式为网络层提供无连接服务【无连接服务：不事先为分组的传输确定传输路径，每个分组独立确定传输路径，不同分组传输路径可能不同】【每个分组携带源和目的地址】【路由器根据分组的目的地址转发分组：基于路由协议&#x2F;算法构建转发表；检索转发表；每个分组独立选路】<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjgapxlfj30qe0c678k.jpg"
+                     
+                ></p>
 <p>虚电路方式为网络层提供连接服务【连接服务：首先为分组的传输确定传输路径(建立连接)，然后沿该路径(连接)传输系列分组，系列分组传输路径相同，传输结束后拆除连接】</p>
 <p>虚电路将数据报方式和电路交换方式结合，以发挥两者优点</p>
 <p>虚电路：一条源主机到目的主机类似于电路的路径（逻辑连接），路径上所有的结点都要维持这条虚电路的建立，都维持一张虚电路表，每一项纪录了一个打开的虚电路信息</p>
 <p>通信过程：<br>1）建立连接（虚电路建立）：每个分组携带虚电路号，而非目的地址，源主机发送“呼叫请求”分组并收到“呼叫应答”分组后才算建立连接<br>2）数据传输（全双工通信）<br>3）释放连接（虚电路释放）：源主机发送“释放请求”分组以拆除虚电路</p>
-<p><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjh0y8ioj310c0e8wm8.jpg"><br><img src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjhnh4wuj30g806y3z8.jpg"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjh0y8ioj310c0e8wm8.jpg"
+                     
+                ><br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008eGmZEly1gosjhnh4wuj30g806y3z8.jpg"
+                     
+                ></p>
 
                 </div>
 
@@ -419,190 +454,45 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            $shields-style-height = 22px
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+                
+            </div>
 
-.footer {
-  padding 1rem 0
-  color var(--text-color-4)
-  font-size 1rem
+            <div class="theme-info info-item default">
+            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
+            </div>
 
-  a {
-    color var(--text-color-4)
+            
 
-    &:hover {
-      color var(--primary-color)
-    }
+            
+                <div class="deploy-info info-item default">
+                    
+                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+                        
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                    </a>
+                    
+                </div>
+            
+        
 
-    &.no-pointer {
-      pointer-events none
-    }
-  }
+        <div class="count-item info-item default">
+            
 
+            
 
-  .website-info-box {
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-
-
-    &.shields {
-      padding 0 1rem
-
-      img {
-        height $shields-style-height !important
-      }
-
-
-      a {
-        position relative
-        display inline-flex
-        box-sizing border-box
-        text-decoration none
-      }
-
-
-      .shields-item
-      .count-box {
-        margin 0.3rem 0.2rem
-        user-select none
-      }
-    }
-
-
-    +keep-mobile() {
-      &.shields {
-        .shields-item
-        .count-box {
-          margin 0.12rem -0.3rem
-          transform scale(0.9)
-          transform-origin center center
-        }
-      }
-    }
-
-
-    .info-item {
-      position relative
-      display flex
-      flex-wrap wrap
-      align-items center
-      justify-content center
-      box-sizing border-box
-      color var(--text-color-4)
-
-
-      &.shields {
-        .count-box {
-          display flex
-          justify-content flex-start
-          height $shields-style-height
-          color #f2f2f2
-          font-size 12.6px
-
-
-          .item-type
-          .item-value {
-            display flex
-            align-items center
-            height 100%
-            padding 0 6px
-          }
-
-
-          .item-type {
-            margin-right 0
-            background #555555
-          }
-
-          .item-value {
-
-            &.uv {
-              background coral
-            }
-
-            &.pv {
-              background orange
-            }
-
-            &.word {
-              background indianred
-            }
-          }
-        }
-      }
-
-
-      &.default {
-        margin 0.2rem 0
-
-        .count-box {
-          margin-right 15px
-
-          &::before {
-            position absolute
-            top 50%
-            left -10px
-            box-sizing border-box
-            transform translateY(-55%)
-            content '|'
-          }
-
-
-          &:first-child {
-            &::before {
-              display none
-            }
-          }
-
-
-          &:last-child {
-            margin-right 0
-          }
-
-
-          .item-type {
-            margin-right 4px
-          }
-        }
-      }
-
-
-      &.count-item {
-        display flex
-
-        .count-box {
-          &.uv
-          &.pv {
-            display none
-          }
-        }
-      }
-
-
-      &.deploy-info {
-
-        display flex
-
-        a
-        .tooltip {
-          display flex
-          align-items center
-        }
-
-        img {
-          height 1.08rem
-          margin 0 0.4rem
-        }
-      }
-    }
-  }
-
-
-  .icon-animate {
-    animation heartbeat-animate 1.2s ease-in-out infinite
-  }
-}
+            
+        </div>
+    </div>
+</footer>
 
         </div>
     </div>
