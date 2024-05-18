@@ -199,16 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/27_Description%E6%96%B9%E6%B3%95/">
-                            Description方法
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/11_%E7%8C%9C%E6%8B%B3%E6%B8%B8%E6%88%8F/">
+                            猜拳游戏
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            %p打印的是指针变量的值%@打印的是指针指向的对象
-如果我们使用%@打印一个对象，发现输出的格式：&lt;对象所属的类名：对象的地址&gt;
-当我们使用%@打印一个对象的时候，NSLog函数的底层实现：1）调用传入的对象的Description方法2...
+                            枚举或者结构体定义在什么地方：如果只是一个类要用，那么就定义在这个类的头文件中；如果多个类要用，那么就定义在一个单独的头文件中
+123456789101112131415161718192021//Player.h#import &lt;Founda...
                         
                     </div>
 
@@ -218,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:39 GMT+0800">2023-11-21 23:24:39</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:11 GMT+0800">2023-11-21 23:24:11</span>
             </span>
         
 
@@ -255,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/27_Description%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/11_%E7%8C%9C%E6%8B%B3%E6%B8%B8%E6%88%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,17 +268,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/28_%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1,%E8%BF%99%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E7%9A%84/">
-                            创建一个对象，这个对象在内存中是如何分配的
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/12_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+                            异常处理
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）子类对象中有自己的属性和所有父类的属性
-2）代码段中的每一个类都有一个叫做isa的指针，这个指针指向它的父类，一直指到NSObject
-子类方法重写以后，调用的就是子类重写的方法了
-
+                            一般情况下，错误指的是我们写的源代码不符合语法规范，然后编译报错，导致程序无法编译
+Bug指的是程序可以编译、链接、执行，但程序执行的结果并不是我们所预想的那样，可以通过调试寻找发生Bug的原因
+异常指的是程序可以编译、链接、执行，当程序在执行的时候...
                         
                     </div>
 
@@ -289,7 +287,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:59 GMT+0800">2023-11-21 23:24:59</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:07 GMT+0800">2023-11-21 23:25:07</span>
             </span>
         
 
@@ -326,7 +324,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/28_%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1,%E8%BF%99%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%86%E9%85%8D%E7%9A%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/12_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +346,8 @@
                    type="number"
                    value="263"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

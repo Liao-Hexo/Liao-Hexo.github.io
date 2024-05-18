@@ -199,15 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.3_%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE/">
-                            折半查找
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.9_%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                            平衡二叉树
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            折半查找：又称二分查找，仅适用于有序的顺序表
-算法思想：1）首先将给定值key与表中中间位置元素的关键字比较2）若相等，则返回该元素的位置；若不等，则在前半部分或者是后半部分进行查找3）查找序列升序时，若key小于中间元素，则查找前半部分；若key大...
+                            平衡二叉树：AVL，任意结点的平衡因子的绝对值不超过1（平衡因子：左子树高度-右子树高度）
+
+平衡二叉树的判断：利用递归的后续遍历过程1）判断左子树是一棵平衡二叉树2）判断右子树是一棵平衡二叉树3）判断以该结点为根的二叉树为平衡二叉树【判断条件：若左...
                         
                     </div>
 
@@ -217,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:10:02 GMT+0800">2023-11-21 23:10:02</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:07:03 GMT+0800">2023-11-21 23:07:03</span>
             </span>
         
 
@@ -254,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.3_%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.9_%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,15 +269,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.4_%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE/">
-                            分块查找
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.10_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
+                            哈夫曼树
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            分块查找：又称索引顺序查找，其查找性能介于折半查找和顺序查找之间
-分块查找的使用前提是将线性表进行分块，并使其分块有序，所谓分块有序是指将线性表划分为若干块，每一块内不要求有序(即块内无序)，但要求第二块中所有记录的关键码均大于第一块中所有记录的关键...
+                            路径长度：路径上所经历边的个数结点的权：结点被赋予的数值
+树的带权路径长度：WPL，树中所有叶结点的带权路径长度之和
+哈夫曼树：也称最优二叉树，含有n个带权叶子结点带权路径长度最小的二叉树
+哈夫曼树的构造算法：1）将n个结点作为n棵仅含有一个根结点的...
                         
                     </div>
 
@@ -286,7 +289,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:10:11 GMT+0800">2023-11-21 23:10:11</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:05:32 GMT+0800">2023-11-21 23:05:32</span>
             </span>
         
 
@@ -323,7 +326,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.4_%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.10_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -345,8 +348,8 @@
                    type="number"
                    value="235"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

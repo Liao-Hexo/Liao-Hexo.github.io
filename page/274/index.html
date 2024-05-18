@@ -199,15 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/49_%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0/">
-                            自动释放池
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/33_@property/">
+                            property
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            原理：存入到自动释放池中的对象，在自动释放池被销毁的时候，会自动调用存储在该自动释放池中的所有对象的release方法
-可以解决的问题：将创建的对象，存入到自动释放池之中，就不再需要手动的release这个对象了，因为池子销毁的时候，就会自动的调用池...
+                            写一个类：1）要先为类写属性2）再声明属性的getter和setter3）再实现getter和setter
+@property
+作用：自动生成getter、setter方法的声明，因为是生成方法的声明，所以应该写在@interface类的声明之中
+语...
                         
                     </div>
 
@@ -217,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:20 GMT+0800">2023-11-21 23:28:20</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:21 GMT+0800">2023-11-21 23:26:21</span>
             </span>
         
 
@@ -254,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/49_%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/33_@property/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,14 +270,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/50_%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9A%84%E8%A7%84%E8%8C%83/">
-                            类方法的规范
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/34_@synthesize/">
+                            synthesize
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            一般情况下，要求提供与自定义构造方法相同功能的类方法，这样可以快速的创建一个对象；使用类方法创建的对象，要求这个对象在方法中就已经被autorelease过了，这样，我们只要在自动释放池中调用类方法来创建对象，那么创建的对象就会被自动的加入到自动释放...
+                            作用：自动生成getter、setter方法的实现，所以应该写在类的实现之中
+语法：@synthesize @property名称;
+@synthesize做的事情：
+问题：希望@synthesize不要去自动生成私有属性了，getter和sette...
                         
                     </div>
 
@@ -285,7 +290,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:35 GMT+0800">2023-11-21 23:28:35</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:29 GMT+0800">2023-11-21 23:26:29</span>
             </span>
         
 
@@ -322,7 +327,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/50_%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9A%84%E8%A7%84%E8%8C%83/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/34_@synthesize/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -344,8 +349,8 @@
                    type="number"
                    value="274"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

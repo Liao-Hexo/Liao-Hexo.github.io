@@ -199,15 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/9_%E5%A4%9A%E6%96%87%E4%BB%B6%E5%BC%80%E5%8F%91%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%96%B9%E6%B3%95/">
-                            多文件开发、对象和方法
+                        <a href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/2_Swift%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                            Swift数据类型
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            多文件开发：所有的类都写在main.m这个源文件之中，导致后期的维护非常不方便，也不利于团队开发
-推荐的方式：把一个类写在一个模块之中，而一个模块至少包含两个文件：.h头文件写类(方法)的声明，因为要用到Foundation框架中的NSObject类...
+                            在我们使用任何程序语言编程时，需要使用各种数据类型来存储不同的信息，变量的数据类型决定了如何将代表这些值的位存储到计算机的内存中，在声明变量时也可指定它的数据类型，所有变量都有数据类型，以决定能够存储哪种数据
+内置数据类型Int一般来说，你不需要专门...
                         
                     </div>
 
@@ -217,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:02 GMT+0800">2023-11-21 23:24:02</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:15:11 GMT+0800">2023-11-21 23:15:11</span>
             </span>
         
 
@@ -240,7 +240,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
                         
                     
                 </ul>
@@ -254,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/9_%E5%A4%9A%E6%96%87%E4%BB%B6%E5%BC%80%E5%8F%91%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/2_Swift%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,17 +268,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/10_%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7/">
-                            对象作为类的属性
+                        <a href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/3_Swift%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                            Swift运算符
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            一个Target中的类无法直接在另外一个Target中访问
-如果要访问其他Target中的类，找到其他Target中的类，右键Show in Finder，选中这个模块直接拖拽到当前类中（上面两个按钮要勾上）
-
-类的属性代表这类事物具有的共同的特征，...
+                            运算符是一个符号，用于告诉编译器执行一个数学或逻辑运算
+算术运算符+、-、*、/、%
+注意：Swift3中已经取消了++、--
+比较运算符==、!=、&gt;、&lt;、&gt;=、&lt;=
+逻辑运算符&amp;&amp;：逻辑与，如果运算符两侧都...
                         
                     </div>
 
@@ -288,7 +289,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:28 GMT+0800">2023-11-21 23:25:28</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:15:05 GMT+0800">2023-11-21 23:15:05</span>
             </span>
         
 
@@ -311,7 +312,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
                         
                     
                 </ul>
@@ -325,7 +326,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/10_%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/3_Swift%E8%BF%90%E7%AE%97%E7%AC%A6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,8 +348,8 @@
                    type="number"
                    value="254"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

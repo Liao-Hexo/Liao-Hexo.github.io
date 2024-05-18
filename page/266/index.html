@@ -199,17 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/33_@property/">
-                            property
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/17_%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">
+                            对象与对象之间的关系
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            写一个类：1）要先为类写属性2）再声明属性的getter和setter3）再实现getter和setter
-@property
-作用：自动生成getter、setter方法的声明，因为是生成方法的声明，所以应该写在@interface类的声明之中
-语...
+                            组合关系：一个类是由其他的几个类联合起来组合而成【计算机由主板、显卡等组成】
+依赖关系：一个对象的方法的参数是另外一个对象【人依赖于手机】
+耦合度：当修改一个对象的时候对另外一个对象的影响程度【低耦合，高耦合】
+高内聚：一个对象仅仅做与自己相关的事情...
                         
                     </div>
 
@@ -219,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:21 GMT+0800">2023-11-21 23:26:21</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:33 GMT+0800">2023-11-21 23:24:33</span>
             </span>
         
 
@@ -256,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/33_@property/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/17_%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,17 +270,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/34_@synthesize/">
-                            synthesize
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/18_static%E5%85%B3%E9%94%AE%E5%AD%97/">
+                            static关键字
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            作用：自动生成getter、setter方法的实现，所以应该写在类的实现之中
-语法：@synthesize @property名称;
-@synthesize做的事情：
-问题：希望@synthesize不要去自动生成私有属性了，getter和sette...
+                            static不能修饰属性，也不能修饰方法，可以修饰方法中的局部变量
+如果方法中的局部变量被static修饰，那么这个变量就会被变成静态变量，存储在常量区，当方法执行完毕之后，不会回收，下次再执行这个方法的时候，直接使用而不用再声明了
+如果方法的返回值...
                         
                     </div>
 
@@ -290,7 +289,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:29 GMT+0800">2023-11-21 23:26:29</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:15 GMT+0800">2023-11-21 23:25:15</span>
             </span>
         
 
@@ -327,7 +326,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/34_@synthesize/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/18_static%E5%85%B3%E9%94%AE%E5%AD%97/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +348,8 @@
                    type="number"
                    value="266"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

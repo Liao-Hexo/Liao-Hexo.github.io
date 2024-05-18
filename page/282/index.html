@@ -199,16 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/65_%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/">
-                            应用实例
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/49_%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0/">
+                            自动释放池
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            写一个数组类，给这个数组类提供一个方法，将一个国家字符串数组进行排序：
-比较j和j+1这两个字符串，我们直接比较的是字母顺序，但是这么写的话就写死了
-比较这两个字符串的大小，不要方法的内部自己写代码去比，因为不管写什么代码都会写死的，让调用者自己写一...
+                            原理：存入到自动释放池中的对象，在自动释放池被销毁的时候，会自动调用存储在该自动释放池中的所有对象的release方法
+可以解决的问题：将创建的对象，存入到自动释放池之中，就不再需要手动的release这个对象了，因为池子销毁的时候，就会自动的调用池...
                         
                     </div>
 
@@ -218,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:30:52 GMT+0800">2023-11-21 23:30:52</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:20 GMT+0800">2023-11-21 23:28:20</span>
             </span>
         
 
@@ -255,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/65_%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/49_%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,15 +268,14 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/66_block%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">
-                            block作为函数的返回值
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/50_%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9A%84%E8%A7%84%E8%8C%83/">
+                            类方法的规范
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            当将block作为函数的返回值的时候，返回值的类型就必须要使用typedef定义的短类型
-
+                            一般情况下，要求提供与自定义构造方法相同功能的类方法，这样可以快速的创建一个对象；使用类方法创建的对象，要求这个对象在方法中就已经被autorelease过了，这样，我们只要在自动释放池中调用类方法来创建对象，那么创建的对象就会被自动的加入到自动释放...
                         
                     </div>
 
@@ -287,7 +285,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:30:58 GMT+0800">2023-11-21 23:30:58</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:35 GMT+0800">2023-11-21 23:28:35</span>
             </span>
         
 
@@ -324,7 +322,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/66_block%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/50_%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9A%84%E8%A7%84%E8%8C%83/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +344,8 @@
                    type="number"
                    value="282"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

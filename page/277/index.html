@@ -199,16 +199,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/55_MRC%E3%80%81ARC%E5%85%BC%E5%AE%B9%E4%B8%8E%E8%BD%AC%E6%8D%A2/">
-                            MRC、ARC兼容与转换
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/39_%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/">
+                            动态类型检测
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            兼容：如果程序使用的是ARC机制开发的，但是其中某个类使用的是MRC，这个时候双击使用MRC的那个文件输入命令：-fno-obj-arc
-MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
+                            编译——运行
+我们就希望，可以写代码来先判断一下对象中是否有这个方法，如果有再去执行，如果没有就不去执行
+1）判断对象中是否有指定的对象方法【最常用】* (BOOL)respondsToSelector:(SEL)aSelector;
 
+2）判断类中...
                         
                     </div>
 
@@ -218,7 +220,7 @@ MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:08 GMT+0800">2023-11-21 23:29:08</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:02 GMT+0800">2023-11-21 23:27:02</span>
             </span>
         
 
@@ -255,7 +257,7 @@ MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/55_MRC%E3%80%81ARC%E5%85%BC%E5%AE%B9%E4%B8%8E%E8%BD%AC%E6%8D%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/39_%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,17 +271,17 @@ MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/56_%E5%88%86%E7%B1%BB%E7%B1%BB%E5%88%AB%E7%B1%BB%E7%9B%AE(category)/">
-                            分类类别类目(category)
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/40_%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
+                            构造方法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            让一个类占多个模块，将功能相似的方法定义在同一个模块中
-分类的使用：如果要访问分类中定义的成员，就要把分类的头文件引进来
-分类的作用：1）将一个类分为多个模块2）为一个已经存在的类添加方法（扩展一个类）
-使用分类的注意事项：1）分类只能增加方法，不能...
+                            类名 *指针名&#x3D;[类名 new];
+new方法的内部，其实是先调用的alloc方法，再调用的init方法
+alloc方法是一个类方法，作用：哪一个类调用这个方法，就创建哪个类的对象，并把对象返回init方法是一个对象方法，作用：初始化对象
+...
                         
                     </div>
 
@@ -289,7 +291,7 @@ MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:14 GMT+0800">2023-11-21 23:29:14</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:17 GMT+0800">2023-11-21 23:27:17</span>
             </span>
         
 
@@ -326,7 +328,7 @@ MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/56_%E5%88%86%E7%B1%BB%E7%B1%BB%E5%88%AB%E7%B1%BB%E7%9B%AE(category)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/40_%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +350,8 @@ MRC转换为ARC：Edit——&gt;Convert——&gt;To Objective-C ARC…
                    type="number"
                    value="277"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

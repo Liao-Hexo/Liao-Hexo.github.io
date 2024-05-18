@@ -199,15 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/83_NSMutableString/">
-                            NSMutableString
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/67_block%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E5%90%8C/">
+                            block与函数的异同
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            会耗费很长的时间，每次循环的时候都会创建一个新的字符串对象，因为字符串的恒定性
-NSMutableString是Foundation框架中的一个类，从NSString继承，所以NSMutableString对象是用来存储字符串数据的，NSMutabl...
+                            相同点：都是封装一段代码
+不同的：1）block是一个数据类型，可以声明block类型的变量；而函数就只是函数2）block可以作为函数的参数，而函数不能直接作为函数的参数
+
                         
                     </div>
 
@@ -217,7 +218,7 @@ NSMutableString是Foundation框架中的一个类，从NSString继承，所以NS
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:33:28 GMT+0800">2023-11-21 23:33:28</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:04 GMT+0800">2023-11-21 23:31:04</span>
             </span>
         
 
@@ -254,7 +255,7 @@ NSMutableString是Foundation框架中的一个类，从NSString继承，所以NS
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/83_NSMutableString/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/67_block%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E5%90%8C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,16 +269,19 @@ NSMutableString是Foundation框架中的一个类，从NSString继承，所以NS
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/84_NSArray/">
-                            NSArray
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/68_%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8(protocol)/">
+                            协议的基本使用(protocol)
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            是Foundation框架中的一个类，这个类的对象是来存储多个数据的，具备数组的功能，所以NSArray是OC中的数组最常用的创建数组的方式：【只能存储OC对象】简写方式：
-取出对应的元素的值：1）2）
-NSArray数组的其他常用方法：1）得到数组...
+                            作用：专门用来声明一大堆方法（不能声明属性，也不能实现方法，只能用来写方法的声明），只要某个类遵守了这个协议，就相当于拥有这个协议中的所有的方法声明，而不用自己去定义
+协议的声明：
+@protocol 协议名称 
+方法的声明;
+@end
+在协议中，只...
                         
                     </div>
 
@@ -287,7 +291,7 @@ NSArray数组的其他常用方法：1）得到数组...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:33:34 GMT+0800">2023-11-21 23:33:34</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:10 GMT+0800">2023-11-21 23:31:10</span>
             </span>
         
 
@@ -324,7 +328,7 @@ NSArray数组的其他常用方法：1）得到数组...
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/84_NSArray/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/68_%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8(protocol)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +350,8 @@ NSArray数组的其他常用方法：1）得到数组...
                    type="number"
                    value="291"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

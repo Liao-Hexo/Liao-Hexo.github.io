@@ -199,16 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/41_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0/">
-                            内存管理概述
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/25_%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/">
+                            方法重写
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            内存的作用：存储数据
-1）如何将数据存储到内存之中：声明一个变量2）当数据不再被使用的时候，占用的内存空间如何被释放？
-内存中的五大区域：1）栈：局部变量，当局部变量的作用域被执行完毕之后，这个局部变量就会被系统立即回收2）堆：OC对象，使用C函数申...
+                            子类从父类继承，子类就继承了父类的方法，就意味着子类拥有了这个功能，但是有的时候，虽然子类也拥有父类的这个行为，但是这个行为的具体的实现和父类不同
+如何重写：直接在自己类的实现中将这个方法重新实现一遍就可以了
+当一个父类指针指向一个子类对象的时候，通...
                         
                     </div>
 
@@ -218,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:24 GMT+0800">2023-11-21 23:27:24</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:23:39 GMT+0800">2023-11-21 23:23:39</span>
             </span>
         
 
@@ -255,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/41_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/25_%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,17 +269,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/42_%E7%AC%AC%E4%B8%80%E4%B8%AAMRC%E7%A8%8B%E5%BA%8F/">
-                            第一个MRC程序
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/26_%E5%A4%9A%E6%80%81/">
+                            多态
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            要写MRC的程序，必须先把Xcode默认的ARC模式关闭，开启MRC
-在ARC机制下，retain，release，dealloc这些方法无法调用
-重写dealloc方法的规范：必须要调用父类的dealloc方法，并且要放在最后一句代码
-测试引用数据...
+                            指的是同一个行为，对于不同的事物具有完全不同的表现形式
+1234567Person *p1=[Chinese new];Person *p2=[Japanese new];Person *p3=[Korea new];[p1 sayHi];[p2 s...
                         
                     </div>
 
@@ -289,7 +287,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:30 GMT+0800">2023-11-21 23:27:30</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:22 GMT+0800">2023-11-21 23:25:22</span>
             </span>
         
 
@@ -326,7 +324,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/42_%E7%AC%AC%E4%B8%80%E4%B8%AAMRC%E7%A8%8B%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/26_%E5%A4%9A%E6%80%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +346,8 @@
                    type="number"
                    value="270"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

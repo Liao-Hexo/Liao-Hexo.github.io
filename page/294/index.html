@@ -199,16 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/89_%E9%9B%86%E5%90%88%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
-                            集合的内存管理
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/73_NSString%E7%B1%BB/">
+                            NSString类
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            NSArray：集合NSDictionary：字典集合
-在MRC模式下，将对象存储到集合之中，会为这个对象的引用计数器+1，当集合销毁的时候，就会向存储在集合中的所有对象发送一条release消息
-使用@[]或者@{}创建的集合已经被autorele...
+                            NSString是一个数据类型，保存OC字符串的，实际上NSString的本质是一个类使用这种方式创建的字符串是一个空的字符@“”
+当我们调用NSString的类方法来创建对象的时候，创建的字符串对象是存储在堆区
+OC提供了一种更为快速的创建字符串对...
                         
                     </div>
 
@@ -218,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:06 GMT+0800">2023-11-21 23:34:06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:00 GMT+0800">2023-11-21 23:32:00</span>
             </span>
         
 
@@ -255,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/89_%E9%9B%86%E5%90%88%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/73_NSString%E7%B1%BB/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,16 +269,14 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/90_NSFileManager/">
-                            NSFileManager
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/74_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
+                            字符串对象常用方法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            NSFileManager是Foundation框架提供的一个类，用来操作磁盘上的文件和文件夹，对它们进行创建、删除、复制、拷贝、移动
-NSFileManager类的对象是以单例模式创建的：
-常用方法之判断：1）判断指定的文件或者文件夹在磁盘上是否真...
+                            1）使用拼接的方式创建一个NSString对象2）得到字符串的长度3）得到字符串中指定下标的字符4）判断两个字符串的内容是否相等【不能使用&#x3D;&#x3D;去比较，因为&#x3D;&#x3D;比较的是字符串指针变量的值，而我们要比的是两个字符串...
                         
                     </div>
 
@@ -288,7 +286,7 @@ NSFileManager类的对象是以单例模式创建的：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:12 GMT+0800">2023-11-21 23:34:12</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:07 GMT+0800">2023-11-21 23:32:07</span>
             </span>
         
 
@@ -325,7 +323,7 @@ NSFileManager类的对象是以单例模式创建的：
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/90_NSFileManager/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/74_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,8 +345,8 @@ NSFileManager类的对象是以单例模式创建的：
                    type="number"
                    value="294"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

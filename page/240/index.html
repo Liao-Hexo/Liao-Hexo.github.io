@@ -199,16 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/8.5_%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
-                            冒泡排序
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.9_%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">
+                            最小生成树
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            冒泡排序(稳定的算法)：假设待排序表长为n，从前往后(从后往前)两两比较相邻元素的值，若为逆序(即A[i-1]&gt;A[i])，则交换他们直到序列比较结束【一次冒泡会将一个元素放置到它最终的位置上】
-适用于顺序存储和链式存储
-最好时间复杂度为O(n...
+                            生成树：连通图包含全部顶点的一个极小连通子图
+最小生成树：对于带权无向连通图G&#x3D;(V,E)，G的所有生成树当中边的权值之和最小的生成树为G的最小生成树（MST）
+性质：1）最小生成树不一定唯一，即最小生成树的树形不一定唯一，当带权无向连通图...
                         
                     </div>
 
@@ -218,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:12:06 GMT+0800">2023-11-21 23:12:06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:09:19 GMT+0800">2023-11-21 23:09:19</span>
             </span>
         
 
@@ -255,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/8.5_%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.9_%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,15 +269,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/8.6_%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
-                            快速排序
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.10_%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">
+                            最短路径
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            快速排序(不稳定的算法)：【时间复杂度为O(high-low+1)】【最好、平均空间复杂度为O(log2(n))、最坏空间复杂度O(n)】【最好、平均时间复杂度为O(nlog2(n))、最坏时间复杂度为O(n^2)】
-初始基本有序或逆序的情况下时间、...
+                            最短路径：两个顶点之间带权路径长度最短的路径为最短路径
+在带权图当中，把从一个顶点v到另一个顶点u所经历的边的权值之和称为路径的带权路径长度
+Dijkstra算法：带权图单源最短路径
+时间复杂度：O(|V|^2)
+Dijkstra算法并不适用于含有负...
                         
                     </div>
 
@@ -287,7 +290,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:12:14 GMT+0800">2023-11-21 23:12:14</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:07:23 GMT+0800">2023-11-21 23:07:23</span>
             </span>
         
 
@@ -324,7 +327,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/8.6_%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.10_%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +349,8 @@
                    type="number"
                    value="240"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

@@ -199,16 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/16_%E5%A4%9A%E6%80%81/">
-                            多态
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/95_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+                            单例模式
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            多态是C++面向对象三大特性之一
-多态分为两类：1）静态多态：函数重载和运算符重载属于静态多态，复用函数名2）动态多态：派生类和虚函数实现运行时多态
-静态多态和动态多态的区别：1）静态多态的函数地址早绑定，编译阶段确定函数地址2）动态多态的函数地址晚...
+                            一个类的对象，无论在何时创建，无论在什么地方创建，也无论创建多少次，创建出来的都是同一个对象
+无论如何创建对象，最终都会调用alloc方法来创建，alloc方法的内部，其实什么都没做，只是调用了allocWithZone方法，实际上真正申请空间创建对...
                         
                     </div>
 
@@ -218,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:17:34 GMT+0800">2023-11-21 23:17:34</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:47 GMT+0800">2023-11-21 23:34:47</span>
             </span>
         
 
@@ -241,7 +240,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
                         
                     
                 </ul>
@@ -255,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/16_%E5%A4%9A%E6%80%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/95_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,16 +268,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/17_C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
-                            C++文件操作
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/1_C++%E5%9F%BA%E7%A1%80/">
+                            C++基础
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            程序运行时产生的数据都属于临时数据，程序一旦运行结束都会被释放，通过文件可以将数据持久化
-C++中对文件操作需要包含头文件
-文件类型分为两种：1）文本文件：文件以文本的ASCII码形式存储在计算机中2）二进制文件：文件以文本的二进制形式存储在计算机中...
+                            常量：用于记录程序中不可更改的数据
+C++定义常量的两种方式：1）#define 常量名 常量值2）const修饰的变量
+利用sizeof关键字可以统计数据类型所占内存的大小【sizeof（数据类型&#x2F;变量）】
+字符型变量并不是把字符本身放到...
                         
                     </div>
 
@@ -288,7 +288,7 @@ C++中对文件操作需要包含头文件
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:17:28 GMT+0800">2023-11-21 23:17:28</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:18:25 GMT+0800">2023-11-21 23:18:25</span>
             </span>
         
 
@@ -325,7 +325,7 @@ C++中对文件操作需要包含头文件
     </div>
 
     
-        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/17_C++%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/1_C++%E5%9F%BA%E7%A1%80/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,8 +347,8 @@ C++中对文件操作需要包含头文件
                    type="number"
                    value="305"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

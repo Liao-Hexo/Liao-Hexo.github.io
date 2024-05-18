@@ -199,19 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/59_%E5%BB%B6%E5%B1%95(Extension)/">
-                            延展(Extension)
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/43_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E5%8E%9F%E5%88%99/">
+                            内存管理的原则
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）是一个特殊的分类，所以延展也是类的一部分2）特殊之处：没有名字；只有声明没有实现，和本类共享一个实现
-语法：             @interface 本类名（）
-         @end
-
-没有实现，和本类共享一个实现
-延展和分类的区别：...
+                            1）有对象的创建，就要匹配一个release2）retain的次数和release的次数要匹配3）谁用谁retain，谁不用谁release4）只有在多一个人用的时候才retain，少一个人使用的时候才release
+有始有终，有加就有减，有reta...
                         
                     </div>
 
@@ -221,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:38 GMT+0800">2023-11-21 23:29:38</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:37 GMT+0800">2023-11-21 23:27:37</span>
             </span>
         
 
@@ -258,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/59_%E5%BB%B6%E5%B1%95(Extension)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/43_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E5%8E%9F%E5%88%99/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -272,15 +268,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/60_block%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                            block的基本使用
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/44_%E9%87%8E%E6%8C%87%E9%92%88%E4%B8%8E%E5%83%B5%E5%B0%B8%E5%AF%B9%E8%B1%A1/">
+                            野指针与僵尸对象
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）block是一个数据类型，我们可以声明一个block类型的变量2）不同类型的变量中可以存储不同类型的数据，block类型的变量中专门存储一段代码，这段代码可以有参数，可以有返回值
-Block变量的声明：1）虽然block变量中是用来存储一段代码的...
+                            C语言中的野指针：定义一个指针变量，没有初始化，这个指针变量的值是一个垃圾值，指向一块随机的空间，这个指针就叫做野指针
+OC中的野指针：指针指向的对象已经被回收了，这样的指针就叫做野指针
+内存回收的本质：申请一个变量实际上就是向系统申请指定字节数的空...
                         
                     </div>
 
@@ -290,7 +287,7 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:58 GMT+0800">2023-11-21 23:29:58</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:44 GMT+0800">2023-11-21 23:27:44</span>
             </span>
         
 
@@ -327,7 +324,7 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/60_block%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/44_%E9%87%8E%E6%8C%87%E9%92%88%E4%B8%8E%E5%83%B5%E5%B0%B8%E5%AF%B9%E8%B1%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +346,8 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
                    type="number"
                    value="279"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

@@ -199,18 +199,20 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/21_super%E5%85%B3%E9%94%AE%E5%AD%97(%E7%89%B9%E6%8C%87%E8%BF%99%E4%B8%AA%E6%96%B9%E6%B3%95%E6%98%AF%E4%BB%8E%E7%88%B6%E7%B1%BB%E7%BB%A7%E6%89%BF%E8%BF%87%E6%9D%A5%E7%9A%84)/">
-                            super关键字(特指这个方法是从父类继承过来的)
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/5_%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                            面向过程和面向对象
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）可以用在类方法和对象方法之中
-2）在对象方法中可以使用super关键字调用当前对象从父类继承过来的对象方法
-12[self sayHi];[super sayHi];
+                            优缺点分析：
+面向过程的解决问题的缺点：后期的维护和修改不方便
 
-3）在类方法中，super关键字可以调用当前类从父类继承过来的类方法【类方法...
+面向对象的解决问题的优点：1）后期的维护和修改十分方便2）使用面向对象设计我们的程序，可以让我们的程序在后期的维护和修改当中更加的方便和快捷
+
+
+
                         
                     </div>
 
@@ -220,7 +222,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:36 GMT+0800">2023-11-21 23:25:36</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:48 GMT+0800">2023-11-21 23:29:48</span>
             </span>
         
 
@@ -257,7 +259,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/21_super%E5%85%B3%E9%94%AE%E5%AD%97(%E7%89%B9%E6%8C%87%E8%BF%99%E4%B8%AA%E6%96%B9%E6%B3%95%E6%98%AF%E4%BB%8E%E7%88%B6%E7%B1%BB%E7%BB%A7%E6%89%BF%E8%BF%87%E6%9D%A5%E7%9A%84)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/5_%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -271,18 +273,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/22_%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%94%A8%E6%9D%A5%E4%BF%AE%E9%A5%B0%E5%B1%9E%E6%80%A7/">
-                            访问修饰符用来修饰属性
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/6_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">
+                            类和对象
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            可以限定对象的属性在哪一段范围之中访问
-
-@private私有的，被@private修饰的属性只能在本类的内部访问，只能在本类的方法实现中访问
-
-@protected受保护的，被@protected修饰的属性只能在本类和本类的子类中访问，只能在本类和...
+                            对象：现实生活中的一个具体存在，看得见摸得着，拿过来就可以直接使用
+类：对一群具有相同特征或者行为的事物的一个统称，抽象的，不能直接使用
+类是模版，类的对象是根据这个模版创建出来的，类模版中有什么，对象中就有什么，绝不可能多，也绝不可能少
+设计类的三...
                         
                     </div>
 
@@ -292,7 +293,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:43 GMT+0800">2023-11-21 23:25:43</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:29 GMT+0800">2023-11-21 23:31:29</span>
             </span>
         
 
@@ -329,7 +330,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/22_%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%94%A8%E6%9D%A5%E4%BF%AE%E9%A5%B0%E5%B1%9E%E6%80%A7/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/6_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -351,8 +352,8 @@
                    type="number"
                    value="260"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

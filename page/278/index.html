@@ -199,17 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/57_%E9%9D%9E%E6%AD%A3%E5%BC%8F%E5%8D%8F%E8%AE%AE/">
-                            非正式协议
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/41_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0/">
+                            内存管理概述
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            为系统自带的类写分类，这个就叫做非正式协议
-分类的作用：1）将一个类分为多个模块2）为一个已经存在的类添加方法（扩展一个类）
-如果想为NSString写一个方法：（此方法无参数，因为NSString本身就是字符串）
-
+                            内存的作用：存储数据
+1）如何将数据存储到内存之中：声明一个变量2）当数据不再被使用的时候，占用的内存空间如何被释放？
+内存中的五大区域：1）栈：局部变量，当局部变量的作用域被执行完毕之后，这个局部变量就会被系统立即回收2）堆：OC对象，使用C函数申...
                         
                     </div>
 
@@ -219,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:21 GMT+0800">2023-11-21 23:29:21</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:24 GMT+0800">2023-11-21 23:27:24</span>
             </span>
         
 
@@ -256,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/57_%E9%9D%9E%E6%AD%A3%E5%BC%8F%E5%8D%8F%E8%AE%AE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/41_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,16 +269,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/58_%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">
-                            知识点补充
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/42_%E7%AC%AC%E4%B8%80%E4%B8%AAMRC%E7%A8%8B%E5%BA%8F/">
+                            第一个MRC程序
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            ARC机制与垃圾回收机制(GC)的区别：
-GC：程序在运行期间有一个东西叫做垃圾回收器，不断的扫描堆中的对象是否无人使用，若无人使用则回收
-ARC：不是运行时，而是在编译的时候就在合适的地方插入retain，release……..插入的代码足以让对象...
+                            要写MRC的程序，必须先把Xcode默认的ARC模式关闭，开启MRC
+在ARC机制下，retain，release，dealloc这些方法无法调用
+重写dealloc方法的规范：必须要调用父类的dealloc方法，并且要放在最后一句代码
+测试引用数据...
                         
                     </div>
 
@@ -289,7 +289,7 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:29 GMT+0800">2023-11-21 23:29:29</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:30 GMT+0800">2023-11-21 23:27:30</span>
             </span>
         
 
@@ -326,7 +326,7 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/58_%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/42_%E7%AC%AC%E4%B8%80%E4%B8%AAMRC%E7%A8%8B%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +348,8 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
                    type="number"
                    value="278"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 

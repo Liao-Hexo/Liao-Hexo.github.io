@@ -199,16 +199,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/8_%E5%87%BD%E6%95%B0/">
-                            函数
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/12_C++%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B%E5%92%8Cthis%E6%8C%87%E9%92%88/">
+                            C++对象模型和this指针
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            函数：函数是一块代码，接收零个或多个参数，做一件事情，并返回零个或一个值
-循环：同一段代码反复不停的执行重用&#x2F;复用：有一段代码，多个地方都要执行一次，但是不是反复不停的执行
-定义在函数内部的变量，我们就叫做局部变量定义在函数外部的变量，我们...
+                            ——————成员变量和成员函数分开存储：
+在C++中，类内的成员变量和成员函数分开存储
+只有非静态成员变量才属于类的对象上
+—————————this指针：
+每一个非静态成员函数只会诞生一份函数实例，也就是说多个同类型的对象会共用一块代码，那么这一块...
                         
                     </div>
 
@@ -218,7 +220,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:19:02 GMT+0800">2023-11-21 23:19:02</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:18:01 GMT+0800">2023-11-21 23:18:01</span>
             </span>
         
 
@@ -241,7 +243,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
                         
                     
                 </ul>
@@ -255,7 +257,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/8_%E5%87%BD%E6%95%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/12_C++%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B%E5%92%8Cthis%E6%8C%87%E9%92%88/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,17 +271,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/9_%E5%80%BC%E4%BC%A0%E9%80%92%E3%80%81%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92/">
-                            值传递、地址传递
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/13_%E5%8F%8B%E5%85%83/">
+                            友元
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            值传递：当函数参数的类型是int、float、double、char类型的时候，调用者传入一个实参变量，函数执行完毕之后，对实参变量的值没有影响
-我们来分析下面一段代码：为啥test函数和main函数中num的值不一样呢？？
-程序执行原理：
-地址传递...
+                            在程序里，有些私有属性也想让类外特殊的一些函数或者类进行访问，就需要用到友元的技术
+友元的目的就是让一个函数或者类访问另一个类中的私有成员，友元的关键字为friend
+友元的三种实现：1）全局函数做友元2）类做友元3）成员函数做友元
+全局函数做友元：...
                         
                     </div>
 
@@ -289,7 +291,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:18:56 GMT+0800">2023-11-21 23:18:56</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:17:54 GMT+0800">2023-11-21 23:17:54</span>
             </span>
         
 
@@ -312,7 +314,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
                         
                     
                 </ul>
@@ -326,7 +328,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/9_%E5%80%BC%E4%BC%A0%E9%80%92%E3%80%81%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/13_%E5%8F%8B%E5%85%83/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +350,8 @@
                    type="number"
                    value="311"
                    min="1"
-                   max="317"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">317</span>
+                   max="325"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">325</span>
         </div>
 
 
