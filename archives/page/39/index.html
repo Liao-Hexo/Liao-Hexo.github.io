@@ -199,13 +199,6 @@
                     <li class="article-item border-box">
                         <span class="article-date border-box">06-30</span>
                         <a class="article-title border-box text-ellipsis"
-                           href="/2019/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/%E5%89%91%E6%8C%87Offer_03_%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/"
-                        >剑指Offer_03_数组中重复的数字</a>
-                    </li>
-                
-                    <li class="article-item border-box">
-                        <span class="article-date border-box">06-30</span>
-                        <a class="article-title border-box text-ellipsis"
                            href="/2019/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/%E5%89%91%E6%8C%87Offer_04_%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/"
                         >剑指Offer_04_二维数组中的查找</a>
                     </li>
@@ -266,6 +259,13 @@
                         >LeetCode_28_实现strStr()</a>
                     </li>
                 
+                    <li class="article-item border-box">
+                        <span class="article-date border-box">06-30</span>
+                        <a class="article-title border-box text-ellipsis"
+                           href="/2019/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/LeetCode/%E9%93%BE%E8%A1%A8/%E5%89%91%E6%8C%87Offer_18_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/"
+                        >剑指Offer_18_删除链表的节点</a>
+                    </li>
+                
             </ul>
         </section>
     
@@ -311,45 +311,190 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="border-box website-info-box default">
-        
-            <div class="copyright-info info-item default">
-                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
-                
-                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
-                
-            </div>
+            $shields-style-height = 22px
 
-            <div class="theme-info info-item default">
-            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
-            </div>
+.footer {
+  padding 1rem 0
+  color var(--text-color-4)
+  font-size 1rem
 
-            
+  a {
+    color var(--text-color-4)
 
-            
-                <div class="deploy-info info-item default">
-                    
-                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
-                        
-                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
-                        
-                    </a>
-                    
-                </div>
-            
-        
+    &:hover {
+      color var(--primary-color)
+    }
 
-        <div class="count-item info-item default">
-            
+    &.no-pointer {
+      pointer-events none
+    }
+  }
 
-            
 
-            
-        </div>
-    </div>
-</footer>
+  .website-info-box {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+
+    &.shields {
+      padding 0 1rem
+
+      img {
+        height $shields-style-height !important
+      }
+
+
+      a {
+        position relative
+        display inline-flex
+        box-sizing border-box
+        text-decoration none
+      }
+
+
+      .shields-item
+      .count-box {
+        margin 0.3rem 0.2rem
+        user-select none
+      }
+    }
+
+
+    +keep-mobile() {
+      &.shields {
+        .shields-item
+        .count-box {
+          margin 0.12rem -0.3rem
+          transform scale(0.9)
+          transform-origin center center
+        }
+      }
+    }
+
+
+    .info-item {
+      position relative
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content center
+      box-sizing border-box
+      color var(--text-color-4)
+
+
+      &.shields {
+        .count-box {
+          display flex
+          justify-content flex-start
+          height $shields-style-height
+          color #f2f2f2
+          font-size 12.6px
+
+
+          .item-type
+          .item-value {
+            display flex
+            align-items center
+            height 100%
+            padding 0 6px
+          }
+
+
+          .item-type {
+            margin-right 0
+            background #555555
+          }
+
+          .item-value {
+
+            &.uv {
+              background coral
+            }
+
+            &.pv {
+              background orange
+            }
+
+            &.word {
+              background indianred
+            }
+          }
+        }
+      }
+
+
+      &.default {
+        margin 0.2rem 0
+
+        .count-box {
+          margin-right 15px
+
+          &::before {
+            position absolute
+            top 50%
+            left -10px
+            box-sizing border-box
+            transform translateY(-55%)
+            content '|'
+          }
+
+
+          &:first-child {
+            &::before {
+              display none
+            }
+          }
+
+
+          &:last-child {
+            margin-right 0
+          }
+
+
+          .item-type {
+            margin-right 4px
+          }
+        }
+      }
+
+
+      &.count-item {
+        display flex
+
+        .count-box {
+          &.uv
+          &.pv {
+            display none
+          }
+        }
+      }
+
+
+      &.deploy-info {
+
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.08rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation heartbeat-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>
