@@ -229,7 +229,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Sun May 19 2024 23:12:13 GMT+0800">2024年05月19日 23:12:13</span>
+                <span class="pc" data-updated="Sat Jun 01 2024 18:19:45 GMT+0800">2024年06月01日 18:19:45</span>
             </span>
         
 
@@ -274,8 +274,14 @@
                     
 
                     <ul>
-<li>状态栏高度、导航栏高度、安全区域、tabBar高度、底部小横条区域、底部安全距离</li>
-<li>逻辑分辨率、物理分辨率</li>
+<li><p>状态栏高度、导航栏高度、安全区域、tabBar高度、底部小横条区域、底部安全距离</p>
+</li>
+<li><p>逻辑分辨率和物理分辨率的区别？</p>
+<blockquote>
+<p>我们以Mac的发展史来说明什么是物理分辨率？以及为什么需要衍生出逻辑分辨率？</p>
+<p>我们的主人公是乔帮主和比尔盖茨，此时乔帮主面前有一台Mac，屏幕的分辨率是1280x720，这就是物理分辨率。乔帮主对比尔盖茨说，给我的Mac开发一个Word软件吧。盖茨说OK，于是写了一个软件，这个软件显示的时候长度是1280像素，宽度是720像素，正好能够盖满整个Mac屏幕，乔帮主看了之后很满意。有一天，乔帮主看自己的Mac屏幕觉得很粗糙，一点都不清晰锐利，于是聪明的乔帮主想到，同样是15寸的屏幕，我把像素点翻倍不就可以更清晰了吗？于是他把Mac的物理分辨率改成了2560x1440的分辨率，相当于每个像素点的尺寸减少了4倍，这下再也看不出颗粒感了，乔帮主很满意。但是当乔帮主打开盖茨给他写的Word的时候，傻眼了，原本全屏的Word现在只占屏幕的四分之一，而且文字非常的小，乔帮主打电话给盖茨说，你的软件怎么出问题了？盖茨回答说，我开发的时候你的Mac分辨率就是1280x720，你自己改了硬件尺寸怪我咯，我很忙没空给你改软件代码，你就凑合着用吧。乔帮主稍作思考，马上想出了一个非常聪明的主意！他在软件和硬件之间的系统层加了一层逻辑分辨率。虽然屏幕横向有2560个像素点，但是告诉软件我只有1280个像素点！当word的宽度要占1280个像素的时候，实际上已经占了2560个像素。于是我们的Word又占满屏幕了！于是乔帮主把这个机智的想法命名为逻辑分辨率，不管我的显示器的硬件有多少个像素点，我只会告诉软件我的逻辑分辨率，这样软件的代码就不用修改也能在不同的屏幕上显示效果一致。在多年后，Mac的物理分辨率已经达到了5120x2880，但是告诉软件的时候还是说我的分辨率是1280x720，相当在盖茨看来的一个逻辑像素点，背后实际上已经有16个物理像素点为其工作了！</p>
+</blockquote>
+</li>
 </ul>
 <table>
 <thead>
@@ -579,45 +585,190 @@
         </div>
 
         <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="border-box website-info-box default">
-        
-            <div class="copyright-info info-item default">
-                &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2024
-                
-                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
-                
-            </div>
+            $shields-style-height = 22px
 
-            <div class="theme-info info-item default">
-            <a href="https://hexo.io/zh-cn/" target="_blank">Hexo官网</a> ｜ <a href="https://keep-docs.xpoet.cn" target="_blank">Keep文档</a> ｜ <a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">Keep仓库</a>
-            </div>
+.footer {
+  padding 1rem 0
+  color var(--text-color-4)
+  font-size 1rem
 
-            
+  a {
+    color var(--text-color-4)
 
-            
-                <div class="deploy-info info-item default">
-                    
-                    <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
-                        
-                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
-                        
-                    </a>
-                    
-                </div>
-            
-        
+    &:hover {
+      color var(--primary-color)
+    }
 
-        <div class="count-item info-item default">
-            
+    &.no-pointer {
+      pointer-events none
+    }
+  }
 
-            
 
-            
-        </div>
-    </div>
-</footer>
+  .website-info-box {
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+
+    &.shields {
+      padding 0 1rem
+
+      img {
+        height $shields-style-height !important
+      }
+
+
+      a {
+        position relative
+        display inline-flex
+        box-sizing border-box
+        text-decoration none
+      }
+
+
+      .shields-item
+      .count-box {
+        margin 0.3rem 0.2rem
+        user-select none
+      }
+    }
+
+
+    +keep-mobile() {
+      &.shields {
+        .shields-item
+        .count-box {
+          margin 0.12rem -0.3rem
+          transform scale(0.9)
+          transform-origin center center
+        }
+      }
+    }
+
+
+    .info-item {
+      position relative
+      display flex
+      flex-wrap wrap
+      align-items center
+      justify-content center
+      box-sizing border-box
+      color var(--text-color-4)
+
+
+      &.shields {
+        .count-box {
+          display flex
+          justify-content flex-start
+          height $shields-style-height
+          color #f2f2f2
+          font-size 12.6px
+
+
+          .item-type
+          .item-value {
+            display flex
+            align-items center
+            height 100%
+            padding 0 6px
+          }
+
+
+          .item-type {
+            margin-right 0
+            background #555555
+          }
+
+          .item-value {
+
+            &.uv {
+              background coral
+            }
+
+            &.pv {
+              background orange
+            }
+
+            &.word {
+              background indianred
+            }
+          }
+        }
+      }
+
+
+      &.default {
+        margin 0.2rem 0
+
+        .count-box {
+          margin-right 15px
+
+          &::before {
+            position absolute
+            top 50%
+            left -10px
+            box-sizing border-box
+            transform translateY(-55%)
+            content '|'
+          }
+
+
+          &:first-child {
+            &::before {
+              display none
+            }
+          }
+
+
+          &:last-child {
+            margin-right 0
+          }
+
+
+          .item-type {
+            margin-right 4px
+          }
+        }
+      }
+
+
+      &.count-item {
+        display flex
+
+        .count-box {
+          &.uv
+          &.pv {
+            display none
+          }
+        }
+      }
+
+
+      &.deploy-info {
+
+        display flex
+
+        a
+        .tooltip {
+          display flex
+          align-items center
+        }
+
+        img {
+          height 1.08rem
+          margin 0 0.4rem
+        }
+      }
+    }
+  }
+
+
+  .icon-animate {
+    animation heartbeat-animate 1.2s ease-in-out infinite
+  }
+}
 
         </div>
     </div>
