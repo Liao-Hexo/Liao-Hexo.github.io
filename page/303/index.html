@@ -199,15 +199,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/92_NSValue/">
-                            NSValue
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/8_C++%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8/">
+                            C++中的引用
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            NSRange、CGPoint、CGSize、CGRect这些都是结构体，他们的变量是无法存储到集合之中，要先将这些结构体变量存储到OC对象中，再将OC对象存储到集合之中
-
+                            作用：给变量起别名
+引用注意事项：1）引用必须初始化2）引用在初始化后，不可以改变
+引用做函数参数：函数传参时，可以利用引用的技术让形参修饰实参，可以简化指针修改实参
+引用做函数返回值：不要返回局部变量引用；函数的调用可以作为左值
+引用的本质：在C+...
                         
                     </div>
 
@@ -217,7 +220,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:25 GMT+0800">2023-11-21 23:34:25</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:16:12 GMT+0800">2023-11-21 23:16:12</span>
             </span>
         
 
@@ -240,7 +243,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
                         
                     
                 </ul>
@@ -254,7 +257,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/92_NSValue/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/8_C++%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,19 +271,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/93_NSDate/">
-                            NSDate
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/9_%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7/">
+                            函数高级
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            可以得到当前的时间，得到的是当前系统的格林威治时间（0时区），北京是东八区
-转换成自己想要输出的格式：【日期转换为字符串】将字符串转换为日期：
-在当前格林威治的时间基础上增加多少秒：【负数表示减少】
-计算时间之差：
-拿到日期的各个部分：1）2）
-
+                            函数默认参数：在C++中，函数的形参列表中的形参是可以有默认值的
+函数占位参数：C++中函数的形参列表里可以有占位参数，用来做占位，调用函数时必须填补该位置
+函数重载：函数名可以相同，提高复用性
+函数重载满足条件：1）同一个作用域下2）函数名称相同3...
                         
                     </div>
 
@@ -290,7 +291,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:30 GMT+0800">2023-11-21 23:34:30</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:16:04 GMT+0800">2023-11-21 23:16:04</span>
             </span>
         
 
@@ -313,7 +314,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
                         
                     
                 </ul>
@@ -327,7 +328,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/93_NSDate/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/9_%E5%87%BD%E6%95%B0%E9%AB%98%E7%BA%A7/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +350,8 @@
                    type="number"
                    value="303"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

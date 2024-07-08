@@ -199,17 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/24_%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99%E2%80%94LSP/">
-                            里氏替换原则-LSP
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/35_@property%E5%A2%9E%E5%BC%BA(Xcode4.4%E4%B9%8B%E5%90%8E)/">
+                            property增强(Xcode4.4之后)
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            子类可以替换父类的位置，并且程序的功能不受影响
-1234Person *p1=[Person new];Student *s1=[Student new];Person *p2=[Student new];
-
-为什么？1）父类指针迫切的需求要一个父类...
+                            只需要写一个@property，编译器就会自动的1）生成私有属性2）生成getter、setter的声明3）生成getter、setter的实现
+使用注意：1）@property的类型一定要和属性的类型一致，名称要和属性的名称一致，只是去掉下划线2）...
                         
                     </div>
 
@@ -219,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:23:32 GMT+0800">2023-11-21 23:23:32</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:36 GMT+0800">2023-11-21 23:26:36</span>
             </span>
         
 
@@ -256,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/24_%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99%E2%80%94LSP/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/35_@property%E5%A2%9E%E5%BC%BA(Xcode4.4%E4%B9%8B%E5%90%8E)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,16 +268,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/25_%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/">
-                            方法重写
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/36_%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E5%92%8C%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B/">
+                            动态类型和静态类型
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            子类从父类继承，子类就继承了父类的方法，就意味着子类拥有了这个功能，但是有的时候，虽然子类也拥有父类的这个行为，但是这个行为的具体的实现和父类不同
-如何重写：直接在自己类的实现中将这个方法重新实现一遍就可以了
-当一个父类指针指向一个子类对象的时候，通...
+                            OC是一门弱语言：编译器在编译的时候，语法检查的时候没有那么严格，不管你怎么写都是可以的
+强类型的语言：编译器在编译的时候，做语法检查的时候，行就是行，不行就是不行
+静态类型：指的是一个指针指向的对象是一个本类对象动态类型：指的是一个指针指向的对象不...
                         
                     </div>
 
@@ -289,7 +287,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:23:39 GMT+0800">2023-11-21 23:23:39</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:42 GMT+0800">2023-11-21 23:26:42</span>
             </span>
         
 
@@ -326,7 +324,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/25_%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/36_%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E5%92%8C%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +346,8 @@
                    type="number"
                    value="269"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

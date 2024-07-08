@@ -199,16 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.6_%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E6%A6%82%E5%BF%B5%E3%80%81%E5%B1%82%E6%AC%A1/">
-                            处理机调度概念、层次
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.3_%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6/">
+                            内存空间的分配与回收
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            基本概念当有一堆任务要处理，但由于资源有限，这些事情没法同时处理。这就需要确定某种规则来决定处理这些任务的顺序，这就是“调度”研究的问题
-三个层次高级调度（作业调度）作业：一个具体的任务
-用户向系统提交一个作业 &#x3D; 用户让操作系统启动一个程...
+                            连续分配管理方式连续分配：指为用户进程分配的必须是一个连续的内存空间
+单一连续分配在单一连续分配方式中，内存被分为系统区和用户区。
+系统区通常位于内存的低地址部分，用于存放操作系统相关数据；用户区用于存放用户进程相关数据，内存中只能有一道用户程序，用...
                         
                     </div>
 
@@ -218,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:07:12 GMT+0800">2023-11-21 22:07:12</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:09:40 GMT+0800">2023-11-21 22:09:40</span>
             </span>
         
 
@@ -255,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.6_%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E6%A6%82%E5%BF%B5%E3%80%81%E5%B1%82%E6%AC%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.3_%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,22 +269,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.7_%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E3%80%81%E5%88%87%E6%8D%A2%E4%B8%8E%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F/">
-                            进程调度的时机、切换与进程调度方式
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.4_%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E6%89%A9%E5%85%85/">
+                            内存空间的扩充
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            进程调度的时机进程调度（低级调度），就是按照某种算法从就绪队列中选择一个进程为其分配处理机
-需要进行进程调度与切换的情况
-当前运行的进程主动放弃处理机
-进程正常终止
-运行过程中发生异常而终止
-进程主动请求阻塞（如等待I&#x2F;O）
-
-
-当前运行的...
+                            内存空间的扩充在传统存储管理方式的基础上引入了交换技术、覆盖技术，使得内存利用率有所提升，并且能从逻辑上扩充内存容量
+覆盖技术早期的计算机内存很小，比如IBM推出的第一台PC机最大只支持1MB大小的内存。因此经常会出现内存大小不够的情况
+后来人们引入...
                         
                     </div>
 
@@ -294,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:07:28 GMT+0800">2023-11-21 22:07:28</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:09:51 GMT+0800">2023-11-21 22:09:51</span>
             </span>
         
 
@@ -331,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.7_%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA%E3%80%81%E5%88%87%E6%8D%A2%E4%B8%8E%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.4_%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E6%89%A9%E5%85%85/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -353,8 +347,8 @@
                    type="number"
                    value="69"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

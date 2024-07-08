@@ -199,16 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.2_%E4%B8%B2%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">
-                            串的存储结构
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.9_%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                            平衡二叉树
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            串的顺序存储：【默认使用方案四】
+                            平衡二叉树：AVL，任意结点的平衡因子的绝对值不超过1（平衡因子：左子树高度-右子树高度）
 
-12345678910111213141516171819202122232425262728293031#include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;#define...
+平衡二叉树的判断：利用递归的后续遍历过程1）判断左子树是一棵平衡二叉树2）判断右子树是一棵平衡二叉树3）判断以该结点为根的二叉树为平衡二叉树【判断条件：若左...
                         
                     </div>
 
@@ -218,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:21:55 GMT+0800">2024-05-18 23:21:55</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:59 GMT+0800">2024-05-18 23:22:59</span>
             </span>
         
 
@@ -255,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.2_%E4%B8%B2%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.9_%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,18 +269,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">
-                            串的朴素模式匹配算法
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.10_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
+                            哈夫曼树
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            一定是主串中存在的才叫“子串”
-模式串：想尝试在主串中找到的串，未必存在
-串的模式匹配：在主串中找到与模式串相同的子串，并返回其所在位置【就是定位操作】
-朴素模式匹配算法：
-【比较好的情况：每个子串的第一个字符就与模式串不匹配，若模式串长度为m，主串...
+                            路径长度：路径上所经历边的个数结点的权：结点被赋予的数值
+树的带权路径长度：WPL，树中所有叶结点的带权路径长度之和
+哈夫曼树：也称最优二叉树，含有n个带权叶子结点带权路径长度最小的二叉树
+哈夫曼树的构造算法：1）将n个结点作为n棵仅含有一个根结点的...
                         
                     </div>
 
@@ -290,7 +289,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:00 GMT+0800">2024-05-18 23:22:00</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:11 GMT+0800">2024-05-18 23:22:11</span>
             </span>
         
 
@@ -327,7 +326,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.10_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +348,8 @@
                    type="number"
                    value="229"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

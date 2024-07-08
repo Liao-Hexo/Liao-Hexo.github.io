@@ -199,17 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/6_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">
-                            类和对象
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/17_%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">
+                            对象与对象之间的关系
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            对象：现实生活中的一个具体存在，看得见摸得着，拿过来就可以直接使用
-类：对一群具有相同特征或者行为的事物的一个统称，抽象的，不能直接使用
-类是模版，类的对象是根据这个模版创建出来的，类模版中有什么，对象中就有什么，绝不可能多，也绝不可能少
-设计类的三...
+                            组合关系：一个类是由其他的几个类联合起来组合而成【计算机由主板、显卡等组成】
+依赖关系：一个对象的方法的参数是另外一个对象【人依赖于手机】
+耦合度：当修改一个对象的时候对另外一个对象的影响程度【低耦合，高耦合】
+高内聚：一个对象仅仅做与自己相关的事情...
                         
                     </div>
 
@@ -219,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:29 GMT+0800">2023-11-21 23:31:29</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:33 GMT+0800">2023-11-21 23:24:33</span>
             </span>
         
 
@@ -256,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/6_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/17_%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,21 +270,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/7_%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E7%9A%84/">
-                            对象在内存中是如何存储的
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/18_static%E5%85%B3%E9%94%AE%E5%AD%97/">
+                            static关键字
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            内存中的五大区域：
-栈：存储局部变量
-堆：程序员手动申请的字节空间
-BSS段：存储未被初始化的全局变量、静态变量
-数据段（常量区）：存储已被初始化的全局变量、静态变量、常量数据
-代码段：存储代码，存储程序的代码
-
-类加载：在程序运行期间，当某个类第一...
+                            static不能修饰属性，也不能修饰方法，可以修饰方法中的局部变量
+如果方法中的局部变量被static修饰，那么这个变量就会被变成静态变量，存储在常量区，当方法执行完毕之后，不会回收，下次再执行这个方法的时候，直接使用而不用再声明了
+如果方法的返回值...
                         
                     </div>
 
@@ -294,7 +289,7 @@ BSS段：存储未被初始化的全局变量、静态变量
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:52 GMT+0800">2023-11-21 23:32:52</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:15 GMT+0800">2023-11-21 23:25:15</span>
             </span>
         
 
@@ -331,7 +326,7 @@ BSS段：存储未被初始化的全局变量、静态变量
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/7_%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E7%9A%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/18_static%E5%85%B3%E9%94%AE%E5%AD%97/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -353,8 +348,8 @@ BSS段：存储未被初始化的全局变量、静态变量
                    type="number"
                    value="260"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

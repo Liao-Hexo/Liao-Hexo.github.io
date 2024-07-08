@@ -199,16 +199,14 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/90_NSFileManager/">
-                            NSFileManager
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/6_%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                            通讯录管理系统
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            NSFileManager是Foundation框架提供的一个类，用来操作磁盘上的文件和文件夹，对它们进行创建、删除、复制、拷贝、移动
-NSFileManager类的对象是以单例模式创建的：
-常用方法之判断：1）判断指定的文件或者文件夹在磁盘上是否真...
+                            系统需求：1）添加联系人：向通讯录中添加新人，信息包括（姓名、性别、年龄、联系电话、家庭住址），最多记录1000人2）显示联系人：显示通讯录中所有联系人的信息3）删除联系人：按照姓名进行删除指定联系人4）查找联系人：按照姓名查看指定联系人信息5）修改...
                         
                     </div>
 
@@ -218,7 +216,7 @@ NSFileManager类的对象是以单例模式创建的：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:12 GMT+0800">2023-11-21 23:34:12</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:16:27 GMT+0800">2023-11-21 23:16:27</span>
             </span>
         
 
@@ -241,7 +239,7 @@ NSFileManager类的对象是以单例模式创建的：
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
                         
                     
                 </ul>
@@ -255,7 +253,7 @@ NSFileManager类的对象是以单例模式创建的：
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/90_NSFileManager/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/6_%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,18 +267,14 @@ NSFileManager类的对象是以单例模式创建的：
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/91_OC%E4%B8%AD%E7%9A%84%E7%BB%93%E6%9E%84%E4%BD%93/">
-                            OC中的结构体
+                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/7_%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E5%8C%BA%E6%A8%A1%E5%9E%8B/">
+                            程序的内存分区模型
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            在Foundation框架中，已经定义好了一个结构体CGPoint
-声明CGPoint变量并初始化的方式：4）Foundation框架中提供的函数来快速的创建一个CGPoint变量
-——————————————
-CGSize：
-CZSize声明并初始...
+                            C++程序在执行时，将内存大方向划分为4个区域1）代码区：存放函数体的二进制代码，由操作系统进行管理2）全局区：存放全局变量和静态变量以及常量【静态变量：static int s_a&#x3D;10;】【常量分为字符串常量和const修饰的全局变量】...
                         
                     </div>
 
@@ -290,7 +284,7 @@ CZSize声明并初始...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:19 GMT+0800">2023-11-21 23:34:19</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:16:20 GMT+0800">2023-11-21 23:16:20</span>
             </span>
         
 
@@ -313,7 +307,7 @@ CZSize声明并初始...
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
                         
                     
                 </ul>
@@ -327,7 +321,7 @@ CZSize声明并初始...
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/91_OC%E4%B8%AD%E7%9A%84%E7%BB%93%E6%9E%84%E4%BD%93/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/7_%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E5%8C%BA%E6%A8%A1%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +343,8 @@ CZSize声明并初始...
                    type="number"
                    value="302"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

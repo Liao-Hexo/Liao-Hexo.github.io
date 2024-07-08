@@ -199,14 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/3_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                            数据类型
+                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/14_%E7%BB%93%E6%9E%84%E4%BD%93(struct)/">
+                            结构体(struct)
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            C数据类型、格式控制符整理123456789101112131415161718192021222324252627282930313233343536373839404142434445464748C数据类型：1⃣️基本数据类型：整型：char、s...
+                            我们使用结构体仅仅是创建了一个新的数据类型而已，并没有声明变量，是在指定新的数据类型是由哪些成员组合而成
+12345678struct Student&#123;   char *name;   int age;   int score;   flo...
                         
                     </div>
 
@@ -216,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:19:44 GMT+0800">2023-11-21 23:19:44</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:20:44 GMT+0800">2023-11-21 23:20:44</span>
             </span>
         
 
@@ -253,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/3_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/14_%E7%BB%93%E6%9E%84%E4%BD%93(struct)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -267,17 +268,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/4_scanf%E5%87%BD%E6%95%B0%E8%BE%93%E5%85%A5%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%90%8E%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/">
-                            scanf函数输入多个数据后导致的问题
+                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/15_%E6%9E%9A%E4%B8%BE(enum)/">
+                            枚举(enum)
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            如果使用scanf函数一次输入多个数据，只能是整型和浮点型，如果有char字符型混合输入，就会出现问题：
-图中可以看到：num3的值并没有打印出来，出现这种情况的原因是什么呢？？？
-
-在执行scanf函数的时候，会让用户输入一个数据，数据输入完毕之后...
+                            支持新创建一种数据类型，这个数据类型的变量的取值被限定，枚举值的名称都以枚举类型来开头
+每一个枚举值&#x2F;枚举项都有一个对应的整型的数，默认从0开始，依次的递增【实际上可以手动的赋值】，无论是什么类型的枚举变量，都是占据4个字节，枚举变量中真正...
                         
                     </div>
 
@@ -287,7 +286,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:19:37 GMT+0800">2023-11-21 23:19:37</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:20:36 GMT+0800">2023-11-21 23:20:36</span>
             </span>
         
 
@@ -324,7 +323,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/4_scanf%E5%87%BD%E6%95%B0%E8%BE%93%E5%85%A5%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%90%8E%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/15_%E6%9E%9A%E4%B8%BE(enum)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +345,8 @@
                    type="number"
                    value="316"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

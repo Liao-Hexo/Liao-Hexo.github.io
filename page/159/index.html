@@ -199,17 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/9_%E5%88%9B%E5%BB%BA%E8%AE%A1%E7%AE%97%E5%AD%97%E6%AE%B5/">
-                            创建计算字段
+                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/20_%E5%88%9B%E5%BB%BA%E5%92%8C%E6%93%8D%E7%BA%B5%E8%A1%A8/">
+                            创建和操纵表
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            创建计算字段
-计算字段并不实际存在于数据库表中，计算字段是运行时在SELECT语句内创建的
-字段：基本上与列的意思相同，经常互换使用，不过数据库列一般称为列，而术语字段通常用在计算字段的连接上
-只有数据库知道SELECT语句中哪些列是实际的表列，哪些...
+                            创建和操纵表
+一般有两种创建表的方法：1）使用具有交互式创建和管理表的工具2）表也可以直接用MySQL语句操纵
+值得注意的是，在使用交互式工具时，实际上使用的是MySQL语句，但是这些语句不是用户编写的，界面工具会自动生成并执行相应的MySQL语句（...
                         
                     </div>
 
@@ -219,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:49:15 GMT+0800">2023-11-21 21:49:15</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:52:03 GMT+0800">2023-11-21 21:52:03</span>
             </span>
         
 
@@ -256,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/9_%E5%88%9B%E5%BB%BA%E8%AE%A1%E7%AE%97%E5%AD%97%E6%AE%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/20_%E5%88%9B%E5%BB%BA%E5%92%8C%E6%93%8D%E7%BA%B5%E8%A1%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,18 +269,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/10_%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">
-                            使用数据处理函数
+                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/21_%E4%BD%BF%E7%94%A8%E8%A7%86%E5%9B%BE/">
+                            使用视图
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            使用数据处理函数
-
-1）文本处理函数Upper()SELECT vendname,Upper(vendname) AS vendnameupcaseFROM vendorsORDER BY vend_name;
-2)日期和时间处理函数
-SELECT ...
+                            使用视图
+视图是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询
+SELECT custname,custcontactFROM customers,orders,orderitemsWHERE customers.custid&#...
                         
                     </div>
 
@@ -291,7 +288,7 @@ SELECT ...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:49:30 GMT+0800">2023-11-21 21:49:30</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:52:14 GMT+0800">2023-11-21 21:52:14</span>
             </span>
         
 
@@ -328,7 +325,7 @@ SELECT ...
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/10_%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/21_%E4%BD%BF%E7%94%A8%E8%A7%86%E5%9B%BE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -350,8 +347,8 @@ SELECT ...
                    type="number"
                    value="159"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

@@ -199,16 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/58_%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">
-                            知识点补充
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/69_@required%E4%B8%8E@optional/">
+                            required与optional
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            ARC机制与垃圾回收机制(GC)的区别：
-GC：程序在运行期间有一个东西叫做垃圾回收器，不断的扫描堆中的对象是否无人使用，若无人使用则回收
-ARC：不是运行时，而是在编译的时候就在合适的地方插入retain，release……..插入的代码足以让对象...
+                            当一个类遵守了一份协议，这个类只是拥有了这个协议中的方法的声明而已，没有实现，所以这个类还应该实现协议中的方法；如果类不实现协议中的方法，其实也不会报错，编译器只是会报警告；但是当创建对象，来调用这个没有实现的协议中的方法的时候，就会报错
+这两个修饰...
                         
                     </div>
 
@@ -218,7 +217,7 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:29 GMT+0800">2023-11-21 23:29:29</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:17 GMT+0800">2023-11-21 23:31:17</span>
             </span>
         
 
@@ -255,7 +254,7 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/58_%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/69_@required%E4%B8%8E@optional/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,19 +268,18 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/59_%E5%BB%B6%E5%B1%95(Extension)/">
-                            延展(Extension)
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/70_%E5%8D%8F%E8%AE%AE%E4%B9%8B%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF/">
+                            协议之间的继承
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）是一个特殊的分类，所以延展也是类的一部分2）特殊之处：没有名字；只有声明没有实现，和本类共享一个实现
-语法：             @interface 本类名（）
-         @end
-
-没有实现，和本类共享一个实现
-延展和分类的区别：...
+                            协议与协议之间可以相互继承
+语法：
+@protocol 协议名称 &lt;父协议名称&gt;
+@end
+效果：子协议中不仅有自己的方法的声明，还有父协议中的所有的方法的声明；如果某个类遵守了某份协议，那么这个类就拥有了这个协议和这个协议的父协议中的所...
                         
                     </div>
 
@@ -291,7 +289,7 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:38 GMT+0800">2023-11-21 23:29:38</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:36 GMT+0800">2023-11-21 23:31:36</span>
             </span>
         
 
@@ -328,7 +326,7 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/59_%E5%BB%B6%E5%B1%95(Extension)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/70_%E5%8D%8F%E8%AE%AE%E4%B9%8B%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -350,8 +348,8 @@ ARC：不是运行时，而是在编译的时候就在合适的地方插入retai
                    type="number"
                    value="286"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

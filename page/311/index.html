@@ -199,17 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/13_%E5%8F%8B%E5%85%83/">
-                            友元
+                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/4_scanf%E5%87%BD%E6%95%B0%E8%BE%93%E5%85%A5%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%90%8E%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/">
+                            scanf函数输入多个数据后导致的问题
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            在程序里，有些私有属性也想让类外特殊的一些函数或者类进行访问，就需要用到友元的技术
-友元的目的就是让一个函数或者类访问另一个类中的私有成员，友元的关键字为friend
-友元的三种实现：1）全局函数做友元2）类做友元3）成员函数做友元
-全局函数做友元：...
+                            如果使用scanf函数一次输入多个数据，只能是整型和浮点型，如果有char字符型混合输入，就会出现问题：
+图中可以看到：num3的值并没有打印出来，出现这种情况的原因是什么呢？？？
+
+在执行scanf函数的时候，会让用户输入一个数据，数据输入完毕之后...
                         
                     </div>
 
@@ -219,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:17:54 GMT+0800">2023-11-21 23:17:54</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:19:37 GMT+0800">2023-11-21 23:19:37</span>
             </span>
         
 
@@ -242,7 +242,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a></li>
                         
                     
                 </ul>
@@ -256,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/13_%E5%8F%8B%E5%85%83/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/4_scanf%E5%87%BD%E6%95%B0%E8%BE%93%E5%85%A5%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%90%8E%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,17 +270,14 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/14_C++%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
-                            C++运算符重载
+                        <a href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/5_%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                            运算符和表达式
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            运算符重载：对已有的运算符重新进行定义，赋予其另一种功能，以适应不同的数据类型
-加号运算符重载：实现两个自定义数据类型相加的计算【对于内置的数据类型的表达式的运算符是不可能改变的；不要滥用运算符重载】
-左移运算符重载：可以输出自定义数据类型
-递增运算...
+                            C运算符、优先级整理123456789101112131415161718192021C运算符：赋值运算符【=、+=、-=、*=、/=、%=】算术运算符【+、-、*、/、%】关系运算符【==、!=、&gt;、&gt;=、&lt;、&lt;=】自增自减...
                         
                     </div>
 
@@ -290,7 +287,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:17:47 GMT+0800">2023-11-21 23:17:47</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:19:30 GMT+0800">2023-11-21 23:19:30</span>
             </span>
         
 
@@ -313,7 +310,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C/">编程语言-C++</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a></li>
                         
                     
                 </ul>
@@ -327,7 +324,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/10/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++/14_C++%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/5_%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +346,8 @@
                    type="number"
                    value="311"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

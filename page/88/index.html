@@ -199,17 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/1.5_%E4%B8%AD%E6%96%AD%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%9F/">
-                            中断和异常？
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.10_%E6%AD%BB%E9%94%81%EF%BC%9F/">
+                            死锁？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            中断的作用：“中断”是让操作系统内核夺回CPU使用权的唯一途径，中断会让CPU由用户态变为内核态，如果没有“中断”机制，那么一旦应用程序上CPU运行，CPU就会一直运行这个应用程序，既如此，何来并发。
-中断的类型：
+                            什么是死锁：在并发环境下，各进程因竞争资源而造成的一种互相等待对方手里的资源，导致各进程都阻塞，都无法向前推进的现象，就是“死锁”。发生死锁后若无外力干涉，这些进程都将无法向前推进
+进程死锁、饥饿、死循环的区别：
 
-内中断（也称异常），与当前执行的...
+死锁：各进程互相等待对方手里的资源...
                         
                     </div>
 
@@ -219,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:56:22 GMT+0800">2023-11-21 21:56:22</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:59:25 GMT+0800">2023-11-21 21:59:25</span>
             </span>
         
 
@@ -256,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/1.5_%E4%B8%AD%E6%96%AD%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.10_%E6%AD%BB%E9%94%81%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,16 +270,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/1.6_%E4%B8%AD%E6%96%AD%E5%92%8C%E8%BD%AE%E8%AF%A2%EF%BC%9F/">
-                            中断和轮询？
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.11_%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%A7%8D%E7%B1%BB%EF%BC%9F/">
+                            线程的种类？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            轮询：CPU对特定设备轮流询问，效率低等待时间长，CPU利用率不高。
-中断：通过特定事件提醒CPU，容易遗漏问题，CPU利用率不高。
+                            从线程的运行空间来说，分为用户级线程ULT和内核级线程KLT
 
+内核级线程：这类线程依赖于内核，又称为内核支持的线程或轻量级进程。无论是在用户程序中的线程还是系统进程中的线程，它们的创建、撤销和切换都由内核实现。
+
+用户级线程：它仅存在于用户级中，这...
                         
                     </div>
 
@@ -289,7 +291,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:56:44 GMT+0800">2023-11-21 21:56:44</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:59:37 GMT+0800">2023-11-21 21:59:37</span>
             </span>
         
 
@@ -326,7 +328,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/1.6_%E4%B8%AD%E6%96%AD%E5%92%8C%E8%BD%AE%E8%AF%A2%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.11_%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%A7%8D%E7%B1%BB%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +350,8 @@
                    type="number"
                    value="88"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

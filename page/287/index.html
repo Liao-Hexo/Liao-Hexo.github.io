@@ -199,15 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/60_block%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                            block的基本使用
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/71_%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6(%E4%BB%A3%E7%90%86%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)/">
+                            协议的类型限制(代理设计模式)
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）block是一个数据类型，我们可以声明一个block类型的变量2）不同类型的变量中可以存储不同类型的数据，block类型的变量中专门存储一段代码，这段代码可以有参数，可以有返回值
-Block变量的声明：1）虽然block变量中是用来存储一段代码的...
+                            NSObject&lt;协议名称1，协议名称2….&gt;  *指针名;Id&lt;协议名称1，协议名称2….&gt;  指针名;
+这个时候，这个指针可以指向遵守了指定协议的任意对象，如果指定的对象没有遵守这个协议，会报一个警告【多个协议必须同时遵守...
                         
                     </div>
 
@@ -217,7 +217,7 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:58 GMT+0800">2023-11-21 23:29:58</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:42 GMT+0800">2023-11-21 23:31:42</span>
             </span>
         
 
@@ -254,7 +254,7 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/60_block%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/71_%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6(%E4%BB%A3%E7%90%86%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,14 +268,15 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/61_block%E7%9A%84%E7%AE%80%E5%86%99/">
-                            block的简写
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/72_%E6%A1%86%E6%9E%B6/">
+                            框架
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）如果我们写的代码段没有返回值，那么代码段的void可以省略【既没有参数也没有返回值，代码段的void和小括弧都省略，只写一个^】注意：这里说的是代码段的返回值如果是void可以省略，声明block变量的返回值无论是什么都不可以省略2）如果我们写的...
+                            框架：苹果或者第三方事先写好了一些功能很厉害的类，把这些类交给我们使用，这些类的集合我们叫做框架
+Foundation框架：是一个包，这里面有很多类、函数、定义了一些数据类型，这个框架中的类都是一些最基础的类(NSString、NSObject)，其...
                         
                     </div>
 
@@ -285,7 +286,7 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:30:24 GMT+0800">2023-11-21 23:30:24</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:49 GMT+0800">2023-11-21 23:31:49</span>
             </span>
         
 
@@ -322,7 +323,7 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/61_block%E7%9A%84%E7%AE%80%E5%86%99/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/72_%E6%A1%86%E6%9E%B6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -344,8 +345,8 @@ Block变量的声明：1）虽然block变量中是用来存储一段代码的...
                    type="number"
                    value="287"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

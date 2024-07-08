@@ -199,14 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.12_%E4%BC%A0%E4%BA%86SYN%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E8%A6%81%E4%BC%A0ACK%EF%BC%9F/">
-                            传了SYN，为什么还要传ACK？
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.1_URL%E5%92%8CURI%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">
+                            URL和URI的区别？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            双方通信无误必须是两者互相发送信息都无误，传了SYN证明发送方到接收方的通道没有问题，但是接收方到发送方的通道还需要ACK信号来进行验证
+                            URI：统一资源标识符
+URL：统一资源定位符
+URI用字符串标识某一互联网资源，而URL表示资源的位置，URL是URI的子集
 
                         
                     </div>
@@ -217,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:35:17 GMT+0800">2023-11-21 22:35:17</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:31:51 GMT+0800">2023-11-21 22:31:51</span>
             </span>
         
 
@@ -254,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.12_%E4%BC%A0%E4%BA%86SYN%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E8%A6%81%E4%BC%A0ACK%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.1_URL%E5%92%8CURI%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,17 +270,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.13_%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E8%BF%9E%E6%8E%A5%E9%98%B6%E6%AE%B5%EF%BC%8C%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1ACK%E5%8C%85%E4%B8%A2%E5%A4%B1%EF%BC%8C%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88%EF%BC%9F/">
-                            三次握手连接阶段，最后一次ACK包丢失，会发生什么？
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.2_DNS%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B%EF%BC%9F/">
+                            DNS的解析过程？
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            服务端：
-
-第三次的ACK在网络中丢失，那么服务端该TCP连接的状态为SYN_RECV,并且会根据 TCP的超时重传机制，会等待3秒、6秒、12秒后重新发送SYN+ACK包，以便客户端重新发送ACK包。
-如果重发指定次数之后，仍然未收到客户端的ACK...
+                            
+主机向本地域名服务器的查询一般都是采用递归查询，所谓递归查询就是：如果主机所询问的本地域名服务器不知道被查询的域名的IP地址，那么本地域名服务器就以DNS 客户的身份，向根城名服务器继续发出查询请求报文(即替主机继续查询)，而不是让主机自己进行下一...
                         
                     </div>
 
@@ -288,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:36:31 GMT+0800">2023-11-21 22:36:31</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:33:37 GMT+0800">2023-11-21 22:33:37</span>
             </span>
         
 
@@ -325,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.13_%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E8%BF%9E%E6%8E%A5%E9%98%B6%E6%AE%B5%EF%BC%8C%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1ACK%E5%8C%85%E4%B8%A2%E5%A4%B1%EF%BC%8C%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.2_DNS%E7%9A%84%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B%EF%BC%9F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,8 +347,8 @@
                    type="number"
                    value="137"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

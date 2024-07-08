@@ -199,16 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/46_setter%E6%96%B9%E6%B3%95%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
-                            setter方法内存管理
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/57_%E9%9D%9E%E6%AD%A3%E5%BC%8F%E5%8D%8F%E8%AE%AE/">
+                            非正式协议
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            这辆车多了一个人使用：
-当传进来的对象赋值给当前对象的属性，代表传入的对象多了一个人使用，所以我们应该先为这个传入的对象发送一条retain消息，再赋值；当当前对象销毁的时候，代表属性指向的对象少一个人使用，就应该在dealloc中release
-宝...
+                            为系统自带的类写分类，这个就叫做非正式协议
+分类的作用：1）将一个类分为多个模块2）为一个已经存在的类添加方法（扩展一个类）
+如果想为NSString写一个方法：（此方法无参数，因为NSString本身就是字符串）
+
                         
                     </div>
 
@@ -218,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:02 GMT+0800">2023-11-21 23:28:02</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:21 GMT+0800">2023-11-21 23:29:21</span>
             </span>
         
 
@@ -255,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/46_setter%E6%96%B9%E6%B3%95%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/57_%E9%9D%9E%E6%AD%A3%E5%BC%8F%E5%8D%8F%E8%AE%AE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,15 +270,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/47_@property%E5%8F%82%E6%95%B0/">
-                            property参数
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/58_%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">
+                            知识点补充
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）@property可以带参数的：@property(参数1，参数2，参数3…..)  数据类型 名称;
-@property的四组参数：1）与多线程相关的两个参数：atomic（默认值）、nonatomic2）与生成的setter方法的实现相关的参...
+                            ARC机制与垃圾回收机制(GC)的区别：
+GC：程序在运行期间有一个东西叫做垃圾回收器，不断的扫描堆中的对象是否无人使用，若无人使用则回收
+ARC：不是运行时，而是在编译的时候就在合适的地方插入retain，release……..插入的代码足以让对象...
                         
                     </div>
 
@@ -287,7 +289,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:08 GMT+0800">2023-11-21 23:28:08</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:29 GMT+0800">2023-11-21 23:29:29</span>
             </span>
         
 
@@ -324,7 +326,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/47_@property%E5%8F%82%E6%95%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/58_%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +348,8 @@
                    type="number"
                    value="280"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

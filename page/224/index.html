@@ -199,18 +199,18 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.4_%E9%98%9F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-                            队列的基本概念
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">
+                            串的朴素模式匹配算法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            队列的定义：是只允许在一端进行插入，在另一端删除的线性表【空队列、队头：允许删除的一端、队尾：允许插入的一端】
-特点：先进入队列的元素先出队【First In First Out(FIFO)】
-队列的基本操作：
-
-InitQueue(&amp;Q)：...
+                            一定是主串中存在的才叫“子串”
+模式串：想尝试在主串中找到的串，未必存在
+串的模式匹配：在主串中找到与模式串相同的子串，并返回其所在位置【就是定位操作】
+朴素模式匹配算法：
+【比较好的情况：每个子串的第一个字符就与模式串不匹配，若模式串长度为m，主串...
                         
                     </div>
 
@@ -220,7 +220,7 @@ InitQueue(&amp;Q)：...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:21:18 GMT+0800">2024-05-18 23:21:18</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:00 GMT+0800">2024-05-18 23:22:00</span>
             </span>
         
 
@@ -257,7 +257,7 @@ InitQueue(&amp;Q)：...
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.4_%E9%98%9F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -271,15 +271,18 @@ InitQueue(&amp;Q)：...
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.5_%E9%98%9F%E5%88%97%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AE%9E%E7%8E%B0/">
-                            队列的顺序实现
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">
+                            KMP算法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666...
+                            朴素模式匹配算法的缺点：当某些子串与模式串能部分匹配时，主串的扫描指针i经常回溯，导致时间开销增加
+改进思路：主串指针不回溯，只有模式串指针回溯
+
+求模式串的next数组：当模式串的第j个字符匹配失败时，令模式串跳到next[j]再继续匹配
+串的前缀...
                         
                     </div>
 
@@ -289,7 +292,7 @@ InitQueue(&amp;Q)：...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:21:23 GMT+0800">2024-05-18 23:21:23</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:06 GMT+0800">2024-05-18 23:22:06</span>
             </span>
         
 
@@ -326,7 +329,7 @@ InitQueue(&amp;Q)：...
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.5_%E9%98%9F%E5%88%97%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AE%9E%E7%8E%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +351,8 @@ InitQueue(&amp;Q)：...
                    type="number"
                    value="224"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

@@ -199,17 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/5_%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE/">
-                            过滤数据
+                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/16_%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2/">
+                            组合查询
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            过滤数据
-1）只返回prod_price值为2.50的行SELECT prodname,prodpriceFROM productsWHERE prod_price&#x3D;2.50;
-2）
-3）MySQL在执行匹配时默认不区分大小写，所以fuse...
+                            组合查询
+MySQL也允许执行多个查询（多条SELECT语句），并将结果作为单个查询结果集返回，这些组合查询通常称为并或复合查询
+1）假如需要价格小于等于5的所有物品的一个列表，而且还想包括供应商1001和1002生产的所有物品（不考虑价格）
+法1:...
                         
                     </div>
 
@@ -219,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:48:17 GMT+0800">2023-11-21 21:48:17</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:50:59 GMT+0800">2023-11-21 21:50:59</span>
             </span>
         
 
@@ -256,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/5_%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/16_%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,16 +270,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/6_%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4/">
-                            数据过滤
+                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/17_%E5%85%A8%E6%96%87%E6%9C%AC%E6%90%9C%E7%B4%A2/">
+                            全文本搜索
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            数据过滤
-操作符：用来联结或改变WHERE子句中的子句的关键字，也称为逻辑操作符
-1）AND:用在WHERE子句中的关键字，用来指示检索满足所有给定条件的行SELECT prodid,prodname,prod_priceFROM productsW...
+                            全文本搜索
+
+1）CREATE TABLE语句接受FULLTEXT子句，它给出被索引列的一个逗号分隔的列表
+2）在索引之后，使用两个函数Match()和Against()执行全文本搜索，其中Match()指定被搜索的列，Against()指定要使用的...
                         
                     </div>
 
@@ -289,7 +290,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:48:30 GMT+0800">2023-11-21 21:48:30</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:51:14 GMT+0800">2023-11-21 21:51:14</span>
             </span>
         
 
@@ -326,7 +327,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/6_%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/17_%E5%85%A8%E6%96%87%E6%9C%AC%E6%90%9C%E7%B4%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +349,8 @@
                    type="number"
                    value="157"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

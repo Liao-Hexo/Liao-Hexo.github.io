@@ -199,14 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/8_%E5%88%86%E7%BB%84%E5%AF%BC%E8%88%AA%E6%A0%87%E8%AE%B0%E3%80%81%E6%96%B9%E6%B3%95%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%90%8C/">
-                            分组导航标记、方法与函数的不同
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/19_self%E5%85%B3%E9%94%AE%E5%AD%97/">
+                            self关键字
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            分组导航标记：1）#pragma mark 分组名：就会在导航条对应的位置显示一个标题2）#pragma mark -：就会在导航条对应的位置显示一条水平分割线3）#pragma mark - 分组名：就会在导航条对应的位置先产生一条水平分割线，再显...
+                            在方法的内部可以定义一个和属性名相同的局部变量，这个时候，如果在方法中访问这个同名的变量，访问的是局部变量，如果需要访问属性就需要使用关键字self
+self可以在对象方法和类方法中使用，self是一个指针，在对象方法中self指向当前对象，在类方法...
                         
                     </div>
 
@@ -216,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:18 GMT+0800">2023-11-21 23:24:18</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:23:15 GMT+0800">2023-11-21 23:23:15</span>
             </span>
         
 
@@ -253,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/8_%E5%88%86%E7%BB%84%E5%AF%BC%E8%88%AA%E6%A0%87%E8%AE%B0%E3%80%81%E6%96%B9%E6%B3%95%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%90%8C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/19_self%E5%85%B3%E9%94%AE%E5%AD%97/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -267,15 +268,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/9_%E5%A4%9A%E6%96%87%E4%BB%B6%E5%BC%80%E5%8F%91%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%96%B9%E6%B3%95/">
-                            多文件开发、对象和方法
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/20_%E7%BB%A7%E6%89%BF%E3%80%81NSObject/">
+                            继承、NSObject
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            多文件开发：所有的类都写在main.m这个源文件之中，导致后期的维护非常不方便，也不利于团队开发
-推荐的方式：把一个类写在一个模块之中，而一个模块至少包含两个文件：.h头文件写类(方法)的声明，因为要用到Foundation框架中的NSObject类...
+                            继承的目的：儿子类想拥有父亲类中的所有的成员，但是不想自己去定义，而是想凭空拥有
+继承的语法：@interface 子类名：父类名 
+@end
+术语：@interface Student:Person1）Student类从Person类继承，Stud...
                         
                     </div>
 
@@ -285,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:02 GMT+0800">2023-11-21 23:24:02</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:25 GMT+0800">2023-11-21 23:24:25</span>
             </span>
         
 
@@ -322,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/9_%E5%A4%9A%E6%96%87%E4%BB%B6%E5%BC%80%E5%8F%91%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/20_%E7%BB%A7%E6%89%BF%E3%80%81NSObject/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -344,8 +347,8 @@
                    type="number"
                    value="261"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

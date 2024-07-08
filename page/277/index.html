@@ -199,17 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/40_%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
-                            构造方法
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/51_ARC%E6%9C%BA%E5%88%B6%E6%A6%82%E8%BF%B0/">
+                            ARC机制概述
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            类名 *指针名&#x3D;[类名 new];
-new方法的内部，其实是先调用的alloc方法，再调用的init方法
-alloc方法是一个类方法，作用：哪一个类调用这个方法，就创建哪个类的对象，并把对象返回init方法是一个对象方法，作用：初始化对象
-...
+                            Automatic Reference Counting，自动引用计数，即ARC，系统自动的帮助我们去计算对象的引用计数器的值
+在程序中使用ARC非常简单，只需要向往常那样编写代码，只不过永远不要写retain，release，autorelease...
                         
                     </div>
 
@@ -219,7 +217,7 @@ alloc方法是一个类方法，作用：哪一个类调用这个方法，就创
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:17 GMT+0800">2023-11-21 23:27:17</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:42 GMT+0800">2023-11-21 23:28:42</span>
             </span>
         
 
@@ -256,7 +254,7 @@ alloc方法是一个类方法，作用：哪一个类调用这个方法，就创
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/40_%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/51_ARC%E6%9C%BA%E5%88%B6%E6%A6%82%E8%BF%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,16 +268,16 @@ alloc方法是一个类方法，作用：哪一个类调用这个方法，就创
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/41_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0/">
-                            内存管理概述
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/52_ARC%E4%B8%8B%E7%9A%84%E5%8D%95%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                            ARC下的单个对象的内存管理
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            内存的作用：存储数据
-1）如何将数据存储到内存之中：声明一个变量2）当数据不再被使用的时候，占用的内存空间如何被释放？
-内存中的五大区域：1）栈：局部变量，当局部变量的作用域被执行完毕之后，这个局部变量就会被系统立即回收2）堆：OC对象，使用C函数申...
+                            1）当指向对象的所有的强指针被回收的时候，对象就会被立即回收2）当所有指向对象的强指针赋值为nil的时候，对象就会被立即回收
+注意：不能创建对象用一个弱指针存储这个对象的指针，这样的话，刚创建出来的对象，就没有任何强指针指向，创建出来就被回收
+在AR...
                         
                     </div>
 
@@ -289,7 +287,7 @@ alloc方法是一个类方法，作用：哪一个类调用这个方法，就创
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:24 GMT+0800">2023-11-21 23:27:24</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:48 GMT+0800">2023-11-21 23:28:48</span>
             </span>
         
 
@@ -326,7 +324,7 @@ alloc方法是一个类方法，作用：哪一个类调用这个方法，就创
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/41_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/52_ARC%E4%B8%8B%E7%9A%84%E5%8D%95%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +346,8 @@ alloc方法是一个类方法，作用：哪一个类调用这个方法，就创
                    type="number"
                    value="277"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

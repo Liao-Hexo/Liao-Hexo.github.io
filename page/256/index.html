@@ -199,20 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/7_Swift%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85/">
-                            Swift函数和闭包
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/9_%E5%A4%9A%E6%96%87%E4%BB%B6%E5%BC%80%E5%8F%91%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%96%B9%E6%B3%95/">
+                            多文件开发、对象和方法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            Swift函数Swift函数用来完成特定任务的独立的代码块
-
-函数声明：告诉编译器函数的名字、返回类型及参数
-函数定义：提供了函数的实体
-
-函数定义和调用Swift 定义函数使用关键字 func。
-定义函数的时候，可以指定一个或多个输入参数和一个返回...
+                            多文件开发：所有的类都写在main.m这个源文件之中，导致后期的维护非常不方便，也不利于团队开发
+推荐的方式：把一个类写在一个模块之中，而一个模块至少包含两个文件：.h头文件写类(方法)的声明，因为要用到Foundation框架中的NSObject类...
                         
                     </div>
 
@@ -222,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:14:37 GMT+0800">2023-11-21 23:14:37</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:02 GMT+0800">2023-11-21 23:24:02</span>
             </span>
         
 
@@ -245,7 +240,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
                         
                     
                 </ul>
@@ -259,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/7_Swift%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/9_%E5%A4%9A%E6%96%87%E4%BB%B6%E5%BC%80%E5%8F%91%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -273,18 +268,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/8_Swift%E6%9E%9A%E4%B8%BE%E5%92%8C%E7%BB%93%E6%9E%84%E4%BD%93/">
-                            Swift枚举和结构体
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/10_%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7/">
+                            对象作为类的属性
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            Swift 枚举枚举简单的说也是一种数据类型，只不过是这种数据类型只包含自定义的特定数据，它是一组有共同特性的数据的集合
-枚举的功能为：
+                            一个Target中的类无法直接在另外一个Target中访问
+如果要访问其他Target中的类，找到其他Target中的类，右键Show in Finder，选中这个模块直接拖拽到当前类中（上面两个按钮要勾上）
 
-它声明在类中，可以通过实例化类来访问它的值。
-枚举也可以定义构造函数（initializers）来提供一个初始...
+类的属性代表这类事物具有的共同的特征，...
                         
                     </div>
 
@@ -294,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:14:30 GMT+0800">2023-11-21 23:14:30</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:25:28 GMT+0800">2023-11-21 23:25:28</span>
             </span>
         
 
@@ -317,7 +311,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
                         
                     
                 </ul>
@@ -331,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/8_Swift%E6%9E%9A%E4%B8%BE%E5%92%8C%E7%BB%93%E6%9E%84%E4%BD%93/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/10_%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -353,8 +347,8 @@
                    type="number"
                    value="256"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

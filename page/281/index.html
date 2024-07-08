@@ -199,15 +199,19 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/48_@class%E5%92%8C%E5%BE%AA%E7%8E%AFretain/">
-                            class和循环retain
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/59_%E5%BB%B6%E5%B1%95(Extension)/">
+                            延展(Extension)
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            当两个类相互包含的时候：Person.h中包含Book.h，而Book.h中又包含Person.h，这个时候就会出现循环引用的问题，就会造成无限递归，而导致无法编译通过
-解决方案：.h头文件：其中一边不要使用#import引入对方的头文件，而是使用@...
+                            1）是一个特殊的分类，所以延展也是类的一部分2）特殊之处：没有名字；只有声明没有实现，和本类共享一个实现
+语法：             @interface 本类名（）
+         @end
+
+没有实现，和本类共享一个实现
+延展和分类的区别：...
                         
                     </div>
 
@@ -217,7 +221,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:14 GMT+0800">2023-11-21 23:28:14</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:38 GMT+0800">2023-11-21 23:29:38</span>
             </span>
         
 
@@ -254,7 +258,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/48_@class%E5%92%8C%E5%BE%AA%E7%8E%AFretain/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/59_%E5%BB%B6%E5%B1%95(Extension)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,15 +272,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/49_%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0/">
-                            自动释放池
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/60_block%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                            block的基本使用
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            原理：存入到自动释放池中的对象，在自动释放池被销毁的时候，会自动调用存储在该自动释放池中的所有对象的release方法
-可以解决的问题：将创建的对象，存入到自动释放池之中，就不再需要手动的release这个对象了，因为池子销毁的时候，就会自动的调用池...
+                            1）block是一个数据类型，我们可以声明一个block类型的变量2）不同类型的变量中可以存储不同类型的数据，block类型的变量中专门存储一段代码，这段代码可以有参数，可以有返回值
+Block变量的声明：1）虽然block变量中是用来存储一段代码的...
                         
                     </div>
 
@@ -286,7 +290,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:20 GMT+0800">2023-11-21 23:28:20</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:29:58 GMT+0800">2023-11-21 23:29:58</span>
             </span>
         
 
@@ -323,7 +327,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/49_%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/60_block%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -345,8 +349,8 @@
                    type="number"
                    value="281"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

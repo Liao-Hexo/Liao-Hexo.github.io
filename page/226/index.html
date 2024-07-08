@@ -199,18 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.8_%E6%A0%88%E5%9C%A8%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">
-                            栈在括号匹配中的应用
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.3_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">
+                            二叉树的存储结构
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            括号匹配问题：
-遇到左括号就入栈，遇到右括号就消耗一个左括号
+                            二叉树的顺序存储：用一组连续的存储单元依次自上而下、自左至右存储完全二叉树上的结点元素
+二叉树的链式存储：用链表来存放一棵二叉树，二叉树中每个结点用链表的一个链结点来存储
 
-
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505...
                         
                     </div>
 
@@ -220,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:21:38 GMT+0800">2024-05-18 23:21:38</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:29 GMT+0800">2024-05-18 23:22:29</span>
             </span>
         
 
@@ -257,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.8_%E6%A0%88%E5%9C%A8%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.3_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -271,17 +269,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.9_%E6%A0%88%E5%9C%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">
-                            栈在表达式求值中的应用
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.4_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">
+                            二叉树的遍历
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            
-可以不用界限符也能无歧义的表达运算顺序？【逆波兰表达式&#x3D;后缀表达式，波兰表达式&#x3D;前缀表达式】
+                            二叉树的遍历：按某条搜索路径访问树中的每个结点，树的每个结点均被访问一次，而且只访问一次
+先序遍历(递归实现)：
+中序遍历(递归实现)：
+中序遍历非递归算法：
+后序遍历(递归实现)：
+层次遍历：
+由遍历序列构造二叉树：
 
-中缀表达式转后缀表达式：初始化一个栈，用于保存暂时还不能确定运算顺序的运算符从左到右处理各个元素，直到末尾，可能遇到三种情况：1.遇...
                         
                     </div>
 
@@ -291,7 +293,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:21:43 GMT+0800">2024-05-18 23:21:43</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:33 GMT+0800">2024-05-18 23:22:33</span>
             </span>
         
 
@@ -328,7 +330,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.9_%E6%A0%88%E5%9C%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.4_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -350,8 +352,8 @@
                    type="number"
                    value="226"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

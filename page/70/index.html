@@ -199,17 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.8_%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">
-                            调度算法的评价指标
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.5_%E9%A1%B5%E9%9D%A2%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5/">
+                            页面分配策略
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            CPU利用率由于早期的CPU造价极其昂贵，因此人们会希望让CPU尽可能多的工作
-CPU利用率：指CPU“忙碌”的时间占总时间的比例
-系统吞吐量对于计算机来说，希望能用尽可能少的时间处理完尽可能多的作业
-系统吞吐量：单位时间内完成作业的数量（总共完成了...
+                            驻留集驻留集：指请求分页存储管理中给进程分配的物理块（内存块）的集合，在采用了虚拟存储技术的系统中，驻留集大小一般小于进程的总大小
+假设某进程共有100个页面，则该进程的驻留集大小为100时进程可以全部放入内存，运行期间不可能再发生缺页。若驻留集大小...
                         
                     </div>
 
@@ -219,7 +217,7 @@ CPU利用率：指CPU“忙碌”的时间占总时间的比例
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:07:42 GMT+0800">2023-11-21 22:07:42</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:10:13 GMT+0800">2023-11-21 22:10:13</span>
             </span>
         
 
@@ -256,7 +254,7 @@ CPU利用率：指CPU“忙碌”的时间占总时间的比例
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.8_%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.5_%E9%A1%B5%E9%9D%A2%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,16 +268,20 @@ CPU利用率：指CPU“忙碌”的时间占总时间的比例
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.9_%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/">
-                            调度算法
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.1_%E5%88%9D%E8%AF%86%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">
+                            初识文件管理
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            饥饿：某进程&#x2F;作业长期得不到服务
-先来先服务FCFS按照作业&#x2F;进程到达的先后顺序进行服务，事实上就是等待时间越久的越优先得到服务
-用于作业调度时，考虑的是哪个作业先到达后备队列（外存中）；用于进程调度时，考虑的是哪个进程先到达就绪...
+                            文件就是一组有意义的信息&#x2F;数据集合
+
+
+计算机中存放了各种各样的文件，一个文件有哪些属性？
+
+文件名：由创建文件的用户决定文件名，主要是为了方便用户找到文件，同一目录下不允许有重名文件
+标识符：一个系统内的各文件标识符唯一，对用户来说毫无可...
                         
                     </div>
 
@@ -289,7 +291,7 @@ CPU利用率：指CPU“忙碌”的时间占总时间的比例
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:07:56 GMT+0800">2023-11-21 22:07:56</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:10:25 GMT+0800">2023-11-21 22:10:25</span>
             </span>
         
 
@@ -326,7 +328,7 @@ CPU利用率：指CPU“忙碌”的时间占总时间的比例
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.9_%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.1_%E5%88%9D%E8%AF%86%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,8 +350,8 @@ CPU利用率：指CPU“忙碌”的时间占总时间的比例
                    type="number"
                    value="70"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

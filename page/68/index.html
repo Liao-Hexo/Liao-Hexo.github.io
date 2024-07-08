@@ -199,15 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.4_%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/">
-                            进程通信
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.1_%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                            内存的基础知识
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            什么是进程通信顾名思义，进程通信就是指进程之间的信息交换
-进程是分配系统资源的单位（包括内存地址空间），因此各进程拥有的内存地址空间相互独立，为了保证安全，一个进程不能直接访问另一个进程的地址空间，但是进程之间的信息交换又是必须实现的。为了保证进程间...
+                            什么是内存，有何作用内存可存放数据，程序执行前需要先放到内存中才能被CPU处理：缓和CPU与硬盘之间的速度矛盾
+在多道程序环境下，系统中会有多个程序并发执行，也就是说会有多个程序的数据需要同时放到内存中。那么，如何区分各个程序的数据是放在什么地方的呢...
                         
                     </div>
 
@@ -217,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:06:49 GMT+0800">2023-11-21 22:06:49</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:09:16 GMT+0800">2023-11-21 22:09:16</span>
             </span>
         
 
@@ -254,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.4_%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.1_%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,20 +268,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.5_%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
-                            线程概念、多线程模型
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.2_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/">
+                            内存管理的概念
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            什么是线程，为什么要引入线程
-还没引入进程之前，系统中各个程序只能串行执行
-引入进程之后，可以边听音乐边玩QQ
-引入线程之后，在QQ里可以边聊天边传送文件等
+                            操作系统作为系统资源的管理者，当然也需要对内存进行管理
 
-传统的进程是程序执行流的最小单位，引入线程后，线程成为了程序执行流的最小单位
-线程是一个基...
+操作系统负责内存空间的分配与回收
+
+
+操作系统要怎么记录哪些内存区域已经被分配出去了，哪些又还空闲？
+内存中很多位置都可以存放，那新来的进程应该放在哪里？
+当进程运行结束之后，如何将进程占用的...
                         
                     </div>
 
@@ -291,7 +292,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:07:01 GMT+0800">2023-11-21 22:07:01</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:09:28 GMT+0800">2023-11-21 22:09:28</span>
             </span>
         
 
@@ -328,7 +329,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.5_%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E3%80%81%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.2_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -350,8 +351,8 @@
                    type="number"
                    value="68"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

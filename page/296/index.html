@@ -199,17 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/78_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%90%9C%E7%B4%A2/">
-                            字符串的搜索
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/89_%E9%9B%86%E5%90%88%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                            集合的内存管理
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            在主串中搜索子串：
-1）这个方法是从前往后搜索，第一次匹配的子串：
-2）从后往前搜索NSRange结构体：是Foundation框架中定义的一个结构体，结构体变量一般用来表示一段范围
-声明并初始化结构体变量的方式：1）2）3）4）Foundation...
+                            NSArray：集合NSDictionary：字典集合
+在MRC模式下，将对象存储到集合之中，会为这个对象的引用计数器+1，当集合销毁的时候，就会向存储在集合中的所有对象发送一条release消息
+使用@[]或者@{}创建的集合已经被autorele...
                         
                     </div>
 
@@ -219,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:34 GMT+0800">2023-11-21 23:32:34</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:06 GMT+0800">2023-11-21 23:34:06</span>
             </span>
         
 
@@ -256,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/78_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%90%9C%E7%B4%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/89_%E9%9B%86%E5%90%88%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,15 +269,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/79_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%88%AA%E5%8F%96/">
-                            字符串的截取
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/90_NSFileManager/">
+                            NSFileManager
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1）从指定的下标处一直截取到最后2）从第0个开始截取指定的个数3）截取指定的一段范围
-
+                            NSFileManager是Foundation框架提供的一个类，用来操作磁盘上的文件和文件夹，对它们进行创建、删除、复制、拷贝、移动
+NSFileManager类的对象是以单例模式创建的：
+常用方法之判断：1）判断指定的文件或者文件夹在磁盘上是否真...
                         
                     </div>
 
@@ -288,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:41 GMT+0800">2023-11-21 23:32:41</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:34:12 GMT+0800">2023-11-21 23:34:12</span>
             </span>
         
 
@@ -325,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/79_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%88%AA%E5%8F%96/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/90_NSFileManager/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,8 +347,8 @@
                    type="number"
                    value="296"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

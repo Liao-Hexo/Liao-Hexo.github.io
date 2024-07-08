@@ -199,16 +199,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/5_Swift%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%AD%97%E7%AC%A6/">
-                            Swift字符串和字符
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/7_%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E7%9A%84/">
+                            对象在内存中是如何存储的
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            Swift 字符串Swift字符串是一系列字符的集合，它的数据类型为String
-创建字符串可以通过使用字符串字面量或String类的实例来创建一个字符串
-123456789import UIKit//使用字符串字面量var stringA = &q...
+                            内存中的五大区域：
+栈：存储局部变量
+堆：程序员手动申请的字节空间
+BSS段：存储未被初始化的全局变量、静态变量
+数据段（常量区）：存储已被初始化的全局变量、静态变量、常量数据
+代码段：存储代码，存储程序的代码
+
+类加载：在程序运行期间，当某个类第一...
                         
                     </div>
 
@@ -218,7 +223,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:14:51 GMT+0800">2023-11-21 23:14:51</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:52 GMT+0800">2023-11-21 23:32:52</span>
             </span>
         
 
@@ -241,7 +246,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
                         
                     
                 </ul>
@@ -255,7 +260,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/5_Swift%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%AD%97%E7%AC%A6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/7_%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E7%9A%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -269,15 +274,14 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/6_Swift%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E5%85%B8/">
-                            Swift数组和字典
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/8_%E5%88%86%E7%BB%84%E5%AF%BC%E8%88%AA%E6%A0%87%E8%AE%B0%E3%80%81%E6%96%B9%E6%B3%95%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%90%8C/">
+                            分组导航标记、方法与函数的不同
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            Swift 数组Swift 数组使用有序列表存储同一类型的多个值。相同的值可以多次出现在一个数组的不同位置中。
-Swift 数组会强制检测元素的类型，如果类型不同则会报错，Swift 数组应该遵循像Array这样的形式，其中Element是这个数组中...
+                            分组导航标记：1）#pragma mark 分组名：就会在导航条对应的位置显示一个标题2）#pragma mark -：就会在导航条对应的位置显示一条水平分割线3）#pragma mark - 分组名：就会在导航条对应的位置先产生一条水平分割线，再显...
                         
                     </div>
 
@@ -287,7 +291,7 @@ Swift 数组会强制检测元素的类型，如果类型不同则会报错，Sw
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:14:44 GMT+0800">2023-11-21 23:14:44</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:24:18 GMT+0800">2023-11-21 23:24:18</span>
             </span>
         
 
@@ -310,7 +314,7 @@ Swift 数组会强制检测元素的类型，如果类型不同则会报错，Sw
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Swift/">编程语言-Swift</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-Objective-C/">编程语言-Objective-C</a></li>
                         
                     
                 </ul>
@@ -324,7 +328,7 @@ Swift 数组会强制检测元素的类型，如果类型不同则会报错，Sw
     </div>
 
     
-        <a class="home-read-more" href="/2018/12/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Swift/6_Swift%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E5%85%B8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/8_%E5%88%86%E7%BB%84%E5%AF%BC%E8%88%AA%E6%A0%87%E8%AE%B0%E3%80%81%E6%96%B9%E6%B3%95%E4%B8%8E%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%90%8C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +350,8 @@ Swift 数组会强制检测元素的类型，如果类型不同则会报错，Sw
                    type="number"
                    value="255"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

@@ -199,17 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.10_%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5/">
-                            进程同步、进程互斥
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.2_%E6%96%87%E4%BB%B6%E7%9A%84%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84/">
+                            文件的逻辑结构
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            进程同步进程具有异步性的特征，异步性是指，各并发执行的进程以各自独立的、不可预知的速度向前推进
-但是有时候我们需要进程确定性的顺序向前推进，操作系统提供“进程同步机制”来实现需求
-
-同步亦称直接制约关系，它是指为完成某种任务而建立的两个或多个进程，这...
+                            所谓的“逻辑结构”，就是指在用户看来，文件内部的数据应该是如何组织起来的。而“物理结构”指的是在操作系统看来，文件的数据是如何存放在外存中的（类比于数据结构中的“逻辑结构”、“物理结构”）
+无结构文件文件内部的数据就是一系列二进制流或字符流组成，又称...
                         
                     </div>
 
@@ -219,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:08:08 GMT+0800">2023-11-21 22:08:08</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:10:36 GMT+0800">2023-11-21 22:10:36</span>
             </span>
         
 
@@ -256,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.10_%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.2_%E6%96%87%E4%BB%B6%E7%9A%84%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,19 +268,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.11_%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/">
-                            信号量机制
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.3_%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/">
+                            文件目录
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1965年，荷兰学者Dijkstra提出了一种卓有成效的实现进程互斥、同步的方法：信号量机制
+                            
+文件之间的组织结构清晰，易于查找
+编程时也可以很方便的用文件路径找到一个文件，用户可以轻松实现“按名存取”
 
-整型信号量用一个整数型的变量作为信号量，用来表示系统中某种资源的数量
-与普通整数变量的区别：对信号量的操作只有三种，初始化、P操作、V操作
+从操作系统的角度来看，这些目录结构应该是如何实现的？
+文件控制块（实现文件目录的关键数据结构）
 
-记录型信号量...
+FCB实现了文件名和文件之间的映射，使用...
                         
                     </div>
 
@@ -292,7 +292,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:08:22 GMT+0800">2023-11-21 22:08:22</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 22:10:48 GMT+0800">2023-11-21 22:10:48</span>
             </span>
         
 
@@ -329,7 +329,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.11_%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.3_%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -351,8 +351,8 @@
                    type="number"
                    value="71"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

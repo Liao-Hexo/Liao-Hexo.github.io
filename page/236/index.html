@@ -199,15 +199,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.2_%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%B3%95/">
-                            邻接矩阵法
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.1_%E6%9F%A5%E6%89%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+                            查找的基本概念
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            图的邻接矩阵存储也称数组表示法，用一个一维数组存储图中的顶点，用一个二维数组存储图中的边，存储顶点之间邻接关系的二维数组称为邻接矩阵
-邻接矩阵的性质：1）邻接矩阵的空间复杂度为O(n^2)，适用于稠密图2）无向图的邻接矩阵为对称矩阵3）无向图中第i行...
+                            查找：在数据集合中寻找满足某种条件的数据元素的过程，查找结果分为查找成功和查找失败
+查找表：用于查找的数据集合，由同一种数据类型(或记录)组成，可以是一个数组或链表等数据类型
+查找表的操作：1）查询某个特定的数据元素是否在查找表中2）检索满足条件的某...
                         
                     </div>
 
@@ -217,7 +218,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:27 GMT+0800">2024-05-18 23:23:27</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:24:09 GMT+0800">2024-05-18 23:24:09</span>
             </span>
         
 
@@ -254,7 +255,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.2_%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.1_%E6%9F%A5%E6%89%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -268,16 +269,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.3_%E9%82%BB%E6%8E%A5%E8%A1%A8%E6%B3%95/">
-                            邻接表法
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.2_%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE/">
+                            顺序查找
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            邻接矩阵法存储稀疏图会有许多空间浪费
-邻接表法：为每一个顶点建立一个单链表存放与它相邻的边
-邻接表的特点：1）若G为无向图，存储空间为O(|V|+2|E|)若G为有向图，存储空间为O(|V|+|E|)2）邻接表更加适用于稀疏图3）若G为无向图，则结点...
+                            顺序查找：又称线性查找，主要用于在线性表中进行查找，从线性表的一端向另一端逐个将记录与给定值进行比较，若相等则查找成功，给出该记录在表中的位置；若整个表检测完仍未找到与给定值相等的记录，则查找失败，给出失败信息
+对无序线性表进行查找：
+对无序线性表进...
                         
                     </div>
 
@@ -287,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:33 GMT+0800">2024-05-18 23:23:33</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:24:14 GMT+0800">2024-05-18 23:24:14</span>
             </span>
         
 
@@ -324,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.3_%E9%82%BB%E6%8E%A5%E8%A1%A8%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/7.2_%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,8 +347,8 @@
                    type="number"
                    value="236"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

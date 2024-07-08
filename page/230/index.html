@@ -199,18 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">
-                            KMP算法
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.1_%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+                            图的基本概念
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            朴素模式匹配算法的缺点：当某些子串与模式串能部分匹配时，主串的扫描指针i经常回溯，导致时间开销增加
-改进思路：主串指针不回溯，只有模式串指针回溯
-
-求模式串的next数组：当模式串的第j个字符匹配失败时，令模式串跳到next[j]再继续匹配
-串的前缀...
+                            图G由顶点集V和边集E组成，记为G&#x3D;(V,E)，其中V(G)表示图G中顶点的有限非空集；E(G)表示图G中顶点之间的关系(边)集合|V|表示图G中顶点的个数，也称图G的阶；|E|表示图G中边的条数
+无向图和有向图：
+简单图和多重图：
+在图中...
                         
                     </div>
 
@@ -220,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:06 GMT+0800">2024-05-18 23:22:06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:22 GMT+0800">2024-05-18 23:23:22</span>
             </span>
         
 
@@ -257,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.1_%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -271,18 +270,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.1_%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-                            树的基本概念
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.2_%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%B3%95/">
+                            邻接矩阵法
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            树是n(n&gt;&#x3D;0)个结点的有限集合，n&#x3D;0时，称为空树
-而任意非空树应满足：
-
-有且仅有一个特定的称为根的结点
-当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集合，其中每一个集合本身又是一棵树，称为根结点...
+                            图的邻接矩阵存储也称数组表示法，用一个一维数组存储图中的顶点，用一个二维数组存储图中的边，存储顶点之间邻接关系的二维数组称为邻接矩阵
+邻接矩阵的性质：1）邻接矩阵的空间复杂度为O(n^2)，适用于稠密图2）无向图的邻接矩阵为对称矩阵3）无向图中第i行...
                         
                     </div>
 
@@ -292,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:19 GMT+0800">2024-05-18 23:22:19</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:27 GMT+0800">2024-05-18 23:23:27</span>
             </span>
         
 
@@ -329,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.1_%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.2_%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -351,8 +347,8 @@
                    type="number"
                    value="230"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

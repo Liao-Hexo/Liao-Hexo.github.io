@@ -199,19 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/68_%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8(protocol)/">
-                            协议的基本使用(protocol)
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/79_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%88%AA%E5%8F%96/">
+                            字符串的截取
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            作用：专门用来声明一大堆方法（不能声明属性，也不能实现方法，只能用来写方法的声明），只要某个类遵守了这个协议，就相当于拥有这个协议中的所有的方法声明，而不用自己去定义
-协议的声明：
-@protocol 协议名称 
-方法的声明;
-@end
-在协议中，只...
+                            1）从指定的下标处一直截取到最后2）从第0个开始截取指定的个数3）截取指定的一段范围
+
                         
                     </div>
 
@@ -221,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:10 GMT+0800">2023-11-21 23:31:10</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:41 GMT+0800">2023-11-21 23:32:41</span>
             </span>
         
 
@@ -258,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/68_%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8(protocol)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/79_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%88%AA%E5%8F%96/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -272,15 +268,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/69_@required%E4%B8%8E@optional/">
-                            required与optional
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/80_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9B%BF%E6%8D%A2/">
+                            字符串的替换
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            当一个类遵守了一份协议，这个类只是拥有了这个协议中的方法的声明而已，没有实现，所以这个类还应该实现协议中的方法；如果类不实现协议中的方法，其实也不会报错，编译器只是会报警告；但是当创建对象，来调用这个没有实现的协议中的方法的时候，就会报错
-这两个修饰...
+                            将字符串中的第一个参数替换为第二个参数（全部替换）这个方法还可以做删除，原理是将其替换为@“”
+
                         
                     </div>
 
@@ -290,7 +286,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:31:17 GMT+0800">2023-11-21 23:31:17</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:32:59 GMT+0800">2023-11-21 23:32:59</span>
             </span>
         
 
@@ -327,7 +323,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/69_@required%E4%B8%8E@optional/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/80_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9B%BF%E6%8D%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +345,8 @@
                    type="number"
                    value="291"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

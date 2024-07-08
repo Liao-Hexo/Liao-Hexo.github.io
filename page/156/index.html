@@ -199,18 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/3_%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AESELECT%E8%AF%AD%E5%8F%A5/">
-                            检索数据SELECT语句
+                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/14_%E8%81%94%E7%BB%93%E8%A1%A8%E3%80%81%E5%86%85%E9%83%A8%E8%81%94%E7%BB%93%E6%88%96%E7%AD%89%E5%80%BC%E8%81%94%E7%BB%93/">
+                            联结表、内部联结或等值联结
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            检索数据【SELECT语句】：
-检索单个列：
-从db表中检索一个名为Host的列：从db表中检索多个列：从db表中检索所有列：
-检索不同的行？？
-限制结果：LIMIT 1；【指示MySQL返回不多于1行】LIMIT 1，2；【第一个数为开始位置，第二...
+                            联结表【内部联结或等值联结】
+
+联结是一种机制，用来在一条SELECT语句中关联表，使用特殊的语法，可以联结多个表返回一组输出，联结在运行时关联表中正确的行
+1）SELECT vendname,prodname,prod_priceFROM vend...
                         
                     </div>
 
@@ -220,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:47:50 GMT+0800">2023-11-21 21:47:50</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:50:31 GMT+0800">2023-11-21 21:50:31</span>
             </span>
         
 
@@ -257,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/3_%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AESELECT%E8%AF%AD%E5%8F%A5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/14_%E8%81%94%E7%BB%93%E8%A1%A8%E3%80%81%E5%86%85%E9%83%A8%E8%81%94%E7%BB%93%E6%88%96%E7%AD%89%E5%80%BC%E8%81%94%E7%BB%93/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -271,17 +270,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/4_%E6%8E%92%E5%BA%8F%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE/">
-                            排序检索数据
+                        <a href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/15_%E5%88%9B%E5%BB%BA%E9%AB%98%E7%BA%A7%E8%81%94%E7%BB%93%E3%80%81%E8%87%AA%E8%81%94%E7%BB%93%E3%80%81%E8%87%AA%E7%84%B6%E8%81%94%E7%BB%93%E3%80%81%E5%A4%96%E9%83%A8%E8%81%94%E7%BB%93/">
+                            创建高级联结、自联结、自然联结、外部联结
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            排序检索数据
-子句：SQL语句由子句构成，有些子句是必须的，而有的是可选的。一个子句通常由一个关键字和所提供的数据组成。
-1）指示MySQL对列以字母顺序排序SELECT 列名FROM 表名ORDER BY 列名;
-2）先按价格，再按名称排序：SEL...
+                            创建高级联结【自联结、自然联结、外部联结】
+别名除了用于列名和计算字段外，SQL还允许给表名起别名，这样做有两个主要理由：1）缩短SQL语句2）允许在单条SELECT语句中多次使用相同的表
+1）表别名不仅能用于WHERE子句，它还可以用于SELECT...
                         
                     </div>
 
@@ -291,7 +289,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:48:04 GMT+0800">2023-11-21 21:48:04</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 21:50:46 GMT+0800">2023-11-21 21:50:46</span>
             </span>
         
 
@@ -328,7 +326,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/4_%E6%8E%92%E5%BA%8F%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/15_%E5%88%9B%E5%BB%BA%E9%AB%98%E7%BA%A7%E8%81%94%E7%BB%93%E3%80%81%E8%87%AA%E8%81%94%E7%BB%93%E3%80%81%E8%87%AA%E7%84%B6%E8%81%94%E7%BB%93%E3%80%81%E5%A4%96%E9%83%A8%E8%81%94%E7%BB%93/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -350,8 +348,8 @@
                    type="number"
                    value="156"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

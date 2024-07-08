@@ -199,17 +199,17 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.10_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
-                            哈夫曼树
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.11_%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">
+                            拓扑排序
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            路径长度：路径上所经历边的个数结点的权：结点被赋予的数值
-树的带权路径长度：WPL，树中所有叶结点的带权路径长度之和
-哈夫曼树：也称最优二叉树，含有n个带权叶子结点带权路径长度最小的二叉树
-哈夫曼树的构造算法：1）将n个结点作为n棵仅含有一个根结点的...
+                            有向无环图：不存在环的有向图，简称DAG图
+在一个表示工程的有向图中，用顶点表示活动，用弧表示活动之间的优先关系，称这样的有向图为顶点表示活动的网，简称AOV网
+在AOV网中，不能出现回路
+若从顶点vi到vj有一条路径，则在顶点序列中顶点vi必在vj...
                         
                     </div>
 
@@ -219,7 +219,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:22:11 GMT+0800">2024-05-18 23:22:11</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:09 GMT+0800">2024-05-18 23:23:09</span>
             </span>
         
 
@@ -256,7 +256,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.10_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.11_%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,17 +270,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.1_%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-                            图的基本概念
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.12_%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/">
+                            关键路径
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            图G由顶点集V和边集E组成，记为G&#x3D;(V,E)，其中V(G)表示图G中顶点的有限非空集；E(G)表示图G中顶点之间的关系(边)集合|V|表示图G中顶点的个数，也称图G的阶；|E|表示图G中边的条数
-无向图和有向图：
-简单图和多重图：
-在图中...
+                            在一个表示工程的带权有向图中，用顶点表示事件，用有向边表示活动，边上的权值表示活动的持续时间，称这样的有向图为边表示活动的网，简称AOE网
+在AOE网中，所有活动都完成才能到达终点，因此完成整个工程所必须花费的时间(即最短工期)应该为源点到终点的最大...
                         
                     </div>
 
@@ -290,7 +288,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:22 GMT+0800">2024-05-18 23:23:22</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat May 18 2024 23:23:15 GMT+0800">2024-05-18 23:23:15</span>
             </span>
         
 
@@ -327,7 +325,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.1_%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/6.12_%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -349,8 +347,8 @@
                    type="number"
                    value="235"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 

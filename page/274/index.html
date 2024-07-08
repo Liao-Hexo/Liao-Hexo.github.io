@@ -199,17 +199,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/34_@synthesize/">
-                            synthesize
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/45_%E5%8D%95%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                            单个对象的内存管理
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            作用：自动生成getter、setter方法的实现，所以应该写在类的实现之中
-语法：@synthesize @property名称;
-@synthesize做的事情：
-问题：希望@synthesize不要去自动生成私有属性了，getter和sette...
+                            内存泄露：指的是一个对象没有被及时的回收，在该回收的时候而没有被回收，一直驻留在内存中，直到程序结束的时候才回收
+单个对象的内存泄漏情况：1）有对象的创建，而没有对应的release2）retain的次数和release的次数不匹配3）在不适当的时候...
                         
                     </div>
 
@@ -219,7 +217,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:29 GMT+0800">2023-11-21 23:26:29</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:27:54 GMT+0800">2023-11-21 23:27:54</span>
             </span>
         
 
@@ -256,7 +254,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/34_@synthesize/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/45_%E5%8D%95%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -270,15 +268,16 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/35_@property%E5%A2%9E%E5%BC%BA(Xcode4.4%E4%B9%8B%E5%90%8E)/">
-                            property增强(Xcode4.4之后)
+                        <a href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/46_setter%E6%96%B9%E6%B3%95%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                            setter方法内存管理
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            只需要写一个@property，编译器就会自动的1）生成私有属性2）生成getter、setter的声明3）生成getter、setter的实现
-使用注意：1）@property的类型一定要和属性的类型一致，名称要和属性的名称一致，只是去掉下划线2）...
+                            这辆车多了一个人使用：
+当传进来的对象赋值给当前对象的属性，代表传入的对象多了一个人使用，所以我们应该先为这个传入的对象发送一条retain消息，再赋值；当当前对象销毁的时候，代表属性指向的对象少一个人使用，就应该在dealloc中release
+宝...
                         
                     </div>
 
@@ -288,7 +287,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:26:36 GMT+0800">2023-11-21 23:26:36</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 21 2023 23:28:02 GMT+0800">2023-11-21 23:28:02</span>
             </span>
         
 
@@ -325,7 +324,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/35_@property%E5%A2%9E%E5%BC%BA(Xcode4.4%E4%B9%8B%E5%90%8E)/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2018/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Objective-C/46_setter%E6%96%B9%E6%B3%95%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,8 +346,8 @@
                    type="number"
                    value="274"
                    min="1"
-                   max="324"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">324</span>
+                   max="319"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">319</span>
         </div>
 
 
