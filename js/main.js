@@ -1,18 +1,20 @@
 /* global KEEP */
 
 window.addEventListener('DOMContentLoaded', () => {
-  const { version, local_search, lazyload } = KEEP.theme_config
+  const { version, local_search } = KEEP.theme_config
 
   KEEP.themeInfo = {
     theme: `Keep v${version}`,
     author: 'XPoet',
     repository: 'https://github.com/XPoet/hexo-theme-keep',
     localStorageKey: 'KEEP-THEME-STATUS',
+    encryptKey: 'KEEP-ENCRYPT',
     styleStatus: {
       isDark: false,
       fontSizeLevel: 0,
       isShowToc: true
-    }
+    },
+    defaultDatetimeFormat: 'YYYY-MM-DD HH:mm:ss'
   }
 
   // print theme base info
@@ -29,8 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
   KEEP.setFooterVersion = () => {
     const vd = document.querySelector('.footer .keep-version')
     vd && (vd.innerHTML = KEEP.themeInfo.theme)
-    const vd2 = document.querySelector('.footer .shields-keep-version')
-    vd2 && (vd2.src = vd2.src.replace('Keep', KEEP.themeInfo.theme))
   }
 
   // set styleStatus to localStorage
@@ -69,13 +69,10 @@ window.addEventListener('DOMContentLoaded', () => {
     KEEP.initBack2Top()
     KEEP.initCodeBlock()
     KEEP.setFooterVersion()
+    KEEP.initLazyLoad()
 
     if (local_search?.enable === true) {
       KEEP.initLocalSearch()
-    }
-
-    if (lazyload?.enable === true) {
-      KEEP.initLazyLoad()
     }
   }
   KEEP.initExecute()

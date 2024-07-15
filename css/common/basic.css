@@ -6,9 +6,9 @@
   --page-content-width: 80%;
   --page-content-width-tablet: 88%;
   --page-content-width-mobile: 90%;
-  --page-content-max-width: 928px;
+  --page-content-max-width: 960px;
   --page-content-max-width-2: calc(var(--page-content-max-width) * 1.2);
-  --components-spacing: 36px;
+  --component-gap: 36px;
   --box-border-radius: 8px;
   --header-height: 70px;
   --header-shrink-height: calc(var(--header-height) * 0.72);
@@ -16,6 +16,7 @@
   --header-scroll-progress-bar-height: 2px;
   --header-title-font-family: var(--base-font-family);
   --header-title-font-size: 1.8rem;
+  --header-menu-icon: inline-flex;
   --first-screen-display: block;
   --first-screen-font-family: var(--base-font-family);
   --first-screen-font-size: 2rem;
@@ -28,7 +29,9 @@
   --first-screen-header-font-color-light: #50505c;
   --first-screen-header-font-color-dark: #adbac5;
   --home-post-hover-scale: 1;
+  --post-title-align: left;
   --post-author-avatar: block;
+  --post-author-name: flex;
   --post-create-datetime: flex;
   --post-update-datetime: flex;
   --post-img-align: 0 auto 0 0;
@@ -314,9 +317,6 @@
   --header-transparent-background-2: rgba(255,255,255,0.4);
   --pjax-progress-bar-color: linear-gradient(45deg, #f10006, #ef5b00, #e59c01, #19ca05, #00cab5, #0264c8, #c303c3);
   --post-h-bottom-border-color: rgba(80,80,92,0.15);
-  --article-aging-tips-color: $article-aging-tips-color;
-  --article-aging-tips-background-color: $article-aging-tips-background-color;
-  --article-aging-tips-border-color: $article-aging-tips-border-color;
   --keep-info-color: rgba(117,117,122,0.8);
   --keep-info-background-color: rgba(117,117,122,0.1);
   --keep-info-border-color: rgba(117,117,122,0.6);
@@ -367,9 +367,6 @@
     --header-transparent-background-2: rgba(255,255,255,0.4);
     --pjax-progress-bar-color: linear-gradient(45deg, #f10006, #ef5b00, #e59c01, #19ca05, #00cab5, #0264c8, #c303c3);
     --post-h-bottom-border-color: rgba(80,80,92,0.15);
-    --article-aging-tips-color: $article-aging-tips-color;
-    --article-aging-tips-background-color: $article-aging-tips-background-color;
-    --article-aging-tips-border-color: $article-aging-tips-border-color;
     --keep-info-color: rgba(117,117,122,0.8);
     --keep-info-background-color: rgba(117,117,122,0.1);
     --keep-info-border-color: rgba(117,117,122,0.6);
@@ -421,9 +418,6 @@
     --header-transparent-background-2: rgba(34,39,46,0.4);
     --pjax-progress-bar-color: linear-gradient(45deg, #ea404a, #ea722f, #e9a71f, #67e559, #18ecec, #1b85f1, #ee1dee);
     --post-h-bottom-border-color: rgba(173,186,197,0.15);
-    --article-aging-tips-color: $dark-article-aging-tips-color;
-    --article-aging-tips-background-color: $dark-article-aging-tips-background-color;
-    --article-aging-tips-border-color: $dark-article-aging-tips-border-color;
     --keep-info-color: #9999a2;
     --keep-info-background-color: rgba(153,153,162,0.1);
     --keep-info-border-color: rgba(153,153,162,0.5);
@@ -474,9 +468,6 @@
   --header-transparent-background-2: rgba(255,255,255,0.4);
   --pjax-progress-bar-color: linear-gradient(45deg, #f10006, #ef5b00, #e59c01, #19ca05, #00cab5, #0264c8, #c303c3);
   --post-h-bottom-border-color: rgba(80,80,92,0.15);
-  --article-aging-tips-color: $article-aging-tips-color;
-  --article-aging-tips-background-color: $article-aging-tips-background-color;
-  --article-aging-tips-border-color: $article-aging-tips-border-color;
   --keep-info-color: rgba(117,117,122,0.8);
   --keep-info-background-color: rgba(117,117,122,0.1);
   --keep-info-border-color: rgba(117,117,122,0.6);
@@ -526,9 +517,6 @@
   --header-transparent-background-2: rgba(34,39,46,0.4);
   --pjax-progress-bar-color: linear-gradient(45deg, #ea404a, #ea722f, #e9a71f, #67e559, #18ecec, #1b85f1, #ee1dee);
   --post-h-bottom-border-color: rgba(173,186,197,0.15);
-  --article-aging-tips-color: $dark-article-aging-tips-color;
-  --article-aging-tips-background-color: $dark-article-aging-tips-background-color;
-  --article-aging-tips-border-color: $dark-article-aging-tips-border-color;
   --keep-info-color: #9999a2;
   --keep-info-background-color: rgba(153,153,162,0.1);
   --keep-info-border-color: rgba(153,153,162,0.5);
@@ -687,6 +675,16 @@ img[lazyload]::after {
   align-items: center;
   justify-content: center;
 }
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .border-box {
   position: relative;
   box-sizing: border-box;
@@ -695,6 +693,15 @@ img[lazyload]::after {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.text-color-2 {
+  color: var(--text-color-2);
+}
+.text-color-3 {
+  color: var(--text-color-3);
+}
+.text-color-4 {
+  color: var(--text-color-4);
 }
 .clear::after {
   display: block;

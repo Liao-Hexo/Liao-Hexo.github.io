@@ -31,9 +31,6 @@
   --header-transparent-background-2: rgba(255,255,255,0.4);
   --pjax-progress-bar-color: linear-gradient(45deg, #f10006, #ef5b00, #e59c01, #19ca05, #00cab5, #0264c8, #c303c3);
   --post-h-bottom-border-color: rgba(80,80,92,0.15);
-  --article-aging-tips-color: $article-aging-tips-color;
-  --article-aging-tips-background-color: $article-aging-tips-background-color;
-  --article-aging-tips-border-color: $article-aging-tips-border-color;
   --keep-info-color: rgba(117,117,122,0.8);
   --keep-info-background-color: rgba(117,117,122,0.1);
   --keep-info-border-color: rgba(117,117,122,0.6);
@@ -84,9 +81,6 @@
     --header-transparent-background-2: rgba(255,255,255,0.4);
     --pjax-progress-bar-color: linear-gradient(45deg, #f10006, #ef5b00, #e59c01, #19ca05, #00cab5, #0264c8, #c303c3);
     --post-h-bottom-border-color: rgba(80,80,92,0.15);
-    --article-aging-tips-color: $article-aging-tips-color;
-    --article-aging-tips-background-color: $article-aging-tips-background-color;
-    --article-aging-tips-border-color: $article-aging-tips-border-color;
     --keep-info-color: rgba(117,117,122,0.8);
     --keep-info-background-color: rgba(117,117,122,0.1);
     --keep-info-border-color: rgba(117,117,122,0.6);
@@ -138,9 +132,6 @@
     --header-transparent-background-2: rgba(34,39,46,0.4);
     --pjax-progress-bar-color: linear-gradient(45deg, #ea404a, #ea722f, #e9a71f, #67e559, #18ecec, #1b85f1, #ee1dee);
     --post-h-bottom-border-color: rgba(173,186,197,0.15);
-    --article-aging-tips-color: $dark-article-aging-tips-color;
-    --article-aging-tips-background-color: $dark-article-aging-tips-background-color;
-    --article-aging-tips-border-color: $dark-article-aging-tips-border-color;
     --keep-info-color: #9999a2;
     --keep-info-background-color: rgba(153,153,162,0.1);
     --keep-info-border-color: rgba(153,153,162,0.5);
@@ -191,9 +182,6 @@
   --header-transparent-background-2: rgba(255,255,255,0.4);
   --pjax-progress-bar-color: linear-gradient(45deg, #f10006, #ef5b00, #e59c01, #19ca05, #00cab5, #0264c8, #c303c3);
   --post-h-bottom-border-color: rgba(80,80,92,0.15);
-  --article-aging-tips-color: $article-aging-tips-color;
-  --article-aging-tips-background-color: $article-aging-tips-background-color;
-  --article-aging-tips-border-color: $article-aging-tips-border-color;
   --keep-info-color: rgba(117,117,122,0.8);
   --keep-info-background-color: rgba(117,117,122,0.1);
   --keep-info-border-color: rgba(117,117,122,0.6);
@@ -243,9 +231,6 @@
   --header-transparent-background-2: rgba(34,39,46,0.4);
   --pjax-progress-bar-color: linear-gradient(45deg, #ea404a, #ea722f, #e9a71f, #67e559, #18ecec, #1b85f1, #ee1dee);
   --post-h-bottom-border-color: rgba(173,186,197,0.15);
-  --article-aging-tips-color: $dark-article-aging-tips-color;
-  --article-aging-tips-background-color: $dark-article-aging-tips-background-color;
-  --article-aging-tips-border-color: $dark-article-aging-tips-border-color;
   --keep-info-color: #9999a2;
   --keep-info-background-color: rgba(153,153,162,0.1);
   --keep-info-border-color: rgba(153,153,162,0.5);

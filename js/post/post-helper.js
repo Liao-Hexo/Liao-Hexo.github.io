@@ -1,19 +1,22 @@
 /* global KEEP */
 
-function initPostHelper() {
+async function initPostHelper() {
+  const encryptClassName = 'encrypt'
+
   KEEP.utils.postHelper = {
     postPageContainerDom: document.querySelector('.post-page-container'),
     toggleShowTocBtn: document.querySelector('.toggle-show-toc'),
     toggleShowTocTabletBtn: document.querySelector('.toggle-show-toc-tablet'),
-    toggleShowTocIcon: document.querySelector('.toggle-show-toc i'),
     mainContentDom: document.querySelector('.main-content'),
     postToolsDom: document.querySelector('.post-tools'),
-
     isShowToc: false,
 
     initToggleToc() {
       this.toggleShowTocBtn &&
         this.toggleShowTocBtn.addEventListener('click', () => {
+          if (this.postPageContainerDom.classList.contains(encryptClassName)) {
+            return
+          }
           this.isShowToc = !this.isShowToc
           KEEP.themeInfo.styleStatus.isShowToc = this.isShowToc
           KEEP.setStyleStatus()
@@ -22,6 +25,10 @@ function initPostHelper() {
 
       this.toggleShowTocTabletBtn &&
         this.toggleShowTocTabletBtn.addEventListener('click', () => {
+          if (this.postPageContainerDom.classList.contains(encryptClassName)) {
+            return
+          }
+
           const tabletTocMask = document.querySelector('.tablet-post-toc-mask')
           const tabletToc = tabletTocMask.querySelector('.tablet-post-toc')
 
@@ -50,7 +57,7 @@ function initPostHelper() {
 
       setTimeout(() => {
         this.setPostToolsLayout()
-      }, 120)
+      }, 100)
     },
 
     hasToc(isOpen) {
@@ -97,25 +104,7 @@ function initPostHelper() {
       ]
 
       goToCommentsBtnList.forEach((btn) => {
-        if (btn && commentsAnchor) {
-          btn.addEventListener('click', (event) => {
-            event.preventDefault()
-            let winScrollY = window.scrollY
-            winScrollY = winScrollY === 0 ? -20 : winScrollY
-            const offset = commentsAnchor.getBoundingClientRect().top + winScrollY
-            window.anime({
-              targets: document.scrollingElement,
-              duration: 300,
-              easing: 'linear',
-              scrollTop: offset,
-              complete: () => {
-                setTimeout(() => {
-                  KEEP.utils.pageTopDom.classList.add('hide')
-                }, 150)
-              }
-            })
-          })
-        }
+        KEEP.utils.title2Top4HTag(btn, commentsAnchor, 300)
       })
     },
 
@@ -144,9 +133,9 @@ function initPostHelper() {
       observer.observe(commentsCountDom, config)
     },
 
-    // set article aging tips
+    // set post aging tips
     setArticleAgingDays() {
-      const agingTipsDom = document.querySelector('.article-content .article-aging-tips')
+      const agingTipsDom = document.querySelector('.post-content .post-aging-tips')
       if (agingTipsDom) {
         const daysDom = agingTipsDom.querySelector('.days')
         const nowTimestamp = Date.now()
@@ -162,49 +151,207 @@ function initPostHelper() {
       }
     },
 
-    formatDatetime(fmt = 'YYYY-MM-DD hh:mm:ss', timestamp = Date.now()) {
-      function padLeftZero(str) {
-        return `00${str}`.substr(str.length)
-      }
-
-      const date = new Date(timestamp)
-
-      if (/(y+)/.test(fmt) || /(Y+)/.test(fmt)) {
-        fmt = fmt.replace(RegExp.$1, `${date.getFullYear()}`.substr(4 - RegExp.$1.length))
-      }
-
-      const obj = {
-        'M+': date.getMonth() + 1,
-        'D+': date.getDate(),
-        'd+': date.getDate(),
-        'H+': date.getHours(),
-        'h+': date.getHours(),
-        'm+': date.getMinutes(),
-        's+': date.getSeconds()
-      }
-
-      for (const key in obj) {
-        if (new RegExp(`(${key})`).test(fmt)) {
-          const str = `${obj[key]}`
-          fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : padLeftZero(str))
-        }
-      }
-      return fmt
-    },
-
+    // reset post update datetime
     resetPostUpdateDate() {
       const updateDateDom = document.querySelector(
-        '.article-meta-info-container .article-update-date .pc'
+        '.post-meta-info-container .post-update-date .datetime'
       )
       const updated = new Date(updateDateDom.dataset.updated).getTime()
-      const format = KEEP.theme_config.post?.datetime_format || 'YYYY-MM-DD HH:mm:ss'
-      updateDateDom.innerHTML = this.formatDatetime(format, updated)
+      const format = KEEP.theme_config.post?.datetime_format || KEEP.themeInfo.defaultDatetimeFormat
+      updateDateDom.innerHTML = KEEP.utils.formatDatetime(format, updated)
+    },
+
+    // enable full screen
+    enableFullScreen() {
+      const fsb = document.querySelector('.post-tools-container .full-screen')
+      if (fsb) {
+        const icon = fsb.querySelector('i')
+
+        const isFullScreen = () => {
+          return (
+            document.fullscreenElement ||
+            document.mozFullScreenElement ||
+            document.webkitFullscreenElement
+          )
+        }
+
+        const toggleFullScreen = () => {
+          if (!isFullScreen()) {
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen()
+            } else if (document.documentElement.mozRequestFullScreen) {
+              document.documentElement.mozRequestFullScreen()
+            } else if (document.documentElement.webkitRequestFullScreen) {
+              document.documentElement.webkitRequestFullScreen()
+            }
+          } else {
+            if (document.exitFullscreen) {
+              document.exitFullscreen()
+            } else if (document.mozCancelFullScreen) {
+              document.mozCancelFullScreen()
+            } else if (document.webkitExitFullscreen) {
+              document.webkitExitFullscreen()
+            }
+          }
+        }
+
+        const handleFullscreenChange = () => {
+          if (isFullScreen()) {
+            icon.classList.remove('fa-expand')
+            icon.classList.add('fa-compress')
+          } else {
+            icon.classList.remove('fa-compress')
+            icon.classList.add('fa-expand')
+          }
+        }
+
+        fsb.addEventListener('click', function () {
+          toggleFullScreen()
+        })
+
+        document.addEventListener('fullscreenchange', handleFullscreenChange)
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange)
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange)
+      }
+    },
+
+    hexToBuffer(hex) {
+      const typedArray = new Uint8Array(hex.match(/[\da-f]{2}/gi).map((h) => parseInt(h, 16)))
+      return typedArray.buffer
+    },
+
+    async decrypt(encrypted, key) {
+      const algorithm = { name: 'AES-CBC', iv: this.hexToBuffer(encrypted.iv) }
+      const cryptoKey = await crypto.subtle.importKey(
+        'raw',
+        this.hexToBuffer(key),
+        algorithm,
+        false,
+        ['decrypt']
+      )
+      const decrypted = await crypto.subtle.decrypt(
+        algorithm,
+        cryptoKey,
+        this.hexToBuffer(encrypted.encryptedData)
+      )
+      const decoder = new TextDecoder()
+      return decoder.decode(decrypted)
+    },
+
+    // encrypt toc handle
+    encryptTocHandle(show) {
+      setTimeout(() => {
+        const tocDom = document.querySelector('.pc-post-toc')
+        if (tocDom) {
+          this.handleToggleToc(show)
+          if (show) {
+            tocDom?.removeAttribute('style')
+          } else {
+            tocDom.style.display = 'none'
+          }
+        }
+      })
+    },
+
+    // post encrypt handle
+    async postEncryptHandle() {
+      const postContentDom = document.querySelector('.post-content')
+      const encryptBoxDom = postContentDom.querySelector('.post-encrypt-box')
+      const lockIconDom = document.querySelector('.post-tools-list .post-lock')
+      const sessionKey = `${KEEP.themeInfo.encryptKey}#${location.pathname}`
+      const lockClassName = `decrypt`
+
+      if (encryptBoxDom) {
+        this.encryptTocHandle(false)
+        const { secret, ep, content, iv } = encryptBoxDom.dataset
+
+        encryptBoxDom.removeAttribute('data-secret')
+        encryptBoxDom.removeAttribute('data-iv')
+        encryptBoxDom.removeAttribute('data-ep')
+        encryptBoxDom.removeAttribute('data-content')
+
+        const pwdInput = encryptBoxDom.querySelector('.password-input')
+
+        const doDecrypt = async (isDecrypted = false) => {
+          const pwdVal = pwdInput.value
+          const dp = await this.decrypt({ iv, encryptedData: ep }, secret)
+
+          const ddc = async () => {
+            const dc = await this.decrypt({ iv, encryptedData: content }, secret)
+            encryptBoxDom.style.display = 'none'
+            postContentDom.removeChild(encryptBoxDom)
+            this.postPageContainerDom.classList.remove(encryptClassName)
+            this.encryptTocHandle(true)
+            postContentDom.querySelector('.post').innerHTML = dc
+            setTimeout(() => {
+              KEEP.initLazyLoad()
+              KEEP.initCodeBlock()
+              KEEP.initTOC()
+              KEEP.utils.zoomInImage()
+              KEEP.utils.insertTooltipContent()
+              KEEP.utils.tabsActiveHandle()
+              KEEP.utils.wrapTableWithBox()
+              KEEP.utils.aAnchorJump()
+            })
+            lockIconDom.classList.add(lockClassName)
+            lockIconDom.classList.add('tooltip')
+            sessionStorage.setItem(`${KEEP.themeInfo.encryptKey}#${location.pathname}`, '1')
+          }
+
+          if (isDecrypted) {
+            await ddc()
+            return
+          }
+
+          if (pwdVal === dp) {
+            await ddc()
+          } else {
+            pwdInput.classList.add('error')
+          }
+        }
+
+        const decrypted = sessionStorage.getItem(sessionKey)
+
+        if (decrypted) {
+          await doDecrypt(true)
+        }
+
+        pwdInput.addEventListener('keydown', async (e) => {
+          if (pwdInput.value === '') {
+            pwdInput.classList.remove('error')
+          }
+
+          if (e.keyCode === 13) {
+            await doDecrypt()
+            e.preventDefault()
+          }
+        })
+
+        pwdInput.addEventListener('keyup', async (e) => {
+          if (pwdInput.value === '') {
+            pwdInput.classList.remove('error')
+          }
+        })
+
+        lockIconDom.addEventListener('click', () => {
+          if (lockIconDom.classList.contains(lockClassName)) {
+            lockIconDom.classList.remove(lockClassName)
+            sessionStorage.removeItem(sessionKey)
+            location.reload()
+          }
+        })
+      }
     }
   }
 
   KEEP.utils.postHelper.initSetPostToolsLeft()
   KEEP.utils.postHelper.setArticleAgingDays()
   KEEP.utils.postHelper.resetPostUpdateDate()
+  KEEP.utils.postHelper.enableFullScreen()
+
+  if (KEEP.utils.postHelper.postPageContainerDom.classList.contains(encryptClassName)) {
+    await KEEP.utils.postHelper.postEncryptHandle()
+  }
 
   if (KEEP.theme_config.toc?.enable === true) {
     KEEP.utils.postHelper.initToggleToc()

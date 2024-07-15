@@ -78,12 +78,14 @@
   font-weight: 600;
   font-size: 0.9rem;
   font-family: "Source Code Pro", consolas, Menlo;
+  color: var(--text-color-3);
 }
 .highlight-container .code-tools-box .tool {
   cursor: pointer;
 }
 .highlight-container .code-tools-box .tool i {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text-color-3);
 }
 .highlight-container .code-tools-box .fold {
   padding: 0 0.4rem 0 0.2rem;
@@ -99,12 +101,6 @@ figure.highlight {
   box-sizing: border-box;
   overflow-y: hidden;
 }
-figure.highlight::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-figure.highlight::-webkit-scrollbar-track {
-  background: transparent;
-}
 figure.highlight .shrink-line {
   position: absolute;
   left: 0;
@@ -118,7 +114,7 @@ figure.highlight .shrink-line::before {
   font-weight: 600;
   font-size: 1rem;
   font-family: 'Font Awesome 6 Free';
-  content: '\f078';
+  content: '\f103';
 }
 figure.highlight .shrink-line:hover::before {
   font-size: 1.1rem;

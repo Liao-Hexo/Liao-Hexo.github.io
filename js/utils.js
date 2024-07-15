@@ -20,6 +20,72 @@ KEEP.initUtils = () => {
     isHideHeader: true,
     hasToc: false,
 
+    // ==============  common utils ==============
+
+    // formatting timestamp
+    formatDatetime(fmt = KEEP.themeInfo.defaultDatetimeFormat, timestamp = Date.now()) {
+      function padLeftZero(str) {
+        return `00${str}`.substring(str.length)
+      }
+
+      const date = new Date(timestamp)
+
+      if (/(y+)/.test(fmt) || /(Y+)/.test(fmt)) {
+        fmt = fmt.replace(RegExp.$1, `${date.getFullYear()}`.substr(4 - RegExp.$1.length))
+      }
+
+      const obj = {
+        'M+': date.getMonth() + 1,
+        'D+': date.getDate(),
+        'd+': date.getDate(),
+        'H+': date.getHours(),
+        'h+': date.getHours(),
+        'm+': date.getMinutes(),
+        's+': date.getSeconds()
+      }
+
+      for (const key in obj) {
+        if (new RegExp(`(${key})`).test(fmt)) {
+          const str = `${obj[key]}`
+          fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : padLeftZero(str))
+        }
+      }
+      return fmt
+    },
+
+    // set how long ago language
+    setHowLongAgoLanguage(p1, p2) {
+      return p2.replace(/%s/g, p1)
+    },
+
+    // get how long ago
+    getHowLongAgo(timestamp) {
+      const lang = KEEP.language_ago
+      const __Y = Math.floor(timestamp / (60 * 60 * 24 * 30) / 12)
+      const __M = Math.floor(timestamp / (60 * 60 * 24 * 30))
+      const __W = Math.floor(timestamp / (60 * 60 * 24) / 7)
+      const __d = Math.floor(timestamp / (60 * 60 * 24))
+      const __h = Math.floor((timestamp / (60 * 60)) % 24)
+      const __m = Math.floor((timestamp / 60) % 60)
+      const __s = Math.floor(timestamp % 60)
+
+      if (__Y > 0) {
+        return this.setHowLongAgoLanguage(__Y, lang.year)
+      } else if (__M > 0) {
+        return this.setHowLongAgoLanguage(__M, lang.month)
+      } else if (__W > 0) {
+        return this.setHowLongAgoLanguage(__W, lang.week)
+      } else if (__d > 0) {
+        return this.setHowLongAgoLanguage(__d, lang.day)
+      } else if (__h > 0) {
+        return this.setHowLongAgoLanguage(__h, lang.hour)
+      } else if (__m > 0) {
+        return this.setHowLongAgoLanguage(__m, lang.minute)
+      } else if (__s > 0) {
+        return this.setHowLongAgoLanguage(__s, lang.second)
+      }
+    },
+
     // initialization data
     initData() {
       const scroll = KEEP.theme_config?.scroll || {}
@@ -36,7 +102,7 @@ KEEP.initUtils = () => {
 
     // scroll Style Handle
     styleHandleWhenScroll() {
-      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+      const scrollTop = this.getScrollTop()
       const scrollHeight = document.body.scrollHeight || document.documentElement.scrollHeight
       const clientHeight = window.innerHeight || document.documentElement.clientHeight
 
@@ -130,10 +196,15 @@ KEEP.initUtils = () => {
     toggleShowToolsList() {
       const sideToolsListDom = document.querySelector('.side-tools-list')
       const toggleShowToolsDom = document.querySelector('.tool-toggle-show')
-      toggleShowToolsDom.addEventListener('click', (e) => {
-        sideToolsListDom.classList.toggle('show')
-        e.stopPropagation()
-      })
+
+      if (!toggleShowToolsDom?.hasClickListener) {
+        toggleShowToolsDom.addEventListener('click', (e) => {
+          sideToolsListDom.classList.toggle('show')
+          e.stopPropagation()
+        })
+        toggleShowToolsDom.hasClickListener = true
+      }
+
       sideToolsListDom.querySelectorAll('.tools-item').forEach((item) => {
         item.addEventListener('click', (e) => {
           e.stopPropagation()
@@ -194,6 +265,12 @@ KEEP.initUtils = () => {
       }
     },
 
+    // get dom zoom value
+    getZoomValueOfDom(dom) {
+      const tmp = Number((dom.style?.zoom || '1').replace('%', ''))
+      return tmp > 1 ? tmp / 100 : tmp
+    },
+
     // zoom in image
     zoomInImage() {
       let SIDE_GAP = 40
@@ -244,16 +321,27 @@ KEEP.initUtils = () => {
       }
 
       if (imgDomList.length) {
+        // Register zoom out events
         zoomOutHandle()
+
         imgDomList.forEach((img) => {
+          // Zoom in handle
           img.addEventListener('click', () => {
             curWinScrollY = window.scrollY
             isZoomIn = !isZoomIn
             setSideGap()
             zoomInImg.setAttribute('src', img.getAttribute('src'))
             selectedImgDom = img
+
             if (isZoomIn) {
               const imgRect = selectedImgDom.getBoundingClientRect()
+
+              const zoom = this.getZoomValueOfDom(selectedImgDom)
+
+              for (let key in imgRect) {
+                imgRect[key] = imgRect[key] * zoom
+              }
+
               const imgW = imgRect.width
               const imgH = imgRect.height
               const imgL = imgRect.left
@@ -268,6 +356,7 @@ KEEP.initUtils = () => {
 
               selectedImgDom.classList.add('hide')
               zoomInImgMask.classList.add('show')
+
               zoomInImg.style.top = imgT + 'px'
               zoomInImg.style.left = imgL + 'px'
               zoomInImg.style.width = imgW + 'px'
@@ -277,50 +366,6 @@ KEEP.initUtils = () => {
           })
         })
       }
-    },
-
-    // set how long ago language
-    setHowLongAgoLanguage(p1, p2) {
-      return p2.replace(/%s/g, p1)
-    },
-
-    // get how long ago
-    getHowLongAgo(timestamp) {
-      const lang = KEEP.language_ago
-      const __Y = Math.floor(timestamp / (60 * 60 * 24 * 30) / 12)
-      const __M = Math.floor(timestamp / (60 * 60 * 24 * 30))
-      const __W = Math.floor(timestamp / (60 * 60 * 24) / 7)
-      const __d = Math.floor(timestamp / (60 * 60 * 24))
-      const __h = Math.floor((timestamp / (60 * 60)) % 24)
-      const __m = Math.floor((timestamp / 60) % 60)
-      const __s = Math.floor(timestamp % 60)
-
-      if (__Y > 0) {
-        return this.setHowLongAgoLanguage(__Y, lang.year)
-      } else if (__M > 0) {
-        return this.setHowLongAgoLanguage(__M, lang.month)
-      } else if (__W > 0) {
-        return this.setHowLongAgoLanguage(__W, lang.week)
-      } else if (__d > 0) {
-        return this.setHowLongAgoLanguage(__d, lang.day)
-      } else if (__h > 0) {
-        return this.setHowLongAgoLanguage(__h, lang.hour)
-      } else if (__m > 0) {
-        return this.setHowLongAgoLanguage(__m, lang.minute)
-      } else if (__s > 0) {
-        return this.setHowLongAgoLanguage(__s, lang.second)
-      }
-    },
-
-    // set how long age in home article block
-    setHowLongAgoInHome() {
-      const post = document.querySelectorAll('.article-meta-info .home-article-history')
-      post &&
-        post.forEach((v) => {
-          const nowTimestamp = Date.now()
-          const updatedTimestamp = new Date(v.dataset.updated).getTime()
-          v.innerHTML = this.getHowLongAgo(Math.floor((nowTimestamp - updatedTimestamp) / 1000))
-        })
     },
 
     // loading progress bar start
@@ -368,6 +413,7 @@ KEEP.initUtils = () => {
 
     // insert tooltip content dom
     insertTooltipContent() {
+      const { root } = KEEP.theme_config
       const isLazyLoadImg = KEEP.theme_config?.lazyload?.enable === true
 
       const init = () => {
@@ -448,10 +494,11 @@ KEEP.initUtils = () => {
           if (tooltipImgUrl) {
             const imgDomClass = `tooltip-img-${idx}-${tooltipImgName ? tooltipImgName : Date.now()}`
             const nameIdx = `${tooltipImgName}-${idx}`
+            const tmpSrc = (/^(https?:\/\/)/.test(tooltipImgUrl) ? '' : root) + tooltipImgUrl
 
             const imgDom = `<img class="${imgDomClass}"
                               ${isLazyLoadImg ? 'lazyload' : ''}
-                              ${isLazyLoadImg ? 'data-' : ''}src="${tooltipImgUrl}"
+                              ${isLazyLoadImg ? 'data-' : ''}src="${tmpSrc}"
                               alt="${imgDomClass}"
                             >`
 
@@ -472,17 +519,20 @@ KEEP.initUtils = () => {
               eventTrigger = 'mouseover'
             }
 
-            dom.addEventListener(eventTrigger, (e) => {
-              if (isLazyLoadImg && !imgsSet[nameIdx].imgLoaded) {
-                loadImg(
-                  document.querySelector(`.tooltip-img-box img.${imgDomClass}`),
-                  imgsSet[nameIdx].imgLoaded
-                )
-              }
-              imgsSet[nameIdx].isShowImg = !imgsSet[nameIdx].isShowImg
-              dom.classList.toggle('show-img')
-              e.stopPropagation()
-            })
+            if (!dom?.hasEventListener) {
+              dom.addEventListener(eventTrigger, (e) => {
+                if (isLazyLoadImg && !imgsSet[nameIdx].imgLoaded) {
+                  loadImg(
+                    document.querySelector(`.tooltip-img-box img.${imgDomClass}`),
+                    imgsSet[nameIdx].imgLoaded
+                  )
+                }
+                imgsSet[nameIdx].isShowImg = !imgsSet[nameIdx].isShowImg
+                dom.classList.toggle('show-img')
+                e.stopPropagation()
+              })
+              dom.hasEventListener = true
+            }
 
             hideTooltipImg(dom, nameIdx, tooltipImgTrigger)
           }
@@ -519,9 +569,9 @@ KEEP.initUtils = () => {
               getText('#busuanzi_value_site_pv') ||
               getText('#busuanzi_value_page_pv')
             ) {
-              const tmpDom1 = document.querySelector('.footer .count-item .uv')
-              const tmpDom2 = document.querySelector('.footer .count-item .pv')
-              const tmpDom3 = document.querySelector('.article-meta-info .article-pv')
+              const tmpDom1 = document.querySelector('.footer .count-info .uv')
+              const tmpDom2 = document.querySelector('.footer .count-info .pv')
+              const tmpDom3 = document.querySelector('.post-meta-info .post-pv')
               tmpDom1 && (tmpDom1.style.display = 'flex')
               tmpDom2 && (tmpDom2.style.display = 'flex')
               tmpDom3 && (tmpDom3.style.display = 'inline-block')
@@ -534,30 +584,58 @@ KEEP.initUtils = () => {
     // page number jump handle
     pageNumberJump() {
       const inputDom = document.querySelector('.paginator .page-number-input')
-      inputDom &&
-        inputDom.addEventListener('change', (e) => {
-          const min = 1
-          const max = Number(e.target.max)
-          let current = Number(e.target.value)
 
-          if (current <= 0) {
-            inputDom.value = min
-            current = min
-          }
+      if (!inputDom) {
+        return
+      }
 
-          if (current > max) {
-            inputDom.value = max
-            current = max
-          }
+      const firstPageDom = document.querySelector('.paginator .first-page')
+      const lastPageDom = document.querySelector('.paginator .last-page')
 
-          const tempHref = window.location.href.replace(/\/$/, '').split('/page/')[0]
+      const min = Number(inputDom.min)
+      const max = Number(inputDom.max)
 
-          if (current === 1) {
-            window.location.href = tempHref
-          } else {
-            window.location.href = tempHref + '/page/' + current
-          }
-        })
+      const tempClass = 'not-allow'
+
+      firstPageDom.addEventListener('click', () => {
+        if (!firstPageDom.classList.contains(tempClass)) {
+          inputDom.value = min
+          jump()
+        }
+      })
+
+      lastPageDom.addEventListener('click', () => {
+        if (!lastPageDom.classList.contains(tempClass)) {
+          inputDom.value = max
+          jump()
+        }
+      })
+
+      const jump = () => {
+        let current = Number(inputDom.value)
+
+        if (current <= 0) {
+          inputDom.value = min
+          current = min
+        }
+
+        if (current > max) {
+          inputDom.value = max
+          current = max
+        }
+
+        const tempHref = window.location.href.replace(/\/$/, '').split('/page/')[0]
+
+        if (current === 1) {
+          window.location.href = tempHref
+        } else {
+          window.location.href = tempHref + '/page/' + current
+        }
+      }
+
+      inputDom.addEventListener('change', (e) => {
+        jump()
+      })
     },
 
     // custom tabs tag active handle
@@ -593,54 +671,6 @@ KEEP.initUtils = () => {
         })
     },
 
-    // first screen typewriter
-    initTypewriter() {
-      const fsc = KEEP.theme_config?.first_screen || {}
-      const isHitokoto = fsc?.hitokoto === true
-
-      if (fsc?.enable !== true) {
-        return
-      }
-
-      if (fsc?.enable === true && !isHitokoto && !fsc?.description) {
-        return
-      }
-
-      const descBox = document.querySelector('.first-screen-content .description')
-      if (descBox) {
-        descBox.style.opacity = '0'
-
-        setTimeout(
-          () => {
-            descBox.style.opacity = '1'
-            const descItemList = descBox.querySelectorAll('.desc-item')
-            descItemList.forEach((descItem) => {
-              const desc = descItem.querySelector('.desc')
-              const cursor = descItem.querySelector('.cursor')
-              const text = desc.innerHTML
-              desc.innerHTML = ''
-              let charIndex = 0
-
-              if (text) {
-                const typewriter = () => {
-                  if (charIndex < text.length) {
-                    desc.textContent += text.charAt(charIndex)
-                    charIndex++
-                    setTimeout(typewriter, 100)
-                  } else {
-                    cursor.style.display = 'none'
-                  }
-                }
-
-                typewriter()
-              }
-            })
-          },
-          isHitokoto ? 400 : 300
-        )
-      }
-    },
-
     // remove white space between children
     removeWhitespace(container) {
       if (!container) {
@@ -663,23 +693,8 @@ KEEP.initUtils = () => {
       }
     },
     trimPostMetaInfoBar() {
-      this.removeWhitespace(
-        document.querySelector('.article-meta-info-container .article-category-ul')
-      )
-      this.removeWhitespace(document.querySelector('.article-meta-info-container .article-tag-ul'))
-    },
-
-    // close website announcement
-    closeWebsiteAnnouncement() {
-      if (KEEP.theme_config?.home?.announcement) {
-        const waDom = document.querySelector('.home-content-container .website-announcement')
-        if (waDom) {
-          const closeDom = waDom.querySelector('.close')
-          closeDom.addEventListener('click', () => {
-            waDom.style.display = 'none'
-          })
-        }
-      }
+      this.removeWhitespace(document.querySelector('.post-meta-info-container .post-category-ul'))
+      this.removeWhitespace(document.querySelector('.post-meta-info-container .post-tag-ul'))
     },
 
     // wrap table dom with div
@@ -689,22 +704,86 @@ KEEP.initUtils = () => {
         box.className = 'table-container'
         element.wrap(box)
       })
+    },
+
+    // H tag title to top
+    title2Top4HTag(a, h, duration, cb) {
+      if (a && h) {
+        if (!a?.hasEventListener) {
+          a.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            cb && cb()
+
+            let winScrollY = window.scrollY
+            winScrollY = winScrollY <= 1 ? -19 : winScrollY
+            let offset = h.getBoundingClientRect().top + winScrollY
+            const headerHeader = this.headerWrapperDom.getBoundingClientRect().height
+
+            if (!this.isHideHeader) {
+              offset = offset - headerHeader
+            }
+
+            const fullPageHeight = this.getFullPageHeight()
+            if (fullPageHeight <= window.innerHeight) {
+              return
+            }
+
+            window.anime({
+              targets: document.scrollingElement,
+              duration,
+              easing: 'linear',
+              scrollTop: offset,
+              complete: () => {
+                history.pushState(null, document.title, a.href)
+                if (this.isHideHeader) {
+                  setTimeout(() => {
+                    this.pageTopDom.classList.add('hide')
+                  }, 160)
+                }
+              }
+            })
+          })
+          a.hasEventListener = true
+        }
+      }
+    },
+
+    // A tag anchor jump handle
+    aAnchorJump() {
+      document.querySelectorAll('a.headerlink').forEach((a) => {
+        this.title2Top4HTag(a, a.parentNode, 10)
+      })
+      document.querySelectorAll('a.markdownIt-Anchor').forEach((a) => {
+        this.title2Top4HTag(a, a.parentNode, 10)
+      })
+    },
+
+    getScrollTop() {
+      return document.body.scrollTop || document.documentElement.scrollTop
+    },
+
+    getFullPageHeight() {
+      return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)
     }
   }
 
+  // global
   KEEP.utils.initData()
   KEEP.utils.registerWindowScroll()
   KEEP.utils.toggleShowToolsList()
   KEEP.utils.globalFontAdjust()
   KEEP.utils.initHasToc()
-  KEEP.utils.zoomInImage()
-  KEEP.utils.setHowLongAgoInHome()
-  KEEP.utils.insertTooltipContent()
   KEEP.utils.siteCountInitialize()
   KEEP.utils.pageNumberJump()
-  KEEP.utils.tabsActiveHandle()
-  KEEP.utils.initTypewriter()
+
+  // home & post page
   KEEP.utils.trimPostMetaInfoBar()
-  KEEP.utils.closeWebsiteAnnouncement()
+
+  // post page
+  KEEP.utils.insertTooltipContent()
+  KEEP.utils.zoomInImage()
+  KEEP.utils.tabsActiveHandle()
   KEEP.utils.wrapTableWithBox()
+  KEEP.utils.aAnchorJump()
 }
