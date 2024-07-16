@@ -1247,6 +1247,7 @@ img[lazyload]::after {
 .keep-markdown-body p > img,
 .keep-markdown-body > .post p > img {
   margin: var(--post-img-align);
+  margin: 0 auto 0 0;
 }
 .keep-markdown-body > .table-container,
 .keep-markdown-body > .post > .table-container {
@@ -2497,7 +2498,7 @@ figure.highlight .shrink-line:hover::before {
 }
 .post-toc-wrap .post-toc .nav .nav-item .nav-child {
   padding-left: 1rem;
-  display: none;
+  display: block;
 }
 .comments-container {
   display: inline-block;
