@@ -19,9 +19,8 @@
    */
    /* --header-shrink-height: 50px; */
 
-   /* 设置 Header 头部的背景毛玻璃效果程度✅ */
+   /* 设置 Header 头部的背景毛玻璃效果程度 */
    /* --header-backdrop-filter-blur: 5px; */
-   --header-backdrop-filter-blur: 0px;
 
    /* 设置 Header 头部的 Title 字体大小 */
    /* --header-title-font-size: 50px; */
