@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>廖家龙的博客网站</title>
   
-  <subtitle>测试一下</subtitle>
+  
   <link href="https://liao-hexo.github.io/atom.xml" rel="self"/>
   
   <link href="https://liao-hexo.github.io/"/>
