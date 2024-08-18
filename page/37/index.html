@@ -261,7 +261,7 @@
         <div class="website-announcement border-box">
             <i class="icon left fa-solid fa-bullhorn"></i>
             <div class="announcement border-box text-ellipsis">
-                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#105;&#97;&#111;&#106;&#105;&#97;&#x6c;&#x6f;&#110;&#103;&#x30;&#51;&#50;&#56;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#108;&#105;&#97;&#111;&#106;&#105;&#97;&#x6c;&#x6f;&#110;&#103;&#x30;&#51;&#50;&#56;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#x69;&#x61;&#111;&#x6a;&#x69;&#97;&#108;&#111;&#110;&#x67;&#x30;&#51;&#50;&#56;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#108;&#x69;&#x61;&#111;&#x6a;&#x69;&#97;&#108;&#111;&#110;&#x67;&#x30;&#51;&#50;&#56;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
             </div>
             <i class="icon right close fa-solid fa-close"></i>
@@ -276,18 +276,16 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.5_%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86/">
-                            文件存储空间管理
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.13_%E7%AE%A1%E7%A8%8B/">
+                            管程
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            存储空间的划分与初始化目录区包含文件目录、空闲表、位示图、超级块等用于文件管理的数据
-
-几种管理方法空闲表法（适用于“连续分配方式”）
-
-如何分配磁盘块，与内存管理中的动态分区分配很类似，为一个文件分配连续的存储空间。同样可采用首次适应、最佳适应、最...
+                            为什么要引入管程信号量机制存在的问题：编写程序困难，易出错
+能不能设计一种机制，让程序员写程序时不需要再关注复杂的PV操作，让写代码更轻松呢？
+1973年，Brinch Hansen首次在程序设计语言（Pascal）中引入了“管程”成分：一种高级同步...
                         
                     </div>
 
@@ -298,8 +296,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Tue Jun 30 2020 23:29:00 GMT+0800"
-                >2020-06-30 23:29:00</span>
+                                                                                data-updated="Tue Jun 30 2020 23:40:00 GMT+0800"
+                >2020-06-30 23:40:00</span>
             </span>
         
 
@@ -334,7 +332,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.5_%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.13_%E7%AE%A1%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -348,19 +346,15 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.6_%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                            文件的基本操作
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.14_%E6%AD%BB%E9%94%81/">
+                            死锁
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            向上提供的几个最基本的功能：
-
-创建文件（create系统调用）：可以创建文件，点击新建后，图形化交互进程在背后调用了create系统调用
-
-
-删除文件（delete系统调用）：可以删除文件，点了删除之后，图形化交互进程通过操作系统提供的删除文件功能...
+                            死锁的概念什么是死锁在并发环境下，各进程因竞争资源而造成的一种互相等待对方手里的资源，导致各进程都阻塞，都无法向前推进的现象，就是“死锁”。发生死锁后若无外力干涉，这些进程都将无法向前推进
+进程死锁、饥饿、死循环的区别死锁：各进程互相等待对方手里的资...
                         
                     </div>
 
@@ -371,8 +365,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Tue Jun 30 2020 23:28:00 GMT+0800"
-                >2020-06-30 23:28:00</span>
+                                                                                data-updated="Tue Jun 30 2020 23:39:00 GMT+0800"
+                >2020-06-30 23:39:00</span>
             </span>
         
 
@@ -407,7 +401,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.6_%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.14_%E6%AD%BB%E9%94%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -421,16 +415,15 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.7_%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/">
-                            文件共享
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.1_%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                            内存的基础知识
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            操作系统为用户提供文件共享功能，可以让多个用户共享的使用同一个文件
-多个用户共享同一个文件，意味着系统中只有一份文件数据，并且只要某个用户修改了该文件的数据，其他用户也可以看到文件数据的变化
-如果是多个用户都复制了同一个文件，那么系统中会有好几份文件...
+                            什么是内存，有何作用内存可存放数据，程序执行前需要先放到内存中才能被CPU处理：缓和CPU与硬盘之间的速度矛盾
+在多道程序环境下，系统中会有多个程序并发执行，也就是说会有多个程序的数据需要同时放到内存中。那么，如何区分各个程序的数据是放在什么地方的呢...
                         
                     </div>
 
@@ -441,8 +434,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Tue Jun 30 2020 23:27:00 GMT+0800"
-                >2020-06-30 23:27:00</span>
+                                                                                data-updated="Tue Jun 30 2020 23:38:00 GMT+0800"
+                >2020-06-30 23:38:00</span>
             </span>
         
 
@@ -477,7 +470,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.7_%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.1_%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -491,22 +484,21 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.8_%E6%96%87%E4%BB%B6%E4%BF%9D%E6%8A%A4/">
-                            文件保护
+                        <a href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.2_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/">
+                            内存管理的概念
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            操作系统需要保护文件数据的安全
-口令保护
-加密保护
-优点：保密性强，不需要在系统中存储密码
-缺点：编码&#x2F;译码，或者说加密&#x2F;解密要花费一定时间
-访问控制
+                            操作系统作为系统资源的管理者，当然也需要对内存进行管理
 
-实现灵活，可以实现复杂的文件保护功能
-如果对某个目录进行了访问权限的控制，那...
+操作系统负责内存空间的分配与回收
+
+
+操作系统要怎么记录哪些内存区域已经被分配出去了，哪些又还空闲？
+内存中很多位置都可以存放，那新来的进程应该放在哪里？
+当进程运行结束之后，如何将进程占用的...
                         
                     </div>
 
@@ -517,8 +509,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Tue Jun 30 2020 23:26:00 GMT+0800"
-                >2020-06-30 23:26:00</span>
+                                                                                data-updated="Tue Jun 30 2020 23:37:00 GMT+0800"
+                >2020-06-30 23:37:00</span>
             </span>
         
 
@@ -553,7 +545,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/4.8_%E6%96%87%E4%BB%B6%E4%BF%9D%E6%8A%A4/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.2_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -579,8 +571,8 @@
                    type="number"
                    value="37"
                    min="1"
-                   max="134"
-            /><span class="delimiter base-style">/</span><span class="base-style">134</span>
+                   max="137"
+            /><span class="delimiter base-style">/</span><span class="base-style">137</span>
         </div>
 
 

@@ -261,7 +261,7 @@
         <div class="website-announcement border-box">
             <i class="icon left fa-solid fa-bullhorn"></i>
             <div class="announcement border-box text-ellipsis">
-                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#x69;&#97;&#111;&#106;&#x69;&#97;&#108;&#x6f;&#110;&#x67;&#48;&#x33;&#50;&#x38;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#108;&#x69;&#97;&#111;&#106;&#x69;&#97;&#108;&#x6f;&#110;&#x67;&#48;&#x33;&#50;&#x38;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></p>
+                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#105;&#97;&#111;&#106;&#105;&#97;&#108;&#x6f;&#110;&#x67;&#48;&#x33;&#x32;&#x38;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#108;&#105;&#97;&#111;&#106;&#105;&#97;&#108;&#x6f;&#110;&#x67;&#48;&#x33;&#x32;&#x38;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 
             </div>
             <i class="icon right close fa-solid fa-close"></i>
@@ -276,17 +276,54 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.14_%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84TIME-WAIT%E7%8A%B6%E6%80%81%E5%BF%85%E9%A1%BB%E7%AD%89%E5%BE%852MSL/">
-                            为什么客户端的TIME-WAIT状态必须等待2MSL
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.3_%E4%BA%86%E8%A7%A3%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%AF%B9%E5%BA%94%E7%9A%84%E6%9C%8D%E5%8A%A1/">
+                            了解的端口及对应的服务
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            主要有两个原因：
+                            
 
-确保 ACK 报文能够到达服务端，从而使服务端正常关闭连接。
-第四次挥手时，客户端第四次挥手的 ACK 报文不一定会到达服务端。服务端会超时重传 FIN&#x2F;ACK 报文，此时如果客户端已经断开了连接，那么就无法响应服务端的...
+
+端口
+服务
+
+
+
+21
+FTP
+
+
+23
+TELNET
+
+
+25
+SMTP
+
+
+53
+DNS
+
+
+69
+TFTP
+
+
+80
+HTTP
+
+
+161
+SNMP
+
+
+443
+HTTPS
+
+
+端口是传输层的SAP，标识主机中的应用进程，端口号只有本地意...
                         
                     </div>
 
@@ -297,8 +334,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:36:00 GMT+0800"
-                >2020-05-15 23:36:00</span>
+                                                                                data-updated="Fri May 15 2020 23:47:00 GMT+0800"
+                >2020-05-15 23:47:00</span>
             </span>
         
 
@@ -333,7 +370,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.14_%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84TIME-WAIT%E7%8A%B6%E6%80%81%E5%BF%85%E9%A1%BB%E7%AD%89%E5%BE%852MSL/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.3_%E4%BA%86%E8%A7%A3%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%8F%8A%E5%AF%B9%E5%BA%94%E7%9A%84%E6%9C%8D%E5%8A%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,15 +384,18 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.15_TIME-WAIT%E6%98%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81%E8%BF%98%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81/">
-                            TIME-WAIT是服务器端的状态还是客户端的状态
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.4_TCP%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E5%8F%AF%E9%9D%A0%E6%80%A7/">
+                            TCP协议如何保证可靠性
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            TIME_WAIT 是主动断开连接的一方会进入的状态，一般情况下，都是客户端所处的状态；服务器端一般设置不主动关闭连接。TIME_WAIT 需要等待 2MSL，在大量短连接的情况下，TIME_WAIT会太多，这也会消耗很多系统资源。
+                            TCP主要提供了检验和、序列号&#x2F;确认应答、超时重传、滑动窗口、拥塞控制和 流量控制等方法实现了可靠性传输。
 
+检验和：通过检验和的方式，接收端可以检测出来数据是否有差错和异常，假如有差错就会直接丢弃TCP段，重新发送。
+
+序列号&#x2F;...
                         
                     </div>
 
@@ -366,8 +406,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:35:00 GMT+0800"
-                >2020-05-15 23:35:00</span>
+                                                                                data-updated="Fri May 15 2020 23:46:00 GMT+0800"
+                >2020-05-15 23:46:00</span>
             </span>
         
 
@@ -402,7 +442,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.15_TIME-WAIT%E6%98%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81%E8%BF%98%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.4_TCP%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E5%8F%AF%E9%9D%A0%E6%80%A7/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -416,15 +456,17 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.16_TIME-WAIT%E7%8A%B6%E6%80%81%E8%BF%87%E5%A4%9A%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C/">
-                            TIME-WAIT状态过多会产生什么后果
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.5_%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E5%81%9C%E6%AD%A2%E7%AD%89%E5%BE%85%E5%8D%8F%E8%AE%AE%E5%92%8CARQ%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%90%86%E8%A7%A3/">
+                            谈谈你对停止等待协议和ARQ协议的理解
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            从服务器来讲，短时间内关闭了大量的Client连接，就会造成服务器上出现大量的TIME_WAIT连接，严重消耗着服务器的资源，此时部分客户端就会显示连接不上。
-从客户端来讲，客户端TIME_WAIT过多，就会导致端口资源被占用，因为端口就65536个...
+                            停止等待协议是为了实现可靠传输的，它的基本原理就是每发完一个分组就停止发送，等待对方确认，在收到确认后再发下一个分组，在停止等待协议中，若接收方收到重复分组，就丢弃该分组，但同时还要发送确认
+ARQ协议：
+
+自动重传请求ARQ协议：停止等待协议中超时...
                         
                     </div>
 
@@ -435,8 +477,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:34:00 GMT+0800"
-                >2020-05-15 23:34:00</span>
+                                                                                data-updated="Fri May 15 2020 23:45:00 GMT+0800"
+                >2020-05-15 23:45:00</span>
             </span>
         
 
@@ -471,7 +513,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.16_TIME-WAIT%E7%8A%B6%E6%80%81%E8%BF%87%E5%A4%9A%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.5_%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E5%81%9C%E6%AD%A2%E7%AD%89%E5%BE%85%E5%8D%8F%E8%AE%AE%E5%92%8CARQ%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%90%86%E8%A7%A3/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -485,14 +527,15 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.17_%E5%A6%82%E6%9E%9C%E5%B7%B2%E7%BB%8F%E5%BB%BA%E7%AB%8B%E4%BA%86%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%87%BA%E7%8E%B0%E6%95%85%E9%9A%9C%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/">
-                            如果已经建立了连接，但是客户端出现故障了怎么办
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.6_%E8%AF%A6%E7%BB%86%E8%AE%B2%E4%B8%80%E4%B8%8BTCP%E7%9A%84%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                            详细讲一下TCP的滑动窗口
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            TCP 设有一个保活计时器。服务器每收到一次客户端的数据，都会重新复位这个计时器，时间通常是设置为 2 小时。若 2 小时还没有收到客户端的任何数据，服务器就开始重试：每隔 75 分钟发送一个探测报文段，若一连发送 10 个探测报文后客户端依然没有回...
+                            在进行数据传输时，如果传输的数据比较大，就需要拆分为多个数据包进行发送。TCP 协议需要对数据进行确认后，才可以发送下一个数据包。这样一来，就会在等待确认应答包环节浪费时间。
+为了避免这种情况，TCP引入了窗口概念。窗口大小指的是不需要等待确认应答包...
                         
                     </div>
 
@@ -503,8 +546,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:33:00 GMT+0800"
-                >2020-05-15 23:33:00</span>
+                                                                                data-updated="Fri May 15 2020 23:44:00 GMT+0800"
+                >2020-05-15 23:44:00</span>
             </span>
         
 
@@ -539,7 +582,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.17_%E5%A6%82%E6%9E%9C%E5%B7%B2%E7%BB%8F%E5%BB%BA%E7%AB%8B%E4%BA%86%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%87%BA%E7%8E%B0%E6%95%85%E9%9A%9C%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.6_%E8%AF%A6%E7%BB%86%E8%AE%B2%E4%B8%80%E4%B8%8BTCP%E7%9A%84%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -565,8 +608,8 @@
                    type="number"
                    value="67"
                    min="1"
-                   max="134"
-            /><span class="delimiter base-style">/</span><span class="base-style">134</span>
+                   max="137"
+            /><span class="delimiter base-style">/</span><span class="base-style">137</span>
         </div>
 
 
