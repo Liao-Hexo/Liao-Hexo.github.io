@@ -267,7 +267,7 @@ keep-mobile()
 .keep-markdown-body h1,
 .keep-markdown-body > .post h1 {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.68rem;
 keep-tablet()
 keep-mobile()
 }
@@ -275,7 +275,7 @@ keep-mobile()
 .keep-markdown-body > .post h1 a.headerlink,
 .keep-markdown-body h1 a.markdownIt-Anchor,
 .keep-markdown-body > .post h1 a.markdownIt-Anchor {
-  font-size: 1.36rem;
+  font-size: 1.344rem;
 }
 .keep-markdown-body h2,
 .keep-markdown-body > .post h2 {
@@ -333,8 +333,8 @@ keep-mobile()
 .keep-markdown-body > .post h6 {
   font-weight: 500;
   font-size: 1.2rem;
-  line-height: 1.2;
 keep-tablet()
+keep-mobile()
 }
 .keep-markdown-body h6 a.headerlink,
 .keep-markdown-body > .post h6 a.headerlink,
@@ -381,13 +381,13 @@ keep-tablet()
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-keep-mobile()
 }
 .keep-markdown-body > .table-container table td,
 .keep-markdown-body > .post > .table-container table td,
 .keep-markdown-body > .table-container table th,
 .keep-markdown-body > .post > .table-container table th {
   padding: 0;
+  white-space: nowrap;
 }
 .keep-markdown-body > .table-container table td,
 .keep-markdown-body > .post > .table-container table td {
