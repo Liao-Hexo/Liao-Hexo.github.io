@@ -261,7 +261,7 @@
         <div class="website-announcement border-box">
             <i class="icon left fa-solid fa-bullhorn"></i>
             <div class="announcement border-box text-ellipsis">
-                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#x69;&#97;&#x6f;&#106;&#x69;&#97;&#108;&#111;&#110;&#103;&#x30;&#51;&#x32;&#56;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#108;&#x69;&#97;&#x6f;&#106;&#x69;&#97;&#108;&#111;&#110;&#103;&#x30;&#51;&#x32;&#56;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a></p>
+                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#105;&#x61;&#111;&#x6a;&#105;&#97;&#108;&#111;&#x6e;&#x67;&#48;&#51;&#50;&#x38;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#108;&#105;&#x61;&#111;&#x6a;&#105;&#97;&#108;&#111;&#x6e;&#x67;&#48;&#51;&#50;&#x38;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a></p>
 
             </div>
             <i class="icon right close fa-solid fa-close"></i>
@@ -276,16 +276,16 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/1.6_%E4%B8%AD%E6%96%AD%E5%92%8C%E8%BD%AE%E8%AF%A2/">
-                            中断和轮询
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.5_%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                            进程调度的方式
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            轮询：CPU对特定设备轮流询问，效率低等待时间长，CPU利用率不高。
-中断：通过特定事件提醒CPU，容易遗漏问题，CPU利用率不高。
-
+                            
+非剥夺调度方式，又称非抢占方式，即只允许进程主动放弃处理机，在运行过程中即便有更紧迫的任务到达，当前进程依然会继续使用处理机，直到该进程终止或主动要求进入阻塞态
+剥夺调度方式，又称抢占方式，可由操作系统剥夺当前进程的CPU使用权，当一个进程正在处理...
                         
                     </div>
 
@@ -296,8 +296,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:54:00 GMT+0800"
-                >2020-06-15 23:54:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:49:00 GMT+0800"
+                >2020-06-15 23:49:00</span>
             </span>
         
 
@@ -332,7 +332,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/1.6_%E4%B8%AD%E6%96%AD%E5%92%8C%E8%BD%AE%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.5_%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%96%B9%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -346,23 +346,15 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.1_%E7%A8%8B%E5%BA%8F%E3%80%81%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B/">
-                            程序、进程、线程、协程
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.6_%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/">
+                            进程调度算法
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            进程和程序的区别：
-
-程序：是静态的，就是个存放在磁盘里的可执行文件，就是一系列的指令集合
-
-进程（Process）：是动态的，是程序的一次执行过程，同一个程序多次执行会对应多个进程
-
-
-进程和线程的区别：
-
-调度：进程是资源管理的基本单位，线程是程...
+                            
+先来先服务FCFS：按照作业&#x2F;进程到达的先后顺序进行服务，事实上就是等待时间越久的越优先得到服务，非抢占式算法，不会导致饥饿，缺点：排在长作业（进程）后面的短作业需要等待很长时间，带权周转时间很大，对短作业来说用户体验不好，即FCFS算法...
                         
                     </div>
 
@@ -373,8 +365,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:53:00 GMT+0800"
-                >2020-06-15 23:53:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:48:00 GMT+0800"
+                >2020-06-15 23:48:00</span>
             </span>
         
 
@@ -409,7 +401,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.1_%E7%A8%8B%E5%BA%8F%E3%80%81%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E3%80%81%E5%8D%8F%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.6_%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -423,16 +415,18 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.2_%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/">
-                            进程的状态与转换
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.7_%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%B4%E7%95%8C%E5%8C%BA%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81/">
+                            什么是临界区，如何解决冲突
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            创建状态：进程正在被创建时，它的状态是“创建态”，在这个阶段操作系统会为进程分配资源、初始化PCB
-就绪状态：当进程创建完成后，便进入了“就绪态”，处于就绪态的进程已经具备运行条件，但由于没有空闲CPU，就暂时不能运行
-运行状态：如果一个进程此时在C...
+                            每个进程中访问临界资源的那段程序称为临界区，一次仅允许一个进程使用的资源称为临界资源。
+解决冲突的办法（为了实现对临界资源的互斥访问）：
+
+空闲让进：临界区空闲时，可以允许一个请求进入临界区的进程立即进入临界区
+忙则等待：当已有进程进入临界区时，其他...
                         
                     </div>
 
@@ -443,8 +437,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:52:00 GMT+0800"
-                >2020-06-15 23:52:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:47:00 GMT+0800"
+                >2020-06-15 23:47:00</span>
             </span>
         
 
@@ -479,7 +473,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.2_%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.7_%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%B4%E7%95%8C%E5%8C%BA%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -493,14 +487,14 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.3_%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/">
-                            进程间通信方式有哪些
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.8_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2/">
+                            上下文切换
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            进程通信就是指进程之间的信息交换，进程是分配系统资源的单位（包括内存地址空间），因此各进程拥有的内存地址空间相互独立，为了保证安全，一个进程不能直接访问另一个进程的地址空间，但是进程之间的信息交换又是必须实现的。为了保证进程间的安全通信，操作系统提供...
+                            对于单核CPU而言，在某一时刻只能执行一条CPU指令，上下文切换是一种将CPU资源从一个进程分配给另一个进程的机制。从用户角度看，计算机能够并行运行多个进程，这恰恰是操作系统通过快速上下文切换造成的结果。在切换的过程中，操作系统需要先存储当前进程的状...
                         
                     </div>
 
@@ -511,8 +505,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:51:00 GMT+0800"
-                >2020-06-15 23:51:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:46:00 GMT+0800"
+                >2020-06-15 23:46:00</span>
             </span>
         
 
@@ -547,7 +541,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.3_%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.8_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -573,8 +567,8 @@
                    type="number"
                    value="47"
                    min="1"
-                   max="139"
-            /><span class="delimiter base-style">/</span><span class="base-style">139</span>
+                   max="137"
+            /><span class="delimiter base-style">/</span><span class="base-style">137</span>
         </div>
 
 

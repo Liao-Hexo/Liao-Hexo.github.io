@@ -261,7 +261,7 @@
         <div class="website-announcement border-box">
             <i class="icon left fa-solid fa-bullhorn"></i>
             <div class="announcement border-box text-ellipsis">
-                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#x69;&#x61;&#111;&#x6a;&#x69;&#x61;&#108;&#111;&#110;&#x67;&#x30;&#x33;&#50;&#56;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#108;&#x69;&#x61;&#111;&#x6a;&#x69;&#x61;&#108;&#111;&#110;&#x67;&#x30;&#x33;&#50;&#56;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
+                <p>如有问题，请联系本人邮箱 <a href="mailto:&#x6c;&#x69;&#x61;&#x6f;&#x6a;&#x69;&#97;&#108;&#111;&#x6e;&#x67;&#x30;&#x33;&#50;&#x38;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#x6c;&#x69;&#x61;&#x6f;&#x6a;&#x69;&#97;&#108;&#111;&#x6e;&#x67;&#x30;&#x33;&#50;&#x38;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a></p>
 
             </div>
             <i class="icon right close fa-solid fa-close"></i>
@@ -276,15 +276,17 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.15_TIME-WAIT%E6%98%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81%E8%BF%98%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81/">
-                            TIME-WAIT是服务器端的状态还是客户端的状态
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.20_%E4%BB%80%E4%B9%88%E6%98%AFSYN%E6%B4%AA%E6%B3%9B%E6%94%BB%E5%87%BB%EF%BC%9F%E5%A6%82%E4%BD%95%E9%98%B2%E8%8C%83/">
+                            什么是SYN洪泛攻击？如何防范
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            TIME_WAIT 是主动断开连接的一方会进入的状态，一般情况下，都是客户端所处的状态；服务器端一般设置不主动关闭连接。TIME_WAIT 需要等待 2MSL，在大量短连接的情况下，TIME_WAIT会太多，这也会消耗很多系统资源。
+                            SYN洪泛攻击属于 DOS 攻击的一种，它利用 TCP 协议缺陷，通过发送大量的半连接请求，耗费 CPU 和内存资源。
+原理：
 
+在三次握手过程中，服务器发送 [SYN&#x2F;ACK] 包（第二个包）之后、收到客户端的 [ACK] 包（第三个包）...
                         
                     </div>
 
@@ -295,8 +297,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:35:00 GMT+0800"
-                >2020-05-15 23:35:00</span>
+                                                                                data-updated="Fri May 15 2020 23:30:00 GMT+0800"
+                >2020-05-15 23:30:00</span>
             </span>
         
 
@@ -331,7 +333,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.15_TIME-WAIT%E6%98%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81%E8%BF%98%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E7%8A%B6%E6%80%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.20_%E4%BB%80%E4%B9%88%E6%98%AFSYN%E6%B4%AA%E6%B3%9B%E6%94%BB%E5%87%BB%EF%BC%9F%E5%A6%82%E4%BD%95%E9%98%B2%E8%8C%83/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -345,15 +347,16 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.16_TIME-WAIT%E7%8A%B6%E6%80%81%E8%BF%87%E5%A4%9A%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C/">
-                            TIME-WAIT状态过多会产生什么后果
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.21_%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8BTCP%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%E8%BF%87%E7%A8%8B/">
+                            详细介绍一下TCP的四次挥手过程
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            从服务器来讲，短时间内关闭了大量的Client连接，就会造成服务器上出现大量的TIME_WAIT连接，严重消耗着服务器的资源，此时部分客户端就会显示连接不上。
-从客户端来讲，客户端TIME_WAIT过多，就会导致端口资源被占用，因为端口就65536个...
+                            
+第一次挥手：客户端向服务端发送连接释放报文（FIN&#x3D;1），主动关闭连接，同时等待服务端的确认。
+第二次挥手：服务端收到连接释放报文后，立即发出确认报文（ACK&#x3D;1），序列号 seq &#x3D; k，确认号 ack &#x3D;...
                         
                     </div>
 
@@ -364,8 +367,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:34:00 GMT+0800"
-                >2020-05-15 23:34:00</span>
+                                                                                data-updated="Fri May 15 2020 23:29:00 GMT+0800"
+                >2020-05-15 23:29:00</span>
             </span>
         
 
@@ -400,7 +403,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.16_TIME-WAIT%E7%8A%B6%E6%80%81%E8%BF%87%E5%A4%9A%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.21_%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8BTCP%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%E8%BF%87%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -414,14 +417,15 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.17_%E5%A6%82%E6%9E%9C%E5%B7%B2%E7%BB%8F%E5%BB%BA%E7%AB%8B%E4%BA%86%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%87%BA%E7%8E%B0%E6%95%85%E9%9A%9C%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/">
-                            如果已经建立了连接，但是客户端出现故障了怎么办
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.22_%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%97%B6%E5%80%99%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%85%B3%E9%97%AD%E7%9A%84%E6%97%B6%E5%80%99%E5%8D%B4%E6%98%AF%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+                            为什么连接的时候是三次握手，关闭的时候却是四次挥手
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            TCP 设有一个保活计时器。服务器每收到一次客户端的数据，都会重新复位这个计时器，时间通常是设置为 2 小时。若 2 小时还没有收到客户端的任何数据，服务器就开始重试：每隔 75 分钟发送一个探测报文段，若一连发送 10 个探测报文后客户端依然没有回...
+                            服务器在收到客户端的 FIN 报文段后，可能还有一些数据要传输，所以不能马上关闭连接，但是会做出应答，返回 ACK 报文段。
+接下来可能会继续发送数据，在数据发送完后，服务器会向客户单发送 FIN 报文，表示数据已经发送完毕，请求关闭连接。服务器的A...
                         
                     </div>
 
@@ -432,8 +436,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:33:00 GMT+0800"
-                >2020-05-15 23:33:00</span>
+                                                                                data-updated="Fri May 15 2020 23:28:00 GMT+0800"
+                >2020-05-15 23:28:00</span>
             </span>
         
 
@@ -468,7 +472,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.17_%E5%A6%82%E6%9E%9C%E5%B7%B2%E7%BB%8F%E5%BB%BA%E7%AB%8B%E4%BA%86%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%87%BA%E7%8E%B0%E6%95%85%E9%9A%9C%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.22_%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%97%B6%E5%80%99%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%85%B3%E9%97%AD%E7%9A%84%E6%97%B6%E5%80%99%E5%8D%B4%E6%98%AF%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -482,17 +486,17 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.18_%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E4%B8%A4%E6%AC%A1/">
-                            为什么需要三次握手，而不是两次
+                        <a href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.1_URL%E5%92%8CURI%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                            URL和URI的区别
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            主要有三个原因：
+                            URI：统一资源标识符
+URL：统一资源定位符
+URI用字符串标识某一互联网资源，而URL表示资源的位置，URL是URI的子集
 
-防止已过期的连接请求报文突然又传送到服务器，因而产生错误和资源浪费。
-在双方两次握手即可建立连接的情况下，假设客户端发送 A 报文段请求建立连接，由于网络原因造成 A 暂时无法到达服务器，服务器接收不到请求报文段就不会返回确认报文...
                         
                     </div>
 
@@ -503,8 +507,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri May 15 2020 23:32:00 GMT+0800"
-                >2020-05-15 23:32:00</span>
+                                                                                data-updated="Fri May 15 2020 23:27:00 GMT+0800"
+                >2020-05-15 23:27:00</span>
             </span>
         
 
@@ -539,7 +543,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/5.18_%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E4%B8%A4%E6%AC%A1/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/05/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/6.1_URL%E5%92%8CURI%E7%9A%84%E5%8C%BA%E5%88%AB/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -565,8 +569,8 @@
                    type="number"
                    value="72"
                    min="1"
-                   max="139"
-            /><span class="delimiter base-style">/</span><span class="base-style">139</span>
+                   max="137"
+            /><span class="delimiter base-style">/</span><span class="base-style">137</span>
         </div>
 
 

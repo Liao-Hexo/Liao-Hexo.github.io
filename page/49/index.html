@@ -261,7 +261,7 @@
         <div class="website-announcement border-box">
             <i class="icon left fa-solid fa-bullhorn"></i>
             <div class="announcement border-box text-ellipsis">
-                <p>如有问题，请联系本人邮箱 <a href="mailto:&#x6c;&#x69;&#97;&#111;&#x6a;&#x69;&#97;&#x6c;&#x6f;&#x6e;&#103;&#x30;&#51;&#50;&#x38;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6c;&#x69;&#97;&#111;&#x6a;&#x69;&#97;&#x6c;&#x6f;&#x6e;&#103;&#x30;&#51;&#50;&#x38;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#x69;&#97;&#111;&#x6a;&#x69;&#97;&#108;&#x6f;&#x6e;&#x67;&#48;&#x33;&#50;&#x38;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#108;&#x69;&#97;&#111;&#x6a;&#x69;&#97;&#108;&#x6f;&#x6e;&#x67;&#48;&#x33;&#50;&#x38;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
 
             </div>
             <i class="icon right close fa-solid fa-close"></i>
@@ -276,14 +276,19 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.8_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2/">
-                            上下文切换
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.13_%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                            进程、线程实现同步的方式
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            对于单核CPU而言，在某一时刻只能执行一条CPU指令，上下文切换是一种将CPU资源从一个进程分配给另一个进程的机制。从用户角度看，计算机能够并行运行多个进程，这恰恰是操作系统通过快速上下文切换造成的结果。在切换的过程中，操作系统需要先存储当前进程的状...
+                            
+临界区：临界区只限制在同一进程的各个线程之间使用，先V后P
+
+互斥量：互斥量跟临界区很相似，只是它允许在进程间使用
+
+信号量：为控制一个具有有限数量用户资源而设计。它允许多个线程在同一时刻访问同一资源，但是需要限制在同一时刻访问此资源的最大线程数目...
                         
                     </div>
 
@@ -294,8 +299,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:46:00 GMT+0800"
-                >2020-06-15 23:46:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:41:00 GMT+0800"
+                >2020-06-15 23:41:00</span>
             </span>
         
 
@@ -330,7 +335,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.8_%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.13_%E8%BF%9B%E7%A8%8B%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -344,15 +349,20 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.9_%E4%B8%BA%E4%BB%80%E4%B9%88%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%88%87%E6%8D%A2%E4%BC%9A%E6%AF%94%E8%BE%83%E8%80%97%E6%97%B6/">
-                            为什么虚拟地址空间切换会比较耗时
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/3.1_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/">
+                            内存管理的概念
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            进程都有自己的虚拟地址空间，把虚拟地址转换为物理地址需要查找页表，页表查找是一个很慢的过程，因此通常使用Cache来缓存常用的地址映射，这样可以加速页表查找。
-由于每个进程都有自己的虚拟地址空间，那么显然每个进程都有自己的页表，那么当进程切换后页表也...
+                            操作系统作为系统资源的管理者，当然也需要对内存进行管理：
+
+操作系统负责内存空间的分配与回收
+连续分配管理方式：指为用户进程分配的必须是一个连续的内存空间
+单一连续分配，无外部碎片
+固定分区分配：分区大小相等、分区大小不等
+动态分区分配，没有内部碎片...
                         
                     </div>
 
@@ -363,8 +373,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:45:00 GMT+0800"
-                >2020-06-15 23:45:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:40:00 GMT+0800"
+                >2020-06-15 23:40:00</span>
             </span>
         
 
@@ -399,7 +409,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.9_%E4%B8%BA%E4%BB%80%E4%B9%88%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%88%87%E6%8D%A2%E4%BC%9A%E6%AF%94%E8%BE%83%E8%80%97%E6%97%B6/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/3.1_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -413,17 +423,16 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.10_%E6%AD%BB%E9%94%81/">
-                            死锁
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/3.2_%E5%88%86%E9%A1%B5%E3%80%81%E5%88%86%E6%AE%B5/">
+                            分页、分段
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            什么是死锁：在并发环境下，各进程因竞争资源而造成的一种互相等待对方手里的资源，导致各进程都阻塞，都无法向前推进的现象，就是“死锁”。发生死锁后若无外力干涉，这些进程都将无法向前推进
-进程死锁、饥饿、死循环的区别：
-
-死锁：各进程互相等待对方手里的资源...
+                            分页：
+把内存空间划分为大小相等且固定的块，作为主存的基本单位。因为程序数据存储在不同的页面中，而页面又离散的分布在内存中，因此需要一个页表来记录映射关系，以实现从页号到物理块号的映射。
+访问分页系统中内存数据需要两次的内存访问 (一次是从内存中访问...
                         
                     </div>
 
@@ -434,8 +443,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:44:00 GMT+0800"
-                >2020-06-15 23:44:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:39:00 GMT+0800"
+                >2020-06-15 23:39:00</span>
             </span>
         
 
@@ -470,7 +479,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.10_%E6%AD%BB%E9%94%81/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/3.2_%E5%88%86%E9%A1%B5%E3%80%81%E5%88%86%E6%AE%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -484,18 +493,17 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.11_%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%A7%8D%E7%B1%BB/">
-                            线程的种类
+                        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/3.3_%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95/">
+                            动态分区分配算法
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            从线程的运行空间来说，分为用户级线程ULT和内核级线程KLT
+                            在动态分区分配方式中，当很多个空闲分区都能满足需求时，应该选择哪个分区进行分配？
+综合来看，四种算法中，首次适应算法的效果反而更好：
 
-内核级线程：这类线程依赖于内核，又称为内核支持的线程或轻量级进程。无论是在用户程序中的线程还是系统进程中的线程，它们的创建、撤销和切换都由内核实现。
-
-用户级线程：它仅存在于用户级中，这...
+首次适应算法和邻近适应算法比最佳适应算法和最坏适应算法好的一点：不用每次都更新空闲分区链&#x2F;表的排列顺序，...
                         
                     </div>
 
@@ -506,8 +514,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Mon Jun 15 2020 23:43:00 GMT+0800"
-                >2020-06-15 23:43:00</span>
+                                                                                data-updated="Mon Jun 15 2020 23:38:00 GMT+0800"
+                >2020-06-15 23:38:00</span>
             </span>
         
 
@@ -542,7 +550,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/2.11_%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%A7%8D%E7%B1%BB/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98/3.3_%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -568,8 +576,8 @@
                    type="number"
                    value="49"
                    min="1"
-                   max="139"
-            /><span class="delimiter base-style">/</span><span class="base-style">139</span>
+                   max="137"
+            /><span class="delimiter base-style">/</span><span class="base-style">137</span>
         </div>
 
 

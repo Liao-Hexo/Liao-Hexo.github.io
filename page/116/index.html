@@ -261,7 +261,7 @@
         <div class="website-announcement border-box">
             <i class="icon left fa-solid fa-bullhorn"></i>
             <div class="announcement border-box text-ellipsis">
-                <p>如有问题，请联系本人邮箱 <a href="mailto:&#108;&#x69;&#x61;&#x6f;&#x6a;&#x69;&#97;&#x6c;&#x6f;&#110;&#x67;&#48;&#x33;&#x32;&#x38;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#108;&#x69;&#x61;&#x6f;&#x6a;&#x69;&#97;&#x6c;&#x6f;&#110;&#x67;&#48;&#x33;&#x32;&#x38;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+                <p>如有问题，请联系本人邮箱 <a href="mailto:&#x6c;&#x69;&#x61;&#111;&#106;&#x69;&#x61;&#x6c;&#111;&#110;&#103;&#48;&#51;&#50;&#56;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x6c;&#x69;&#x61;&#111;&#106;&#x69;&#x61;&#x6c;&#111;&#110;&#103;&#48;&#51;&#50;&#56;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a></p>
 
             </div>
             <i class="icon right close fa-solid fa-close"></i>
@@ -276,17 +276,16 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.9_%E6%A0%88%E5%9C%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">
-                            栈在表达式求值中的应用
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.2_%E4%B8%B2%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">
+                            串的存储结构
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            
-可以不用界限符也能无歧义的表达运算顺序？【逆波兰表达式&#x3D;后缀表达式，波兰表达式&#x3D;前缀表达式】
+                            串的顺序存储：【默认使用方案四】
 
-中缀表达式转后缀表达式：初始化一个栈，用于保存暂时还不能确定运算顺序的运算符从左到右处理各个元素，直到末尾，可能遇到三种情况：1.遇...
+12345678910111213141516171819202122232425262728293031#include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;#define...
                         
                     </div>
 
@@ -297,8 +296,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri Mar 15 2019 23:37:00 GMT+0800"
-                >2019-03-15 23:37:00</span>
+                                                                                data-updated="Fri Mar 15 2019 23:32:00 GMT+0800"
+                >2019-03-15 23:32:00</span>
             </span>
         
 
@@ -333,7 +332,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.9_%E6%A0%88%E5%9C%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.2_%E4%B8%B2%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -347,17 +346,18 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.10_%E6%A0%88%E5%9C%A8%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">
-                            栈在递归中的应用
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">
+                            串的朴素模式匹配算法
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            递归函数调用的特点：最后被调用的函数最先执行结束(LIFO)
-函数调用时，需要用一个栈存储：调用返回地址、实参、局部变量
-适合用“递归”算法解决：可以把原始问题转换为属性相同，但规模较小的问题
-递归调用时，函数调用栈可称为“递归工作栈”，每进入一层递...
+                            一定是主串中存在的才叫“子串”
+模式串：想尝试在主串中找到的串，未必存在
+串的模式匹配：在主串中找到与模式串相同的子串，并返回其所在位置【就是定位操作】
+朴素模式匹配算法：
+【比较好的情况：每个子串的第一个字符就与模式串不匹配，若模式串长度为m，主串...
                         
                     </div>
 
@@ -368,8 +368,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri Mar 15 2019 23:36:00 GMT+0800"
-                >2019-03-15 23:36:00</span>
+                                                                                data-updated="Fri Mar 15 2019 23:31:00 GMT+0800"
+                >2019-03-15 23:31:00</span>
             </span>
         
 
@@ -404,7 +404,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.10_%E6%A0%88%E5%9C%A8%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.3_%E4%B8%B2%E7%9A%84%E6%9C%B4%E7%B4%A0%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -418,19 +418,18 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.11_%E9%98%9F%E5%88%97%E7%9A%84%E5%BA%94%E7%94%A8/">
-                            队列的应用
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">
+                            KMP算法
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            队列的应用：
+                            朴素模式匹配算法的缺点：当某些子串与模式串能部分匹配时，主串的扫描指针i经常回溯，导致时间开销增加
+改进思路：主串指针不回溯，只有模式串指针回溯
 
-树的层次遍历
-图的广度优先遍历
-队列在操作系统中的应用：多个进程争抢着使用有限的系统资源时，FCFS（First Come First Service，先来先服务）是一种常用策略
-打印数据缓冲区：打印机缓冲区用“队列”组织打印数据，可...
+求模式串的next数组：当模式串的第j个字符匹配失败时，令模式串跳到next[j]再继续匹配
+串的前缀...
                         
                     </div>
 
@@ -441,8 +440,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri Mar 15 2019 23:35:00 GMT+0800"
-                >2019-03-15 23:35:00</span>
+                                                                                data-updated="Fri Mar 15 2019 23:30:00 GMT+0800"
+                >2019-03-15 23:30:00</span>
             </span>
         
 
@@ -477,7 +476,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.11_%E9%98%9F%E5%88%97%E7%9A%84%E5%BA%94%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/4.4_KMP%E7%AE%97%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -491,26 +490,18 @@
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.12_%E7%89%B9%E6%AE%8A%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/">
-                            特殊矩阵的压缩存储
+                        <a href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.1_%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+                            树的基本概念
                         </a>
                     </h3>
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            普通矩阵的存储：可用二维数组存储【描述矩阵元素时，行、列号通常从1开始，而描述数组时通常下标从0开始】
-特殊矩阵（某些特殊矩阵可以压缩存储空间）：
+                            树是n(n&gt;&#x3D;0)个结点的有限集合，n&#x3D;0时，称为空树
+而任意非空树应满足：
 
-对称矩阵
-
-三角矩阵
-
-三对角矩阵
-
-稀疏矩阵
-
-
-
+有且仅有一个特定的称为根的结点
+当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集合，其中每一个集合本身又是一棵树，称为根结点...
                         
                     </div>
 
@@ -521,8 +512,8 @@
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-regular fa-calendar-days"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri Mar 15 2019 23:34:00 GMT+0800"
-                >2019-03-15 23:34:00</span>
+                                                                                data-updated="Fri Mar 15 2019 23:29:00 GMT+0800"
+                >2019-03-15 23:29:00</span>
             </span>
         
 
@@ -557,7 +548,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/3.12_%E7%89%B9%E6%AE%8A%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+        <a class="home-read-more" href="/2019/03/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0/5.1_%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -583,8 +574,8 @@
                    type="number"
                    value="116"
                    min="1"
-                   max="139"
-            /><span class="delimiter base-style">/</span><span class="base-style">139</span>
+                   max="137"
+            /><span class="delimiter base-style">/</span><span class="base-style">137</span>
         </div>
 
 
