@@ -90,6 +90,35 @@
   </entry>
   
   <entry>
+    <title>计算机理论书单📚</title>
+    <link href="https://liao-hexo.github.io/2025/01/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/"/>
+    <id>https://liao-hexo.github.io/2025/01/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/</id>
+    <published>2024-12-31T16:00:00.000Z</published>
+    <updated>2025-06-05T03:57:43.910Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center"><font color=#FF9999>开始时间</font></th><th align="center"><font color=#FF9999>图书名称</font></th><th align="center"><font color=#FF9999>图书作者</font></th><th align="center"><font color=#FF9999>结束时间、阅读笔记</font></th></tr></thead><tbody><tr><td align="center"></td><td align="center"><font color=#FF9999>汇编语言</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《汇编语言(第4版)》</td><td align="center">王爽</td><td align="center"><a href="https://liao-hexo.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E7%AC%AC4%E7%89%88-%E3%80%8B/">*</a></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>操作系统原理</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《操作系统精髓与设计原理(原书第6版)》</td><td align="center">William Stallings</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>Apple+Linux</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《Linux命令行大全(第2版)》</td><td align="center">威廉·肖特斯</td><td align="center"><a href="https://liao-hexo.github.io/tags/Apple-Linux-Ubuntu-Server/">*</a></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>数据库系统原理</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《数据库系统概论(第5版)》、《习题解析与实验指导》</td><td align="center">王珊、萨师煊、张俊</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《MySQL必知必会》</td><td align="center">Ben Forta</td><td align="center"><a href="https://liao-hexo.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/">*</a></td></tr><tr><td align="center"></td><td align="center">《SQLite权威指南(第二版)》</td><td align="center">Grant Allen、Mike Owens</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>计算机网络原理</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《计算机网络自顶向下方法(原书第8版)》</td><td align="center">James F.Kurose、Keith W.Ross</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《图解TCP&#x2F;IP(第5版)》</td><td align="center">竹下隆史、村山公保、荒井透、刘田幸雄</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《图解HTTP》</td><td align="center">上野宣</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>编程语言</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C程序设计语言(第2版·新版)》、《习题解答》</td><td align="center">布莱恩·W.克尼汉、丹尼斯·M.里奇、克洛维斯·L.汤多、斯科特·E.吉姆佩尔</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C语言程序设计现代方法(第2版)》</td><td align="center">K.N.King</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C++ Primer(第5版)中文版》</td><td align="center">Stanley B.Lippman、Josee Lajoie、Barbara E.Moo</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C++ Primer Plus(第6版)中文版》</td><td align="center">Stephen Prata</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>数据结构</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《程序员的数学(第2版)》</td><td align="center">结城浩</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《数据结构与算法分析-C语言描述(原书第2版)》</td><td align="center">马克·艾伦·维斯</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>LeetCode算法</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《剑指Offer-名企面试官精讲典型编程题(第2版)》</td><td align="center">何海涛</td><td align="center">计算机理论&#x2F;LeetCode算法</td></tr><tr><td align="center"></td><td align="center">《LeetCode 101: 和你一起你轻松刷题(C++)》</td><td align="center">高畅</td><td align="center">计算机理论&#x2F;LeetCode算法</td></tr><tr><td align="center">测试</td><td align="center"></td><td align="center"></td><td align="center"></td></tr></tbody></table><table><thead><tr><th>* Header</th><th>Header</th><th>Header</th></tr></thead><tbody><tr><td>Sample1</td><td>Sample2</td><td>Sample3</td></tr><tr><td>Sample</td><td>Sample2</td><td>Sample</td></tr><tr><td>Sample</td><td>Sample</td><td>Sample1</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;font color=#FF9999&gt;开始时间&lt;/font&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;font color=#FF9999&gt;图书名称&lt;/font&gt;&lt;/th&gt;
+&lt;th ali</summary>
+      
+    
+    
+    
+    <category term="计算机理论" scheme="https://liao-hexo.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
+    
+    
+    <category term="计算机理论书单📚" scheme="https://liao-hexo.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>产品理论书单📚</title>
     <link href="https://liao-hexo.github.io/2025/01/01/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/"/>
     <id>https://liao-hexo.github.io/2025/01/01/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/</id>
@@ -115,35 +144,6 @@
     
     
     <category term="产品理论书单📚" scheme="https://liao-hexo.github.io/tags/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机理论书单📚</title>
-    <link href="https://liao-hexo.github.io/2025/01/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/"/>
-    <id>https://liao-hexo.github.io/2025/01/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/</id>
-    <published>2024-12-31T16:00:00.000Z</published>
-    <updated>2025-06-05T03:52:48.899Z</updated>
-    
-    <content type="html"><![CDATA[<table><thead><tr><th align="center"><font color=#FF9999>开始时间</font></th><th align="center"><font color=#FF9999>图书名称</font></th><th align="center"><font color=#FF9999>图书作者</font></th><th align="center"><font color=#FF9999>结束时间、阅读笔记</font></th></tr></thead><tbody><tr><td align="center"></td><td align="center"><font color=#FF9999>汇编语言</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《汇编语言(第4版)》</td><td align="center">王爽</td><td align="center"><a href="https://liao-hexo.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E7%AC%AC4%E7%89%88-%E3%80%8B/">*</a></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>操作系统原理</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《操作系统精髓与设计原理(原书第6版)》</td><td align="center">William Stallings</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>Apple+Linux</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《Linux命令行大全(第2版)》</td><td align="center">威廉·肖特斯</td><td align="center"><a href="https://liao-hexo.github.io/tags/Apple-Linux-Ubuntu-Server/">*</a></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>数据库系统原理</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《数据库系统概论(第5版)》、《习题解析与实验指导》</td><td align="center">王珊、萨师煊、张俊</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《MySQL必知必会》</td><td align="center">Ben Forta</td><td align="center"><a href="https://liao-hexo.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B/">*</a></td></tr><tr><td align="center"></td><td align="center">《SQLite权威指南(第二版)》</td><td align="center">Grant Allen、Mike Owens</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>计算机网络原理</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《计算机网络自顶向下方法(原书第8版)》</td><td align="center">James F.Kurose、Keith W.Ross</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《图解TCP&#x2F;IP(第5版)》</td><td align="center">竹下隆史、村山公保、荒井透、刘田幸雄</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《图解HTTP》</td><td align="center">上野宣</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>编程语言</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C程序设计语言(第2版·新版)》、《习题解答》</td><td align="center">布莱恩·W.克尼汉、丹尼斯·M.里奇、克洛维斯·L.汤多、斯科特·E.吉姆佩尔</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C语言程序设计现代方法(第2版)》</td><td align="center">K.N.King</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C++ Primer(第5版)中文版》</td><td align="center">Stanley B.Lippman、Josee Lajoie、Barbara E.Moo</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《C++ Primer Plus(第6版)中文版》</td><td align="center">Stephen Prata</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>数据结构</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《程序员的数学(第2版)》</td><td align="center">结城浩</td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《数据结构与算法分析-C语言描述(原书第2版)》</td><td align="center">马克·艾伦·维斯</td><td align="center"></td></tr><tr><td align="center"></td><td align="center"><font color=#FF9999>LeetCode算法</font></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center">《剑指Offer-名企面试官精讲典型编程题(第2版)》</td><td align="center">何海涛</td><td align="center">计算机理论&#x2F;LeetCode算法</td></tr><tr><td align="center"></td><td align="center">《LeetCode 101: 和你一起你轻松刷题(C++)》</td><td align="center">高畅</td><td align="center">计算机理论&#x2F;LeetCode算法</td></tr><tr><td align="center">测试</td><td align="center"></td><td align="center"></td><td align="center"></td></tr></tbody></table><p>|* Header | Header | Header |<br>| —— | —— |<br>| Sample1 | Sample2 | Sample3 |<br>| Sample | Sample2 | Sample |<br>| Sample | Sample | Sample1 |</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;center&quot;&gt;&lt;font color=#FF9999&gt;开始时间&lt;/font&gt;&lt;/th&gt;
-&lt;th align=&quot;center&quot;&gt;&lt;font color=#FF9999&gt;图书名称&lt;/font&gt;&lt;/th&gt;
-&lt;th ali</summary>
-      
-    
-    
-    
-    <category term="计算机理论" scheme="https://liao-hexo.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/"/>
-    
-    
-    <category term="计算机理论书单📚" scheme="https://liao-hexo.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E4%B9%A6%E5%8D%95%F0%9F%93%9A/"/>
     
   </entry>
   
