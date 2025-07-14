@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            预处理指令 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        预处理指令
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2018-09-30 23:40:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu Jul 18 2024 23:39:59 GMT+0800">2024-07-18 23:39:59</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.4k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>4 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <p>C语言的代码主要分为两类：<br>1）C代码<br>2）预处理代码：以#开头的代码</p>
+<p>预处理指令的分类：<br>1）文件包含指令：#include<br>2）宏定义：#define【可以将一段C代码定义为一个标识，使用这个标识就可以使用这段代码】<br>3）条件编译指令：#if【只编译指定的C代码为二进制指令】</p>
+<p>预处理指令的特点：<br>1）都是以#开头<br>2）预处理指令的后面没有分号</p>
+<h3 id="文件包含指令："><a href="#文件包含指令：" class="headerlink" title="文件包含指令："></a>文件包含指令：</h3><p>文件包含指令作用：可以将指定的文件的内容拷贝到写指令的地方<br><code>#include”文件路径”</code><br><code>#include&lt;文件路径&gt;</code></p>
+<p>绝对路径：路径从根目录开始<br>相对路径：相对于当前这个文件夹的路径，和当前文件路径相同的部分删除【一般把导入文件放到和main.c相同的文件夹下】</p>
+<p><code>#include”文件路径”和#include&lt;文件路径&gt;</code>的寻找指定文件的方式不一样：<br>1）前者先去当前源文件所在的目录中查找这个文件，如果有直接包含，如果没有再去系统自带的编译器目录中查找，如果有直接包含，如果没有报错<br>2）后者直接去编译器目录中查找，如果有包含，没有报错</p>
+<h3 id="宏定义："><a href="#宏定义：" class="headerlink" title="宏定义："></a>宏定义：</h3><p>它是一个预处理指令，所以它在编译之前执行，可以将一段C代码定义为一个标识，使用这个标识就可以使用这段代码<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxijf41hgj308005tdgi.jpg" ></p>
+<p>宏的原理：在预编译的时候，就会执行源文件中的预处理指令，会将C代码中使用宏名的地方替换为宏值【任意的C代码】，将C代码中的宏名替换为宏值的过程叫做宏替换&#x2F;宏代换</p>
+<p>在定义宏的时候不会去检查语法，只有当完成了宏替换的时候，才会去检查替换以后是否符合语法规范</p>
+<p>如果宏值是一个表达式，那么宏值并不是这个表达式的结果，而是这个表达式本身</p>
+<p>如果宏值中包括一个变量名，那么在使用这个宏之前必须要保证这个变量已经存在</p>
+<p>【默认情况下，宏从定义的地方一直到文件结束都可以使用，#undef 宏名可以让指定的宏提前失效】<br><code>#define N 10</code></p>
+<p>只能在中间使用这个宏，#undef N下面宏失效</p>
+<p><code>#undef N</code></p>
+<p>字符串中如果出现了宏名，系统不会认为这是一个宏，而是认为是字符串的一部分<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxijrlkunj30i40570tm.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxik0ojunj308u023jrv.jpg" ></p>
+<p>如果宏后面跟了分号，那么就会把分号作为宏值的一部分</p>
+<p>我们在定义宏的时候，宏名是可以带参数的，在这个宏值中可以直接使用这个参数，如果使用的宏有参数，那么就必须要在使用它的时候为这个宏的参数传值<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxik7s408j308804njsj.jpg" ></p>
+<p>宏不是函数，所以宏的参数不需要加类型说明符</p>
+<p>为带参数的宏传值的时候，是本色传递，如果传递一个变量，并不是传递这个变量的值<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikggxayj308907lmyp.jpg" ></p>
+<h3 id="条件编译指令："><a href="#条件编译指令：" class="headerlink" title="条件编译指令："></a>条件编译指令：</h3><p>默认的情况下，所有的C代码都会被编译为二进制代码，条件编译指令可以让编译器只编译指定部分的代码</p>
+<p>在预编译的时候，如果条件成立，就会将其中的C代码编译成二进制指令，如果条件不成立，就不会将其中的C代码编译成二进制指令【条件只能是宏，不能是变量】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikpk32qj308l0agdhp.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxikxggnsj30im0auq53.jpg" ></p>
+<p>If语句无论如何全部都要被编译为二进制指令，条件编译指令只会将符合条件的C代码编译为二进制指令</p>
+<p>如果定义了指定的宏，就编译其中的代码<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxil58iv2j308a08mjte.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilbvot6j308a02r3z1.jpg" ></p>
+<p>无论一个文件被#include多少次，只希望它最终只会被包含一次<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilixiwnj308a038jrv.jpg" ></p>
+<h3 id="static和extern："><a href="#static和extern：" class="headerlink" title="static和extern："></a>static和extern：</h3><p>C语言中的关键字，用来修饰变量和函数</p>
+<p>如果局部变量被static修饰，这个变量就叫做静态变量，静态变量不再存储在栈区域，而是存储在常量区，当函数执行完之后，这个静态变量不会被回收，后面再去执行这个函数的时候，声明静态变量的这句话就不会再执行了，直接略过，直接使用这个静态变量的值【静态变量只有一份】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxilridhgj30ic0c0tas.jpg" ></p>
+<p>extern不能修饰局部变量</p>
+<p>当我们分模块开发的时候，如果要在模块中声明全局变量，全局变量的声明要写在.h文件中，全局变量的实现要写在.c文件中【如果将全局变量定义在模块中，这个全局变量就必须要使用static或者extern修饰】</p>
+<p>如果定义在模块中的全局变量使用extern修饰，这个模块中的全局变量就可以跨模块访问；使用static修饰，这个模块中的全局变量就只能在当前模块中访问</p>
+<p>如果函数被extern修饰，那么这个函数可以跨模块调用；如果函数被static修饰，那么这个函数只能在当前模块中调用，无法跨模块调用</p>
+<p>如果函数没有写static或者extern，那么这个函数默认就是extern</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/19_%E5%AD%97%E7%AC%A6%E4%B8%B2/"
+                                   title="字符串"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">字符串</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">文件包含指令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">宏定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">条件编译指令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static%E5%92%8Cextern%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">static和extern：</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">文件包含指令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">宏定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">条件编译指令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static%E5%92%8Cextern%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">static和extern：</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

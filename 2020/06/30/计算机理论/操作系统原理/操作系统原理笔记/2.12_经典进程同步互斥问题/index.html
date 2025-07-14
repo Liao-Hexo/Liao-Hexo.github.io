@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            经典进程同步互斥问题 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        经典进程同步互斥问题
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2020-06-30 23:41:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Fri Jul 19 2024 09:48:34 GMT+0800">2024-07-19 09:48:34</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">操作系统原理-操作系统原理笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.6k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h2 id="生产者-消费者问题（互斥、同步综合问题）"><a href="#生产者-消费者问题（互斥、同步综合问题）" class="headerlink" title="生产者-消费者问题（互斥、同步综合问题）"></a>生产者-消费者问题（互斥、同步综合问题）</h2><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中取出一个产品并使用</p>
+<ul>
+<li>生产者、消费者共享一个初始为空、大小为n的缓冲区</li>
+<li>只有缓冲区没满时，生产者才能把产品放入缓冲区，否则必须等待（进程同步：缓冲区没满 -&gt; 生产者生产）</li>
+<li>只有缓冲区不空时，消费者才能从中取出产品，否则必须等待（进程同步：缓冲区没空 -&gt; 消费者消费）</li>
+<li>缓冲区是临界资源，各进程必须互斥访问（如果两个生产者进程并发运行，同时往缓冲区的同一块区域放入数据，会出现问题）（互斥关系）</li>
+</ul>
+<p>❗️互斥信号量初值一般为1，同步信号量的初始值要看对应资源的初始值是多少</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr6laawr80j30sq09e432.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr6lq5y0m3j30zi08s10u.jpg" ></p>
+<p>能否改变相邻P、V操作的顺序？</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr6m1k0or9j30uo0g8wpp.jpg" ></p>
+<p>“生产一个产品”、“使用产品”这两句话逻辑上是可以放到PV操作之间，但是这样会增加临界区的代码，会导致进程的并发度降低，对系统的效能产生影响，造成不便</p>
+<h2 id="多生产者-多消费者问题"><a href="#多生产者-多消费者问题" class="headerlink" title="多生产者-多消费者问题"></a>多生产者-多消费者问题</h2><ul>
+<li>桌子上有一只盘子，每次只能向其中放入一个水果。（大小为1，初始为空的缓冲区）</li>
+<li>爸爸专向盘子中放苹果，妈妈专向盘子中放橘子，儿子专等着吃盘子中的橘子，女儿专等着吃盘子中的苹果。</li>
+<li>只有盘子空时，爸爸或妈妈才可向盘子中放一个水果。仅当盘子中有自己需要的水果时，儿子或女儿可以从盘子中取出水果。用PV操作实现上述过程</li>
+</ul>
+<blockquote>
+<p>互斥关系：对缓冲区（盘子）的访问要互斥的进行</p>
+<p>同步关系（一前一后）：</p>
+<ol>
+<li>盘子中有苹果，女儿才能取苹果</li>
+<li>盘子中有橘子，儿子才能取橘子</li>
+<li>只有盘子为空时，父亲或母亲才能放入水果（“盘子为空”这个事件可以由儿子或女儿触发，事件发生后才允许父亲或母亲放水果）</li>
+</ol>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr74k8k33bj30lk03otac.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr74kxspraj30yc08k0y4.jpg" ></p>
+<p>问题：可不可以不用互斥信号量</p>
+<p>分析：刚开始，儿子、女儿进程即使上处理机运行也会被阻塞，如果刚开始是父亲进程先上处理机运行，则父亲P(plate)，可以访问盘子 -&gt; 母亲P(plate)，阻塞等待盘子 -&gt; 父亲放入苹果V(apple)，女儿进程被唤醒，其他进程即使运行也都会阻塞，暂时不能访问临界资源（盘子） -&gt; 女儿P(apple)，访问盘子，V(plate)，等待盘子的母亲进程被唤醒 -&gt; 母亲进程访问盘子（其他进程暂时无法进入临界区） -&gt; …</p>
+<p>结论：即使不设置专门的互斥变量mutex，也不会出现多个进程同时访问盘子的现象</p>
+<p>原因：本题中的缓冲区大小为1，在任何时刻，apple、orange、plate三个同步信号量中最多只有一个是1，因此在任何时刻，最多只有一个进程的P操作不会被阻塞，并顺利的进入临界区</p>
+<p>如果盘子的容量（缓冲区）设为2，可能出现两个进程同时访问缓冲区的情况，有可能导致两个进程写入缓冲区的数据相互覆盖的情况</p>
+<p>❗️因此，如果缓冲区大小大于1，就必须专门设置一个互斥信号量mutex来保证互斥访问缓冲区</p>
+<h2 id="吸烟者问题（可生产多种产品的单生产者-多消费者）"><a href="#吸烟者问题（可生产多种产品的单生产者-多消费者）" class="headerlink" title="吸烟者问题（可生产多种产品的单生产者-多消费者）"></a>吸烟者问题（可生产多种产品的单生产者-多消费者）</h2><p>假设一个系统有三个抽烟者进程和一个供应者进程。每个抽烟者不停的卷烟并抽掉它，但是要卷起并抽掉一支烟，抽烟者需要有三种材料：烟草、纸和胶水。三个抽烟者中，第一个拥有烟草、第二个拥有纸、第三个拥有胶水。供应者进程无限的提供三种材料，供应者每次将两种材料放桌子上，拥有剩下那种材料的抽烟者卷一根烟并抽掉它，并给供应者进程一个信号告诉它完成了，供应者就会放另外两种材料在桌上，这个过程一直重复（让三个抽烟者轮流的抽烟）</p>
+<blockquote>
+<p>互斥关系：桌子可以抽象为容量为1的缓冲区，要互斥访问（这个容量为1表示组合）</p>
+<ul>
+<li>组合一：纸+胶水</li>
+<li>组合二：烟草+胶水</li>
+<li>组合三：烟草+纸</li>
+</ul>
+<p>同步关系（从事件的角度来分析）：</p>
+<ul>
+<li>桌上有组合一，第一个抽烟者取走东西</li>
+<li>桌上有组合二，第二个抽烟者取走东西</li>
+<li>桌上有组合三，第三个抽烟者取走东西</li>
+<li>发出完成信号，供应者将下一个组合放到桌上</li>
+</ul>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr75zlril5j30m804g0ut.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr760fec1kj309u0ccmyx.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr760yojo9j30pi06wtcj.jpg" ></p>
+<h2 id="读者-写者问题（复杂的互斥问题）"><a href="#读者-写者问题（复杂的互斥问题）" class="headerlink" title="读者-写者问题（复杂的互斥问题）"></a>读者-写者问题（复杂的互斥问题）</h2><p>有读者和写者两组并发进程，共享一个文件，当两个或两个以上的读进程同时访问共享数据时不会产生副作用，但若某个写进程和其他进程（读进程或写进程）同时访问共享数据时则可能导致数据不一致的错误，因此要求：</p>
+<ol>
+<li>允许多个读者可以同时对文件执行读操作（与消费者进程不同，读者进程在读数据后并不会将数据清空，并不会改变数据。因此多个读者进程可同时访问共享数据）</li>
+<li>只允许一个写者往文件中写信息</li>
+<li>任一写者在完成写操作之前不允许其他读者或写者工作（两个写进程同时共享数据，可能导致数据错误覆盖的问题）（读进程与写进程同时共享数据，可能导致读出的数据不一致的问题）</li>
+<li>写者执行写操作前，应让已有的读者和写者全部退出</li>
+</ol>
+<blockquote>
+<p>两类进程：写进程、读进程</p>
+<p>互斥关系：写进程-写进程、写进程-读进程（读进程-读进程不存在互斥问题）</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr76qrlmtuj30x602wmzl.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr76r4cgpuj30e0064ab7.jpg" ></p>
+<p>思考：若两个读进程并发执行，则count&#x3D;0时两个进程也许都能满足if条件，都会执行P(rw)，从而使第二个读进程阻塞的情况</p>
+<p>如何解决：出现上述问题的原因在于对count变量的检查和赋值无法一气呵成，因此可以设置另一个互斥信号量来保证各读者进程对count的访问是互斥的</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr76rhfoihj30i00cmjw7.jpg" ></p>
+<p>潜在的问题：只要有读进程还在读，写进程就要一直阻塞等待，可能“饿死”。因此这种算法中，读进程是优先的</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr77xgaynfj30ko03owh8.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr77xwelc1j306u07u751.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr77y8mjfaj30by0ecmzv.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr77yv8mrwj60a405k75t02.jpg" ></p>
+<p>结论；在这种算法中，连续进入的多个读者可以同时读文件；写者和其他进程不能同时访问文件；写者不会饥饿，但也并不是真正的“写优先”，而是相对公平的先来先服务原则。有的书上把这种算法称为“读写公平法”</p>
+<h2 id="哲学家进餐问题（解决进程死锁）"><a href="#哲学家进餐问题（解决进程死锁）" class="headerlink" title="哲学家进餐问题（解决进程死锁）"></a>哲学家进餐问题（解决进程死锁）</h2><p>一张圆桌上坐着5名哲学家，每两个哲学家之间的桌上摆一根筷子，桌子的中间是一碗米饭。哲学家们倾注毕生的精力用于思考和进餐，哲学家在思考时，并不影响其他人。只有当哲学家饥饿时，才试图拿起左、右两根筷子（一根一根的拿起）。如果筷子已在他人手上，则需等待。饥饿的哲学家只有同时拿起两根筷子才可以开始进餐，当进餐完毕后，放下筷子继续思考</p>
+<blockquote>
+<p>系统中有5个哲学家进程，5位哲学家与左右邻居对其中间筷子的访问是互斥关系</p>
+<p>这个问题中只有互斥关系，但与之前遇到的问题不同的是，每个哲学家进程需要同时持有两个临界资源才能开始吃饭。如何避免临界资源分配不当造成的死锁现象，是哲学家问题的精髓</p>
+<p>定义互斥信号量数组chopstick[5] &#x3D; {1,1,1,1,1}，用于实现对5个筷子的互斥访问，并对哲学家按0～4编号，哲学家i左边的筷子编号为i，右边的筷子编号为(i+1) % 5</p>
+</blockquote>
+<p>如果5个哲学家并发的拿起了自己左手边的筷子，每位哲学家循环等待右边的人放下筷子（阻塞），发生“死锁”</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr7iaeeswoj30fm098tb3.jpg" ></p>
+<p>解决方法：</p>
+<ol>
+<li><p>可以对哲学家进程施加一些限制条件，比如最多只允许四个哲学家同时进餐。这样可以保证至少有一个哲学家是可以拿到左右两只筷子的</p>
+</li>
+<li><p>要求奇数号哲学家先拿左边的筷子，然后再拿右边的筷子，而偶数号哲学家刚好相反。用这种方法可以保证如果相邻的两个奇偶号哲学家都想吃饭，那么只会有其中一个可以拿起第一支筷子，另一个会直接阻塞。这就避免了占有一支后再等待另一只的情况</p>
+</li>
+<li><p>仅当一个哲学家左右两支筷子都可用时才允许他抓起筷子</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr7im97i56j30gg0bsmzw.jpg" ></p>
+</li>
+</ol>
+<p>画图可知，进程分别调度哲学家0、1、2时可发现，哲学家0可正常吃饭，哲学家1被阻塞，哲学家2虽然左右都有筷子，但是他也被阻塞</p>
+<p>进程分别调度0、4时，哲学家0可正常吃饭，哲学家4右边的筷子不可用，但是4仍然可以拿起左边的筷子，因此这种方法并不能保证只有两边的筷子都可用时，才允许哲学家拿起筷子</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">操作系统原理-操作系统原理笔记</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.11_%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/"
+                                   title="信号量机制"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">信号量机制</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/2.13_%E7%AE%A1%E7%A8%8B/"
+                                   title="管程"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">管程</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98%EF%BC%88%E4%BA%92%E6%96%A5%E3%80%81%E5%90%8C%E6%AD%A5%E7%BB%BC%E5%90%88%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">生产者-消费者问题（互斥、同步综合问题）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">多生产者-多消费者问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98%EF%BC%88%E5%8F%AF%E7%94%9F%E4%BA%A7%E5%A4%9A%E7%A7%8D%E4%BA%A7%E5%93%81%E7%9A%84%E5%8D%95%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">吸烟者问题（可生产多种产品的单生产者-多消费者）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E8%80%85-%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98%EF%BC%88%E5%A4%8D%E6%9D%82%E7%9A%84%E4%BA%92%E6%96%A5%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">读者-写者问题（复杂的互斥问题）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98%EF%BC%88%E8%A7%A3%E5%86%B3%E8%BF%9B%E7%A8%8B%E6%AD%BB%E9%94%81%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">哲学家进餐问题（解决进程死锁）</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98%EF%BC%88%E4%BA%92%E6%96%A5%E3%80%81%E5%90%8C%E6%AD%A5%E7%BB%BC%E5%90%88%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">生产者-消费者问题（互斥、同步综合问题）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">多生产者-多消费者问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98%EF%BC%88%E5%8F%AF%E7%94%9F%E4%BA%A7%E5%A4%9A%E7%A7%8D%E4%BA%A7%E5%93%81%E7%9A%84%E5%8D%95%E7%94%9F%E4%BA%A7%E8%80%85-%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">吸烟者问题（可生产多种产品的单生产者-多消费者）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E8%80%85-%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98%EF%BC%88%E5%A4%8D%E6%9D%82%E7%9A%84%E4%BA%92%E6%96%A5%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">读者-写者问题（复杂的互斥问题）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98%EF%BC%88%E8%A7%A3%E5%86%B3%E8%BF%9B%E7%A8%8B%E6%AD%BB%E9%94%81%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">哲学家进餐问题（解决进程死锁）</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

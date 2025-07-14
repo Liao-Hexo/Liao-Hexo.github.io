@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            寄存器(CPU工作原理) |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        寄存器(CPU工作原理)
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2020-07-31 23:58:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Fri Jul 19 2024 09:58:33 GMT+0800">2024-07-19 09:58:33</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E7%AC%AC4%E7%89%88-%E3%80%8B/">汇编语言-《汇编语言(第4版)》</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.5k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>5 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <p>—————————————————<br>2.1.通用寄存器<br>2.2.字在寄存器中的存储<br>2.3.几条汇编指令<br>2.4.物理地址<br>2.5.16位结构的CPU<br>2.6.8086CPU给出物理地址的方法<br>2.7.“段地址*16+偏移地址&#x3D;物理地址”的本质含义<br>2.8.段的概念<br>2.9.段寄存器<br>2.10.CS和IP<br>2.11.修改CS、IP的指令<br>2.12.代码段<br>—————————————————</p>
+<p>一个典型的CPU由运算器、控制器、寄存器(CPU工作原理)等器件组成，这些器件靠内部总线相连</p>
+<p>内部总线实现CPU内部各个器件之间的联系，外部总线实现CPU和主板上其他器件的联系</p>
+<p>在CPU中：<br>1）运算器进行信息处理<br>2）寄存器进行信息存储<br>3）控制器控制各种器件进行工作<br>4）内部总线连接各种器件，在他们之间进行数据的传送</p>
+<p>对于一个汇编程序员来说，CPU中的主要部件是寄存器，寄存器是CPU中程序员可以用指令读写的部件，程序员通过改变各种寄存器中的内容来实现对CPU的控制</p>
+<p>8086CPU有14个寄存器，它们的名称为：<br>AX，BX，CX，DX，<br>SI，DI，SP，BP，<br>CS，IP，<br>SS，DS，ES，PSW</p>
+<p>8086CPU所有的寄存器都是16位的，可以存放两个字节，AX、BX、CX、DX通常用来存放一般性数据被称为通用寄存器<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8shcygwj30e903sdg9.jpg" ></p>
+<p>一个16位寄存器可以存储一个16位的数据，所能存储的数据的最大值为2^16-1</p>
+<p>8086上一代CPU中的寄存器都是8位的，为保证兼容性，这四个通用寄存器都可以分为两个独立的8位寄存器使用<br>AX可以分为AH和AL<br>BX可以分为BH和BL<br>CX可以分为CH和CL<br>DX可以分为DH和DL<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8ss5p1mj30g605fwfz.jpg" ><br>—————————</p>
+<p>出于对兼容性的考虑，8086CPU可以一次性处理以下两种尺寸的数据：<br>1）字节：记为byte，一个字节由8个bit组成，可以存在8位寄存器中<br>2）字：记为word，一个字由两个字节组成，这两个字节分别称为这个字的高位字节和低位字节<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8t4abvtj306802hgls.jpg" ></p>
+<p>为了区分不同的进制，在十六进制表示的数据的后面加H，在二进制表示的数据的后面加B<br>—————————</p>
+<p>在写一条汇编指令或一个寄存器的名称时不区分大小写：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8tjwbmyj30ch03pt9m.jpg" ><br>—————————</p>
+<p>CPU访问内存单元时，要给出内存单元的地址，所有的内存单元构成的存储空间是一个一维的线性空间，每一个内存单元在这个空间中都有唯一的地址，我们将这个唯一的地址称为物理地址</p>
+<p>CPU通过地址总线送入存储器的，必须是一个内存单元的物理地址。在CPU向地址总线上发出物理地址之前，必须要在内部先形成这个物理地址，不同的CPU可以有不同的形成物理地址的方式<br>—————————</p>
+<p>概括来讲，16位结构描述了一个CPU具有下面几方面的结构特性：<br>1）运算器一次最多可以处理16位的数据<br>2）寄存器的最大宽度为16位<br>3）寄存器和运算器之间的通路为16位<br>—————————</p>
+<p>8086CPU给出物理地址的方法：</p>
+<p>8086CPU有20位地址总线，又是16位结构，采用一种在内部用两个16位地址合成的方法来形成一个20位的物理地址<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8u1db7lj30aa06ydgo.jpg" ></p>
+<p>当8086CPU要读写内存时：<br>1）CPU中的相关部件提供两个16位的地址，一个称为段地址，另一个称为偏移地址<br>2）段地址和偏移地址通过内部总线送入一个称为地址加法器的部件<br>3）地址加法器将两个16位地址合成为一个20位的物理地址<br>4）地址加法器通过内部总线将20位物理地址送入输入输出控制电路<br>5）输入输出控制电路将20位物理地址送上地址总线<br>6）20位物理地址被地址总线传送到存储器<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8ubj36tj30cj06y403.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8ukaiukj30bz08h42f.jpg" ></p>
+<p>——————————</p>
+<p>“段地址<em>16+偏移地址&#x3D;物理地址”的本质含义是：CPU在访问内存时，用一个基础地址（段地址</em>16）和一个相对于基础地址的偏移地址相加，给出内存单元的物理地址<br>——————————</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8uth09bj30au066aar.jpg" ><br>在编程时可以根据需要，将若干地址连续的内存单元看作一个段，用段地址<em>16定位段的起始地址（基础地址），用偏移地址定位段中的内存单元<br>1）段地址</em>16必然是16的倍数，所以一个段的起始地址也一定是16的倍数<br>2)偏移地址为16位，16位地址的寻址能力为64KB，所以一个段的长度最大为64KB<br>——————————</p>
+<p>段地址在8086CPU的段寄存器中存放，8086CPU有4个段寄存器：CS，DS，SS，ES<br>——————————</p>
+<p>CS和IP是8086CPU中两个最关键的寄存器，它们指示了CPU当前要读取指令的地址，CS为代码段寄存器，IP为指令指针寄存器</p>
+<p>在8086PC机中，任意时刻，设CS中的内容为M，IP中的内容为N，8086CPU将从内存M*16+N单元开始，读取一条指令并执行<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8w0hau0j30c409hju7.jpg" ></p>
+<p>8086CPU读取、执行一条指令的过程：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8w92jsrj30c405kq4e.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8wgrgaxj30c405kmym.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8woipllj30c405kgmz.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8wvqrskj30c405k75o.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8x2wtnpj30c405fabk.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8x9k43hj30c405f0u6.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8xguwhdj30c406f0uf.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8xntv5ij30c405edh6.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8xvhssgj30c405vq4c.jpg" ></p>
+<p>1）从CS：IP指向的内存单元读取指令，读取的指令进入指令缓冲器<br>2）IP&#x3D;IP+所读取指令的长度，从而指向下一条指令<br>3）执行指令，转到步骤1），重复这个过程<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8y47ydgj30c401jwey.jpg" ></p>
+<p>CPU将CS：IP指向的内存单元中的内容看作指令<br>—————————</p>
+<p>程序员可以通过改变CS、IP中的内容来控制CPU执行目标指令</p>
+<p>8086CPU大部分寄存器的值，都可以用mov指令来改变，mov指令被称为传送指令，但是mov指令不能用于设置CS、IP的值；能够改变CS、IP的内容的指令被统称为转移指令（jmp指令）<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8yjgr77j30c402z0tg.jpg" ></p>
+<p>若想仅修改IP的内容，可用形如“jmp 某一合法寄存器”的指令完成：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8yskyiej30c40383z6.jpg" ></p>
+<p>——————————<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/008eGmZEly1gor8z1g7l7j30cm087gnz.jpg" ></p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80-%E7%AC%AC4%E7%89%88-%E3%80%8B/">汇编语言-《汇编语言(第4版)》</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2020/07/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/1_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
+                                   title="基础知识"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">基础知识</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2020/07/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/%E3%80%8A%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80(%E7%AC%AC4%E7%89%88)%E3%80%8B/3_%E5%AE%9E%E9%AA%8C1%E3%80%81%E6%9F%A5%E7%9C%8BCPU%E5%92%8C%E5%86%85%E5%AD%98%EF%BC%8C%E7%94%A8%E6%9C%BA%E5%99%A8%E6%8C%87%E4%BB%A4%E5%92%8C%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E7%BC%96%E7%A8%8B/"
+                                   title="实验1、查看CPU和内存，用机器指令和汇编指令编程"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">实验1、查看CPU和内存，用机器指令和汇编指令编程</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

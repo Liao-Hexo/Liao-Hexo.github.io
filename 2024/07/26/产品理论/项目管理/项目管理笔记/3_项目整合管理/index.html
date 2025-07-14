@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            项目整合管理 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        项目整合管理
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2024-07-26 16:34:30</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Fri Dec 13 2024 11:57:39 GMT+0800">2024-12-13 11:57:39</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/">产品理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">项目管理-项目管理笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>10 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>项目管理过程的三从四得：</p>
+<ul>
+<li>三从：从过程想结果、从结果知输入、从输入选工具</li>
+<li>四得：一得文件和计划（统称文档）、二得成果和数据、三得变更请求、四得事业环境因素和组织过程资产的更新（比如项目过程中企业文化&#x2F;团队氛围的变化、经验教训等）</li>
+</ul>
+<h3 id="什么是整合"><a href="#什么是整合" class="headerlink" title="什么是整合"></a>什么是整合</h3><p>兼具统一、合并、沟通和建立联系，这些行动贯穿项目始终。整合管理包括识别、定义、组合、统一与协调项目管理各过程</p>
+<p>项目整合管理包括选择：资源分配、平衡竞争性需求、研究各种备选方法、为实现项目目标而剪裁过程、管理各个项目管理知识领域之间的依赖关系</p>
+<p>整合管理是整个项目成功的关键，项目经理因整合而存在（整合的唯一方法是沟通和协调，项目经理要花大于90%的时间用于沟通和协调上）</p>
+<h3 id="敏捷环境中的整合"><a href="#敏捷环境中的整合" class="headerlink" title="敏捷环境中的整合"></a>敏捷环境中的整合</h3><p>迭代和敏捷方法：能够促进团队成员以相关领域专家的身份参与整合管理，团队成员自行决定计划及其组件的整合方式</p>
+<p>适应型环境下：对项目经理的期望保持不变，把具体产品的规划和交付授权给团队来控制，项目经理关注营造一个合作型的决策氛围，确保团队有能力应对变更</p>
+<h3 id="项目整合管理的发展趋势"><a href="#项目整合管理的发展趋势" class="headerlink" title="项目整合管理的发展趋势"></a>项目整合管理的发展趋势</h3><ul>
+<li>使用自动化工具（PMIS）</li>
+<li>使用可视化管理工具</li>
+<li>项目知识管理（团队共享共同维护知识文档）</li>
+<li>增加项目经理的职责</li>
+<li>混合方法</li>
+</ul>
+<h3 id="剪裁需要考虑的因素"><a href="#剪裁需要考虑的因素" class="headerlink" title="剪裁需要考虑的因素"></a>剪裁需要考虑的因素</h3><p>项目生命周期、开发生命周期、变更、经验教训、效益、管理方法、知识管理、治理</p>
+<h3 id="项目整合管理的过程"><a href="#项目整合管理的过程" class="headerlink" title="项目整合管理的过程"></a>项目整合管理的过程</h3><ol>
+<li>启动过程组：制定项目章程（目的是批准项目并授权项目经理在项目活动中使用组织资源，最终得到一份项目管理文件叫项目章程）</li>
+<li>规划过程组：制定项目管理计划（目的是整合所有子计划为一份综合项目管理计划，最终得到一份文件叫项目管理计划）</li>
+<li>执行过程组：指导与管理项目工作（目的是执行项目管理计划和批准的变更，实现项目目标）、管理项目知识（目的是利用现有知识生成新的知识，帮助组织学习）</li>
+<li>监控过程组：监控项目工作（目的是跟踪、审查、报告整体项目进展，实现绩效目标）、实施整体变更控制（目的是审查变更请求、批准变更，管理变更）</li>
+<li>收尾过程组：结束项目或阶段（目的是终结项目、阶段或合同的所有活动）</li>
+</ol>
+<h2 id="制定项目章程"><a href="#制定项目章程" class="headerlink" title="制定项目章程"></a>制定项目章程</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181528770.png" ></p>
+<p>制定一份正式批准项目并授权项目经理在项目活动中使用组织资源的文件。主要作用：明确项目与组织战略目标之间的直接联系，确立项目正式地位，展示组织对项目的承诺。本过程只开展一次或在项目预定义点开展</p>
+<ul>
+<li><p>商业论证（商业需求和成本效益分析）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181531300.png" ></p>
+<p>成本效益分析可以使用定性的非数学模型分析，也可以使用定量的经济计量模型也就是数学模型分析</p>
+</li>
+<li><p>效益管理计划</p>
+<ul>
+<li>目标效益：如可以创造的有形&#x2F;无形商业价值，财务价值体现：净现值</li>
+<li>战略一致性：如项目效益与组织业务战略的一致程度</li>
+<li>实现效益的时限：如阶段效益、短期效益、长期效益和持续效益</li>
+<li>效益责任人：如计划确定时限内负责监督、记录、报告已实现效益负责人</li>
+<li>测量指标：如直接测量值和间接测量值</li>
+<li>假设：如预计存在或显而易见的因素</li>
+<li>风险：如实现效益的风险</li>
+</ul>
+<p>项目效益：为发起组织和项目预期受益方创造价值的行动、行为、产品、服务或成果的结果</p>
+<p>项目效益管理计划：描述了项目实现效益的方式和时间，应制定的效益制衡机制</p>
+<p>⭐️商业论证和效益管理计划不是项目管理文件，而是项目开始之前就具备的商业文件</p>
+</li>
+<li><p>协议：合同（外部客户）、谅解备忘录、服务品质协议、协议书（口头）&#x2F;意向书、电子邮件&#x2F;其他书面协议</p>
+</li>
+<li><p>假设日志：假设条件、制约因素</p>
+</li>
+</ul>
+<h2 id="制定项目管理计划"><a href="#制定项目管理计划" class="headerlink" title="制定项目管理计划"></a>制定项目管理计划</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181533451.png" ></p>
+<p>制定一份项目管理计划，定义&#x2F;准备&#x2F;协调所有子计划，把它们整合为一份综合项目管理计划。包括：12+4+2个文档，12个子计划，4个基准，2个重要描述文档。本过程只开展一次或在项目预定义点开</p>
+<ul>
+<li>12个子计划：范围管理计划、进度管理计划、成本管理计划、质量管理计划、相关方参与计划、需求管理计划、配置管理计划、变更管理计划、资源管理计划、沟通管理计划、风险管理计划、采购管理计划</li>
+<li>4个基准：范围基准、成本基准、进度基准、绩效测量基准PMB</li>
+<li>2个重要描述文档：项目生命周期描述、开发方法</li>
+</ul>
+<h2 id="指导与管理项目工作"><a href="#指导与管理项目工作" class="headerlink" title="指导与管理项目工作"></a>指导与管理项目工作</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181533436.png" ></p>
+<p>为实现项目目标，领导和执行项目管理计划中确定的工作，实施已批准的变更请求。本过程需要在整个项目期间开展</p>
+<ul>
+<li>三个重要输出：可交付成果、工作绩效数据、变更请求</li>
+<li>项目管理信息系统PMIS：项目管理系统[项目管理信息系统[配置管理系统[变更控制系统]]]<ul>
+<li>配置管理系统最少要有3个配置项：文档（计划&#x2F;文件）配置项、产出配置项、变更配置项，对这三个配置项要分别进行3个管理活动：定义&#x2F;识别、记录、检查</li>
+</ul>
+</li>
+</ul>
+<h2 id="管理项目知识"><a href="#管理项目知识" class="headerlink" title="管理项目知识"></a>管理项目知识</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181534110.png" ></p>
+<p>使用现有知识生成新知识，实现项目目标，帮助组织学习。本过程需要在整个项目期间开展</p>
+<ul>
+<li><p>经验教训登记册：</p>
+<ul>
+<li>情况的类别和描述</li>
+<li>与情况相关的影响、建议和行动方案</li>
+<li>遇到的挑战、问题、意识到的风险和机会</li>
+<li>其他内容</li>
+</ul>
+</li>
+<li><p>项目团队派工单：</p>
+<ul>
+<li><p>团队成员名录</p>
+</li>
+<li><p>在项目中的职责、角色</p>
+</li>
+<li><p>人员姓名插入项目管理计划的其他组成部分</p>
+</li>
+<li><p>姓名插入组织机构图、进入计划</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181534751.png" ></p>
+</li>
+</ul>
+</li>
+<li><p>知识管理：</p>
+<ul>
+<li>合作生成新知识</li>
+<li>分享隐性知识</li>
+<li>集成不同团队成员拥有的知识</li>
+<li>知识管理的工具将员工联系起来</li>
+</ul>
+</li>
+</ul>
+<h2 id="监控项目工作"><a href="#监控项目工作" class="headerlink" title="监控项目工作"></a>监控项目工作</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181534199.png" ></p>
+<p>跟踪、审查和调整项目进展，以实现项目管理计划中确定的绩效目标。本过程需要在整个项目期间开展</p>
+<ul>
+<li><p>变更请求</p>
+<p>变什么？</p>
+<ul>
+<li>变更请求：配置要素的任何内容变更的正式提议，书面形式记录</li>
+</ul>
+<p>怎么变？</p>
+<ul>
+<li>预防措施：可以避免过去人们常犯的错误</li>
+<li>纠正措施（小问题小偏差）：可以提示如何输入信息并使人知道应该去做什么</li>
+<li>缺陷补救（大问题大偏差）：可能让某人将错误的部分重做</li>
+<li>更新：对正规受控的文件或计划等变更，反映修改的内容</li>
+</ul>
+</li>
+<li><p>数据-信息-报告-知识-经验-智慧</p>
+<p>工作绩效数据：从执行项目的活动中收集到的原始观察结果和测量值，数据是最低层的细节，交由各控制过程做进一步分析，由其他过程提炼出项目信息，脱离背景的数据本身不能用于决策</p>
+<p>工作绩效信息：从控制过程中收集并结合相关背景和跨领域关系整合分析得到，将工作绩效数据转化为工作绩效信息，考虑了背景和关系，可以作为项目决策可靠基础</p>
+<p>工作绩效报告：汇编工作绩效信息，形成纸质或电子项目文件，包括状态报告、备忘录、论证报告、信息札记、推荐意见和情况更新</p>
+</li>
+<li><p>常用分析方法：分析完成后会得到一个决策，要不要继续下去的决策</p>
+<ul>
+<li>模型分析：回归分析、分组方法、失效分析、储备分析、挣值管理、故障树分析</li>
+<li>对比分析</li>
+<li>因果分析</li>
+<li>相关分析</li>
+<li>趋势分析</li>
+</ul>
+</li>
+<li><p>有效的会议</p>
+</li>
+</ul>
+<h2 id="实施整体变更控制"><a href="#实施整体变更控制" class="headerlink" title="实施整体变更控制"></a>实施整体变更控制</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181535664.png" ></p>
+<p>审查所有变更请求，批准变更，管理对可交付成果、项目文件和项目管理计划的变更，并决定对变更请求的处置方案。本过程需要在整个项目期间开展</p>
+<ul>
+<li><p>整体变更控制流程</p>
+<ul>
+<li><p>变更控制是一个机制，由变更控制系统来进行，它是项目管理信息系统PMIS的一个重要子系统，它包括变更管理流程&#x2F;制度、变更沟通程序、变更控制委员会CCB</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181535344.png" ></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="结束项目或阶段"><a href="#结束项目或阶段" class="headerlink" title="结束项目或阶段"></a>结束项目或阶段</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181535205.png" ></p>
+<p>终结项目、阶段或合同的所有过程。本过程只开展一次或仅在项目的预定点开展</p>
+<ul>
+<li><p>注意交付和移交的区别，交付是指已经验收了合格了，移交是指交到客户手里去</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>项目管理重要会议</th>
+<th>会议名称</th>
+<th>英文名称</th>
+<th>主要内容</th>
+<th>召开时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>项目启动会议</td>
+<td>Initiating meeting</td>
+<td>发布项目章程、任命项目经理、赋予项目经理动用组织资源的权力</td>
+<td>启动阶段结束</td>
+</tr>
+<tr>
+<td></td>
+<td>项目开踢&#x2F;开工会议</td>
+<td>kick-off meeting</td>
+<td>团队成员彼此认识、自上而下要求、自下而上承诺、建立沟通关系、建立责任关系</td>
+<td>规划阶段结束</td>
+</tr>
+<tr>
+<td></td>
+<td>焦点小组会议</td>
+<td>Focus groups</td>
+<td>干系人和主题专家一起会议收集需求</td>
+<td>收集需求</td>
+</tr>
+<tr>
+<td></td>
+<td>引导式研讨会</td>
+<td>Facilitated Workshops</td>
+<td>跨职能干系人与团队的会议收集需求</td>
+<td>收集需求</td>
+</tr>
+<tr>
+<td></td>
+<td>规划会议与分析</td>
+<td>Planning Meetings and Analysis</td>
+<td>制定风险管理计划、项目团队举行</td>
+<td>规划风险管理</td>
+</tr>
+<tr>
+<td></td>
+<td>状态297、352（审查276&#x2F;413）会议</td>
+<td>Status（review）Meetings</td>
+<td>交流和分析有关干系人参与的信息、项目进展沟通&#x2F;风险管理</td>
+<td>沟通计划&#x2F;控制风险控制干系人参与&#x2F;团队建设活动</td>
+</tr>
+<tr>
+<td></td>
+<td>投标人会议</td>
+<td>Bidder Conferences</td>
+<td>保证所有潜在卖方对技术要求和合同要求有清楚且一致的理解，公平公正</td>
+<td>投标书或建议书提交之前</td>
+</tr>
+<tr>
+<td></td>
+<td>评估会议（经验教训总结会议）</td>
+<td></td>
+<td>收尾报告会&#x2F;客户总结会&#x2F;经验教训总结会&#x2F;庆祝会</td>
+<td>结束项目或阶段</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="知识领域概要"><a href="#知识领域概要" class="headerlink" title="知识领域概要"></a>知识领域概要</h2><p>三字言：观六路、听八方、思统筹、掌乾坤（格局）</p>
+<p>整合管理最为重要</p>
+<ul>
+<li>必须有人来协调项目所需人员&#x2F;工作&#x2F;计划</li>
+<li>必须有人集中精力管理项目的总体框架，引导团队成员成功完成项目</li>
+<li>必须有人在当项目目标&#x2F;人员出现冲突时作出最终决策</li>
+<li>必须有人与高管&#x2F;干系人沟通主要项目信息</li>
+</ul>
+<p>这个人就是项目经理，这种管理就是项目整合管理</p>
+<p>项目管理过程4W1H</p>
+<ul>
+<li>what：做什么？</li>
+<li>why：为什么做？</li>
+<li>who：谁来做？</li>
+<li>when：什么时候做？</li>
+<li>how：如何做？工具？</li>
+</ul>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">项目管理-项目管理笔记</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/07/28/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/4_%E9%A1%B9%E7%9B%AE%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86/"
+                                   title="项目范围管理"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">项目范围管理</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/05/05/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E9%9D%A2%E8%AF%95%E9%A2%98/1_%E4%BA%A7%E5%93%81%E9%9D%A2%E8%AF%95%E9%A2%98%F0%9F%94%90/"
+                                   title="产品面试题🔐"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">产品面试题🔐</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B4%E5%90%88"><span class="nav-number">1.1.</span> <span class="nav-text">什么是整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E6%95%B4%E5%90%88"><span class="nav-number">1.2.</span> <span class="nav-text">敏捷环境中的整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF"><span class="nav-number">1.3.</span> <span class="nav-text">项目整合管理的发展趋势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%AA%E8%A3%81%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="nav-number">1.4.</span> <span class="nav-text">剪裁需要考虑的因素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.5.</span> <span class="nav-text">项目整合管理的过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">制定项目章程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92"><span class="nav-number">3.</span> <span class="nav-text">制定项目管理计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AF%BC%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">指导与管理项目工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">5.</span> <span class="nav-text">管理项目知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%91%E6%8E%A7%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">监控项目工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%96%BD%E6%95%B4%E4%BD%93%E5%8F%98%E6%9B%B4%E6%8E%A7%E5%88%B6"><span class="nav-number">7.</span> <span class="nav-text">实施整体变更控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9D%9F%E9%A1%B9%E7%9B%AE%E6%88%96%E9%98%B6%E6%AE%B5"><span class="nav-number">8.</span> <span class="nav-text">结束项目或阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E9%A2%86%E5%9F%9F%E6%A6%82%E8%A6%81"><span class="nav-number">9.</span> <span class="nav-text">知识领域概要</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B4%E5%90%88"><span class="nav-number">1.1.</span> <span class="nav-text">什么是整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%8F%E6%8D%B7%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E6%95%B4%E5%90%88"><span class="nav-number">1.2.</span> <span class="nav-text">敏捷环境中的整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF"><span class="nav-number">1.3.</span> <span class="nav-text">项目整合管理的发展趋势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%AA%E8%A3%81%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="nav-number">1.4.</span> <span class="nav-text">剪裁需要考虑的因素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.5.</span> <span class="nav-text">项目整合管理的过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">制定项目章程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B6%E5%AE%9A%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92"><span class="nav-number">3.</span> <span class="nav-text">制定项目管理计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AF%BC%E4%B8%8E%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">指导与管理项目工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">5.</span> <span class="nav-text">管理项目知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%91%E6%8E%A7%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">监控项目工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%96%BD%E6%95%B4%E4%BD%93%E5%8F%98%E6%9B%B4%E6%8E%A7%E5%88%B6"><span class="nav-number">7.</span> <span class="nav-text">实施整体变更控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9D%9F%E9%A1%B9%E7%9B%AE%E6%88%96%E9%98%B6%E6%AE%B5"><span class="nav-number">8.</span> <span class="nav-text">结束项目或阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E9%A2%86%E5%9F%9F%E6%A6%82%E8%A6%81"><span class="nav-number">9.</span> <span class="nav-text">知识领域概要</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

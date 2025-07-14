@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            字符串 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        字符串
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2018-09-30 23:41:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu Jul 18 2024 23:39:55 GMT+0800">2024-07-18 23:39:55</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.5k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>9 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h3 id="字符串数据在C中的存储方式："><a href="#字符串数据在C中的存储方式：" class="headerlink" title="字符串数据在C中的存储方式："></a>字符串数据在C中的存储方式：</h3><p>内存中的五大区域：</p>
+<ol>
+<li>栈：是专门用来存储局部变量的，所有的局部变量都是声明在栈区域中</li>
+<li>堆：允许程序员手动的从堆申请指定字节数的空间来使用</li>
+<li>BSS段：是用来存储未初始化的全局变量和静态变量，声明一个全局变量，如果我们没有初始化，在程序运行最开始的时候，这个全局变量是没有初始化的，存储在BSS段【程序运行后系统就自动的初始化为0，并把初始化后的全局变量存储在数据段中】</li>
+<li>数据段&#x2F;常量区：用来存储已经初始化的全局变量、静态变量和常量数据</li>
+<li>代码段：用来存储程序的代码&#x2F;指令</li>
+</ol>
+<p>字符串数据在C语言中有两种存储方式：</p>
+<ol>
+<li><p>使用字符数组来存储：将字符串数据的每一个字符存储到字符数组中，并追加一个’\0’代表存储结束<br><code>char name[]=“jack”;</code></p>
+</li>
+<li><p>使用字符指针来存储字符串数据：直接将一个字符串数据初始化给一个字符指针<br><code>char* name =“jack”;</code></p>
+</li>
+</ol>
+<p>1）当它们都是局部变量的时候：</p>
+<p>字符数组是申请在栈区，字符串的每一个字符存储在这个字符数组的每一个元素中；<br>指针变量是声明在栈区的，字符串数据是以字符数组的形式存储在常量区的，指针变量中存储的是字符串在常量区的地址<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffrlt05vj30k30ebdgq.jpg" ></p>
+<p>2）当它们作为全局变量的时候：</p>
+<p>字符数组是存储在常量区的，字符串的每一个字符存储在这个字符数组的每一个元素中；<br>指针变量也是存储在常量区的，字符串数据是以字符数组的形式存储在常量区的，指针变量中存储的是字符串在常量区的地址<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffruf6mdj30bb0d20tf.jpg" ></p>
+<p>3）<br>以字符数组的形式存储字符串数据，不管是全局的还是局部的，都可以使用下标去修改字符数组中的每一个元素；<br>以字符指针的形式存储字符串数据，不管是全局的还是局部的，都不能通过指针去修改指向的字符串数据</p>
+<p>当我们以字符指针的形式要将字符串数据存储到常量区的时候，并不是直接将字符串存储到常量区，而是先检查常量区中是否有相同内容的字符串，如果有直接将这个字符串的地址拿过来返回，如果没有，才会将这个字符串数据存储在常量区中</p>
+<p>当我们重新为字符指针初始化一个字符串的时候，并不是修改原来的字符串，而是重新的创建了一个字符串，把这个新的字符串的地址赋值给它<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffs2gcrdj30hj0dwmyx.jpg" ></p>
+<p>几个比较容易混的点：</p>
+<ol>
+<li><p>这样是可以的，但是不是把“jack”改成了“rose”，而是重新创建了一个“rose”，把“rose”的地址赋值给name<br><code>char *name = &quot;jack&quot;;</code><br><code>name = &quot;rose&quot;;</code></p>
+</li>
+<li><p>这样是不行的，name是数组名，代表数组的地址，不能为数组名赋值<br><code>char name[]=&quot;jack&quot;;</code><br><code>name = &quot;rose&quot;;</code></p>
+</li>
+<li><p>这样做是可以的，直接修改数组的元素<br><code>name[0]=&#39;r&#39;;</code><br><code>name[1]=&#39;o&#39;;</code><br><code>name[2]=&#39;s&#39;;</code><br><code>name[3]=&#39;e&#39;;</code><br><code>name[4]=&#39;\0&#39;;</code></p>
+</li>
+</ol>
+<hr>
+<h3 id="统计字符串中某一个字符出现的次数："><a href="#统计字符串中某一个字符出现的次数：" class="headerlink" title="统计字符串中某一个字符出现的次数："></a>统计字符串中某一个字符出现的次数：</h3><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffsbyo8oj30lt0da75z.jpg" ></p>
+<hr>
+<h3 id="使用字符指针数组来存储多个字符串数据："><a href="#使用字符指针数组来存储多个字符串数据：" class="headerlink" title="使用字符指针数组来存储多个字符串数据："></a>使用字符指针数组来存储多个字符串数据：</h3><p>这是一个一维数组，每一个元素的类型是char指针：<br><code>char* names[4] = &#123;&quot;jack&quot;,&quot;rose&quot;,&quot;lily&quot;,&quot;lilei&quot;&#125;;</code></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glffskcpb7j3q0iw0b00u6.jpg" ></p>
+<hr>
+<p>在声明字符数组的同时，如果初始化了部分元素，那么其他的字符会被初始化为’\0’，‘\0’是一个字符，是一个不可见的字符，打印出来啥都没有，这个字符的ASCII码是0</p>
+<p>在C语言中字符串数据必须要用双引号引起来</p>
+<p>C语言中存储字符串数据：将字符串数据的每一个字符存储到字符数组中，并在后面追加一个’\0’代表字符串存储完毕<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi8i55dkj30db05zaap.jpg" ></p>
+<p>最根本的方式存储字符串：<br><code>char name[5]=&#123;‘j’,’a’,’c’,’k’,’\0’&#125;;</code></p>
+<p><code>char name[]=&#123;“jack”&#125;;</code><br>系统会自动的将这个字符串中的每一个字符存储到字符数组中，并自动的追加一个’\0’</p>
+<p>最常用的方式：<br><code>char name[]=“jack”;</code></p>
+<p>如果我们使用字符数组存储字符串数据的时候，没有指定这个字符数组的长度，那么这个时候这个字符数组的长度为字符串长度+1</p>
+<p>我们在使用字符数组存储字符串数据的时候，最好不要指定长度了</p>
+<p>如果在声明一个字符数组的同时我们就初始化一个字符数据给这个数组，那么这个时候是可以用中文的【这个字符数组的长度为7，因为一个中文占3个字节】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi8rla1wj3050014jrg.jpg" ></p>
+<p>使用格式控制符%s就可以输出存储在字符数组中的字符串数据【%s从给定的数组的地址开始，一个字节一个字节的输出，直到遇到’\0’为止】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi91mct2j3092056gm5.jpg" ></p>
+<p>无需&amp;<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9bfcgxj304n04ijrv.jpg" ></p>
+<p>使用scanf函数：<br>1）如果用户输入的字符串数据在给定的字符数组中存储不下的时候，就会运行报错<br>2）用户在输入字符串的时候，如果输入了空格，就会认为输入结束</p>
+<p>不能使用sizeof去计算字符数组的长度来得到字符串的长度，因为有可能字符串数据存储在字符数组中只占了一部分空间<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9jg8u9j308707xt9x.jpg" ><br>解决方法：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxi9se9s7j30930bnq4h.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxia1pfybj30h10c741i.jpg" ></p>
+<p>字符串常量：<br>“Hello”会被编译器变成一个字符数组放在某处，这个数组的长度是6，结尾还有表示结束的0<br>两个相邻的字符串常量会被自动连接起来</p>
+<p>C语言的字符串是以字符数组的形态存在的，不能用运算符对字符串做运算，通过数组的方式可以遍历字符串，唯一特殊的地方是字符串字面量可以用来初始化字符数组</p>
+<p><code>char *s=“Hello,world!”;</code><br>s是一个指针，初始化为指向一个字符串常量，由于这个常量所在的地方，所以实际上s是const char *s，但是由于历史的原因，编译器接受不带const的写法，但是试图对s所指的字符串做写入会导致严重的后果<br>如果需要修改字符串，应该用数组：char s[]&#x3D;“Hello,world!”;<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxia9htm4j309h0bbt9t.jpg" ><br>数组：这个字符串在这里，作为本地变量空间自动被回收<br>指针：这个字符串不知道在哪里，处理参数，动态分配空间</p>
+<p>如果要构造一个字符串，用数组<br>如果要处理一个字符串，用指针<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiakld2vj30fp0a8tb0.jpg" ></p>
+<p>在%和s之间的数字表示最多允许读入的字符的数量，这个数字应该比数组的大小小一<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiasvnmmj30b708cab2.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxib200p8j30gr0b2gnl.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxib903fkj30dc0adt9x.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibg4a5qj30pk06kabt.jpg" ></p>
+<h3 id="stdio-h文件："><a href="#stdio-h文件：" class="headerlink" title="stdio.h文件："></a>stdio.h文件：</h3><p>puts()函数：用来输出字符串的【优点是输出完毕之后自动换行，缺点是只能输出字符串，也不能使用占位符】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibov60sj308c04i0tg.jpg" ></p>
+<p>fputs()函数：将字符串数据输出到指定的流中【标准输出流：控制台；文件流：磁盘上的文件】<br>输出到标准输出流中：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxibzbnetj308v04aaaw.jpg" ><br>将字符串存储到文件中：<br>1）要先声明一个文件指针，指向磁盘上的文件【fopen函数可以创建一个指向文件的指针】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicgau45j30cf04ajto.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicneawlj30cc036jsu.jpg" ><br>2）使用fputs()函数将字符串写入到指定的文件流中<br>3）写完之后一定要记得使用fclose()函数将这个文件关闭<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxicvtjlej30dr07o0ue.jpg" ></p>
+<p>gets()函数：从控制台接收用户输入一个字符串数据【优点是当用户输入的数据包含空格的时候，会连空格一起接收；缺点是和scanf函数一样不安全，当用来存储字符串的数据的字符数组的长度不够的时候，程序就会崩溃】<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxid4nt7oj30cd05rjt7.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidd0fioj305d068my6.jpg" ></p>
+<p>fgets()函数：从指定的流中读取字符串，这个流可以是标准输入流：控制台，也可以是文件流<br>1）从标准输入流中读取数据<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidlb0bhj30e701j0tw.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidswxpij3094049wfb.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxidzv4r0j30hr04ptba.jpg" ><br>解决方案：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxie6ulcrj30aa01e3z8.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiednglnj308m0aumzb.jpg" ><br>2）从文件流中读取数据<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiekzz5jj30dq09xtby.jpg" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxieru4tnj30an03ydgj.jpg" ></p>
+<h3 id="string-h头文件：strlen-strcmp-strcpy-strcat-strchr-strstr"><a href="#string-h头文件：strlen-strcmp-strcpy-strcat-strchr-strstr" class="headerlink" title="string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr"></a>string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr</h3><p>strlen:<br><code>size_t strlen(const char *s);</code><br>返回s的字符串长度（不包括结尾的0）<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxiezump7j30a00a73zm.jpg" ></p>
+<p>strcmp:<br><code>int strcmp(const char *s1,const char *s2);</code><br>比较两个字符串，返回：<br>0:  s1&#x3D;&#x3D;s2<br>1:   s1&gt;s2<br>-1:  s1&lt;s2<br><code>int strncmp(const char *s1,const char *s2,size_t n);</code>只比较前几个字符<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxifahbiyj30fd0grgo7.jpg" ></p>
+<p>strcpy:【存储字符串1的字符数组长度不够，无法存储字符串2，这个时候运行就会崩溃】<br><code>char *strcpy(char *restrict dst,const char *restrict src);</code><br>把src的字符串拷贝到dst，restrict表明src和dst不重叠<br>返回dst,为了能链起代码来</p>
+<p>复制一个字符串：<br><code>char *dst=(char *)malloc(strlen(src)+1);</code><br><code>strcpy(dst,src);</code><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxigx7as1j30at0f4dh5.jpg" ><br>把name2拷贝到name1:<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxih2cxooj30h107idhj.jpg" ></p>
+<p>strcat:【接的时候会把第一个字符串后的’\0’干掉】<br><code>char *strcat(char *restrict s1,const char *restrict s2);</code><br>把s2拷贝到s1的后面，接成一个长的字符串<br>返回s1<br>s1必须具有足够的空间</p>
+<p>strcpy,strcat不安全！！</p>
+<p>安全版本：<br><code>char *strncpy(char *restrict dst,const char *restrict src,size_t n);</code><br><code>char *strncat(char *restrict s1,const char *restrict s2,size_t n);</code></p>
+<p>字符串中找字符：<br><code>char *strchr(const char *s,int c);</code><br><code>char *strrchr(const char *s,int c);</code><br>返回NULL表示没有找到<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/C%E8%AF%AD%E8%A8%80/0081Kckwly1glxihcb8s7j30b90hmjt5.jpg" ></p>
+<p>字符串中找字符串：<br><code>char *strstr(const char *s1,const char *s2);</code><br><code>char *strcasestr(const char *s1,const char *s2);</code></p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80/">编程语言-C语言</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/18_%E8%BF%9B%E5%88%B6/"
+                                   title="进制"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">进制</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2018/09/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C%E8%AF%AD%E8%A8%80/20_%E9%A2%84%E5%A4%84%E7%90%86%E6%8C%87%E4%BB%A4/"
+                                   title="预处理指令"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">预处理指令</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%E5%9C%A8C%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">字符串数据在C中的存储方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%9F%90%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">统计字符串中某一个字符出现的次数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E6%9D%A5%E5%AD%98%E5%82%A8%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">使用字符指针数组来存储多个字符串数据：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stdio-h%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">stdio.h文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-h%E5%A4%B4%E6%96%87%E4%BB%B6%EF%BC%9Astrlen-strcmp-strcpy-strcat-strchr-strstr"><span class="nav-number">5.</span> <span class="nav-text">string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%E5%9C%A8C%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">字符串数据在C中的存储方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%9F%90%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">统计字符串中某一个字符出现的次数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E6%9D%A5%E5%AD%98%E5%82%A8%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">使用字符指针数组来存储多个字符串数据：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stdio-h%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">stdio.h文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-h%E5%A4%B4%E6%96%87%E4%BB%B6%EF%BC%9Astrlen-strcmp-strcpy-strcat-strchr-strstr"><span class="nav-number">5.</span> <span class="nav-text">string.h头文件：strlen,strcmp,strcpy,strcat,strchr,strstr</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            内存空间的分配与回收 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        内存空间的分配与回收
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2020-06-30 23:36:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Fri Jul 19 2024 09:49:39 GMT+0800">2024-07-19 09:49:39</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/">计算机理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">操作系统原理-操作系统原理笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>9 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h2 id="连续分配管理方式"><a href="#连续分配管理方式" class="headerlink" title="连续分配管理方式"></a>连续分配管理方式</h2><p>连续分配：指为用户进程分配的必须是一个连续的内存空间</p>
+<h3 id="单一连续分配"><a href="#单一连续分配" class="headerlink" title="单一连续分配"></a>单一连续分配</h3><p>在单一连续分配方式中，内存被分为系统区和用户区。</p>
+<p>系统区通常位于内存的低地址部分，用于存放操作系统相关数据；用户区用于存放用户进程相关数据，内存中只能有一道用户程序，用户程序独占整个用户区空间</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9qcckbvej30dq0eatew.jpg" ></p>
+<p>优点：实现简单，无外部碎片，可以采用覆盖技术扩充内存，不一定需要采取内存保护（MS-DOS）</p>
+<p>缺点：只能用于单用户、单任务的操作系统中，有内部碎片，存储器利用率极低（分配给某进程的内存区域中，如果有些部分没有用上，就是“内部碎片”）</p>
+<h3 id="固定分区分配"><a href="#固定分区分配" class="headerlink" title="固定分区分配"></a>固定分区分配</h3><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9qjw6ej7j30uw0fqkf1.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9qnmb5w7j30vc0f8qos.jpg" ></p>
+<h3 id="动态分区分配"><a href="#动态分区分配" class="headerlink" title="动态分区分配"></a>动态分区分配</h3><p>动态分区分配又称为可变分区分配，这种分配方式不会预先划分内存分区，而是在进程装入内存时，根据进程的大小动态的建立分区，并使分区的大小正好适合进程的需要。因此系统分区的大小和数目是可变的</p>
+<p>假设某计算机内存大小为64MB，系统区8MB，用户区共56MB</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9qt3bidbj307o0cm77p.jpg" ></p>
+<blockquote>
+<ol>
+<li><p>系统要用什么样的数据结构记录内存的使用情况？</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9qxxmtflj30w80e8ql7.jpg" ></p>
+</li>
+<li><p>当很多个空闲分区都能满足需求时，应该选择哪个分区进行分配？</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9qzlvgqdj30uk0cqn8x.jpg" ></p>
+</li>
+<li><p>如何进行分区的分配与回收操作？（假设系统采用的数据结构是“空闲分区表”）</p>
+<p>1）如何分配？</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9r21x40wj30r20d6wq3.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9r2xi71vj30r20d6akv.jpg" ></p>
+<p>2）如何回收？（总之，相邻的空闲分区要合并）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9r5644xkj30r20ccjyp.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9r5pwl2lj30r20ccqdt.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9r6eyxgwj30r20cc13z.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9r7f75k0j30rm0ccdnv.jpg" ></p>
+</li>
+</ol>
+</blockquote>
+<p>动态分区分配没有内部碎片，但是有外部碎片</p>
+<p>内部碎片：分配给某进程的内存区域中，如果有些部分没有用上</p>
+<p>外部碎片；是指内存中的某些空闲分区由于太小而难以利用</p>
+<p>如果内存中空闲空间的总和本来可以满足某进程的要求，但由于进程需要的是一整块连续的内存空间，因此这些“碎片”不能满足进程的需求。可以通过紧凑（拼凑）技术来解决外部碎片</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9rfzt5fvj30cq0cejwn.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9rgfv4thj307o0cejtq.jpg" ></p>
+<h4 id="动态分区分配算法"><a href="#动态分区分配算法" class="headerlink" title="动态分区分配算法"></a>动态分区分配算法</h4><p>在动态分区分配方式中，当很多个空闲分区都能满足需求时，应该选择哪个分区进行分配？</p>
+<blockquote>
+<ol>
+<li><p>首次适应算法（First Fit）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9rzi4gejj30t80g2nel.jpg" ></p>
+</li>
+<li><p>最佳适应算法（Best Fit）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9s3xsooej60t80g2k6002.jpg" ></p>
+</li>
+<li><p>最坏适应算法（Worst Fit）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9s5yukpwj30t80g2avc.jpg" ></p>
+</li>
+<li><p>邻近适应算法（Next Fit）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9sf54f45j30tu0g2h9g.jpg" ></p>
+</li>
+</ol>
+<p>⭐️首次适应算法和邻近适应算法比最佳适应算法和最坏适应算法好的一点：不用每次都更新空闲分区链&#x2F;表的排列顺序，减少开销</p>
+<p>❗️综合来看，四种算法中，首次适应算法的效果反而更好</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gr9skmiivij30uo0f67r5.jpg" ></p>
+</blockquote>
+<h2 id="非连续分配管理方式"><a href="#非连续分配管理方式" class="headerlink" title="非连续分配管理方式"></a>非连续分配管理方式</h2><p>非连续分配：为用户进程分配的可以是一些分散的内存空间</p>
+<h3 id="基本分页存储管理"><a href="#基本分页存储管理" class="headerlink" title="基本分页存储管理"></a>基本分页存储管理</h3><h4 id="什么是分页存储"><a href="#什么是分页存储" class="headerlink" title="什么是分页存储"></a>什么是分页存储</h4><p>将内存空间分为一个个大小相等的分区，每个分区就是一个“页框”（页框、页帧、内存块、物理块、物理页面），每个页框有一个编号，即“页框号”，页框号从0开始</p>
+<p>将进程的逻辑地址空间也分为与页框大小相等的一个个部分，每个部分称为一个“页”或“页面”。每个页面也有一个编号，即“页号”，页号也是从0开始</p>
+<p>操作系统以页框为单位为各个进程分配内存空间。进程的每个页面分别放入一个页框中。也就是说，进程的页面与内存的页框有一一对应的关系，各个页面不必连续存放，可以放到不相邻的各个页框中</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1granazofnjj30ey0gmk1z.jpg" ></p>
+<h4 id="页表"><a href="#页表" class="headerlink" title="页表"></a>页表</h4><p>为了能知道进程的每个页面在内存中存放的位置，操作系统要为每个进程建立一张页表，页表通常存在PCB（进程控制块）中</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1granfhmgsoj30vq0eck5o.jpg" ></p>
+<blockquote>
+<ol>
+<li><p>每个页表项多大，占几个字节？</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grannoss6kj30mu07a10z.jpg" ></p>
+<p>页表项连续存放，因此页号可以是隐含的，不占存储空间（类比数组）</p>
+<p>假设页表中的各页表项从内存地址为X的地方开始连续存放，如何找到页号为i的页表项：X + 3*i</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1granzj5rb9j30ac07076s.jpg" ></p>
+<p>由于页号是隐含的，因此每个页表项占3B，存储整个页表至少需要3*(n+1)B</p>
+<p>注意；页表记录的只是内存块号，而不是内存块的其实地址：J号内存块的起始地址 &#x3D; J * 内存块大小</p>
+</li>
+<li><p>如何通过页表实现逻辑地址到物理地址的转换？（逻辑地址结构可拆分为页号P和页内偏移量W）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graocgnqc7j30wk0f4kba.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graogawladj30xa0egn6k.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graomtt11jj30wa0h21kx.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graoujpqdwj30yq0de1ia.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graoxeovrnj30ty07c13e.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grap0k8zhnj30x60byao3.jpg" ></p>
+</li>
+</ol>
+</blockquote>
+<h4 id="基本地址变换机构（用于实现逻辑地址到物理地址转换的一组硬件机构）"><a href="#基本地址变换机构（用于实现逻辑地址到物理地址转换的一组硬件机构）" class="headerlink" title="基本地址变换机构（用于实现逻辑地址到物理地址转换的一组硬件机构）"></a>基本地址变换机构（用于实现逻辑地址到物理地址转换的一组硬件机构）</h4><p>基本地址变换机构可以借助进程的页表将逻辑地址转换为物理地址</p>
+<p>通常会在系统中设置一个页表寄存器PTR，存放页表在内存中的起始地址F和页表长度M。进程未执行时，页表的始址和页表长度放在进程控制块PCB中，当进程被调度时，操作系统内核会把它们放到页表寄存器中</p>
+<p>注意：假设页面大小是2的整数幂，设页面大小为L，逻辑地址A到物理地址E的变换过程如下：</p>
+<p>CPU第一次访问内存：查页表</p>
+<p>CPU第二次访问内存：访问目标内存单元</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grapqb7pirj30ya0i61fn.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graptaq5rlj30sq09ctnm.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grapwhn046j30v00dgap1.jpg" ></p>
+<p>对页表项大小的进一步探讨：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graq4eqv42j30xc0gce68.jpg" ></p>
+<h4 id="具有快表的地址变换机构（是基本地址变换机构的改进版本）"><a href="#具有快表的地址变换机构（是基本地址变换机构的改进版本）" class="headerlink" title="具有快表的地址变换机构（是基本地址变换机构的改进版本）"></a>具有快表的地址变换机构（是基本地址变换机构的改进版本）</h4><h5 id="什么是快表TLB"><a href="#什么是快表TLB" class="headerlink" title="什么是快表TLB"></a>什么是快表TLB</h5><p>快表，又称联想寄存器TLB，是一种访问速度比内存快很多的高速缓存，用来存放最近访问的一部分页表项的副本，可以加速地址变换的速度，与此对应，内存中的页表常称为慢表</p>
+<p>❗️TLB不是内存</p>
+<p>❗️TLB和普通Cache的区别：TLB中只有一部分页表项的副本，而普通Cache中可能会有其他各种数据的副本</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grascxlpeij30eo0dsn3e.jpg" ></p>
+<h5 id="引入快表后，地址的变换过程"><a href="#引入快表后，地址的变换过程" class="headerlink" title="引入快表后，地址的变换过程"></a>引入快表后，地址的变换过程</h5><p>刚开始快表是为空的，当访问完慢表后，会把最近使用过的页表项放入快表中，下次若快表命中就不需要再访问内存了：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grash269e8j60ys0ja7rv02.jpg" ></p>
+<p>❗️快表中存放的是页表的一部分副本，因为TLB造价比内存高</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grass0m7gtj30ui0707il.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grastl023ej30ui08kds4.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grasvyfmlpj30yk09qdon.jpg" ></p>
+<h5 id="局部性原理"><a href="#局部性原理" class="headerlink" title="局部性原理"></a>局部性原理</h5><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graszaactwj30v80eqqm6.jpg" ></p>
+<h4 id="两级页表"><a href="#两级页表" class="headerlink" title="两级页表"></a>两级页表</h4><h5 id="单极页表存在什么问题，如何解决？"><a href="#单极页表存在什么问题，如何解决？" class="headerlink" title="单极页表存在什么问题，如何解决？"></a>单极页表存在什么问题，如何解决？</h5><p>1）页表必须连续存放，因此当页表很大时，需要占用很多个连续的页框</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gratl08s44j30vk0goamm.jpg" ></p>
+<p>2）根据局部性原理可知：很多时候，进程在一段时间内只需要访问某几个页面就可以正常运行了。因此没必要让整个页表都常驻内存</p>
+<p>第一个问题的解决方法：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grats76drej60uw0aetnj02.jpg" ></p>
+<h5 id="两级页表的原理，逻辑地址结构（一级页号、二级页号、页内偏移量）"><a href="#两级页表的原理，逻辑地址结构（一级页号、二级页号、页内偏移量）" class="headerlink" title="两级页表的原理，逻辑地址结构（一级页号、二级页号、页内偏移量）"></a>两级页表的原理，逻辑地址结构（一级页号、二级页号、页内偏移量）</h5><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1gratz65d7rj30ws0h4ap9.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grau409000j30x20gy4hh.jpg" ></p>
+<h5 id="如何实现地址变换？"><a href="#如何实现地址变换？" class="headerlink" title="如何实现地址变换？"></a>如何实现地址变换？</h5><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grauo26twkj30xe0e0nds.jpg" ></p>
+<p>第二个问题的解决方法：可以在需要访问页面时才把页面调入内存（虚拟存储技术），可以在页表项中增加一个标志位，用于表示该页面是否已经调入内存</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grauzy1mimj30va0aeqeg.jpg" ></p>
+<h5 id="两级页表问题需要注意的几个细节？"><a href="#两级页表问题需要注意的几个细节？" class="headerlink" title="两级页表问题需要注意的几个细节？"></a>两级页表问题需要注意的几个细节？</h5><ol>
+<li><p>若采用多级页表机制，则各级页表的大小不能超过一个页面，若两级页表不够，可以分更多级</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grav6rsrh8j30uq0emk8d.jpg" ></p>
+</li>
+<li><p>两级页表的访存次数分析（假设没有快表机构）（N级页表访问一个逻辑地址需要N+1次访存）</p>
+<ul>
+<li>第一次访存：访问内存中的页目录表</li>
+<li>第二次访存：访问内存中的二级页表</li>
+<li>第三次访存：访问目标内存单元</li>
+</ul>
+</li>
+</ol>
+<h3 id="基本分段存储管理"><a href="#基本分段存储管理" class="headerlink" title="基本分段存储管理"></a>基本分段存储管理</h3><p>与“分页”最大的区别就是离散分配时所分配地址空间的基本单位不同</p>
+<h4 id="什么是分段"><a href="#什么是分段" class="headerlink" title="什么是分段"></a>什么是分段</h4><p>进程的地址空间：按照程序自身的逻辑关系划分为若干个段，每个段都有一个段名（在低级语言中，程序员使用段名来编程），每段从0开始编址</p>
+<p>内存分配规则：以段为单位进行分配，每个段在内存中占据连续空间，但各段之间可以不相邻</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grayphvmhdj30wi0d07kc.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graysw4bxtj30wk0g4e02.jpg" ></p>
+<h4 id="什么是段表"><a href="#什么是段表" class="headerlink" title="什么是段表"></a>什么是段表</h4><p>程序分多个段，各段离散的装入内存，为了保证程序能正常运行，就必须能从物理内存中找到各个逻辑段的存放位置。为此，需为每个进程建立一张段映射表，简称“段表”</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grayzmrysfj30uc0ec1cy.jpg" ></p>
+<h4 id="如何实现地址变换"><a href="#如何实现地址变换" class="headerlink" title="如何实现地址变换"></a>如何实现地址变换</h4><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graz30j0soj30t60f21aa.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graz9vsu7bj30yo0js1kx.jpg" ></p>
+<h4 id="分段、分页管理的对比"><a href="#分段、分页管理的对比" class="headerlink" title="分段、分页管理的对比"></a>分段、分页管理的对比</h4><ol>
+<li><p>页是信息的物理单位，分页的主要目的是为了实现离散分配，提高内存利用率。分页仅仅是系统管理上的需要，完全是系统行为，对用户是不可见的</p>
+<p>段是信息的逻辑单位，分段的主要目的是更好的满足用户需求，一个段通常包含着一组属于一个逻辑模块的信息。分段对用户是可见的，用户编程时需要显式的给出段名</p>
+</li>
+<li><p>页的大小固定且由系统决定，段的长度却不固定，决定于用户编写的程序</p>
+</li>
+<li><p>分页的用户进程地址空间是一维的，程序员只需给出一个记忆符即可表示一个地址</p>
+<p>分段的用户进程地址空间是二维的，程序员在标识一个地址时，既要给出段名，也要给出段内地址</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graznm0llzj30x009atjg.jpg" ></p>
+</li>
+<li><p>分段比分页更容易实现信息的共享和保护</p>
+<p>不能被修改的代码称为纯代码或可重入代码（不属于临界资源），这样的代码是可以共享的。可修改的代码是不能共享的（比如有一个代码段中有很多变量，各进程并发的同时访问可能造成数据不一致）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1graztcxy9nj30vg0d27ks.jpg" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grazvbfih6j30vm0f87pm.jpg" ></p>
+</li>
+<li><p>访问一个逻辑地址需要几次访存？</p>
+<p>分页（单级页表）：第一次访存查内存中的页表，第二次访存访问目标内存单元，总共两次访存</p>
+<p>分段：第一次访存查内存中的段表，第二次访存访问目标内存单元，总共两次访存。与分页系统类似，分段系统中也可以引入快表机构，将近期访问过的段表项放到快表中，这样可以少一次访问，加快地址变换速度</p>
+</li>
+</ol>
+<h3 id="段页式存储管理"><a href="#段页式存储管理" class="headerlink" title="段页式存储管理"></a>段页式存储管理</h3><h4 id="分页、分段的优缺点"><a href="#分页、分段的优缺点" class="headerlink" title="分页、分段的优缺点"></a>分页、分段的优缺点</h4><p>分页管理：</p>
+<ul>
+<li>优点：内存空间利用率高，不会产生外部碎片，只会有少量的页内碎片</li>
+<li>缺点：不方便按照逻辑模块实现信息的共享和保护</li>
+</ul>
+<p>分段管理：</p>
+<ul>
+<li>优点：很方便按照逻辑模块实现信息的共享和保护</li>
+<li>缺点：如果段长过大，为其分配很大的连续空间会很不方便。另外，段式管理会产生外部碎片（分段管理中产生的外部碎片也可以用“紧凑”来解决，只是需要付出较大的时间代价）</li>
+</ul>
+<h4 id="分段-分页-段页式管理"><a href="#分段-分页-段页式管理" class="headerlink" title="分段 + 分页 &#x3D; 段页式管理"></a>分段 + 分页 &#x3D; 段页式管理</h4><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbqzq718xj30vc0g4h2f.jpg" ></p>
+<h4 id="段页式管理的逻辑地址结构"><a href="#段页式管理的逻辑地址结构" class="headerlink" title="段页式管理的逻辑地址结构"></a>段页式管理的逻辑地址结构</h4><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbr2t0fp4j30vi0fq4k1.jpg" ></p>
+<h4 id="段表、页表"><a href="#段表、页表" class="headerlink" title="段表、页表"></a>段表、页表</h4><p>一个进程对应一个段表，一个进程对应多个页表</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbr6lskdkj60v80i2e4302.jpg" ></p>
+<h4 id="地址变换"><a href="#地址变换" class="headerlink" title="地址变换"></a>地址变换</h4><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/008i3skNly1grbrbhedd2j30zo0j84qp.jpg" ></p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">操作系统原理-操作系统原理笔记</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.2_%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5/"
+                                   title="内存管理的概念"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">内存管理的概念</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2020/06/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/3.4_%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E6%89%A9%E5%85%85/"
+                                   title="内存空间的扩充"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">内存空间的扩充</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">连续分配管理方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%80%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D"><span class="nav-number">1.1.</span> <span class="nav-text">单一连续分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9A%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D"><span class="nav-number">1.2.</span> <span class="nav-text">固定分区分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D"><span class="nav-number">1.3.</span> <span class="nav-text">动态分区分配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">动态分区分配算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">非连续分配管理方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">基本分页存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">什么是分页存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E8%A1%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">页表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84%EF%BC%88%E7%94%A8%E4%BA%8E%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E5%88%B0%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E7%9A%84%E4%B8%80%E7%BB%84%E7%A1%AC%E4%BB%B6%E6%9C%BA%E6%9E%84%EF%BC%89"><span class="nav-number">2.1.3.</span> <span class="nav-text">基本地址变换机构（用于实现逻辑地址到物理地址转换的一组硬件机构）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B7%E6%9C%89%E5%BF%AB%E8%A1%A8%E7%9A%84%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84%EF%BC%88%E6%98%AF%E5%9F%BA%E6%9C%AC%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84%E7%9A%84%E6%94%B9%E8%BF%9B%E7%89%88%E6%9C%AC%EF%BC%89"><span class="nav-number">2.1.4.</span> <span class="nav-text">具有快表的地址变换机构（是基本地址变换机构的改进版本）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BF%AB%E8%A1%A8TLB"><span class="nav-number">2.1.4.1.</span> <span class="nav-text">什么是快表TLB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%95%E5%85%A5%E5%BF%AB%E8%A1%A8%E5%90%8E%EF%BC%8C%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%98%E6%8D%A2%E8%BF%87%E7%A8%8B"><span class="nav-number">2.1.4.2.</span> <span class="nav-text">引入快表后，地址的变换过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%80%A7%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.4.3.</span> <span class="nav-text">局部性原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8"><span class="nav-number">2.1.5.</span> <span class="nav-text">两级页表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%95%E6%9E%81%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">单极页表存在什么问题，如何解决？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%8C%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%E7%BA%A7%E9%A1%B5%E5%8F%B7%E3%80%81%E4%BA%8C%E7%BA%A7%E9%A1%B5%E5%8F%B7%E3%80%81%E9%A1%B5%E5%86%85%E5%81%8F%E7%A7%BB%E9%87%8F%EF%BC%89"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">两级页表的原理，逻辑地址结构（一级页号、二级页号、页内偏移量）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%EF%BC%9F"><span class="nav-number">2.1.5.3.</span> <span class="nav-text">如何实现地址变换？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8%E9%97%AE%E9%A2%98%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%87%A0%E4%B8%AA%E7%BB%86%E8%8A%82%EF%BC%9F"><span class="nav-number">2.1.5.4.</span> <span class="nav-text">两级页表问题需要注意的几个细节？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">基本分段存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E6%AE%B5"><span class="nav-number">2.2.1.</span> <span class="nav-text">什么是分段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AE%B5%E8%A1%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">什么是段表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2"><span class="nav-number">2.2.3.</span> <span class="nav-text">如何实现地址变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%AE%B5%E3%80%81%E5%88%86%E9%A1%B5%E7%AE%A1%E7%90%86%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">2.2.4.</span> <span class="nav-text">分段、分页管理的对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text">段页式存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E3%80%81%E5%88%86%E6%AE%B5%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">2.3.1.</span> <span class="nav-text">分页、分段的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%AE%B5-%E5%88%86%E9%A1%B5-%E6%AE%B5%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">分段 + 分页 &#x3D; 段页式管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86%E7%9A%84%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.3.</span> <span class="nav-text">段页式管理的逻辑地址结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E8%A1%A8%E3%80%81%E9%A1%B5%E8%A1%A8"><span class="nav-number">2.3.4.</span> <span class="nav-text">段表、页表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2"><span class="nav-number">2.3.5.</span> <span class="nav-text">地址变换</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">连续分配管理方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%80%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D"><span class="nav-number">1.1.</span> <span class="nav-text">单一连续分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9A%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D"><span class="nav-number">1.2.</span> <span class="nav-text">固定分区分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D"><span class="nav-number">1.3.</span> <span class="nav-text">动态分区分配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">动态分区分配算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">非连续分配管理方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">基本分页存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">什么是分页存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E8%A1%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">页表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84%EF%BC%88%E7%94%A8%E4%BA%8E%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E5%88%B0%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E7%9A%84%E4%B8%80%E7%BB%84%E7%A1%AC%E4%BB%B6%E6%9C%BA%E6%9E%84%EF%BC%89"><span class="nav-number">2.1.3.</span> <span class="nav-text">基本地址变换机构（用于实现逻辑地址到物理地址转换的一组硬件机构）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B7%E6%9C%89%E5%BF%AB%E8%A1%A8%E7%9A%84%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84%EF%BC%88%E6%98%AF%E5%9F%BA%E6%9C%AC%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84%E7%9A%84%E6%94%B9%E8%BF%9B%E7%89%88%E6%9C%AC%EF%BC%89"><span class="nav-number">2.1.4.</span> <span class="nav-text">具有快表的地址变换机构（是基本地址变换机构的改进版本）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BF%AB%E8%A1%A8TLB"><span class="nav-number">2.1.4.1.</span> <span class="nav-text">什么是快表TLB</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%95%E5%85%A5%E5%BF%AB%E8%A1%A8%E5%90%8E%EF%BC%8C%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%98%E6%8D%A2%E8%BF%87%E7%A8%8B"><span class="nav-number">2.1.4.2.</span> <span class="nav-text">引入快表后，地址的变换过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%80%A7%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.4.3.</span> <span class="nav-text">局部性原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8"><span class="nav-number">2.1.5.</span> <span class="nav-text">两级页表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%95%E6%9E%81%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">单极页表存在什么问题，如何解决？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%8C%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%E7%BA%A7%E9%A1%B5%E5%8F%B7%E3%80%81%E4%BA%8C%E7%BA%A7%E9%A1%B5%E5%8F%B7%E3%80%81%E9%A1%B5%E5%86%85%E5%81%8F%E7%A7%BB%E9%87%8F%EF%BC%89"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">两级页表的原理，逻辑地址结构（一级页号、二级页号、页内偏移量）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%EF%BC%9F"><span class="nav-number">2.1.5.3.</span> <span class="nav-text">如何实现地址变换？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8%E9%97%AE%E9%A2%98%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%87%A0%E4%B8%AA%E7%BB%86%E8%8A%82%EF%BC%9F"><span class="nav-number">2.1.5.4.</span> <span class="nav-text">两级页表问题需要注意的几个细节？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">基本分段存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E6%AE%B5"><span class="nav-number">2.2.1.</span> <span class="nav-text">什么是分段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%AE%B5%E8%A1%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">什么是段表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2"><span class="nav-number">2.2.3.</span> <span class="nav-text">如何实现地址变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%AE%B5%E3%80%81%E5%88%86%E9%A1%B5%E7%AE%A1%E7%90%86%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">2.2.4.</span> <span class="nav-text">分段、分页管理的对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text">段页式存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E3%80%81%E5%88%86%E6%AE%B5%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">2.3.1.</span> <span class="nav-text">分页、分段的优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%AE%B5-%E5%88%86%E9%A1%B5-%E6%AE%B5%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">分段 + 分页 &#x3D; 段页式管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86%E7%9A%84%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.3.</span> <span class="nav-text">段页式管理的逻辑地址结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E8%A1%A8%E3%80%81%E9%A1%B5%E8%A1%A8"><span class="nav-number">2.3.4.</span> <span class="nav-text">段表、页表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2"><span class="nav-number">2.3.5.</span> <span class="nav-text">地址变换</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

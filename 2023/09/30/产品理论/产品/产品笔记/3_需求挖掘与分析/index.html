@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            需求挖掘与分析 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        需求挖掘与分析
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2023-09-30 23:57:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Fri Dec 13 2024 11:59:45 GMT+0800">2024-12-13 11:59:45</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/">产品理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E4%BA%A7%E5%93%81-%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/">产品-产品笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.8k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>9 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231559212.png" ></p>
+<p>基本产品工作流程：</p>
+<ol>
+<li>了解市场</li>
+<li>确定需求：需求定义（提升对需求的理解和认知）、需求挖掘、需求管理</li>
+<li>产品设计</li>
+<li>产品运营</li>
+</ol>
+<h2 id="需求定义"><a href="#需求定义" class="headerlink" title="需求定义"></a>需求定义<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231600574.png" ></h2><p>需求是用户在一定场景下产生的某种欲望或解决某些问题的需要<br>常见的需求：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231600385.png" ></p>
+<ol>
+<li>用户需求和业务需求都是产品需求的来源</li>
+<li>用户需求和业务需求分别满足用户和公司的基本诉求，但有时候这两者是冲突的（比如说穿插广告）</li>
+<li>产品需求就是一种解决方案</li>
+</ol>
+<p>用户痛点：解决问题<br>用户痒点：满足欲望<br>用户兴奋点：超出期望</p>
+<p>需求分析的目标：各个需求来源出发，为产品需求生成提供基础，通俗的说，就是明确我们的工作执行任务</p>
+<h2 id="需求要素："><a href="#需求要素：" class="headerlink" title="需求要素："></a>需求要素：</h2><ol>
+<li>用户：用户属性：角色（使用者、购买者、决策者）、特点、规模，由于产品属性不同，每个产品的用户角色分类会有所差别</li>
+<li>场景：存不存在？频次咋样？</li>
+<li>任务：为了实现目标可以做什么？有哪些方案？什么是最佳解决方案？</li>
+<li>目标：直接目标、终极目标</li>
+</ol>
+<p>在我们所听到的需求中，很多时候会直接说出任务而不会提到目标</p>
+<p>为了更好的平衡用户需要和企业利益，我们需要更好的了解用户，了解用户场景，这样才能知道用户的真实目标，继而才能更好的给出解决方案</p>
+<p>需求分析：从用户需求&#x2F;业务需求出发，挖掘其真实目标，并转化为产品需求的过程<br>需求分析工作的要点：</p>
+<ol>
+<li>需求挖掘：即找到真实的用户需求、业务需求、市场需求等，以便于可以转化更多的更合适的产品需求</li>
+<li>需求辨识</li>
+<li>需求优先级</li>
+<li>需求管理</li>
+<li>需求转化</li>
+</ol>
+<p>需求挖掘的方法：无论哪种方法，其核心都是要找到更多的可以需要转化为产品需求</p>
+<ol>
+<li>自主分析法：通过自身的思考分析得出需求，建议多头脑风暴（当一群人围绕一个特定的兴趣领域产生新观点的时候，这种情境就叫做头脑风暴）<br>多体验：感知用户、感知抱怨、感知产品<br>多分析：分析形势、分析竞品、分析变化、分析结果<br>多实战：执行、观察、思考<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231600488.png" ><br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231601758.png" ><br>头脑风暴法准备：准备议题明确会议目标、人数5～10人、时间一小时以内、主持人合理引导会议<br>头脑风暴法原则：自由发言不受约束、禁止批评规避自谦、独立思考杜绝讨论、追求尽可能多的设想</li>
+<li>业务驱动法：<br>（1）解决运营&#x2F;市场的问题，为了达到某一业务目标而产生的需求，例如营销工具、广告资源位交换<br>（2）解决技术的问题：<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231601270.png" ><br>（3）客服或其它人员（采购、物流）需求<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231602481.png" ><br>（4）战略目标变化：基于战略的发展，会产生很多新的产品需求<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231602066.png" ></li>
+<li>市场竞品追踪分析法：长期定期的跟踪竞品，也可以发现需求，根据竞品及行业的动态来挖掘新需求（深刻理解竞品做法的真实原因，适当的考虑到如何指导自己的产品）</li>
+<li>用户研究分析法：通过用户研究了解用户是否有需求、验证想法、怎样的实现方式最贴近用户需求、用户迫切程度如何，以此来判断方向是否可行，用户研究就是需求挖掘的重要方法之一</li>
+</ol>
+<p>用户研究：是一种理解用户并将用户目标及需求与企业商业宗旨相匹配的理想方法。目的是使用户的实际需求成为产品设计的导向，使产品更符合用户的习惯、经验和期待。</p>
+<p>用户画像：是真实用户的虚拟代表，是建立在一系列真实数据之上的目标用户模型（使用Axure工具）</p>
+<p>常用的用户研究方法：</p>
+<ol>
+<li>定性研究：从小规模的样本中发现新事物的方法，通过与少数用户（10～20个）互动来得到新想法或揭露以前未知的问题</li>
+<li>定量研究：用大量的样本来测试和证明某些事情的方法，可验证通过定性研究而发现的假说<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231602433.png" ></li>
+</ol>
+<h3 id="用户研究分析法"><a href="#用户研究分析法" class="headerlink" title="用户研究分析法"></a>用户研究分析法</h3><h4 id="用户反馈分析"><a href="#用户反馈分析" class="headerlink" title="用户反馈分析"></a>用户反馈分析</h4><p>用户反馈：是指使用某一产品的客户对其产品所提出的关于产品的情况反馈，用于收集问题，了解用户的使用现状和意见</p>
+<p>为什么搜集用户反馈：用户反馈是做产品必须建立一套机制的长期工作</p>
+<ol>
+<li>自身产品问题：聆听用户真实的声音</li>
+<li>竞品问题：对手的弱点可能就是自己的机会</li>
+<li>可能的机会点：集思广益</li>
+</ol>
+<p>用户反馈收集方法：<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231602876.png" ></p>
+<p>用户反馈搜集后最重要的是做好分类，然后根据不同类型、Bug修复、建议转需求</p>
+<h4 id="用户访谈"><a href="#用户访谈" class="headerlink" title="用户访谈"></a>用户访谈</h4><p>用户访谈是一种定性的研究方法，用于定位问题，挖掘问题背后的用户需求<br>用户访谈是指通过访员和用户面对面的交流来了解用户的心理和行为的基本研究方法。</p>
+<p>为什么要做用户访谈：</p>
+<ol>
+<li>用户价值至上：保持做产品的初衷</li>
+<li>用户的认知并非产品经理的认知：学会理解小白用户</li>
+<li>用户的个体差异：获得新的灵感</li>
+</ol>
+<p>用户访谈适用于探索性研究、验证性研究（开拓新业务、现有功能优化、探索新可能）</p>
+<p>用户访谈基本流程：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231603191.png" ></p>
+<p>用户的类型：</p>
+<ol>
+<li>行业资深用户：深度了解你产品所在行业的各类产品的人</li>
+<li>核心用户：能带来资源、现金流，能够给你带来更多用户的人</li>
+<li>低频用户：用你的产品但是不经常用的人</li>
+<li>流失用户：曾经用过你的产品但现在已经不用的人</li>
+<li>边缘用户：指未使用你的产品而使用其他类似服务的人</li>
+<li>非用户：指完全不使用此类产品的用户</li>
+</ol>
+<p>不同的目标会促使选择不同类型的访谈对象</p>
+<p>访谈中最关键的就是避免引导受访者，访谈结论不局限在产品层面，记录所有访谈结论</p>
+<h4 id="可用性测试"><a href="#可用性测试" class="headerlink" title="可用性测试"></a>可用性测试</h4><p>可用性测试是用来评估产品或系统的一种方法，让一群具有代表性的用户对产品进行典型操作，同时观察员和开发人员在一旁观察，聆听，记录。目的是为了发现用户真实使用情况中遇到的问题，来提升产品的可用性，同时发现优化需求。</p>
+<h4 id="调查问卷"><a href="#调查问卷" class="headerlink" title="调查问卷"></a>调查问卷</h4><p>问卷调查是社会调查里的一种数据收集手段。当一个研究者想通过社会调查来研究一个现象时（比如什么因素影响顾客满意度），他可以用问卷调查收集数据。这些问题会通过一定渠道让用户进行填写，然后收回整理分析，从而得出结论（获取反馈优化产品、了解市场需求确认产品价值、了解满意度）。<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231603012.png" ></p>
+<h4 id="数据分析（比如营销漏斗模型）"><a href="#数据分析（比如营销漏斗模型）" class="headerlink" title="数据分析（比如营销漏斗模型）"></a>数据分析（比如营销漏斗模型）</h4><p>用适当的统计分析方法对收集的数据进行分析，提取有用信息和形成结论而对数据加以详细研究和概括总结发现需求的过程<br>数据分析的方法：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231603588.png" ><br>数据分析如何变成需求：从数据表现到得出结论需要的是全面的分析，结合当下情况再进行优化<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231603806.png" ><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231604861.png" ></p>
+<h2 id="需求管理"><a href="#需求管理" class="headerlink" title="需求管理"></a>需求管理</h2><p>纷繁世界里有大量的需求，包括真需求、伪需求，因此需要产品经理用自己的判断去甄别选择需求。</p>
+<p>需求管理需要先解决的问题：</p>
+<ol>
+<li>区分真伪需求：没有绝对的真伪需求的分界线，重点是理解我们的目标用户的真实诉求，结合场景和时机综合判断需求是否在当下为真需求</li>
+</ol>
+<p>同样的需求在不同的场景下可能是真需求也可能是伪需求。<br>同样的需求在不同的时机下可能是真需求也可能是伪需求。<br>同样的需求针对不同的用户痛点程度就是不一样的。</p>
+<ol start="2">
+<li>需求优先级：因为资源有限，在有限的时间、开发资源、金钱等资源条件下我们需要用最简单的产品逻辑去验证商业模式<br>优先级priority是一种约定，优先级高的先做，优先级低的后做。需求优先级的判断，可以帮助确认后续开发阶段什么需求先做，什么后做。</li>
+</ol>
+<p>优先级判定的基本影响因素：</p>
+<ol>
+<li>企业层面：<br>公司战略<br>产品生命周期（不同的生命周期相同的需求也有不同的优先级）<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231604575.png" ></li>
+<li>用户层面：<br>紧急重要四象限<img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231604439.png" ><br>场景分析（在不同的场景下，需求的优先级会有差异。用户量越大、频次越高或满意度越低的需求则优先级更高）<br>用户等级分析（我们需要优先满足大部分用户的诉求，尤其是核心用户的诉求）<br>从可用到易用（涉及影响可用性的需求，优先级更高)<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231605352.png" ></li>
+<li>技术层面：开发成本（开发的难易程度也会影响需求的优先级，难易程度的影响因素有技术实现难度、投入人力成本、投入资金成本等）</li>
+</ol>
+<p>需求优先级的金字塔模型：<br><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E4%BA%A7%E5%93%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/202311231605247.png" ></p>
+<ol start="3">
+<li>形成需求池（表述清晰、优先级明确、合理分类）<br>需求池：把搜集来的需求经过分析后，将确认需要实现的需求放入一个可统一管理的地方，可以使用EXCEL、公司内部管理系统、Xmind等多种方式进行记录</li>
+</ol>
+<p>需求池表述：一般来说，根据需求4要素（用户、用户场景、用户目标、用户任务）来描述一个需求，但需求池内的记录可以简化，不要求写出需求的具体执行方案</p>
+<p>需求池的复盘：产品经理应该培养习惯，定期如按季度进行原需求池规划的复盘，看已经规划的需求是否完成，完成的需求实际效果如何，以便于更好的调整需求规划</p>
+<p>需求管理：互联网需求管理，是指包含需求挖掘、需求分析，到形成需求清单，并将需求实现的过程，在分析阶段需确认需求的优先级，并进行简单的需求分类，形成可存档的文件</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E4%BA%A7%E5%93%81-%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/">产品-产品笔记</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2023/09/30/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/2_%E5%B8%82%E5%9C%BA%E4%B8%8E%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/"
+                                   title="市场与竞品分析"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">市场与竞品分析</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2023/09/30/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E7%AC%94%E8%AE%B0/4_%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%A7%84%E5%88%92/"
+                                   title="产品设计-产品规划"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">产品设计-产品规划</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">需求定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E8%A6%81%E7%B4%A0%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">需求要素：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%A0%94%E7%A9%B6%E5%88%86%E6%9E%90%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">用户研究分析法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%8F%8D%E9%A6%88%E5%88%86%E6%9E%90"><span class="nav-number">2.1.1.</span> <span class="nav-text">用户反馈分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E8%AE%BF%E8%B0%88"><span class="nav-number">2.1.2.</span> <span class="nav-text">用户访谈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E7%94%A8%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-number">2.1.3.</span> <span class="nav-text">可用性测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7"><span class="nav-number">2.1.4.</span> <span class="nav-text">调查问卷</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E6%AF%94%E5%A6%82%E8%90%A5%E9%94%80%E6%BC%8F%E6%96%97%E6%A8%A1%E5%9E%8B%EF%BC%89"><span class="nav-number">2.1.5.</span> <span class="nav-text">数据分析（比如营销漏斗模型）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">需求管理</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">需求定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E8%A6%81%E7%B4%A0%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">需求要素：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%A0%94%E7%A9%B6%E5%88%86%E6%9E%90%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">用户研究分析法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%8F%8D%E9%A6%88%E5%88%86%E6%9E%90"><span class="nav-number">2.1.1.</span> <span class="nav-text">用户反馈分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E8%AE%BF%E8%B0%88"><span class="nav-number">2.1.2.</span> <span class="nav-text">用户访谈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E7%94%A8%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-number">2.1.3.</span> <span class="nav-text">可用性测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7"><span class="nav-number">2.1.4.</span> <span class="nav-text">调查问卷</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E6%AF%94%E5%A6%82%E8%90%A5%E9%94%80%E6%BC%8F%E6%96%97%E6%A8%A1%E5%9E%8B%EF%BC%89"><span class="nav-number">2.1.5.</span> <span class="nav-text">数据分析（比如营销漏斗模型）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">需求管理</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>
