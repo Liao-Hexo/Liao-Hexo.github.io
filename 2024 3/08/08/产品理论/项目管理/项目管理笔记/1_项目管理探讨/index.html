@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            项目管理探讨 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        项目管理探讨
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2024-08-08 10:11:30</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Wed Jan 22 2025 14:54:48 GMT+0800">2025-01-22 14:54:48</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/">产品理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">项目管理-项目管理笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>6.8k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>22 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h2 id="项目管理的起源与发展"><a href="#项目管理的起源与发展" class="headerlink" title="项目管理的起源与发展"></a>项目管理的起源与发展</h2><p>项目管理自古就存在，比如埃及金字塔、万里长城</p>
+<p>项目管理的思路：想-谋（规划）-动（执行）-成</p>
+<p>项目管理起源于二战时期的曼哈顿计划，阿波罗登月计划使项目管理风靡全球，北极星计划被认为是现代项目管理的起点</p>
+<p>项目管理方法很久以来就是一些行业做生意的风格，其中有建筑业、美国国防部、好莱坞以及大的咨询公司。现在项目管理正扩散到所有工作领域。越来越多的组织开始认识到管理项目是每个人工作的关键部分。企业正开始认识到他们的所有员工而不仅仅是项目经理都会从项目管理培训中受益</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181611485.png" ></p>
+<p>项目管理从远古走来，起源于战争，推广于社会，不断演进中</p>
+<h2 id="项目管理学科载体和PMI"><a href="#项目管理学科载体和PMI" class="headerlink" title="项目管理学科载体和PMI"></a>项目管理学科载体和PMI</h2><p>1965年，以欧洲国家为主的一些国家成立了“国际项目管理协会IPMA”，1969年，美国成立了一个相同性质的组织，取名为“项目管理学会PMI”</p>
+<p>二十世纪中期，项目经理开始致力于将项目管理确立为一种职业，对项目管理达成一致意见</p>
+<p>项目管理学会PMI：</p>
+<ol>
+<li><p>1969年成立（5名志愿者发起、分享、讨论）</p>
+</li>
+<li><p>1976年提出制定标准</p>
+</li>
+<li><p>1983年发表一个报告，报告中的“标准”部分成为著名的项目管理知识体系指南</p>
+</li>
+<li><p>1987年推出项目管理知识体系指南，简称PMBOK Guide，PMBOK Guide是项目管理职业的知识总和，是职业和实践的一个共同术语汇编，动态演进中</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181612612.png" ></p>
+</li>
+</ol>
+<p>PMI项目管理相关标准：</p>
+<ul>
+<li>《项目管理知识体系指南》PMBOK标准仅适用于单个项目</li>
+<li>《项目集管理标准》对项目集的管理</li>
+<li>《项目组合管理标准》对项目组合的管理</li>
+</ul>
+<p>PMP认证（项目管理专业人员资质认证）目标是致力于项目管理专业的实践知识和应用</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181612567.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181612372.png" ></p>
+<p>2000年，国家外国专家局培训中心与美国项目管理协会签订了合作协议，正式将PMP认证引入中国，国家外国专家局培训中心成为中国大陆独家代理PMP认证考试的管理合作机构</p>
+<h2 id="PMP备考学习方法"><a href="#PMP备考学习方法" class="headerlink" title="PMP备考学习方法"></a>PMP备考学习方法</h2><p>学习方法：结构化+发散式+滴灌法（广而不深、耗时渐进、充分理解）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181612077.png" ></p>
+<h2 id="项目管理多视角解读"><a href="#项目管理多视角解读" class="headerlink" title="项目管理多视角解读"></a>项目管理多视角解读</h2><h3 id="管理的历史视角"><a href="#管理的历史视角" class="headerlink" title="管理的历史视角"></a>管理的历史视角</h3><ol>
+<li><p>[英]亚当·斯密（1723-1790年）和劳动分工《国民财富的性质和原因的研究》（1776年）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181613140.png" ></p>
+</li>
+<li><p>[美]弗雷德里克·温斯洛·泰勒（1856-1915）和科学管理《科学管理原理》1911年</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181613475.png" ></p>
+</li>
+<li><p>[法]亨利·法约尔（1841-1925年）和一般行政管理《工业管理和一般管理》1916年</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181613247.png" ></p>
+</li>
+<li><p>[美]乔治·埃尔顿·梅奥（1880-1949）和人际关系理论《工业文明中人类问题》1933年，《工业文明的社会问题》1945年</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181613128.png" ></p>
+</li>
+<li><p>[美]赫伯特·西蒙（1916-2001）和组织决策管理《管理行为》1947年，唯一获得诺贝尔奖经济学奖的管理大师</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181614761.png" ></p>
+</li>
+<li><p>[美]彼得·德鲁克（1909-2005）和目标管理《管理的实践》1954年</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181614278.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181614519.png" ></p>
+</li>
+</ol>
+<p>管理者的活动：研究分析管理者的活动大致可分为四类</p>
+<ul>
+<li><p>传统管理：决策、计划和控制</p>
+</li>
+<li><p>沟通：交流理性信息和处理文书工作</p>
+</li>
+<li><p>人力资源管理：激励、惩戒、调解冲突、人员配备、培训和管理</p>
+</li>
+<li><p>网络关系：社交活动、政治活动</p>
+</li>
+<li><p>与外界交往</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181614242.png" ></p>
+</li>
+</ul>
+<p>有效的管理者和成功的管理者：</p>
+<ul>
+<li><p>有效的管理者：较好实现目标绩效和下属员工满意度高的管理者</p>
+</li>
+<li><p>成功的管理者：组织中提升最快的管理者</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181615991.png" ></p>
+</li>
+</ul>
+<p>管理就是理事调人相得益彰、效率效果平衡兼顾</p>
+<p>管理要做的事情就是：计划、组织、领导、控制</p>
+<h3 id="单项目视角"><a href="#单项目视角" class="headerlink" title="单项目视角"></a>单项目视角</h3><p>单项目框架：十大知识领域、五大管理过程组、生命期阶段</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181615553.png" ></p>
+<p>项目是为创造独特产品、服务或成果而进行的临时性工作</p>
+<p>项目是组织创造价值和效益的主要方式。在当今商业环境下，组织领导者需要应对预算紧缩、时间缩短、资源稀缺以及技术快速变化的情况，商业环境的动荡不安，变化越来越快，为了在全球经济中保持竞争力，公司日益广泛利用项目管理，来持续创造商业价值</p>
+<p>项目可以创造有形的、无形的成果</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181615703.png" ></p>
+<p>项目的特点：</p>
+<ol>
+<li><p>临时性：每个项目都有确定的开始和结束，不意味时间短。项目具有时间约束（临时性不适用于项目产生的产品，产品我们希望它是长期的，比如万里长城）</p>
+</li>
+<li><p>独特性：项目创造独特的可交付成果</p>
+</li>
+<li><p>渐进明细：意味着分步开发，连续积累</p>
+</li>
+<li><p>项目驱动变更：推动组织状态（当前状态）转到另一状态，获得期望结果（将来状态）</p>
+<p>项目驱动组织变更&#x2F;变革：结构、规模、职责、角色（组织通过项目进行状态转换）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181615238.png" ></p>
+</li>
+</ol>
+<p>项目启动背景：</p>
+<ol>
+<li>符合法规、法律或社会要求</li>
+<li>满足相关方的要求或需求</li>
+<li>创造、改进或修复产品、过程或服务</li>
+<li>执行、变更业务或技术战略</li>
+</ol>
+<p>项目结束：</p>
+<ol>
+<li>达成项目目标（项目结束）</li>
+<li>不会或不能达成目标，资金缺乏，无法获得所需人力或物力资源（提前终止）</li>
+<li>需求不复存在，客户不再要求完成项目，战略优先级的变更致使项目终止，组织管理层下达项目终止指示（项目终止）</li>
+<li>出于法律或便利原因终止项目（项目终止）</li>
+</ol>
+<p>商业价值：从商业运作中获得的可量化净效益。效益可以是有形的、无形的或二者兼有之。在商业分析中，商业价值被视为回报，即以某种投入换取时间、资金、货物或无形的回报</p>
+<ul>
+<li>有形价值：货币资产、固定设施、股东权益、公共事业、工具、市场份额等</li>
+<li>无形价值：商誉、品牌认知度、公共利益、商标、战略一致度、声誉等</li>
+</ul>
+<p>项目管理：将知识、技能、工具和技术应用于项目活动，以满足项目的要求。项目管理通过合理运用与整合特定项目所需的项目管理过程得以实现。项目管理使组织能够有效且高效地开展项目</p>
+<p>有效项目管理的重要性：</p>
+<ol>
+<li>达成目标，满足相关方期望，提高可预测性，提高成功概率，在适当时间交付正确产品</li>
+<li>解决问题和争议，及时应对风险，识别、挽救或终止失败项目</li>
+<li>优化组织资源的使用</li>
+<li>管理制约因素（范围、质量、进度、成本），平衡制约因素对项目的影响，以更好的方式管理变更</li>
+</ol>
+<p>项目经理的道德与专业行为规范：（4个2）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181616230.png" ></p>
+<p>项目与运营：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181616797.png" ></p>
+<p>项目与运营在产品生命周期的不同时点交叉：在每个交叉点，可交付成果及知识在项目与运营之间转移，项目趋于结束，项目资源被转移到运营中，项目开始时，运营资源被转移到项目中</p>
+<ul>
+<li>在每个收尾阶段</li>
+<li>在新产品开发、产品升级或提高产量时</li>
+<li>在改进运营或产品开发流程时</li>
+<li>在产品生命周期结束之前</li>
+</ul>
+<p>项目生命周期：life cycle，是通常按顺序排列而有时又相互交叉的各项目阶段的集合。生命周期能为管理项目提供基本框架</p>
+<p>项目阶段是为有效完成某些重要的可交付成果而在需要特别控制点将项目分界。阶段结束点是对项目进行重新评估，并在必要时变更或终止项目的一个当然时点。这些时点可称为阶段出口、里程碑、阶段关卡、决策关卡、时段关卡或关键决策点（启动项目、组织与准备、执行项目工作、结束项目）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181616022.png" ></p>
+<p>项目生命周期类型：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181616275.png" ></p>
+<ul>
+<li><p>预测型（完全计划驱动型）：在项目生命周期的尽早时间，确定项目范围和交付此范围所需的时间和成本，也称瀑布开发模型</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181616086.png" ></p>
+</li>
+<li><p>适应型（变更驱动方法或敏捷方法）：为应对大量变更，获取干系人的持续参与。通常在每次迭代中都会执行多个过程（螺旋或迭代开发模型）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181617722.png" ></p>
+</li>
+</ul>
+<p>迭代开发：就是反复求精，增量开发：就是逐块构建</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181617121.png" ></p>
+<p>项目生命周期通用结构：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181617036.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181617061.png" ></p>
+<p>典型的生命周期结构（三个阶段）：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181617813.png" ></p>
+<p>项目阶段的关系：</p>
+<ul>
+<li><p>顺序关系：时间长，技术稳妥，有时赶不上市场需求，技术风险低，市场风险大，计划阶段经常这样做</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181618992.png" ></p>
+</li>
+<li><p>交叠关系：也被叫做搭接，时间短，市场经济快，但加大了技术风险</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181618909.png" ></p>
+</li>
+<li><p>迭代关系：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181618052.png" ></p>
+</li>
+</ul>
+<p>项目商业文件：项目立项之前的文件</p>
+<ul>
+<li>项目商业论证：文档化的经济可行性研究报告，用来对尚缺乏充分定义的所选方案的收益进行有效性论证，是启动后续项目管理活动的依据</li>
+<li>项目效益管理计划：对创造、提高和保持项目效益的过程进行定义的书面文件</li>
+</ul>
+<p>需求评估与关键业务&#x2F;项目文件的相互关系：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181618480.png" ></p>
+<p>项目目标（工作所指向的结果）：SMART原则</p>
+<ul>
+<li>Specific：明确的</li>
+<li>Measurable：可测量</li>
+<li>Achievable：可实现</li>
+<li>Relevant：相关联的</li>
+<li>Time bound：有时限的</li>
+</ul>
+<p>项目成功标准：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181619608.png" ></p>
+<p>项目成功标志之一：以产品与项目的范围（质量）、进度和预算达成度以及相关方满意度来测量成功</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181619701.png" ></p>
+<p>项目管理三约束&#x2F;三坐标：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181619274.png" ></p>
+<p>项目约束目标间的关系：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181619135.png" ></p>
+<p>项目所处环境对项目的影响：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181619793.png" ></p>
+<p>事业环境因素EEF：项目团队不能控制的，将对项目产生影响、限制或指令作用的各种条件，可能提高或降低项目管理的灵活性，对项目结果产生积极或消极影响</p>
+<ul>
+<li>组织文化、结构、治理、设施资源地理分布、政府行业标准、基础设施、现有人力资源状况、组织规章制度、公司授权系统、干系人的风险承受力、政治氛围、组织已有的沟通渠道、商业数据库、项目管理信息系统等</li>
+</ul>
+<p>组织过程资产OPA：执行组织所特有并使用的计划、流程、政策、程序和知识库，包括来自任何（或所有）项目参与组织的可用于执行或治理项目的任何产物、实践或知识。还包括组织知识库（经验教训和历史信息）</p>
+<ul>
+<li>流程与程序、共享知识库</li>
+</ul>
+<p>组织系统：</p>
+<ul>
+<li>组织系统因素：管理要素、治理框架（规则、政策、程序、规范、关系、系统、过程）、组织结构类型</li>
+<li>组织系统的原则：系统是动态的、系统是可以优化的、系统组件是可以优化的、系统及其组件不能同时优化、系统呈现非线性响应（输入的变更并不会产生可预测的输出）</li>
+</ul>
+<p>PMO：项目管理办公室&#x2F;项目集管理办公室&#x2F;项目组合管理办公室，对与项目相关的治理过程进行标准化，并促进资源、方法论、工具和技术共享的一个组织结构。PMO的职责、范围可大可小，从提供项目管理支持服务到直接管理一个或多个项目</p>
+<p>三种不同类型的PMO：具体是哪种要看公司的事业环境因素</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181620405.png" ></p>
+<p>组织结构：组织结构是企业正式的配置机制、程序机制、监督机制、治理机制、授权和决策机制</p>
+<p>选择组织结构类型考虑的因素：</p>
+<ul>
+<li>组织结构要跟公司战略一致</li>
+<li>组织结构要体现公司的专业能力</li>
+<li>要考虑这种组织结构管理的效率与效果</li>
+<li>授权、职责（终责）分配、权限、决策</li>
+<li>设计简单、灵活</li>
+<li>考虑成本因素</li>
+<li>地理位置</li>
+<li>部门设置</li>
+<li>沟通便利</li>
+</ul>
+<p>组织结构类型：</p>
+<ul>
+<li><p>简单型：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181620367.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181620620.png" ></p>
+</li>
+<li><p>职能型：会带来资源专属的浪费，比如市场营销部门需要1个质量控制的人员，它不可能去生产部门去借，生产部门的质量控制人员也不太想去市场营销，所以市场营销部门只能再招一个，这就造成了浪费</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181620892.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181620421.png" ></p>
+</li>
+<li><p>多部门：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181621348.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181621638.png" ></p>
+</li>
+<li><p>项目型：项目都是临时的，人员没有归属感，也没有晋升通道</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181621764.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181621947.png" ></p>
+</li>
+<li><p>矩阵型：缺点是员工既是部门内人员又是项目组成员，但是员工会更偏向于听从部门经理的</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181621132.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181622745.png" ></p>
+</li>
+<li><p>虚拟型：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181622162.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181622847.png" ></p>
+</li>
+<li><p>混合型：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181622046.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181622988.png" ></p>
+</li>
+<li><p>PMO型：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181623712.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181623525.png" ></p>
+</li>
+</ul>
+<p>项目经理PM：是执行组织委派其实现项目目标的个人</p>
+<ul>
+<li>责任：对项目成果负责</li>
+<li>知识和技能：管理知识、技术知识、理解和经验、关注行业发展、跨领域</li>
+<li>沟通：充当发起人、团队成员和其他相关方之间的沟通者</li>
+<li>成功的项目经理：持续有效地使用某些基本技能，展现出超凡的人际关系和沟通技能以及积极的态度</li>
+<li>对组织的了解：战略、使命、目的、目标、优先级、策略、产品和服务、风险、商务知识</li>
+</ul>
+<p>项目相关方&#x2F;项目经理影响范围：（PPP经理：项目经理、项目集经理、项目组合经理）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181623434.png" ></p>
+<p>项目经理的能力：PMI人才三角</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181623467.png" ></p>
+<p>领导者的品质和技能：</p>
+<ul>
+<li>有远见，积极乐观</li>
+<li>重点关注系统思维</li>
+<li>乐于合作，管理冲突</li>
+<li>服务导向，结果&#x2F;行动导向</li>
+<li>高效团队，幽默分享</li>
+<li>管理关系，进行沟通</li>
+<li>尊重他人，终生学习</li>
+<li>批判性思维，推动变革</li>
+<li>诚信正直，文化敏感</li>
+</ul>
+<p>PM行使权力的方式：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181623644.png" ></p>
+<p>管理与领导力比较：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181624643.png" ></p>
+<p>管理力风格：放任型、交易型、服务型、变革型、魅力型、交互型等</p>
+<ul>
+<li>考虑要素：领导者的特点、团队成员的特点、环境的特点、组织的特点</li>
+</ul>
+<p>领导力风格：软性技能</p>
+<p>情商：指一个人控制自己和他人情绪的能力（四种情绪：喜怒哀惧，让自己快乐，让别人舒服）</p>
+<ul>
+<li>要素：自我认知、自我管理、自我激励、认知他人、管理他人</li>
+</ul>
+<p>执行整合：整合是项目经理的一项关键技能，与发起人携手合作，指导团队协同工作，整合过程、知识和人员（过程层面、认知层面、背景层面）</p>
+<p>项目管理与其他学科的关系：</p>
+<ul>
+<li>项目管理学科独有的（PM应有的四个知识）：项目生命期概念、工作分解结构WBS、关键路径法、挣值技术</li>
+<li>其他领域知识的支持：一般科学知识（如系统科学、行为科学、财务、组织、经济、政治、心理、社交、管理、商业环境等）、各种应用领域（如软件开发、医药学、工程设计与施工）</li>
+</ul>
+<p>整合与复杂性：</p>
+<ul>
+<li>复杂性定义：<ul>
+<li>包括多个部分</li>
+<li>不同部分之间存在一系列连接</li>
+<li>不同部分之间有动态交互作用</li>
+<li>这些交互作用所产生的行为远远大于各部分简单相加</li>
+</ul>
+</li>
+<li>复杂性三个维度：<ul>
+<li>系统行为（组成部分与系统之间的依赖关系）</li>
+<li>人类行为（不同个体和群体之间的相互作用）</li>
+<li>不明确性（出现问题、缺乏理解或造成困惑引发的不确定性）</li>
+</ul>
+</li>
+</ul>
+<h3 id="资源集成视角"><a href="#资源集成视角" class="headerlink" title="资源集成视角"></a>资源集成视角</h3><p>资源是一切具有现实和潜在价值的东西，包括自然资源和人造资源、内部和外部资源、有形资源和无形资源，工程类的项目管理会将资源分为人力和人才、材料、机械、资金、信息、科学技术、市场等七类，即7M，项目管理作为方法和手段，也是一种资源</p>
+<p>在复杂多变的环境中，集成资源做好一件事</p>
+<p>资源分解结构RBS：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181625014.png" ></p>
+<p>项目管理是最有效地整合资源、高效地实现目标的理论和技术，已在全球范围内迅速发展和应用</p>
+<ul>
+<li>资源集成模型：多组织级之间、组织级之间、项目级之间</li>
+<li>资源集成机制：项目级外、组织级外<ul>
+<li>总价合同：买方必须准确定义要采购的产品或服务，对采购规范的任何变更都可能增加买方的成本（总价合同是一种封口合同，也就是总价是有边界的）<ul>
+<li>固定总价合同FFP：采用总价合同买方必须定义要采购的产品或服务，虽然允许范围变更，但范围变更通常会导致合同价格提高</li>
+<li>总价加激励费合同FPIF：设置一个价格上限，卖方必须完成工作并且要承担高于上限的全部成本</li>
+<li>总价加经济价格调整合同FP-EPA：持续时间较长的合同，允许根据条件变化以事前确定的方式对合同价格进行最终调整</li>
+</ul>
+</li>
+<li>成本补偿合同：工作范围无法准确定义，项目工作存在较大风险，以便重新安排卖方的工作（成本补偿合同是一种开口合同）<ul>
+<li>成本加固定费合同CPFF：固定费只能针对已完成的工作，不因卖方的绩效而变化，范围发生变化才可考虑费用的改变</li>
+<li>成本加激励费合同CPIF：基于卖方的实际成本按一定的比例分担超过或低于目标成本的部分，便于卖方重视控制成本</li>
+<li>成本加奖励费合同CPAF：适用于成果评价标准不易或无法量化的项目，如管理咨询项目等，支付的奖励费用完全由买方主观判断决定，卖方无权申诉</li>
+</ul>
+</li>
+<li>工料合同T&amp;M：增加人员、聘请专家、寻求外部支持，可规定价格和时间限制，防止成本无限增加</li>
+<li><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181625310.png" ></li>
+</ul>
+</li>
+</ul>
+<h3 id="项目式做事风格视角"><a href="#项目式做事风格视角" class="headerlink" title="项目式做事风格视角"></a>项目式做事风格视角</h3><p>项目式做事风格5过程：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181625501.png" ></p>
+<p>项目式做事风格可以培养我们的目标能力、专业能力、用人能力、社交能力、营销能力、转化能力、把控能力、革新能力</p>
+<h3 id="组织级视角"><a href="#组织级视角" class="headerlink" title="组织级视角"></a>组织级视角</h3><p>项目的三种不同管理模式：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181626305.png" ></p>
+<p>有效&#x2F;高效的项目管理应被视为组织的战略能力</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181626429.png" ></p>
+<p>项目集和项目集管理：</p>
+<ul>
+<li>项目集是一组相互关联且被协调管理的项目、子项目和项目集活动，以便获得分别管理所无法获得利益1+1&gt;&gt;2</li>
+<li>项目集不是大项目，大项目是指10亿美元及以上成本、影响上百万人，持续数年</li>
+<li>项目集管理是指在项目集中应用知识、技能与原则来实现项目集目标，获得分别管理项目集组成部分所无法实现的利益和控制。项目集中的项目通过产生共同的结果或整体能力而相互联系。如果项目间的联系仅限于共享雇主、供应商、技术或资源，那么这些项目就应作为一个项目组合而非项目集来管理</li>
+<li>项目集管理重点关注项目间的依赖关系，并有助于找到管理这些依赖关系的最佳方法（共同目标关联，协同收益交付）</li>
+</ul>
+<p>项目组合和项目组合管理：</p>
+<ul>
+<li>项目组合是指为实现战略业务目标而组合在一起管理的项目、项目集、子项目组合和运营运作。项目组合中的项目或项目集不一定彼此依赖或有直接关系</li>
+<li>项目组合管理是指为了实现特定的战略业务目标，对一个或多个项目组合进行的集中管理，包括识别、排序、授权、管理和控制项目、项目集和其他有关工作</li>
+<li>项目组合管理重点关注通过审核项目和项目集来确定资源分配的优先顺序，并确保对项目组合的管理与组织战略协调一致</li>
+</ul>
+<p>项目组合、项目集、项目和运营：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181626302.png" ></p>
+<p>项目集管理和项目管理是以正确的方式开展项目集和项目，项目组合管理是开展正确的项目集和项目</p>
+<p>组织项目管理：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181626263.png" ></p>
+<p>战略：与战略有关的词（使命、愿景、目标）</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181626419.png" ></p>
+<p>组织&#x2F;企业战略：组织以未来为主导，为寻求和维持持久竞争优势而做出的有关全局的重大筹划和谋略</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181627753.png" ></p>
+<p>战略目标：对企业战略经营活动预期取得的主要成果的期望值</p>
+<p>项目与战略规划：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181627171.png" ></p>
+<p>企业使命：企业在社会中存在的根据&#x2F;价值或在社会中应担当的角色和责任，体现了企业总的发展方向，企业的长期目标和企业行为活动的总原则，一般包括四个要素：企业哲学、企业宗旨、企业形象、企业社会责任，由内、外部因素决定企业使命（解决我们要做什么？为什么这样做？）</p>
+<p>使命陈述：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181627167.png" ></p>
+<p>愿景：彼得·圣吉《第五项修炼》中愿景是愿望的景象，企业愿景是对企业长期发展前景、发展方向、目标、目的等自我设定的社会责任，企业的共同愿望体现企业的价值观，是企业的灵魂，是企业发展愿望和长远目标的情景式描述（解决我们要成为什么？）</p>
+<p>项目管理和组织战略之间的关系：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181627140.png" ></p>
+<p>企业管理地图：</p>
+<ul>
+<li>业务运营实现的是源源不断的现金流维持着短期的公司的发展，项目考虑的是公司的未来，为未来注入活力</li>
+<li>运营管理可以使用项目管理的方法进行，但是项目管理不能使用运营管理的方法</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181627219.png" ></p>
+<p>基于项目的组织PBO：指建立临时机构来开展工作的各种组织形式。在各种不同的组织结构中，都可以建立PBO，采用PBO可以减轻组织中的层级主义和官僚主义，因为在PBO中，考核工作成败的依据是最终结果，与职位或政治因素无关</p>
+<p>组织治理：</p>
+<ul>
+<li><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181628393.png" ></li>
+<li>组织驱动因素：组织结构、组织文化、组织技术、人力资源实践</li>
+<li>组织治理由董事会执行</li>
+</ul>
+<p>项目治理：项目治理是在组织治理的框架之下</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181628806.png" ></p>
+<p>项目治理框架：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181628383.png" ></p>
+<p>敏捷方法：描述了一组交付软件的原则和实践，2001年17位“轻量级”方法学家在Utah的Snowbird会晤，提出包含4个敏捷价值观、12条敏捷宣言原则</p>
+<ul>
+<li>4个敏捷价值观：个人与互动胜于过程和工具、可用的软件胜于复杂的文档、与客户协作胜于合同谈判、相应变更胜于遵循计划</li>
+<li>12条敏捷宣言原则<ol>
+<li>我们最重要的目标，是通过及早和持续不断地交付有价值的软件使客户满意</li>
+<li>欣然面对需求变化，即使在开发后期也一样。为了客户的竞争优势，敏捷过程掌控变化</li>
+<li>经常地交付可工作的软件，相隔几星期或一两个月，倾向于采取较短的周期</li>
+<li>业务人员和开发人员必须相互合作，项目中的每一天都不例外</li>
+<li>激发个体的斗志，以他们为核心搭建项目。提供所需的环境和支援，辅以信任，从而达成目标</li>
+<li>不论团队内外，传递信息效果最好效率也最高的方式是面对面的交谈</li>
+<li>可工作的软件是进度的首要度量标准</li>
+<li>敏捷过程倡导可持续开发。责任人、开发人员和用户要能够共同维持其步调稳定延续</li>
+<li>坚持不懈地追求技术卓越和良好设计，敏捷能力由此增强</li>
+<li>以简洁为本，它是极力减少不必要工作量的艺术</li>
+<li>最好的架构、需求和设计出自自我组织的团队</li>
+<li>团队定期地反思如何能提高成效，并依此调整自身的行为表现</li>
+</ol>
+</li>
+</ul>
+<h2 id="项目管理良好实践"><a href="#项目管理良好实践" class="headerlink" title="项目管理良好实践"></a>项目管理良好实践</h2><p>项目交付方面出众公司拥有的4个最佳实践&#x2F;良好实践：</p>
+<ul>
+<li><p>使用完整的工具箱：</p>
+<ul>
+<li>数据收集技术：访谈、问卷调查、资料收集、现场参观与调查、观察法、原型法</li>
+<li>数据分析技术：模型分析、对比分析、因果分析、相关分析、趋势分析</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181629677.png" ></p>
+</li>
+<li><p>培养项目经理</p>
+<ul>
+<li><p>《阿尔法项目经理：什么是2%的顶尖人才知道，而其他人不知道的》收集了860名项目经理的资料，发现除了实施过程外，最好的阿尔法项目经理在每个过程上花费的计划时间比其他项目经理多，阿尔法项目经理在计划过程所花时间通常是其他项目经理的2倍</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181629845.png" ></p>
+</li>
+</ul>
+</li>
+<li><p>使用标准过程管理：49个标准过程</p>
+<ul>
+<li>项目管理往往体现为相互关联的若干过程，尊重管理项目的标准过程可以协助预防新的和有经验的项目经理都会遇到的一些典型问题</li>
+</ul>
+</li>
+<li><p>使用度量体系检测</p>
+<ul>
+<li>采取有效监控方法，建立度量体系，控制风险，控制变更</li>
+</ul>
+</li>
+</ul>
+<p>项目管理知识领域：</p>
+<ul>
+<li>整合管理：项目经理是整合者</li>
+<li>范围、进度、成本、质量：4个核心知识领域（偏硬性技能）</li>
+<li>资源、沟通、风险、采购、相关方：5个辅助知识领域（偏软性技能）</li>
+</ul>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">项目管理-项目管理笔记</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/08/14/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/2_%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E6%A0%87%E5%87%86/"
+                                   title="项目管理标准"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">项目管理标准</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/08/07/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/12_%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3%E6%96%B9%E7%AE%A1%E7%90%86/"
+                                   title="项目相关方管理"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">项目相关方管理</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E8%B5%B7%E6%BA%90%E4%B8%8E%E5%8F%91%E5%B1%95"><span class="nav-number">1.</span> <span class="nav-text">项目管理的起源与发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%AD%A6%E7%A7%91%E8%BD%BD%E4%BD%93%E5%92%8CPMI"><span class="nav-number">2.</span> <span class="nav-text">项目管理学科载体和PMI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PMP%E5%A4%87%E8%80%83%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">PMP备考学习方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%A4%9A%E8%A7%86%E8%A7%92%E8%A7%A3%E8%AF%BB"><span class="nav-number">4.</span> <span class="nav-text">项目管理多视角解读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E7%9A%84%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92"><span class="nav-number">4.1.</span> <span class="nav-text">管理的历史视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%A1%B9%E7%9B%AE%E8%A7%86%E8%A7%92"><span class="nav-number">4.2.</span> <span class="nav-text">单项目视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E9%9B%86%E6%88%90%E8%A7%86%E8%A7%92"><span class="nav-number">4.3.</span> <span class="nav-text">资源集成视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%BC%8F%E5%81%9A%E4%BA%8B%E9%A3%8E%E6%A0%BC%E8%A7%86%E8%A7%92"><span class="nav-number">4.4.</span> <span class="nav-text">项目式做事风格视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E7%BB%87%E7%BA%A7%E8%A7%86%E8%A7%92"><span class="nav-number">4.5.</span> <span class="nav-text">组织级视角</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%89%AF%E5%A5%BD%E5%AE%9E%E8%B7%B5"><span class="nav-number">5.</span> <span class="nav-text">项目管理良好实践</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E8%B5%B7%E6%BA%90%E4%B8%8E%E5%8F%91%E5%B1%95"><span class="nav-number">1.</span> <span class="nav-text">项目管理的起源与发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%AD%A6%E7%A7%91%E8%BD%BD%E4%BD%93%E5%92%8CPMI"><span class="nav-number">2.</span> <span class="nav-text">项目管理学科载体和PMI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PMP%E5%A4%87%E8%80%83%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">PMP备考学习方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%A4%9A%E8%A7%86%E8%A7%92%E8%A7%A3%E8%AF%BB"><span class="nav-number">4.</span> <span class="nav-text">项目管理多视角解读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E7%9A%84%E5%8E%86%E5%8F%B2%E8%A7%86%E8%A7%92"><span class="nav-number">4.1.</span> <span class="nav-text">管理的历史视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%A1%B9%E7%9B%AE%E8%A7%86%E8%A7%92"><span class="nav-number">4.2.</span> <span class="nav-text">单项目视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E6%BA%90%E9%9B%86%E6%88%90%E8%A7%86%E8%A7%92"><span class="nav-number">4.3.</span> <span class="nav-text">资源集成视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%BC%8F%E5%81%9A%E4%BA%8B%E9%A3%8E%E6%A0%BC%E8%A7%86%E8%A7%92"><span class="nav-number">4.4.</span> <span class="nav-text">项目式做事风格视角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E7%BB%87%E7%BA%A7%E8%A7%86%E8%A7%92"><span class="nav-number">4.5.</span> <span class="nav-text">组织级视角</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%89%AF%E5%A5%BD%E5%AE%9E%E8%B7%B5"><span class="nav-number">5.</span> <span class="nav-text">项目管理良好实践</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>

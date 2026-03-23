@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="廖家龙">
+    
+    <title>
+        
+            项目资源管理 |
+        
+        廖家龙的博客网站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
+    
+        
+            
+                
+<link rel="stylesheet" href="/css/custom.css">
+
+            
+        
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"liao-hexo.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FF9999","title":"廖家龙的博客网站","author":"廖家龙","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"首页":"/ || fa-solid fa-house","品牌探究":"/品牌探究 || fa-solid fa-copyright","产品理论":"/产品理论 || fa-solid fa-diagram-project","计算机理论":"/计算机理论 || fa-solid fa-computer","项目":"https://github.com/Liao-Hexo || fa-brands fa-github"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"用心听，不照做。","hitokoto":false},"social_contact":{"enable":true,"links":{"k":"https://liao-hexo.github.io","github":"https://github.com/Liao-Hexo"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":false},"home":{"announcement":"如有问题，请联系本人邮箱 liaojialong0328@gmail.com","category":true,"tag":true,"post_datetime":"created || fa-regular fa-calendar-days","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["用心听，不照做"]},"word_count":{"wordcount":true,"min2read":true},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":true,"reward":{"enable":false,"img_link":null,"text":null,"icon":null},"img_align":"left","created_datetime_icon":"fa-regular fa-calendar-days","updated_datetime_icon":"fa-solid fa-arrows-rotate"},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":false},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2018,"word_count":false,"site_deploy":{"enable":true,"provider":"github","url":"https://github.com/Liao-Hexo/Liao-Hexo.github.io"},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{"links":[{"title":"定制西装面料："},{"name":"Scabal、世家宝","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/定制西装面料/Scabal、世家宝/","description":"1938年于英国布鲁塞尔创立","avatar":"/images/品牌探究/定制西装面料/Scabal、世家宝640*640.png"},{"title":"口红："},{"name":"CHANEL、香奈儿","link":"https://liao-hexo.github.io/2024/12/25/品牌探究/口红/CHANEL、香奈儿/","description":"1910年于法国创立","avatar":"/images/品牌探究/口红/CHANEL、香奈儿640*640.png"}]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="廖家龙的博客网站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               廖家龙的博客网站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-house"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                
+                                品牌探究
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                
+                                产品理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-computer"></i>
+                                
+                                计算机理论
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                                
+                                    <i class="menu-text-color menu-icon fa-brands fa-github"></i>
+                                
+                                项目
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-house"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-copyright"></i>
+                                </span>
+                            
+                            品牌探究
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-diagram-project"></i>
+                                </span>
+                            
+                            产品理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-computer"></i>
+                                </span>
+                            
+                            计算机理论
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" target="_blank" rel="noopener" href="https://github.com/liao-hexo">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-brands fa-github"></i>
+                                </span>
+                            
+                            项目
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        项目资源管理
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">廖家龙</span>
+                                
+                                    <span class="author-badge">用心听，不照做</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-regular fa-calendar-days"></i>&nbsp;
+                <span class="datetime">2024-08-04 10:26:30</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-arrows-rotate"></i>&nbsp;
+                    <span class="datetime" data-updated="Fri Dec 13 2024 11:58:13 GMT+0800">2024-12-13 11:58:13</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/">产品理论</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">项目管理-项目管理笔记</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.5k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item post-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+            </span>
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>项目资源分为实物资源和人力资源</p>
+<ul>
+<li>实物资源：设备、材料、设施等</li>
+<li>团队资源指人力资源，相对于实物资源管理，提出了不同的技能和能力要求，应在获取、管理、激励和增强项目团队方面投入适当的努力，尽管项目团队成员被分派了特定的角色和职责，但让他们全员参与项目规划和决策仍是有益的（项目经理主要进行人力资源的管理，人力资源是一种能动资源，能动性表现在两个方面：人具有分析能力、人具有主观需求）</li>
+</ul>
+<p>项目经理是项目团队的领导者，也是项目团队的管理者，除了项目管理活动（启动、规划、执行、监控和收尾），还负责建设高效的团队，应该关注：环境、地理位置、相关方之间沟通、组织变革、文化和组织独特性、政治氛围、其他可能改变项目绩效的因素</p>
+<p>项目经理对人力资源的管理和人力资源部门对人力资源的管理是有差别的，后者讲究长期性，看到的是整个企业运营所配备的资源，前者是临时性，一次性，变更驱动性，需要向企业借资源进行管理</p>
+<p>领导者的影响力：非权力影响力来源于下属服从的意愿，有时会比权力显得更有力量</p>
+<ul>
+<li>权力影响力：法定、强制、奖励</li>
+<li>非权力影响力：品格、才能、知识、感情</li>
+</ul>
+<p>X-Y理论的假设：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181553073.png" ></p>
+<p>Z理论：人的状态跟文化环境有关，跟企业氛围有关，企业氛围可能会激发人X潜能，也可能激发Y潜能</p>
+<p>管理风格：</p>
+<ul>
+<li><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181553120.png" ></p>
+</li>
+<li><p>管理方格理论，心理学家布莱克和莫顿，以人为重，以生产为重</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181553071.png" ></p>
+</li>
+<li><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181554601.png" ></p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181554127.png" ></p>
+</li>
+</ul>
+<p>领导者的激励方法：</p>
+<ul>
+<li><p>马斯洛需求层次理论：自我实现是自己给的，其余四种是外界提供的</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181554944.png" ></p>
+</li>
+<li><p>赫兹伯格双因素理论</p>
+<ul>
+<li>卫生因素（比如工资待遇、工作环境等）：良好的卫生因素基本没有激励作用，恶劣的卫生因素可能破坏激励</li>
+<li>激励因素（比如有挑战性的工作等）：良好的激励因素有激励作用，恶劣的激励因素可能破坏激励</li>
+</ul>
+</li>
+<li><p>期望理论：只有当人们认为实现预定目标的可能性很大，并且实现这种目标又具有很重要的价值，这时该目标对他们的激励程度才会最大（激励程度&#x3D;期望值*效价，效价是指目标值达成以后能得到的东西）</p>
+</li>
+<li><p>公平理论：人们的动机，不仅受其所得的绝对报酬的影响，而且更受相对报酬的影响，每个人都会不自觉的把自己所得的报酬以及自己付出的劳动，与他人所得的报酬与他人所付出的劳动进行社会比较，如果它们相等，就认为是公平的，就会成为激励力量，感觉不公平就会采取对策</p>
+<ul>
+<li>设法增加个人所得</li>
+<li>设法降低别人的所得</li>
+<li>减少投入，降低个人贡献</li>
+<li>设法增加别人的投入</li>
+<li>重新选择比较对象以活动公平感</li>
+<li>发牢骚、消极怠工、离职</li>
+</ul>
+</li>
+<li><p>后天需要理论：大卫·麦克利兰认为个人的特定需求是通过后天培养或者长期学习，由生活经验形成的，获取需求理论包括</p>
+<ul>
+<li>成就需求：渴望成就，努力避开风险去做他们认为值得去做的事情</li>
+<li>亲和需求：渴望与他人建立和睦的关系，希望能被他人接受</li>
+<li>权力需求：不仅渴望得到个人权力，也想得到公共权力</li>
+</ul>
+</li>
+</ul>
+<p>影响力：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181555943.png" ></p>
+<p>权力：权力是一种影响行为的潜在能力，可驱使人们去做他们不愿意去做的事，权力比影响力有更丰富的含义，它经常用来强迫人们去做他们不愿去做的事。法兰斯和瑞文著名研究《社会权力基础》列出了权力的5种主要类型：</p>
+<ul>
+<li>强制权力：使用处罚&#x2F;威胁方法驱使人们去做他们不愿意去做的事情</li>
+<li>合法权力：通过职位赋予的权力去指挥员工做事</li>
+<li>专家权力：使用个人知识和专业能力去改变人们的行为</li>
+<li>奖励权力：用奖励鼓励人们去工作</li>
+<li>参照权力：来自个人自身的魅力或背景</li>
+</ul>
+<p>项目经理通常有许多的授权，但是没有什么正式的权力，因此，他们必须利用人际关系影响来完成工作。这样的人际关系影响有5种：</p>
+<ul>
+<li>法定权</li>
+<li>奖赏权</li>
+<li>处罚权</li>
+<li>专家权</li>
+<li>影响力</li>
+</ul>
+<p>项目职权的种类：法定的权力、暗含的权力、项目章程的权力</p>
+<h2 id="过程和目的"><a href="#过程和目的" class="headerlink" title="过程和目的"></a>过程和目的</h2><p>规划过程组：</p>
+<ul>
+<li>规划资源管理：识别记录角色&#x2F;职责&#x2F;软技能&#x2F;报告关系，得到一份资源管理计划</li>
+<li>估算活动资源：估计为完成活动要使用多少资源（包括实物资源和人力资源）</li>
+</ul>
+<p>执行过程组：</p>
+<ul>
+<li>获取资源：获取项目所需资源（人力、设施、设备、材料、用品等）</li>
+<li>建设团队：提高工作能力，促进互动，改善氛围，提高项目绩效（重点关注团队整体）</li>
+<li>管理团队：跟踪成员表现，反馈，解决问题，管理变更，优化项目绩效（重点关注团队个人）</li>
+</ul>
+<p>监控过程组：</p>
+<ul>
+<li>控制资源：监督资源实际使用情况（控制的是实物资源，对人力资源使用控制这个词不好，一般用监督管理这个词汇）</li>
+</ul>
+<h2 id="规划资源管理"><a href="#规划资源管理" class="headerlink" title="规划资源管理"></a>规划资源管理</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181555684.png" ></p>
+<p>定义如何估算、获取、管理和利用团队以及实物资源。本过程仅开展一次或仅在项目预定义点开展</p>
+<ul>
+<li><p>资源管理计划要得到上级或者高层批准</p>
+</li>
+<li><p>团队章程属于项目管理文件，资源管理计划属于项目管理计划</p>
+</li>
+<li><p>责任分配矩阵RAM</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181555293.png" ></p>
+</li>
+</ul>
+<h2 id="估算活动资源"><a href="#估算活动资源" class="headerlink" title="估算活动资源"></a>估算活动资源</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181555563.png" ></p>
+<p>估算执行项目所需的团队资源以及材料、设备和用品的类型和数量。本过程应根据需要在整个项目期间定期开展</p>
+<ul>
+<li>包括实物资源和人力资源</li>
+</ul>
+<h2 id="获取资源"><a href="#获取资源" class="headerlink" title="获取资源"></a>获取资源</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181556404.png" ></p>
+<p>获取项目所需的团队成员、设施、设备、材料、用品和其他资源。本过程应根据需要在整个项目期间定期开展</p>
+<ul>
+<li><p>物质资源分配单：实物资源，项目团队派工单：人力资源</p>
+</li>
+<li><p>资源日历表明资源在某个时段的可用性</p>
+</li>
+<li><p>多标准决策分析：制定标准，赋予选择标准的不同权重对候选团队成员打分</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181556811.png" ></p>
+</li>
+</ul>
+<h2 id="建设团队"><a href="#建设团队" class="headerlink" title="建设团队"></a>建设团队</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181556203.png" ></p>
+<p>提高工作能力，促进团队互动和改善团队氛围，提高项目绩效。本过程需要在整个项目期间开展</p>
+<ul>
+<li><p>重点关注团队整体</p>
+</li>
+<li><p>团队绩效评价指标：对团队整体的评价</p>
+<ul>
+<li>个人技能的改进</li>
+<li>团队能力的改进</li>
+<li>团队成员离职率的降低（组织中适当的人员流动会带来活力，但是项目团队中最好要保持人员稳定）</li>
+<li>团队成员凝聚力的加强</li>
+</ul>
+</li>
+<li><p>团队建设五个阶段：塔克曼模型</p>
+<ul>
+<li>形成阶段，作为PM要手把手的“指导”团队成员的工作</li>
+<li>震荡阶段，PM要处理各种“冲突”</li>
+<li>规范阶段，PM开始“教练”团队里的管理成员，让他们接手一些工作，同时给他们相应的“支持”</li>
+<li>成熟阶段，PM更多的是“授权”，让团队成员各自完成各自的工作</li>
+<li>解散阶段，PM要提前做好遣散的“规划”</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181556957.png" ></p>
+</li>
+<li><p>个人和团队评估：可以使用态度调查、细节评估、结构化面谈、能力测试、焦点小组讨论等方法</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181556214.png" ></p>
+</li>
+</ul>
+<h2 id="管理团队"><a href="#管理团队" class="headerlink" title="管理团队"></a>管理团队</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181557317.png" ></p>
+<p>跟踪团队成员的表现，提供反馈，解决问题并管理变更，优化项目绩效。本过程需要在整个项目期间开展</p>
+<ul>
+<li><p>重点关注团队个人</p>
+</li>
+<li><p>常用的五种冲突解决方法：</p>
+<ul>
+<li>撤退&#x2F;回避：一方撤出，躲开，拖延，推给别人处理</li>
+<li>缓解&#x2F;包容：求同存异，减轻</li>
+<li>妥协&#x2F;调解：双方各让一步</li>
+<li>强迫&#x2F;命令：推行一方观念，另一方服从，利用权力强行解决紧急问题</li>
+<li>合作&#x2F;解决问题：综合考虑各种意见，各方达成一致</li>
+</ul>
+</li>
+<li><p>人际关系技能：</p>
+<p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181557347.png" ></p>
+</li>
+</ul>
+<h2 id="控制资源"><a href="#控制资源" class="headerlink" title="控制资源"></a>控制资源</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181557794.png" ></p>
+<p>确保按计划为项目分配实物资源，根据资源使用计划监督资源实际使用情况，采取必要纠正措施。本过程需要在整个项目期间开展</p>
+<ul>
+<li>控制的是实物资源，对人力资源使用控制这个词不好，一般用监督管理这个词汇</li>
+<li>实物资源一般都会有专门的技术团队去管理维护，但是对人力资源的管理就需要PM来进行了</li>
+</ul>
+<h2 id="知识领域概要"><a href="#知识领域概要" class="headerlink" title="知识领域概要"></a>知识领域概要</h2><p>资源管理最靠灵活，特别是对人力资源的管理</p>
+<ul>
+<li>懂心理</li>
+<li>解人情</li>
+<li>施软硬</li>
+<li>释影响</li>
+</ul>
+<p>资源管理是项目管理面临的最困难的挑战之一，人是能动资源，管理好人，让人为项目产生积极的影响做贡献，是项目经理的职责，需要下功夫</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">项目管理-项目管理笔记</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                            <div class="post-share-container border-box">
+    <ul class="share-list-wrap border-box">
+        <li class="qq share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到 QQ"
+        >
+            <i class="fa-brands fa-qq"></i>
+        </li>
+        <li class="wechat share-item border-box flex-center tooltip tooltip-img"
+            data-tooltip-content="分享到微信"
+            data-tooltip-img-tip="微信扫一扫"
+            data-tooltip-img-style="background-color: #fff; top: -10px; padding: 0.6rem 0.6rem 0.1rem 0.6rem;"
+        >
+            <i class="fa-brands fa-weixin"></i>
+        </li>
+        <li class="weibo share-item border-box flex-center tooltip"
+            data-tooltip-content="分享到微博"
+        >
+            <i class="fa-brands fa-weibo"></i>
+        </li>
+    </ul>
+</div>
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/08/05/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/9_%E9%A1%B9%E7%9B%AE%E6%B2%9F%E9%80%9A%E7%AE%A1%E7%90%86/"
+                                   title="项目沟通管理"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">项目沟通管理</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/08/03/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/7_%E9%A1%B9%E7%9B%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/"
+                                   title="项目质量管理"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">项目质量管理</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E5%92%8C%E7%9B%AE%E7%9A%84"><span class="nav-number">2.</span> <span class="nav-text">过程和目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E5%88%92%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">规划资源管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%B0%E7%AE%97%E6%B4%BB%E5%8A%A8%E8%B5%84%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">估算活动资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90"><span class="nav-number">5.</span> <span class="nav-text">获取资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E8%AE%BE%E5%9B%A2%E9%98%9F"><span class="nav-number">6.</span> <span class="nav-text">建设团队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%9B%A2%E9%98%9F"><span class="nav-number">7.</span> <span class="nav-text">管理团队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E8%B5%84%E6%BA%90"><span class="nav-number">8.</span> <span class="nav-text">控制资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E9%A2%86%E5%9F%9F%E6%A6%82%E8%A6%81"><span class="nav-number">9.</span> <span class="nav-text">知识领域概要</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2018</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">廖家龙</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        <a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a>、<a href="https://keep-docs.xpoet.cn" target="_blank">Keep主题使用手册</a>、<a href="https://github.com/XPoet/hexo-theme-keep" target="_blank">hexo-theme-keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+                <a target="_blank" rel="nofollow" href="https://github.com/Liao-Hexo/Liao-Hexo.github.io">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+                </a>
+            
+        </div>
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E5%92%8C%E7%9B%AE%E7%9A%84"><span class="nav-number">2.</span> <span class="nav-text">过程和目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E5%88%92%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">规划资源管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%B0%E7%AE%97%E6%B4%BB%E5%8A%A8%E8%B5%84%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">估算活动资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90"><span class="nav-number">5.</span> <span class="nav-text">获取资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E8%AE%BE%E5%9B%A2%E9%98%9F"><span class="nav-number">6.</span> <span class="nav-text">建设团队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%9B%A2%E9%98%9F"><span class="nav-number">7.</span> <span class="nav-text">管理团队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E8%B5%84%E6%BA%90"><span class="nav-number">8.</span> <span class="nav-text">控制资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E9%A2%86%E5%9F%9F%E6%A6%82%E8%A6%81"><span class="nav-number">9.</span> <span class="nav-text">知识领域概要</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/share.min.js"></script>
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+    
+        
+    
+
+</body>
+</html>
