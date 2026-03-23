@@ -6,7 +6,7 @@
   <link href="https://liao-hexo.github.io/atom.xml" rel="self"/>
   
   <link href="https://liao-hexo.github.io/"/>
-  <updated>2025-10-16T06:34:42.554Z</updated>
+  <updated>2026-03-23T10:04:30.784Z</updated>
   <id>https://liao-hexo.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>品牌探究ⓒ</title>
+    <link href="https://liao-hexo.github.io/2026/03/23/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6%E2%93%92/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6%E2%93%92/"/>
+    <id>https://liao-hexo.github.io/2026/03/23/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6%E2%93%92/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6%E2%93%92/</id>
+    <published>2026-03-22T16:00:00.000Z</published>
+    <updated>2026-03-23T10:04:30.784Z</updated>
+    
+    
+    
+    
+    <category term="产品理论" scheme="https://liao-hexo.github.io/categories/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/"/>
+    
+    
+    <category term="品牌探究ⓒ" scheme="https://liao-hexo.github.io/tags/%E5%93%81%E7%89%8C%E6%8E%A2%E7%A9%B6c/"/>
+    
+  </entry>
   
   <entry>
     <title>《跨越鸿沟-颠覆性产品营销指南(原书第3版)》</title>
@@ -470,33 +487,6 @@
 &lt;ul&gt;
 &lt;li&gt;实物资源：设备、材料、设施等&lt;/li&gt;
 &lt;li&gt;团队资源指人力资源</summary>
-      
-    
-    
-    
-    <category term="产品理论" scheme="https://liao-hexo.github.io/categories/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/"/>
-    
-    
-    <category term="项目管理-项目管理笔记" scheme="https://liao-hexo.github.io/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>项目质量管理</title>
-    <link href="https://liao-hexo.github.io/2024/08/03/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/7_%E9%A1%B9%E7%9B%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/"/>
-    <id>https://liao-hexo.github.io/2024/08/03/%E4%BA%A7%E5%93%81%E7%90%86%E8%AE%BA/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/7_%E9%A1%B9%E7%9B%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/</id>
-    <published>2024-08-03T02:38:30.000Z</published>
-    <updated>2024-12-13T03:58:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>质量就是满足需求并符合要求（适用性、符合性）</p><p>质量与等级：</p><ul><li>低质量是个问题</li><li>低等级不一定是个问题</li></ul><p>精确与准确：</p><ul><li><p>精确是指重复测量结果聚合</p></li><li><p>准确是指测量值接近实际值</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181546943.png" ></p></li></ul><p>项目质量管理包括项目管理质量（过程）、项目产品质量（结果）</p><p>项目管理领域引用现代质量管理领域的一些术语：</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181547092.png" ></p><p>质量管理的发展历程：统计控制阶段利用数理统计方法，对于普通人来说太难了，基本上都是专家大师在操控，所以会进入到全面管理阶段</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181547399.png" ></p><h2 id="质量管理主要流派"><a href="#质量管理主要流派" class="headerlink" title="质量管理主要流派"></a>质量管理主要流派</h2><ul><li><p>爱德华·戴明于《走出危机》一书中提出PDCA循环，也叫戴明环（持续改进）</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181547664.png" ></p></li><li><p>朱兰于《质量管理手册》中提出三部曲（改进、计划、控制），并提出质量是符合要求、适于使用</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181547497.png" ></p></li><li><p>克劳斯比《质量是免费的》提出质量成本包括第一次没有做好工作所有的成本，提出零缺陷概念（一致性成本不叫质量成本，不一致性成本才叫质量成本，如果在第一次就把工作做好，没有花费不一致性成本的话，就叫做零缺陷，就叫做质量是免费的）</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181548597.png" ></p></li><li><p>石川馨在《质量控制指南》中提出了要进行质量小组活动QC，使用因果图（5whys法）</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181548025.png" ></p></li><li><p>田口玄一在《稳健设计方法》中提出质量品质可以用金钱损失（损失函数）来表示</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181548066.png" ></p></li><li><p>费根鲍姆在《全面质量管理：工程与管理》中提出了全面质量控制TQC，产品质量比生产率更重要</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181548897.png" ></p></li></ul><h2 id="过程和目的"><a href="#过程和目的" class="headerlink" title="过程和目的"></a>过程和目的</h2><p>规划过程组</p><ul><li>规划质量管理：识别要求和标准，描述如何达到标准，得到一份质量管理计划</li></ul><p>执行过程组</p><ul><li>管理质量：审计要求&#x2F;测量结果，确保标准&#x2F;操作合理（QA质量保证针对过程）</li></ul><p>监控过程组</p><ul><li>控制质量：监测&#x2F;记录结果，评估绩效，建议变更（QC质量控制针对结果&#x2F;产出）</li></ul><h2 id="规划质量管理"><a href="#规划质量管理" class="headerlink" title="规划质量管理"></a>规划质量管理</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181548007.png" ></p><p>识别项目及其可交付成果的质量要求和标准，并书面描述项目将如何证明符合质量要求和标准。本过程仅开展一次或仅在项目预定义点开展</p><ul><li><p>质量管理计划要得到上级或者高层批准</p></li><li><p>质量测量指标包括过程指标和产出指标</p></li><li><p>成本效益分析：就是考虑性价比，用一些财务指标进行商业论证，比较质量成本与预期收益（比如收益成本比BCR、投资回报率ROI）</p><ul><li>达到质量要求的主要效益：减少返工、提高生产率、降低成本、提升干系人满意度</li></ul></li><li><p>组织系统流程图：SIPOC模型</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181549925.png" ></p></li><li><p>逻辑数据模型</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181549707.png" ></p></li><li><p>矩阵图</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181549660.png" ></p></li><li><p>思维导图</p></li></ul><h2 id="管理质量"><a href="#管理质量" class="headerlink" title="管理质量"></a>管理质量</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181550329.png" ></p><p>把组织的质量政策用于项目，将质量管理计划转化为可执行的质量活动。本过程需要在整个项目期间开展</p><ul><li><p>管理质量是对过程的管理</p></li><li><p>质量报告：它是一份项目管理文件，包括团队上报的质量问题、改善建议、纠正措施建议、质量控制中出现的情况等</p></li><li><p>核对单</p></li><li><p>过程分析：检查过程运行中遇到的问题，发现非增值活动，包括采用根本原因分析</p></li><li><p>因果图：帮助找根本原因的</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181550369.png" ></p></li><li><p>直方图（数频直方图、质量分布图）</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181550497.png" ></p><p>特殊直方图：排列图（帕累托图、柏拉图），是帮助找众多原因中哪个原因是最主要原因的❓</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181550601.png" ></p></li><li><p>散点图（相关图、散布图），是帮助找相关原因的</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181551576.png" ></p></li><li><p>审计，也叫审核，是由内部或外部审核员进行的，通过检查和测试寻找证据向相关方&#x2F;客户&#x2F;外界证明产品质量过硬（证明的不是某一件产品质量过硬，而是证明公司保证机制良好，这才是管理质量过程该做的事，前者是控制质量过程做的事）</p><ul><li>确认过程对已批准的变更请求实施情况，不是对某一个变更请求做结论，而是对变更机制作出评价</li></ul><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181551797.png" ></p></li><li><p>面向X的设计DFX，在设计阶段就对质量进行保证</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181551610.png" ></p></li></ul><h2 id="控制质量"><a href="#控制质量" class="headerlink" title="控制质量"></a>控制质量</h2><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181551983.png" ></p><p>为评估绩效，确保项目输出完整、正确且满足客户期望而监督和记录质量管理活动执行结果。本过程需要在整个项目期间开展</p><ul><li><p>控制质量是对项目结果和过程结果进行检查</p></li><li><p>核查表</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181551371.png" ></p></li><li><p>统计抽样</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181552043.png" ></p></li><li><p>控制图</p><p><img   src="https://raw.githubusercontent.com/Liao-Hexo/image-repository/Description/image-repository/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/202408181552772.png" ></p></li></ul><h2 id="知识领域概要"><a href="#知识领域概要" class="headerlink" title="知识领域概要"></a>知识领域概要</h2><p>质量管理最难定义</p><ul><li>要知道质量管理发展的历程</li><li>要知道质量管理中的主要流派</li><li>质量管理既要管产出的质量，又要管过程的质量</li><li>预防胜于检查</li></ul><p>项目质量管理是一个难以定义的知识领域，人们常常对标准的质量定义不知所云，不同的人、不同的组织、不同需求的项目，对项目质量的定义大相径庭，对质量管理学科的基本思想和发展沿革的理解影响项目质量管理</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;质量就是满足需求并符合要求（适用性、符合性）&lt;/p&gt;
-&lt;p&gt;质量与等级：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;低质量是个问题&lt;/li&gt;</summary>
       
     
     
